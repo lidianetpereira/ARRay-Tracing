@@ -152,7 +152,7 @@ static const int markerCount = (sizeof(markers)/sizeof(markers[0]));
 int markerIDs[markerCount];
 int markerModelIDs[markerCount];
 
-int mainWindow, subWindow1,subWindow2,subWindow3;
+int optixWindow, arWindow;
 char str[256];
 float invOut[16];
 
@@ -556,13 +556,14 @@ void glutInitialize( int* argc, char** argv )
     glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE );
     glutInitWindowSize( width, height );
     glutInitWindowPosition( 100, 100 );
-    glutCreateWindow( SAMPLE_NAME );
+    optixWindow = glutCreateWindow( SAMPLE_NAME );
     glutHideWindow();
 }
 
 
 void glutRun()
 {
+    glutSetWindow(optixWindow);
     // Initialize GL state
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -738,7 +739,7 @@ int main( int argc, char** argv )
                 printUsageAndExit( argv[0] );
             }
             out_file = argv[++i];
-        } 
+        }
         else if( arg == "-n" || arg == "--nopbo"  )
         {
             use_pbo = false;
@@ -808,9 +809,18 @@ int main( int argc, char** argv )
         return 0;
     }
     SUTIL_CATCH( context->get() )
+//    glutInit(&argc, argv);
+//    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);
+//    glutInitWindowSize (800, 600);
+    arWindow = glutCreateWindow("Second Window");
+    glutPositionWindow(900,40);
+    init();
+    glutDisplayFunc(display);
+    glutMainLoop();
 }
 
 static void init(){
+    glutSetWindow(arWindow);
     int w = 800, h = 600;
     reshape(w, h);
 
@@ -829,7 +839,9 @@ static void init(){
     char buf[MAXPATHLEN];
     ARLOGd("CWD is '%s'.\n", getcwd(buf, sizeof(buf)));
 #endif
-    char *resourcesDir = arUtilGetResourcesDirectoryPath(AR_UTIL_RESOURCES_DIRECTORY_BEHAVIOR_BEST);
+    //char *resourcesDir = arUtilGetResourcesDirectoryPath(AR_UTIL_RESOURCES_DIRECTORY_BEHAVIOR_BEST);
+    char *resourcesDir = "/home/lidiane/CLionProjects/optix/SDK";
+    ARLOGd("Resources are in'%s'.\n", resourcesDir);
     for (int i = 0; i < markerCount; i++) {
         std::string markerConfig = "single;" + std::string(resourcesDir) + '/' + markers[i].name + ';' + std::to_string(markers[i].height);
         markerIDs[i] = arController->addTrackable(markerConfig);
@@ -848,8 +860,7 @@ static void init(){
 
 static void display(void)
 {
-    glutSetWindow(subWindow1);
-
+    glutSetWindow(arWindow);
     // Start tracking.
     arController->startRunning(vconf, cpara, NULL, 0);
     // Main loop.
