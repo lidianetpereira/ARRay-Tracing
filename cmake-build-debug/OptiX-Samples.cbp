@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="OptiX-Samples"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\CMake\FindCUDA\;CMake Files\optixTutorial\;CMake Files\sutil\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="optixTutorial">
+				<Option output="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/bin/optixTutorial" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLUT_FOUND"/>
+					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/sutil"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include/optixu"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 optixTutorial"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="optixTutorial/fast">
+				<Option output="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/bin/optixTutorial" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLUT_FOUND"/>
+					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/sutil"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include/optixu"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 optixTutorial/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sutil_sdk">
+				<Option output="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/lib/libsutil_sdk.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLUT_FOUND"/>
+					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/sutil"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include/optixu"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cuda"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 sutil_sdk"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sutil_sdk/fast">
+				<Option output="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/lib/libsutil_sdk.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLUT_FOUND"/>
+					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/sutil"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/include/optixu"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cuda"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 sutil_sdk/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sampleConfig.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/common.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/helpers.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/intersection_refinement.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/phong.cu">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/phong.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/random.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/triangle_mesh.cu">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/box.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/common.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/optixTutorial.cpp">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/parallelogram.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/random.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial0.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial1.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial10.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial11.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial2.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial3.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial4.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial5.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial6.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial7.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial8.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial9.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/Arcball.cpp">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/Arcball.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/GL/glew.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/GL/glxew.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/HDRLoader.cpp">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/HDRLoader.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/Mesh.cpp">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/Mesh.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/OptiXMesh.cpp">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/OptiXMesh.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/PPMLoader.cpp">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/PPMLoader.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/glew.c">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/rply-1.01/rply.c">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/rply-1.01/rply.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/sutil.cpp">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/sutil.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/sutilapi.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/tinyobjloader/tiny_obj_loader.cc">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/tinyobjloader/tiny_obj_loader.h">
+			<Option target="sutil_sdk"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sampleConfig.h.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/CompilerInfo.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/ConfigCompilerFlags.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/FindCUDA.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/FindMDLWrapper.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/FindOptiX.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/FindSUtilGLUT.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/LinuxCPUInfo.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/Macros.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/sse_support.h.in">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/FindCUDA/select_compute_arch.cmake">
+			<Option virtualFolder="CMake Files\CMake\FindCUDA\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\optixTutorial\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\sutil\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

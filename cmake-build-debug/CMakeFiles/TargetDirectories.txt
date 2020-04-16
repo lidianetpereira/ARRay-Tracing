@@ -1,0 +1,8 @@
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/CMakeFiles/rebuild_cache.dir
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/CMakeFiles/optixTutorial.dir
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/optixTutorial/CMakeFiles/edit_cache.dir
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/CMakeFiles/rebuild_cache.dir
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/CMakeFiles/sutil_sdk.dir
+/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/sutil/CMakeFiles/edit_cache.dir
