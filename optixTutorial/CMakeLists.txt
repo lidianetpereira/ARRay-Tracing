@@ -52,6 +52,8 @@ if(GLUT_FOUND AND OPENGL_FOUND)
     common.h
     parallelogram.cu
     random.h
+    draw.h
+    draw.cpp
     )
 else()
   # GLUT or OpenGL not found

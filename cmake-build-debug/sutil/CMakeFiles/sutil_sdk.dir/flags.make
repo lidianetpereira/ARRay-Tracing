@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =      -fPIC -DM_PI=3.14159265358979323846 -O0 -g3 -fPIC  
+C_FLAGS =      -fPIC  -DGL_GLEXT_PROTOTYPES=1 -fPIC -DM_PI=3.14159265358979323846 -O0 -g3 -fPIC  
 
-C_DEFINES = -DGLUT_FOUND -DGLUT_NO_LIB_PRAGMA -Dsutil_sdk_EXPORTS
+C_DEFINES = -DARX_TARGET_PLATFORM_LINUX=1 -DDEBUG=1 -DGLUT_FOUND -DGLUT_NO_LIB_PRAGMA -Dsutil_sdk_EXPORTS
 
 C_INCLUDES = -I/home/lidiane/CLionProjects/optix/include -I/home/lidiane/CLionProjects/optix/SDK/sutil -I/home/lidiane/CLionProjects/optix/SDK -I/home/lidiane/CLionProjects/optix/include/optixu -I/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include -I/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug -I/usr/local/cuda/include -I/home/lidiane/CLionProjects/optix/SDK/cuda 
 
-CXX_FLAGS =      -fPIC -O0 -g3 -fPIC  
+CXX_FLAGS =      -fPIC  -DGL_GLEXT_PROTOTYPES=1 -fPIC -O0 -g3 -fPIC   -std=c++11
 
-CXX_DEFINES = -DGLUT_FOUND -DGLUT_NO_LIB_PRAGMA -Dsutil_sdk_EXPORTS
+CXX_DEFINES = -DARX_TARGET_PLATFORM_LINUX=1 -DDEBUG=1 -DGLUT_FOUND -DGLUT_NO_LIB_PRAGMA -Dsutil_sdk_EXPORTS
 
 CXX_INCLUDES = -I/home/lidiane/CLionProjects/optix/include -I/home/lidiane/CLionProjects/optix/SDK/sutil -I/home/lidiane/CLionProjects/optix/SDK -I/home/lidiane/CLionProjects/optix/include/optixu -I/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include -I/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug -I/usr/local/cuda/include -I/home/lidiane/CLionProjects/optix/SDK/cuda 
 

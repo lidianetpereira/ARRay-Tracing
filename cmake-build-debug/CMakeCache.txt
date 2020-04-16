@@ -374,6 +374,12 @@ GLUT_Xmu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXmu.so
 GLUT_glut_LIBRARY:FILEPATH=/usr/local/lib/libglut.so
 
 //Path to a file.
+OPENGLES2_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OPENGLES2_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLESv2.so
+
+//Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a file.
@@ -396,6 +402,42 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
 
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
+
+//Path to a file.
+OpenCV_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OpenCV_LIB_CALIB32:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so
+
+//Path to a library.
+OpenCV_LIB_CORE:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_core.so
+
+//Path to a library.
+OpenCV_LIB_FEATURES2D:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_features2d.so
+
+//Path to a library.
+OpenCV_LIB_FLANN:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_flann.so
+
+//Path to a library.
+OpenCV_LIB_HIGHGUI:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_highgui.so
+
+//Path to a library.
+OpenCV_LIB_IMGCODECS:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so
+
+//Path to a library.
+OpenCV_LIB_IMGPROC:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so
+
+//Path to a library.
+OpenCV_LIB_VIDEO:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_video.so
+
+//Path to a library.
+OpenCV_LIB_VIDEOIO:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_videoio.so
+
+//The directory where GL/glcorearb.h resides
+OpenGL3_INCLUDE_PATH:PATH=/usr/include
+
+//OpenGL lib for Linux
+OpenGL3_LIBRARY:STRING=GL
 
 //Value Computed by CMake
 OptiX-Samples_BINARY_DIR:STATIC=/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug
@@ -684,8 +726,12 @@ CUDA_run_nvcc:INTERNAL=/home/lidiane/CLionProjects/optix/SDK/CMake/FindCUDA/run_
 FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda][/usr/local/cuda/bin/nvcc][/usr/local/cuda/include][/usr/local/cuda/lib64/libcudart_static.a][v10.2(5.0)]
 //Details about finding GLUT
 FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/usr/local/lib/libglut.so][/usr/local/include][v()]
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;/usr/lib/x86_64-linux-gnu/libopencv_videoio.so;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so;/usr/lib/x86_64-linux-gnu/libopencv_video.so;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;/usr/lib/x86_64-linux-gnu/libopencv_core.so][/usr/include][v()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
+//Details about finding OpenGL3
+FIND_PACKAGE_MESSAGE_DETAILS_OpenGL3:INTERNAL=[GL][/usr/include][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GLUT_INCLUDE_DIR
@@ -696,6 +742,10 @@ GLUT_Xi_LIBRARY-ADVANCED:INTERNAL=1
 GLUT_Xmu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_glut_LIBRARY
 GLUT_glut_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGLES2_INCLUDE_DIR
+OPENGLES2_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGLES2_LIBRARIES
+OPENGLES2_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
 OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR

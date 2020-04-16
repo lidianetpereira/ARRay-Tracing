@@ -12,6 +12,8 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
+  "ARX_TARGET_PLATFORM_LINUX=1"
+  "DEBUG=1"
   "GLUT_FOUND"
   "GLUT_NO_LIB_PRAGMA"
   "sutil_sdk_EXPORTS"
@@ -41,6 +43,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ARX_TARGET_PLATFORM_LINUX=1"
+  "DEBUG=1"
   "GLUT_FOUND"
   "GLUT_NO_LIB_PRAGMA"
   "sutil_sdk_EXPORTS"

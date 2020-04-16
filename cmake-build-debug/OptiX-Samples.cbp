@@ -5,7 +5,7 @@
 		<Option title="OptiX-Samples"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\CMake\FindCUDA\;CMake Files\optixTutorial\;CMake Files\sutil\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\SDK\;CMake Files\SDK\lib\;CMake Files\SDK\lib\ARX\;CMake Files\CMake\;CMake Files\CMake\FindCUDA\;CMake Files\optixTutorial\;CMake Files\sutil\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
@@ -17,11 +17,41 @@
 					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
+			<Target title="install/strip">
 				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
 					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -37,6 +67,16 @@
 					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="optixTutorial">
 				<Option output="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/bin/optixTutorial" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug/bin"/>
@@ -44,6 +84,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARX_TARGET_PLATFORM_LINUX=1"/>
+					<Add option="-DDEBUG=1"/>
 					<Add option="-DGLUT_FOUND"/>
 					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
 					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
@@ -53,6 +95,7 @@
 					<Add directory="/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include"/>
 					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
 					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/SDK/include"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -76,6 +119,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARX_TARGET_PLATFORM_LINUX=1"/>
+					<Add option="-DDEBUG=1"/>
 					<Add option="-DGLUT_FOUND"/>
 					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
 					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
@@ -85,6 +130,7 @@
 					<Add directory="/home/lidiane/CLionProjects/optix/SDK/support/mdl-sdk/include"/>
 					<Add directory="/home/lidiane/CLionProjects/optix/SDK/cmake-build-debug"/>
 					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/home/lidiane/CLionProjects/optix/SDK/SDK/include"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -108,6 +154,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARX_TARGET_PLATFORM_LINUX=1"/>
+					<Add option="-DDEBUG=1"/>
 					<Add option="-DGLUT_FOUND"/>
 					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
 					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
@@ -141,6 +189,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARX_TARGET_PLATFORM_LINUX=1"/>
+					<Add option="-DDEBUG=1"/>
 					<Add option="-DGLUT_FOUND"/>
 					<Add option="-DGLUT_NO_LIB_PRAGMA"/>
 					<Add directory="/home/lidiane/CLionProjects/optix/include"/>
@@ -196,6 +246,18 @@
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/common.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/draw.cpp">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/draw.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/hiro.patt">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/kanji.patt">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/optixTutorial.cpp">
@@ -311,6 +373,21 @@
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sampleConfig.h.in">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cmake/FindOpenCV.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cmake/FindOpenGL3.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cmake/FindOpenGLES2.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/SDK/lib/ARX/ARX-release.cmake">
+			<Option virtualFolder="CMake Files\SDK\lib\ARX\"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/SDK/lib/ARX/ARX.cmake">
+			<Option virtualFolder="CMake Files\SDK\lib\ARX\"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/CMake/CompilerInfo.cmake">
 			<Option virtualFolder="CMake Files\CMake\"/>

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../bin/optixTutorial"
   "../bin/optixTutorial.pdb"
+  "CMakeFiles/optixTutorial.dir/draw.cpp.o"
   "CMakeFiles/optixTutorial.dir/optixTutorial.cpp.o"
 )
 
