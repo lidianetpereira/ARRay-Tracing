@@ -1,0 +1,3 @@
+/home/lidiane/CLionProjects/axisView/SDK/bin/axisView
+/home/lidiane/CLionProjects/axisView/SDK/share/axisView/hiro.patt
+/home/lidiane/CLionProjects/axisView/SDK/share/axisView/kanji.patt

@@ -86,6 +86,8 @@
 #include <GL/gl.h>
 #include "draw.h"
 
+#define ar 1
+
 using namespace optix;
 
 const char* const SAMPLE_NAME = "optixTutorial";
@@ -110,8 +112,9 @@ bool         use_pbo = true;
 
 std::string  texture_path;
 const char*  tutorial_ptx;
-int          tutorial_number = 10;
+int          tutorial_number = 3;
 
+float3 correction_size;
 // Camera state
 float3       camera_up;
 float3       camera_lookat;
@@ -155,6 +158,7 @@ int markerModelIDs[markerCount];
 int optixWindow, arWindow;
 char str[256];
 float invOut[16];
+float mView[16];
 
 //------------------------------------------------------------------------------
 //
@@ -186,6 +190,7 @@ static void display(void);
 static void init();
 void showString(std::string str);
 bool gluInvertMatrix(float m[16]);
+static void displayOnce(void);
 
 //------------------------------------------------------------------------------
 //
@@ -318,6 +323,15 @@ void createGeometry()
     box->setIntersectionProgram( box_intersect );
     box["boxmin"]->setFloat( -2.0f, 0.0f, -2.0f );
     box["boxmax"]->setFloat(  2.0f, 7.0f,  2.0f );
+
+//    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
+//    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
+#if ar
+//    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
+//    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
+    box["boxmin"]->setFloat( -2.0f, 0.0f ,-0.5f);
+    box["boxmax"]->setFloat(  2.0f, 3.0f, 0.5f);
+#endif
 
     // Create chull
     Geometry chull = 0;
@@ -464,7 +478,7 @@ void createGeometry()
     // Create GIs for each piece of geometry
     std::vector<GeometryInstance> gis;
     gis.push_back( context->createGeometryInstance( box, &box_matl, &box_matl+1 ) );
-    gis.push_back( context->createGeometryInstance( parallelogram, &floor_matl, &floor_matl+1 ) );
+    //gis.push_back( context->createGeometryInstance( parallelogram, &floor_matl, &floor_matl+1 ) );
     if(chull.get())
         gis.push_back( context->createGeometryInstance( chull, &glass_matl, &glass_matl+1 ) );
 
@@ -472,7 +486,7 @@ void createGeometry()
     GeometryGroup geometrygroup = context->createGeometryGroup();
     geometrygroup->setChildCount( static_cast<unsigned int>(gis.size()) );
     geometrygroup->setChild( 0, gis[0] );
-    geometrygroup->setChild( 1, gis[1] );
+    //geometrygroup->setChild( 1, gis[1] );
     if(chull.get()) {
         geometrygroup->setChild( 2, gis[2] );
     }
@@ -491,16 +505,40 @@ void setupCamera()
     camera_lookat = make_float3( 0.0f, 4.0f,  0.0f );
     camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 
+//    camera_eye    = make_float3( 0.0f, 10.0f, -5.0f );
+//    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
+//    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
+
     camera_rotate  = Matrix4x4::identity();
+
+#ifdef ar
+//    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
+//    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
+//    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
+//
+//    camera_rotate = Matrix4x4(invOut);
+
+    camera_eye    = make_float3( -invOut[12]/50, invOut[14]/50, invOut[13]/50);
+    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
+    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
+
+    camera_rotate  = Matrix4x4::identity();
+#endif
 }
 
 
 void setupLights()
 {
 
-    BasicLight lights[] = { 
+    BasicLight lights[] = {
         { make_float3( -5.0f, 60.0f, -16.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
     };
+
+//#ifdef ar
+//    BasicLight lights[] = {
+//            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+//    };
+//#endif
 
     Buffer light_buffer = context->createBuffer( RT_BUFFER_INPUT );
     light_buffer->setFormat( RT_FORMAT_USER );
@@ -515,6 +553,9 @@ void setupLights()
 
 void updateCamera()
 {
+#ifdef ar
+    setupCamera();
+#endif
     const float vfov = 60.0f;
     const float aspect_ratio = static_cast<float>(width) /
                                static_cast<float>(height);
@@ -599,6 +640,9 @@ void glutRun()
 
 void glutDisplay()
 {
+
+    displayOnce();
+#ifdef ar
     updateCamera();
 
     context->launch( 0, width, height );
@@ -610,7 +654,7 @@ void glutDisplay()
         static unsigned frame_count = 0;
         sutil::displayFps( frame_count++ );
     }
-
+#endif
     glutSwapBuffers();
 }
 
@@ -781,6 +825,8 @@ int main( int argc, char** argv )
 #ifndef __APPLE__
         glewInit();
 #endif
+        init();
+        displayOnce();
 
         // load the ptx source associated with tutorial number
         std::stringstream ss;
@@ -795,6 +841,8 @@ int main( int argc, char** argv )
 
         context->validate();
 
+        //display();
+
         if ( out_file.empty() )
         {
             glutRun();
@@ -804,24 +852,16 @@ int main( int argc, char** argv )
             updateCamera();
             context->launch( 0, width, height );
             sutil::displayBufferPPM( out_file.c_str(), getOutputBuffer() );
+            showString(str);
             destroyContext();
         }
         return 0;
     }
     SUTIL_CATCH( context->get() )
-//    glutInit(&argc, argv);
-//    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);
-//    glutInitWindowSize (800, 600);
-    arWindow = glutCreateWindow("Second Window");
-    glutPositionWindow(900,40);
-    init();
-    glutDisplayFunc(display);
-    glutMainLoop();
 }
 
 static void init(){
-    glutSetWindow(arWindow);
-    int w = 800, h = 600;
+    int w = 1080, h = 720;
     reshape(w, h);
 
     // Initialise the ARController.
@@ -856,13 +896,13 @@ static void init(){
 #ifdef DEBUG
     ARLOGd("vconf is '%s'.\n", vconf);
 #endif
+    arController->startRunning(vconf, cpara, NULL, 0);
 }
 
 static void display(void)
 {
-    glutSetWindow(arWindow);
     // Start tracking.
-    arController->startRunning(vconf, cpara, NULL, 0);
+    //arController->startRunning(vconf, cpara, NULL, 0);
     // Main loop.
     bool done = false;
     while (!done) {
@@ -942,6 +982,96 @@ static void display(void)
 
             draw();
             glutSwapBuffers();
+        }
+    }
+}
+
+static void displayOnce(void)
+{
+
+    // Main loop.
+    bool done = false;
+    while (!done) {
+        bool gotFrame = arController->capture();
+        if (!gotFrame) {
+            arUtilSleep(1);
+        } else {
+            //ARLOGi("Got frame %ld.\n", gFrameNo);
+            gFrameNo++;
+
+            if (!arController->update()) {
+                ARLOGe("Error in ARController::update().\n");
+                quit(-1);
+            }
+
+            if (contextWasUpdated) {
+                if (!arController->drawVideoInit(0)) {
+                    ARLOGe("Error in ARController::drawVideoInit().\n");
+                    quit(-1);
+                }
+                if (!arController->drawVideoSettings(0, contextWidth, contextHeight, false, false, false,
+                                                     ARVideoView::HorizontalAlignment::H_ALIGN_CENTRE,
+                                                     ARVideoView::VerticalAlignment::V_ALIGN_CENTRE,
+                                                     ARVideoView::ScalingMode::SCALE_MODE_FIT, viewport)) {
+                    ARLOGe("Error in ARController::drawVideoSettings().\n");
+                    quit(-1);
+                }
+                drawSetup(drawAPI, false, false, false);
+                //ARLOGd("Viewport: %d %d %d %d", viewport[0], viewport[1], viewport[2], viewport[3]);
+                drawSetViewport(viewport);
+                ARdouble projectionARD[16];
+                arController->projectionMatrix(0, 0.1f, 10000.0f, projectionARD);
+                for (int i = 0; i < 16; i++) projection[i] = (float) projectionARD[i];
+                drawSetCamera(projection, NULL);
+
+                for (int i = 0; i < markerCount; i++) {
+                    markerModelIDs[i] = drawLoadModel(NULL);
+                }
+                contextWasUpdated = false;
+            }
+#ifndef ar
+            // Clear the context.
+            glClearColor(0.0, 0.0, 0.0, 1.0);
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+            // Display the current video frame to the current OpenGL context.
+            arController->drawVideo(0);
+            //ARLOGi("Passou no drawVideo. \n");
+#endif
+
+            // Look for trackables, and draw on each found one.
+            for (int i = 0; i < markerCount; i++) {
+
+                // Find the trackable for the given trackable ID.
+                ARTrackable *marker = arController->findTrackable(markerIDs[i]);
+                float view[16];
+                if (marker->visible) {
+                    //arUtilPrintMtx16(marker->transformationMatrix);
+                    //ARLOGi("\n \n");
+                    for (int i = 0; i < 16; i++){
+                        view[i] = (float) marker->transformationMatrix[i];
+                        mView[i] = view[i];
+                        //ARLOGi("View %d: %0.3f  \n", i, view[i]);
+                    }
+                }
+                //Linearização por coluna
+                //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
+                //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
+                if(gluInvertMatrix(view)){
+                    //for (int i = 0; i < 16; i++){
+                    //ARLOGi("Inv %d: %.3f  \n", i, invOut[i]);
+                    //}
+                    sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
+                }
+                //ARLOGi("%s", str);
+                drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
+                showString( str );
+            }
+#ifndef ar
+            draw();
+#endif
+            glutSwapBuffers();
+            done = true;
         }
     }
 }
