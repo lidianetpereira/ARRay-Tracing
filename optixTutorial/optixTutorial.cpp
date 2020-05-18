@@ -86,6 +86,7 @@
 #include <GL/gl.h>
 #include "draw.h"
 
+
 #define ar 1
 
 using namespace optix;
@@ -106,8 +107,8 @@ static float rand_range(float min, float max)
 //------------------------------------------------------------------------------
 
 Context      context;
-uint32_t     width  = 1080u;
-uint32_t     height = 720;
+uint32_t     width  = 960u;
+uint32_t     height = 720u;
 bool         use_pbo = true;
 
 std::string  texture_path;
@@ -159,6 +160,10 @@ int optixWindow, arWindow;
 char str[256];
 float invOut[16];
 float mView[16];
+
+unsigned int framebuffer;
+unsigned int texColorBuffer;
+unsigned int rbo;
 
 //------------------------------------------------------------------------------
 //
@@ -251,6 +256,7 @@ void createContext()
     glBufferData( GL_ARRAY_BUFFER, 4 * width * height, 0, GL_STREAM_DRAW);
     glBindBuffer( GL_ARRAY_BUFFER, 0 );
 
+    //printf("Buffer Optix: W: %d H: %d \n", width, height);
     Buffer buffer = sutil::createOutputBuffer( context, RT_FORMAT_UNSIGNED_BYTE4, width, height, use_pbo );
     context["output_buffer"]->set( buffer );
 
@@ -263,7 +269,8 @@ void createContext()
     // Exception program
     Program exception_program = context->createProgramFromPTXString( tutorial_ptx, "exception" );
     context->setExceptionProgram( 0, exception_program );
-    context["bad_color"]->setFloat( 1.0f, 0.0f, 1.0f );
+    //context["bad_color"]->setFloat( 1.0f, 0.0f, 1.0f );
+    context["bad_color"]->setFloat(1.0f, 0.0f, 1.0f);
 
     // Miss program
     const std::string miss_name = tutorial_number >= 5 ? "envmap_miss" : "miss";
@@ -271,7 +278,8 @@ void createContext()
     const float3 default_color = make_float3(1.0f, 1.0f, 1.0f);
     const std::string texpath = texture_path + "/" + std::string( "CedarCity.hdr" );
     context["envmap"]->setTextureSampler( sutil::loadTexture( context, texpath, default_color) );
-    context["bg_color"]->setFloat( make_float3( 0.34f, 0.55f, 0.85f ) );
+//    context["bg_color"]->setFloat( make_float3( 0.34f, 0.55f, 0.85f ) );
+    context["bg_color"]->setFloat( make_float3( 1.0f, 1.0f, 0.0f ) );
 
     // 3D solid noise buffer, 1 float channel, all entries in the range [0.0, 1.0].
 
@@ -517,8 +525,9 @@ void setupCamera()
 //    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 //
 //    camera_rotate = Matrix4x4(invOut);
+    float divisor = 50.0f;
 
-    camera_eye    = make_float3( -invOut[12]/50, invOut[14]/50, invOut[13]/50);
+    camera_eye    = make_float3( -invOut[12]/divisor, invOut[14]/divisor, invOut[13]/divisor);
     camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
     camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 
@@ -531,7 +540,7 @@ void setupLights()
 {
 
     BasicLight lights[] = {
-        { make_float3( -5.0f, 60.0f, -16.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+        { make_float3( -5.0f, 10.0f, -16.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
     };
 
 //#ifdef ar
@@ -556,7 +565,7 @@ void updateCamera()
 #ifdef ar
     setupCamera();
 #endif
-    const float vfov = 60.0f;
+    const float vfov = 45.0f;
     const float aspect_ratio = static_cast<float>(width) /
                                static_cast<float>(height);
 
@@ -604,6 +613,7 @@ void glutInitialize( int* argc, char** argv )
 
 void glutRun()
 {
+    //glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glutSetWindow(optixWindow);
     // Initialize GL state
     glMatrixMode(GL_PROJECTION);
@@ -613,10 +623,11 @@ void glutRun()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    glViewport(0, 0, width, height);
+//    glViewport(0, 0, width, height);
+    glViewport(viewport[0], viewport[1], viewport[2], viewport[3]);
 
     glutShowWindow();
-    glutReshapeWindow( width, height);
+    glutReshapeWindow( viewport[2], viewport[3]);
 
     // register glut callbacks
     glutDisplayFunc( glutDisplay );
@@ -640,7 +651,7 @@ void glutRun()
 
 void glutDisplay()
 {
-
+    //glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     displayOnce();
 #ifdef ar
     updateCamera();
@@ -649,6 +660,7 @@ void glutDisplay()
 
     Buffer buffer = getOutputBuffer();
     sutil::displayBufferGL( getOutputBuffer() );
+
 
     {
         static unsigned frame_count = 0;
@@ -667,6 +679,12 @@ void glutKeyboardPress( unsigned char k, int x, int y )
         case( 'q' ):
         case( 27 ): // ESC
         {
+            drawCleanup();
+            if (arController) {
+                arController->drawVideoFinal(0);
+                arController->shutdown();
+                delete arController;
+            }
             destroyContext();
             exit(0);
         }
@@ -841,8 +859,6 @@ int main( int argc, char** argv )
 
         context->validate();
 
-        //display();
-
         if ( out_file.empty() )
         {
             glutRun();
@@ -861,8 +877,34 @@ int main( int argc, char** argv )
 }
 
 static void init(){
-    int w = 1080, h = 720;
+    int w = 960, h = 720;
     reshape(w, h);
+
+    glGenFramebuffers(1, &framebuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+
+    // generate texture
+    glGenTextures(1, &texColorBuffer);
+    glBindTexture(GL_TEXTURE_2D, texColorBuffer);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+    // attach it to currently bound framebuffer object
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texColorBuffer, 0);
+
+    glGenRenderbuffers(1, &rbo);
+    glBindRenderbuffer(GL_RENDERBUFFER, rbo);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, w, h);
+    glBindRenderbuffer(GL_RENDERBUFFER, 0);
+
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
+
+    if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+        std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
 
     // Initialise the ARController.
     arController = new ARController();
@@ -899,92 +941,6 @@ static void init(){
     arController->startRunning(vconf, cpara, NULL, 0);
 }
 
-static void display(void)
-{
-    // Start tracking.
-    //arController->startRunning(vconf, cpara, NULL, 0);
-    // Main loop.
-    bool done = false;
-    while (!done) {
-        bool gotFrame = arController->capture();
-        if (!gotFrame) {
-            arUtilSleep(1);
-        } else {
-            //ARLOGi("Got frame %ld.\n", gFrameNo);
-            gFrameNo++;
-
-            if (!arController->update()) {
-                ARLOGe("Error in ARController::update().\n");
-                quit(-1);
-            }
-
-            if (contextWasUpdated) {
-                if (!arController->drawVideoInit(0)) {
-                    ARLOGe("Error in ARController::drawVideoInit().\n");
-                    quit(-1);
-                }
-                if (!arController->drawVideoSettings(0, contextWidth, contextHeight, false, false, false,
-                                                     ARVideoView::HorizontalAlignment::H_ALIGN_CENTRE,
-                                                     ARVideoView::VerticalAlignment::V_ALIGN_CENTRE,
-                                                     ARVideoView::ScalingMode::SCALE_MODE_FIT, viewport)) {
-                    ARLOGe("Error in ARController::drawVideoSettings().\n");
-                    quit(-1);
-                }
-                drawSetup(drawAPI, false, false, false);
-                //ARLOGd("Viewport: %d %d %d %d", viewport[0], viewport[1], viewport[2], viewport[3]);
-                drawSetViewport(viewport);
-                ARdouble projectionARD[16];
-                arController->projectionMatrix(0, 0.1f, 10000.0f, projectionARD);
-                for (int i = 0; i < 16; i++) projection[i] = (float) projectionARD[i];
-                drawSetCamera(projection, NULL);
-
-                for (int i = 0; i < markerCount; i++) {
-                    markerModelIDs[i] = drawLoadModel(NULL);
-                }
-                contextWasUpdated = false;
-            }
-
-            // Clear the context.
-            glClearColor(0.0, 0.0, 0.0, 1.0);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-            // Display the current video frame to the current OpenGL context.
-            arController->drawVideo(0);
-            //ARLOGi("Passou no drawVideo. \n");
-
-            // Look for trackables, and draw on each found one.
-            for (int i = 0; i < markerCount; i++) {
-
-                // Find the trackable for the given trackable ID.
-                ARTrackable *marker = arController->findTrackable(markerIDs[i]);
-                float view[16];
-                if (marker->visible) {
-                    //arUtilPrintMtx16(marker->transformationMatrix);
-                    //ARLOGi("\n \n");
-                    for (int i = 0; i < 16; i++){
-                        view[i] = (float) marker->transformationMatrix[i];
-                        //ARLOGi("View %d: %0.3f  \n", i, view[i]);
-                    }
-                }
-                //Linearização por coluna
-                //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
-                //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
-                if(gluInvertMatrix(view)){
-                    //for (int i = 0; i < 16; i++){
-                    //ARLOGi("Inv %d: %.3f  \n", i, invOut[i]);
-                    //}
-                    sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
-                }
-                //ARLOGi("%s", str);
-                drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
-                showString( str );
-            }
-
-            draw();
-            glutSwapBuffers();
-        }
-    }
-}
 
 static void displayOnce(void)
 {

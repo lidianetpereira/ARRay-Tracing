@@ -78,6 +78,7 @@ rtDeclareVariable(float3, bg_color, , );
 RT_PROGRAM void miss()
 {
   prd_radiance.result = bg_color;
+  prd_radiance.importance = 0.5f;
 }
   
 

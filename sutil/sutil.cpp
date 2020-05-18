@@ -174,6 +174,7 @@ void displayBuffer()
     uint32_t width  = static_cast<int>(buffer_width_rts);
     uint32_t height = static_cast<int>(buffer_height_rts);
     RTformat buffer_format = buffer->getFormat();
+    printf("Buffer Optix: W: %d H: %d \n", width, height);
 
     GLboolean use_SRGB = GL_FALSE;
     if( !g_disable_srgb_conversion && (buffer_format == RT_FORMAT_FLOAT4 || buffer_format == RT_FORMAT_FLOAT3) )
