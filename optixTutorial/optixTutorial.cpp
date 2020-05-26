@@ -356,9 +356,11 @@ void setupCamera()
 void setupLights()
 {
 
-//    BasicLight lights[] = {
-//        { make_float3( -5.0f, 10.0f, -16.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
-//    };
+#ifndef ar
+    BasicLight lights[] = {
+        { make_float3( -5.0f, 10.0f, -16.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+    };
+#endif
 
 #ifdef ar
     BasicLight lights[] = {
@@ -420,7 +422,7 @@ void updateCamera()
 void glutInitialize( int* argc, char** argv )
 {
     glutInit( argc, argv );
-    glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE );
+    glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE);
     glutInitWindowSize( width, height );
     glutInitWindowPosition( 100, 100 );
     optixWindow = glutCreateWindow( SAMPLE_NAME );
@@ -430,7 +432,7 @@ void glutInitialize( int* argc, char** argv )
 
 void glutRun()
 {
-    //glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     glutSetWindow(optixWindow);
     // Initialize GL state
     glMatrixMode(GL_PROJECTION);
@@ -469,9 +471,10 @@ void glutRun()
 
 void glutDisplay()
 {
-    //glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     displayOnce();
-#ifdef ar
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+//#ifdef ar
     updateCamera();
 
     context->launch( 0, width, height );
@@ -479,12 +482,49 @@ void glutDisplay()
     Buffer buffer = getOutputBuffer();
     sutil::displayBufferGL( getOutputBuffer() );
 
-
     {
         static unsigned frame_count = 0;
         sutil::displayFps( frame_count++ );
     }
-#endif
+//#endif
+
+
+    #define checkImageWidth 960
+    #define checkImageHeight 720
+    GLubyte checkImage[checkImageHeight][checkImageWidth][3];
+    //Iniciar a imagem com todos os alphas 0 e trocar para 1 onde tiver a cor diferente de amarelo, dps somar no outro buffer
+    GLubyte pixel[4];
+    GLubyte pixel_a[4];
+
+    int i, j, x_r, y_r;
+    bool raster = false;
+
+
+    for (i = 0; i < checkImageHeight; i++) {
+        for (j = 0; j < checkImageWidth; j++) {
+            glReadPixels(j, i, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, &pixel);
+            if(pixel[0] != 255 && pixel[1] != 255 && pixel[2] != 0){
+                if(!raster){
+                    x_r = j;
+                    y_r = i;
+                }
+//                checkImage[i][j][0] = pixel[0];
+//                checkImage[i][j][1] = pixel[1];
+//                checkImage[i][j][2] = pixel[2];
+                pixel_a[0] = 255;
+                pixel_a[1] = 0;
+                pixel_a[2] = 0;
+                pixel_a[3] = 255;
+
+                glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+                //glDrawPixels(1, 1, GL_RGBA, GL_UNSIGNED_BYTE, &pixel_a);
+                printf("%d %d: %u %u %u %u\n", j, i, pixel_a[0], pixel_a[1], pixel_a[2], pixel_a[3]);
+                raster = true;
+            }
+        }
+    }
+
+    //glBindBuffer(GL_FRAMEBUFFER, 0);
     glutSwapBuffers();
 }
 
@@ -609,8 +649,8 @@ static void init(){
 
     if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
         std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
+    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 
     // Initialise the ARController.
     arController = new ARController();
@@ -691,7 +731,7 @@ static void displayOnce(void)
                 }
                 contextWasUpdated = false;
             }
-#ifndef ar
+//#ifndef ar
             // Clear the context.
             glClearColor(0.0, 0.0, 0.0, 1.0);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -699,7 +739,7 @@ static void displayOnce(void)
             // Display the current video frame to the current OpenGL context.
             arController->drawVideo(0);
             //ARLOGi("Passou no drawVideo. \n");
-#endif
+//#endif
 
             // Look for trackables, and draw on each found one.
             for (int i = 0; i < markerCount; i++) {
