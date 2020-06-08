@@ -154,8 +154,8 @@ float invOut[16];
 float mView[16];
 
 unsigned int framebuffer;
-unsigned int texColorBuffer;
 unsigned int rbo;
+
 
 //------------------------------------------------------------------------------
 //
@@ -422,7 +422,7 @@ void updateCamera()
 void glutInitialize( int* argc, char** argv )
 {
     glutInit( argc, argv );
-    glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE);
+    glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH );
     glutInitWindowSize( width, height );
     glutInitWindowPosition( 100, 100 );
     optixWindow = glutCreateWindow( SAMPLE_NAME );
@@ -432,7 +432,6 @@ void glutInitialize( int* argc, char** argv )
 
 void glutRun()
 {
-    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     glutSetWindow(optixWindow);
     // Initialize GL state
     glMatrixMode(GL_PROJECTION);
@@ -471,60 +470,74 @@ void glutRun()
 
 void glutDisplay()
 {
-    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-    displayOnce();
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+    glClearColor(1.0, 1.0, 1.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    //displayOnce();
+
 //#ifdef ar
-    updateCamera();
+    //updateCamera();
 
-    context->launch( 0, width, height );
+    //context->launch( 0, width, height );
 
-    Buffer buffer = getOutputBuffer();
-    sutil::displayBufferGL( getOutputBuffer() );
+    //glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+    //glClearColor(0.0, 1.0, 0.0, 0.1);
+    //glClear(GL_COLOR_BUFFER_BIT);
 
-    {
-        static unsigned frame_count = 0;
-        sutil::displayFps( frame_count++ );
-    }
+//    Buffer buffer = getOutputBuffer();
+//    sutil::displayBufferGL( getOutputBuffer() );
+//
+//    {
+//        static unsigned frame_count = 0;
+//        sutil::displayFps( frame_count++ );
+//    }
 //#endif
 
 
     #define checkImageWidth 960
     #define checkImageHeight 720
-    GLubyte checkImage[checkImageHeight][checkImageWidth][3];
-    //Iniciar a imagem com todos os alphas 0 e trocar para 1 onde tiver a cor diferente de amarelo, dps somar no outro buffer
-    GLubyte pixel[4];
-    GLubyte pixel_a[4];
-
+    GLubyte checkImage[checkImageHeight][checkImageWidth][4];
+//    GLubyte pixel[4];
+//    GLubyte pixel_a[4];
+//
     int i, j, x_r, y_r;
-    bool raster = false;
-
-
+//    bool raster = false;
+//
+//    glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
     for (i = 0; i < checkImageHeight; i++) {
         for (j = 0; j < checkImageWidth; j++) {
-            glReadPixels(j, i, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, &pixel);
-            if(pixel[0] != 255 && pixel[1] != 255 && pixel[2] != 0){
-                if(!raster){
-                    x_r = j;
-                    y_r = i;
-                }
+//            glReadPixels(j, i, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, &pixel);
+//            //printf("%d %d: %u %u %u %u\n", j, i, pixel[0], pixel[1], pixel[2], pixel[3]);
+//            if(pixel[0] != 255 && pixel[1] != 255){
+//                if(!raster){
+//                    x_r = j;
+//                    y_r = i;
+//                }
 //                checkImage[i][j][0] = pixel[0];
 //                checkImage[i][j][1] = pixel[1];
 //                checkImage[i][j][2] = pixel[2];
-                pixel_a[0] = 255;
-                pixel_a[1] = 0;
-                pixel_a[2] = 0;
-                pixel_a[3] = 255;
-
-                glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-                //glDrawPixels(1, 1, GL_RGBA, GL_UNSIGNED_BYTE, &pixel_a);
-                printf("%d %d: %u %u %u %u\n", j, i, pixel_a[0], pixel_a[1], pixel_a[2], pixel_a[3]);
-                raster = true;
-            }
+//                checkImage[i][j][2] = 255;
+//                printf("%d %d: %u %u %u %u\n", j, i, pixel[0], pixel[1], pixel[2], pixel[3]);
+//                raster = true;
+//            } else{
+                checkImage[i][j][0] = 255;
+                checkImage[i][j][1] = 0;
+                checkImage[i][j][2] = 0;
+                checkImage[i][j][2] = 100;
+//            }
         }
     }
+    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, framebuffer);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glRasterPos2i(0,0);
+    glDrawPixels(checkImageWidth, checkImageHeight, GL_RGBA, GL_UNSIGNED_BYTE, &checkImage);
 
-    //glBindBuffer(GL_FRAMEBUFFER, 0);
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, framebuffer);
+    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+    //glClear(GL_COLOR_BUFFER_BIT);
+    glBlitFramebuffer(0, 0, checkImageWidth, checkImageHeight, 0, 0, checkImageWidth, checkImageHeight, GL_COLOR_BUFFER_BIT, GL_LINEAR);
+
     glutSwapBuffers();
 }
 
@@ -626,31 +639,24 @@ static void init(){
     int w = 960, h = 720;
     reshape(w, h);
 
+    glEnable(GL_BLEND);
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
     glGenFramebuffers(1, &framebuffer);
-    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-
-    // generate texture
-    glGenTextures(1, &texColorBuffer);
-    glBindTexture(GL_TEXTURE_2D, texColorBuffer);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glBindTexture(GL_TEXTURE_2D, 0);
-
-    // attach it to currently bound framebuffer object
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texColorBuffer, 0);
+    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, framebuffer);
 
     glGenRenderbuffers(1, &rbo);
     glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, w, h);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_RGBA, w, h);
     glBindRenderbuffer(GL_RENDERBUFFER, 0);
-
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, rbo);
 
     if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
         std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
 
-    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+    //glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+
+    //glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
 
     // Initialise the ARController.
     arController = new ARController();
@@ -733,11 +739,11 @@ static void displayOnce(void)
             }
 //#ifndef ar
             // Clear the context.
-            glClearColor(0.0, 0.0, 0.0, 1.0);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            //glClearColor(0.0, 0.0, 0.0, 1.0);
+            //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
             // Display the current video frame to the current OpenGL context.
-            arController->drawVideo(0);
+            //arController->drawVideo(0);
             //ARLOGi("Passou no drawVideo. \n");
 //#endif
 
@@ -769,9 +775,9 @@ static void displayOnce(void)
                 drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
                 showString( str );
             }
-#ifndef ar
+//#ifndef ar
             draw();
-#endif
+//#endif
             glutSwapBuffers();
             done = true;
         }
