@@ -51,6 +51,9 @@ void drawSetCamera(float projection[16], float view[16]);
 void drawSetModel(int modelIndex, bool visible, float pose[16], float camPose[16]);
 void draw(void);
 void drawCleanup();
+void drawTriangle(float viewProjection[16]);
+static void drawCubeTranslucent(float viewProjection[16], float pose[16]);
+void drawAux(void);
 
 #ifdef __cplusplus
 }

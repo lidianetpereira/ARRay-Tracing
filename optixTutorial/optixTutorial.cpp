@@ -87,7 +87,7 @@
 #include "draw.h"
 
 
-#define ar 1
+//#define ar 1
 
 using namespace optix;
 
@@ -187,6 +187,7 @@ static void init();
 void showString(std::string str);
 bool gluInvertMatrix(float m[16]);
 static void displayOnce(void);
+static void display(void);
 
 //------------------------------------------------------------------------------
 //
@@ -422,7 +423,7 @@ void updateCamera()
 void glutInitialize( int* argc, char** argv )
 {
     glutInit( argc, argv );
-    glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH );
+    glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE);
     glutInitWindowSize( width, height );
     glutInitWindowPosition( 100, 100 );
     optixWindow = glutCreateWindow( SAMPLE_NAME );
@@ -470,73 +471,38 @@ void glutRun()
 
 void glutDisplay()
 {
-    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
-    glClearColor(1.0, 1.0, 1.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
 
-    //displayOnce();
-
-//#ifdef ar
-    //updateCamera();
-
-    //context->launch( 0, width, height );
-
-    //glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
-    //glClearColor(0.0, 1.0, 0.0, 0.1);
-    //glClear(GL_COLOR_BUFFER_BIT);
-
-//    Buffer buffer = getOutputBuffer();
-//    sutil::displayBufferGL( getOutputBuffer() );
+    glViewport(0, 0, width, height);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+//    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
+//    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+//    display();
 //
-//    {
-//        static unsigned frame_count = 0;
-//        sutil::displayFps( frame_count++ );
-//    }
-//#endif
+//    glClearColor(1.0f, 1.0f, 0.0f, 0.0f);
+//    glBindFramebuffer(GL_DRAW_BUFFER, 0);
+//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    displayOnce();
+    drawAux();
+
+#ifdef ar
+    updateCamera();
+
+    context->launch( 0, width, height );
 
 
-    #define checkImageWidth 960
-    #define checkImageHeight 720
-    GLubyte checkImage[checkImageHeight][checkImageWidth][4];
-//    GLubyte pixel[4];
-//    GLubyte pixel_a[4];
-//
-    int i, j, x_r, y_r;
-//    bool raster = false;
-//
-//    glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
-    for (i = 0; i < checkImageHeight; i++) {
-        for (j = 0; j < checkImageWidth; j++) {
-//            glReadPixels(j, i, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, &pixel);
-//            //printf("%d %d: %u %u %u %u\n", j, i, pixel[0], pixel[1], pixel[2], pixel[3]);
-//            if(pixel[0] != 255 && pixel[1] != 255){
-//                if(!raster){
-//                    x_r = j;
-//                    y_r = i;
-//                }
-//                checkImage[i][j][0] = pixel[0];
-//                checkImage[i][j][1] = pixel[1];
-//                checkImage[i][j][2] = pixel[2];
-//                checkImage[i][j][2] = 255;
-//                printf("%d %d: %u %u %u %u\n", j, i, pixel[0], pixel[1], pixel[2], pixel[3]);
-//                raster = true;
-//            } else{
-                checkImage[i][j][0] = 255;
-                checkImage[i][j][1] = 0;
-                checkImage[i][j][2] = 0;
-                checkImage[i][j][2] = 100;
-//            }
-        }
+    Buffer buffer = getOutputBuffer();
+    sutil::displayBufferGL( getOutputBuffer() );
+
+    {
+        static unsigned frame_count = 0;
+        sutil::displayFps( frame_count++ );
     }
-    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, framebuffer);
-    glClear(GL_COLOR_BUFFER_BIT);
-    glRasterPos2i(0,0);
-    glDrawPixels(checkImageWidth, checkImageHeight, GL_RGBA, GL_UNSIGNED_BYTE, &checkImage);
-
-    glBindFramebuffer(GL_READ_FRAMEBUFFER, framebuffer);
-    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
-    //glClear(GL_COLOR_BUFFER_BIT);
-    glBlitFramebuffer(0, 0, checkImageWidth, checkImageHeight, 0, 0, checkImageWidth, checkImageHeight, GL_COLOR_BUFFER_BIT, GL_LINEAR);
+#endif
+//    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
+//    glBindFramebuffer(GL_DRAW_BUFFER, 0);
+//    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_LINEAR);
 
     glutSwapBuffers();
 }
@@ -640,7 +606,7 @@ static void init(){
     reshape(w, h);
 
     glEnable(GL_BLEND);
-    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     glGenFramebuffers(1, &framebuffer);
     glBindFramebuffer(GL_DRAW_FRAMEBUFFER, framebuffer);
@@ -654,9 +620,7 @@ static void init(){
     if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
         std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
 
-    //glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-
-    //glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
     // Initialise the ARController.
     arController = new ARController();
@@ -737,14 +701,109 @@ static void displayOnce(void)
                 }
                 contextWasUpdated = false;
             }
-//#ifndef ar
-            // Clear the context.
+#ifndef ar
+            //Clear the context.
             //glClearColor(0.0, 0.0, 0.0, 1.0);
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-            // Display the current video frame to the current OpenGL context.
-            //arController->drawVideo(0);
+            //Display the current video frame to the current OpenGL context.
+            arController->drawVideo(0);
             //ARLOGi("Passou no drawVideo. \n");
+#endif
+
+            // Look for trackables, and draw on each found one.
+            for (int i = 0; i < markerCount; i++) {
+
+                // Find the trackable for the given trackable ID.
+                ARTrackable *marker = arController->findTrackable(markerIDs[i]);
+                float view[16];
+                if (marker->visible) {
+                    //arUtilPrintMtx16(marker->transformationMatrix);
+                    //ARLOGi("\n \n");
+                    for (int i = 0; i < 16; i++){
+                        view[i] = (float) marker->transformationMatrix[i];
+                        mView[i] = view[i];
+                        //ARLOGi("View %d: %0.3f  \n", i, view[i]);
+                    }
+                }
+                //Linearização por coluna
+                //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
+                //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
+                if(gluInvertMatrix(view)){
+                    //for (int i = 0; i < 16; i++){
+                    //ARLOGi("Inv %d: %.3f  \n", i, invOut[i]);
+                    //}
+                    sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
+                }
+                //ARLOGi("%s", str);
+                drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
+                showString( str );
+            }
+#ifndef ar
+            glEnable(GL_DEPTH_TEST);
+            //drawAux();
+            draw();
+
+
+#endif
+            glutSwapBuffers();
+            done = true;
+        }
+    }
+}
+
+
+static void display(void)
+{
+
+    // Main loop.
+    bool done = false;
+    while (!done) {
+        bool gotFrame = arController->capture();
+        if (!gotFrame) {
+            arUtilSleep(1);
+        } else {
+            //ARLOGi("Got frame %ld.\n", gFrameNo);
+            gFrameNo++;
+
+            if (!arController->update()) {
+                ARLOGe("Error in ARController::update().\n");
+                quit(-1);
+            }
+
+            if (contextWasUpdated) {
+                if (!arController->drawVideoInit(0)) {
+                    ARLOGe("Error in ARController::drawVideoInit().\n");
+                    quit(-1);
+                }
+                if (!arController->drawVideoSettings(0, contextWidth, contextHeight, false, false, false,
+                                                     ARVideoView::HorizontalAlignment::H_ALIGN_CENTRE,
+                                                     ARVideoView::VerticalAlignment::V_ALIGN_CENTRE,
+                                                     ARVideoView::ScalingMode::SCALE_MODE_FIT, viewport)) {
+                    ARLOGe("Error in ARController::drawVideoSettings().\n");
+                    quit(-1);
+                }
+                drawSetup(drawAPI, false, false, false);
+                //ARLOGd("Viewport: %d %d %d %d", viewport[0], viewport[1], viewport[2], viewport[3]);
+                drawSetViewport(viewport);
+                ARdouble projectionARD[16];
+                arController->projectionMatrix(0, 0.1f, 10000.0f, projectionARD);
+                for (int i = 0; i < 16; i++) projection[i] = (float) projectionARD[i];
+                drawSetCamera(projection, NULL);
+
+                for (int i = 0; i < markerCount; i++) {
+                    markerModelIDs[i] = drawLoadModel(NULL);
+                }
+                contextWasUpdated = false;
+            }
+//#ifndef ar
+//            //Clear the context.
+//            glClearColor(0.0, 0.0, 0.0, 1.0);
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+//
+//            //Display the current video frame to the current OpenGL context.
+//            arController->drawVideo(0);
+//            ARLOGi("Passou no drawVideo. \n");
 //#endif
 
             // Look for trackables, and draw on each found one.
@@ -775,15 +834,14 @@ static void displayOnce(void)
                 drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
                 showString( str );
             }
-//#ifndef ar
-            draw();
-//#endif
+#ifndef ar
+            drawAux();
+#endif
             glutSwapBuffers();
             done = true;
         }
     }
 }
-
 
 void showString(std::string str){
     int   i;
@@ -1038,7 +1096,7 @@ int main( int argc, char** argv )
         glewInit();
 #endif
         init();
-        displayOnce();
+        //displayOnce();
 
         // load the ptx source associated with tutorial number
         std::stringstream ss;
@@ -1062,7 +1120,7 @@ int main( int argc, char** argv )
             updateCamera();
             context->launch( 0, width, height );
             sutil::displayBufferPPM( out_file.c_str(), getOutputBuffer() );
-            showString(str);
+            //showString(str);
             destroyContext();
         }
         return 0;
