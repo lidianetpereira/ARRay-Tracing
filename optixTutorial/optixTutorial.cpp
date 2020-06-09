@@ -471,19 +471,13 @@ void glutRun()
 
 void glutDisplay()
 {
-
-    glViewport(0, 0, width, height);
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-//    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
-//    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-//    display();
-//
-//    glClearColor(1.0f, 1.0f, 0.0f, 0.0f);
-//    glBindFramebuffer(GL_DRAW_BUFFER, 0);
-//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
+
+    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
     drawAux();
 
 #ifdef ar
@@ -500,9 +494,9 @@ void glutDisplay()
         sutil::displayFps( frame_count++ );
     }
 #endif
-//    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
-//    glBindFramebuffer(GL_DRAW_BUFFER, 0);
-//    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_LINEAR);
+    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
+    glBindFramebuffer(GL_DRAW_BUFFER, 0);
+    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_LINEAR);
 
     glutSwapBuffers();
 }
@@ -741,10 +735,8 @@ static void displayOnce(void)
             }
 #ifndef ar
             glEnable(GL_DEPTH_TEST);
-            //drawAux();
             draw();
-
-
+            drawAux();
 #endif
             glutSwapBuffers();
             done = true;
