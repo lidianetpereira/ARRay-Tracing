@@ -54,6 +54,10 @@ enum {
     UNIFORM_MVP_MATRIX_GENERIC,
     UNIFORM_COUNT_GENERIC
 };
+enum {
+    UNIFORM_MVP_MATRIX_TEX,
+    UNIFORM_COUNT_TEX
+};
 // Indices of of GL program attributes.
 enum {
     ATTRIBUTE_VERTEX,
@@ -65,10 +69,16 @@ enum{
     ATTRIBUTE_VERTEX_GENERIC,
     ATTRIBUTE_COLOUR_GENERIC
 };
+enum{
+    ATTRIBUTE_VERTEX_TEX,
+    ATTRIBUTE_TEXTURE_TEX
+};
 static GLint uniforms[UNIFORM_COUNT] = {0};
 static GLint uniformsGeneric[UNIFORM_COUNT_GENERIC] = {0};
+static GLint uniformsTex[UNIFORM_COUNT_TEX] = {0};
 static GLuint program = 0;
 static GLuint programGeneric = 0;
+static GLuint programTex = 0;
 
 #if HAVE_GL3
 static GLuint gCubeVAOs[2] = {0};
@@ -89,8 +99,10 @@ static bool flipV = false;
 static int32_t gViewport[4] = {0};
 static float gProjection[16];
 static float gProjectionGeneric[16];
+static float gProjectionTex[16];
 static float gView[16];
 static float gViewGeneric[16];
+static float gViewTex[16];
 static bool gModelLoaded[DRAW_MODELS_MAX] = {false};
 static float gModelPoses[DRAW_MODELS_MAX][16];
 static float gCameraPoses[DRAW_MODELS_MAX][16];
@@ -647,3 +659,155 @@ static void drawAxis(float viewProjection[16], float pose[16])
 #endif // HAVE_GLES2 || HAVE_GL3
 }
 
+void drawTexConfig(GLuint texture)
+{
+    float viewProjection[16];
+
+    if (!programTex) {
+        GLuint vertShader = 0, fragShader = 0;
+        // A simple shader pair which accepts just a vertex position and colour, no lighting.
+        const char vertShaderStringGL3[] =
+                "#version 150\n"
+                "in vec4 vert;\n"
+                "in vec2 vertTexCoord;\n"
+                "uniform mat4 modelViewProjectionMatrix;\n"
+                "out vec2 fragTexCoord;\n"
+                "void main()\n"
+                "{\n"
+                "fragTexCoord = vertTexCoord;\n"
+                "gl_Position = modelViewProjectionMatrix * vert;\n"
+                "}\n";
+        const char fragShaderStringGL3[] =
+                "#version 150\n"
+                "uniform sampler2D tex;\n"
+                "in vec2 fragTexCoord;\n"
+                "out vec4 finalColor;\n"
+                "void main()\n"
+                "{\n"
+                "finalColor = texture(tex, fragTexCoord);\n"
+                "}\n";
+        if (programTex) arglGLDestroyShaders(0, 0, programTex);
+        programTex = glCreateProgram();
+        if (!programTex) {
+            ARLOGe("draw: Error creating shader program.\n");
+            return;
+        }
+
+        if (!arglGLCompileShaderFromString(&vertShader, GL_VERTEX_SHADER, vertShaderStringGL3)) {
+            ARLOGe("draw: Error compiling vertex shader.\n");
+            arglGLDestroyShaders(vertShader, fragShader, programTex);
+            programTex = 0;
+            return;
+        }
+        if (!arglGLCompileShaderFromString(&fragShader, GL_FRAGMENT_SHADER, fragShaderStringGL3)) {
+            ARLOGe("draw: Error compiling fragment shader.\n");
+            arglGLDestroyShaders(vertShader, fragShader, programTex);
+            programTex = 0;
+            return;
+        }
+        glAttachShader(programTex, vertShader);
+        glAttachShader(programTex, fragShader);
+
+        glBindAttribLocation(programTex, ATTRIBUTE_VERTEX_TEX, "vert");
+        glBindAttribLocation(programTex, ATTRIBUTE_TEXTURE_TEX, "vertTexCoord");
+        if (!arglGLLinkProgram(programTex)) {
+            ARLOGe("draw: Error linking shader program.\n");
+            arglGLDestroyShaders(vertShader, fragShader, programTex);
+            programTex = 0;
+            return;
+        }
+        arglGLDestroyShaders(vertShader, fragShader, 0); // After linking, shader objects can be deleted.
+
+        // Retrieve linked uniform locations.
+        uniformsTex[UNIFORM_MVP_MATRIX_TEX] = glGetUniformLocation(programTex, "modelViewProjectionMatrix");
+        glProgramUniform1i(programTex, glGetUniformLocation(programTex, "tex"), 0);
+
+    }
+    glUseProgram(programTex);
+
+    mtxLoadIdentityf(gProjectionTex);
+    mtxLoadIdentityf(gViewTex);
+
+    mtxLoadMatrixf(viewProjection, gProjectionTex);
+    mtxMultMatrixf(viewProjection, gViewTex);
+
+    drawTex(viewProjection, texture);
+}
+
+void drawTex(float viewProjection[16], GLuint texture) {
+
+    float modelViewProjection[16];
+
+    mtxLoadMatrixf(modelViewProjection, viewProjection);
+    glUniformMatrix4fv(glGetUniformLocation(programTex, "modelViewProjectionMatrix"), 1, GL_FALSE, modelViewProjection);
+
+//    // set up vertex data (and buffer(s)) and configure vertex attributes
+//    // ------------------------------------------------------------------
+//    float vertices[] = {
+//            // positions         // colors
+//            0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f, 0.3, // bottom right
+//            -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f, 0.3,  // bottom left
+//            0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f, 0.3   // top
+//
+//    };
+
+//    float vertices[] = {
+//            // positions          // texture coords
+//            -1.1f, -1.1f, 0.0f,   0.0f, 0.0f,   // bottom left
+//            1.0f, -1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
+//            1.0f,  1.0f, 0.0f,   1.0f, 1.0f,   // top right
+//            -1.0f,  1.0f, 0.0f,   0.0f, 1.0f    // top left
+//    };
+
+    float vertices[] = {
+            // positions          // texture coords
+            1.0f,  1.0f, 0.0f,   1.0f, 1.0f,   // top right
+            1.0f, -1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
+            -1.1f, -1.1f, 0.0f,   0.0f, 0.0f,   // bottom left
+            -1.0f,  1.0f, 0.0f,   0.0f, 1.0f    // top left
+    };
+
+//    float vertices[] = {
+//            // positions          // texture coords
+//            0.5f,  0.5f, 0.0f,   1.0f, 1.0f,   // top right
+//            0.5f, -0.5f, 0.0f,   1.0f, 0.0f,   // bottom right
+//            -0.5f, -0.5f, 0.0f,   0.0f, 0.0f,   // bottom left
+//            -0.5f,  0.5f, 0.0f,   0.0f, 1.0f    // top left
+//    };
+    unsigned int indices[] = {
+            0, 1, 3, // first triangle
+            1, 2, 3  // second triangle
+    };
+//    unsigned int indices[] = {
+//            2, 1, 3, // first triangle
+//            1, 0, 3  // second triangle
+//    };
+    unsigned int VBO, VAO, EBO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    glGenBuffers(1, &EBO);
+
+    glBindVertexArray(VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+    // position attribute
+    glVertexAttribPointer(ATTRIBUTE_VERTEX_TEX, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(ATTRIBUTE_VERTEX_TEX);
+    // color attribute
+    glVertexAttribPointer(ATTRIBUTE_TEXTURE_TEX, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(ATTRIBUTE_TEXTURE_TEX);
+
+    // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
+    // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
+    // glBindVertexArray(0);
+
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glBindVertexArray(VAO);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+}

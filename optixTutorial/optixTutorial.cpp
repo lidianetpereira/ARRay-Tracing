@@ -87,7 +87,7 @@
 #include "draw.h"
 
 
-//#define ar 1
+#define ar 1
 
 using namespace optix;
 
@@ -107,6 +107,21 @@ bool         use_pbo = true;
 std::string  texture_path;
 const char*  tutorial_ptx;
 int          tutorial_number = 3;
+
+bool   m_interop;
+GLuint m_pbo;
+GLuint m_tex = 0;
+
+Context m_context;
+Buffer m_buffer;
+
+// Viewport size
+int m_width = 960;
+int m_height = 720;
+
+// OptiX launch size
+unsigned int m_widthLaunch = 960u;
+unsigned int m_heightLaunch = 720u;
 
 // Camera state
 float3       camera_up;
@@ -237,17 +252,24 @@ void createContext()
     context["importance_cutoff"]->setFloat( 0.01f );
     context["ambient_light_color"]->setFloat( 0.31f, 0.33f, 0.28f );
 
-    // Output buffer
-    // First allocate the memory for the GL buffer, then attach it to OptiX.
-    GLuint vbo = 0;
-    glGenBuffers( 1, &vbo );
-    glBindBuffer( GL_ARRAY_BUFFER, vbo );
-    glBufferData( GL_ARRAY_BUFFER, 4 * width * height, 0, GL_STREAM_DRAW);
-    glBindBuffer( GL_ARRAY_BUFFER, 0 );
+//    // Output buffer
+//    // First allocate the memory for the GL buffer, then attach it to OptiX.
+//    GLuint vbo = 0;
+//    glGenBuffers( 1, &vbo );
+//    glBindBuffer( GL_ARRAY_BUFFER, vbo );
+//    glBufferData( GL_ARRAY_BUFFER, 4 * width * height, 0, GL_STREAM_DRAW);
+//    glBindBuffer( GL_ARRAY_BUFFER, 0 );
+//
+//    //printf("Buffer Optix: W: %d H: %d \n", width, height);
+//    Buffer buffer = sutil::createOutputBuffer( context, RT_FORMAT_UNSIGNED_BYTE4, width, height, use_pbo );
+//    context["output_buffer"]->set( buffer );
 
-    //printf("Buffer Optix: W: %d H: %d \n", width, height);
-    Buffer buffer = sutil::createOutputBuffer( context, RT_FORMAT_UNSIGNED_BYTE4, width, height, use_pbo );
-    context["output_buffer"]->set( buffer );
+    // OptiX buffer initialization:
+    m_buffer = (m_interop) ? context->createBufferFromGLBO(RT_BUFFER_OUTPUT, m_pbo)
+                           : context->createBuffer(RT_BUFFER_OUTPUT);
+    m_buffer->setFormat(RT_FORMAT_UNSIGNED_BYTE4); // BGRA8
+    m_buffer->setSize(m_widthLaunch, m_heightLaunch);
+    context["output_buffer"]->set(m_buffer);
 
     // Ray generation program
     const std::string camera_name = "pinhole_camera";
@@ -279,17 +301,14 @@ void createGeometry()
     box->setPrimitiveCount( 1u );
     box->setBoundingBoxProgram( box_bounds );
     box->setIntersectionProgram( box_intersect );
-    box["boxmin"]->setFloat( -2.0f, 0.0f, -2.0f );
-    box["boxmax"]->setFloat(  2.0f, 7.0f,  2.0f );
 
-//    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
-//    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
-#if ar
-//    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
-//    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
-    box["boxmin"]->setFloat( -2.0f, 0.0f ,-0.5f);
-    box["boxmax"]->setFloat(  2.0f, 3.0f, 0.5f);
-#endif
+    //Original
+    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
+    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
+
+//    //Tranformadas
+//    box["boxmin"]->setFloat( -2.0f, 0.0f, -0.5f );
+//    box["boxmax"]->setFloat(  2.0f, 3.0f,  0.5f );
 
     // Materials
     std::string box_chname;
@@ -327,22 +346,22 @@ void createGeometry()
 
 void setupCamera()
 {
-    camera_eye    = make_float3( 0.0f, 0.0f, 0.0f );
-    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
-    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
-
-//    camera_eye    = make_float3( 0.0f, 10.0f, -5.0f );
+//    camera_eye    = make_float3( 10.0f, 0.0f, -15.0f );
 //    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
 //    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
+
+    camera_eye    = make_float3( 0.0f, 10.0f, -5.0f );
+    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
+    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 
     camera_rotate  = Matrix4x4::identity();
 
 #ifdef ar
-//    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
-//    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
-//    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
-//
-//    camera_rotate = Matrix4x4(invOut);
+    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
+    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
+    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
+
+    camera_rotate = Matrix4x4(invOut);
     float divisor = 40.0f;
 
     camera_eye    = make_float3( -invOut[12]/divisor, invOut[14]/divisor, invOut[13]/divisor);
@@ -357,17 +376,17 @@ void setupCamera()
 void setupLights()
 {
 
-#ifndef ar
+//#ifndef ar
     BasicLight lights[] = {
         { make_float3( -5.0f, 10.0f, -16.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
     };
-#endif
+//#endif
 
-#ifdef ar
-    BasicLight lights[] = {
-            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
-    };
-#endif
+//#ifdef ar
+//    BasicLight lights[] = {
+//            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+//    };
+//#endif
 
     Buffer light_buffer = context->createBuffer( RT_BUFFER_INPUT );
     light_buffer->setFormat( RT_FORMAT_USER );
@@ -437,16 +456,47 @@ void glutRun()
     // Initialize GL state
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0, 1, 0, 1, -1, 1 );
+    glOrtho(0, 1, 0, 1, -1, 1);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
     glViewport(0, 0, width, height);
-//    glViewport(viewport[0], viewport[1], viewport[2], viewport[3]);
+
+    if (m_interop)
+    {
+        glGenBuffers(1, &m_pbo);
+        if(m_pbo != 0){ // Buffer size must be > 0 or OptiX can't create a buffer from it.
+            glBindBuffer(GL_PIXEL_UNPACK_BUFFER, m_pbo);
+            glBufferData(GL_PIXEL_UNPACK_BUFFER, m_width * m_height * sizeof(unsigned char) * 4, nullptr, GL_STREAM_READ); // BRGA8
+            glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
+        }else{
+            ARLOGe("m_pbo tem tamanho zero");
+        }
+    }
+
+    // glPixelStorei(GL_UNPACK_ALIGNMENT, 4); // default, works for BGRA8, RGBA16F, and RGBA32F.
+
+    glGenTextures(1, &m_tex);
+    if(m_tex != 0){
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, m_tex);
+
+        // Change these to GL_LINEAR for super- or sub-sampling
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
+        // GL_CLAMP_TO_EDGE for linear filtering, not relevant for nearest.
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glBindTexture(GL_TEXTURE_2D, 0);
+
+        //glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+    }else{
+        ARLOGe("m_tex tem tamanho zero");
+    }
 
     glutShowWindow();
-//    glutReshapeWindow( viewport[2], viewport[3]);
     glutReshapeWindow(width, height);
 
     // register glut callbacks
@@ -473,27 +523,78 @@ void glutDisplay()
 {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    //glEnable(GL_DEPTH_TEST);
 
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
+//    glBegin(GL_TRIANGLES);
+//    glColor4f (1.0, 0.0, 0.0, 0.5);
+//    glVertex2f ( 0.0,  0.5);
+//    glColor4f (1.0, 1.0, 1.0, 0.5);
+//    glVertex2f (-0.5, -0.5);
+//    glVertex2f ( 0.5, -0.5);
+//    glEnd();
 
     glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
-    drawAux();
 
-#ifdef ar
+//#ifdef ar
     updateCamera();
 
     context->launch( 0, width, height );
 
+    // Update the OpenGL texture with the results:
+    if (m_interop)
+    {
+        glBindTexture(GL_TEXTURE_2D, m_tex);
+        glBindBuffer(GL_PIXEL_UNPACK_BUFFER, m_buffer->getGLBOId());
 
-    Buffer buffer = getOutputBuffer();
-    sutil::displayBufferGL( getOutputBuffer() );
+        RTsize elmt_size = m_buffer->getElementSize();
+        if      ( elmt_size % 8 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 8);
+        else if ( elmt_size % 4 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+        else if ( elmt_size % 2 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 2);
+        else                          glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) m_widthLaunch, (GLsizei) m_heightLaunch, 0, GL_BGRA, GL_UNSIGNED_BYTE, nullptr); // BGRA8
+        glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
+    }
+    else
+    {
+        void const* data = m_buffer->map();
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, m_tex);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) m_widthLaunch, (GLsizei) m_heightLaunch, 0, GL_BGRA, GL_UNSIGNED_BYTE, data); // BGRA8
+        m_buffer->unmap();
+    }
+
+    glActiveTexture(GL_TEXTURE0);
+    drawTexConfig(m_tex);
+
+//    glBindTexture(GL_TEXTURE_2D, m_tex);
+//
+//    glEnable(GL_TEXTURE_2D);
+//    glBegin(GL_QUADS);
+//    glTexCoord2f(0.0f, 0.0f); // Texture coordinates.
+//    glVertex2f(-1.0f, -1.0f);
+//    glTexCoord2f(1.0f, 0.0f);
+//    glVertex2f(1.0f, -1.0f);
+//    glTexCoord2f(1.0f, 1.0f);
+//    glVertex2f(1.0f, 1.0f);
+//    glTexCoord2f(0.0f, 1.0f);
+//    glVertex2f(-1.0f, 1.0f);
+//    glEnd();
+//    glDisable(GL_TEXTURE_2D);
+//
+//    glBindTexture(GL_TEXTURE_2D, 0);
+
+
+//    Buffer buffer = getOutputBuffer();
+//    sutil::displayBufferGL( getOutputBuffer() );
 
     {
         static unsigned frame_count = 0;
         sutil::displayFps( frame_count++ );
     }
-#endif
+//#endif
     glBindFramebuffer(GL_READ_BUFFER, framebuffer);
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_LINEAR);
@@ -695,7 +796,7 @@ static void displayOnce(void)
                 }
                 contextWasUpdated = false;
             }
-#ifndef ar
+//#ifndef ar
             //Clear the context.
             //glClearColor(0.0, 0.0, 0.0, 1.0);
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -703,7 +804,7 @@ static void displayOnce(void)
             //Display the current video frame to the current OpenGL context.
             arController->drawVideo(0);
             //ARLOGi("Passou no drawVideo. \n");
-#endif
+//#endif
 
             // Look for trackables, and draw on each found one.
             for (int i = 0; i < markerCount; i++) {
@@ -734,11 +835,9 @@ static void displayOnce(void)
                 showString( str );
             }
 #ifndef ar
-            glEnable(GL_DEPTH_TEST);
+            //glEnable(GL_DEPTH_TEST);
             draw();
-            drawAux();
 #endif
-            glutSwapBuffers();
             done = true;
         }
     }

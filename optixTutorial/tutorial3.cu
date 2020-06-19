@@ -62,12 +62,12 @@ RT_PROGRAM void pinhole_camera()
   optix::Ray ray(ray_origin, ray_direction, RADIANCE_RAY_TYPE, scene_epsilon );
 
   PerRayData_radiance prd;
-  prd.importance = 1.f;
+  prd.importance = 1.0f;
   prd.depth = 0;
 
   rtTrace(top_object, ray, prd);
 
-  output_buffer[launch_index] = make_color( prd.result );
+  output_buffer[launch_index] = make_color( prd.result, prd.importance);
 }
 
 
@@ -151,5 +151,5 @@ RT_PROGRAM void closest_hit_radiance3()
 //
 RT_PROGRAM void exception()
 {
-  output_buffer[launch_index] = make_color( bad_color );
+  output_buffer[launch_index] = make_color( bad_color, 0.0f);
 }

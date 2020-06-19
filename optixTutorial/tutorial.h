@@ -58,12 +58,12 @@ static __device__ __inline__ float3 schlick( float nDi, const float3& rgb )
   return make_float3(r, g, b);
 }
 
-static __device__ __inline__ uchar4 make_color(const float3& c)
+static __device__ __inline__ uchar4 make_color(const float3& c, float alpha)
 {
     return make_uchar4( static_cast<unsigned char>(__saturatef(c.z)*255.99f),  /* B */
                         static_cast<unsigned char>(__saturatef(c.y)*255.99f),  /* G */
                         static_cast<unsigned char>(__saturatef(c.x)*255.99f),  /* R */
-                        255u);                                                 /* A */
+                        alpha*255u);                                                 /* A */
 }
 
 struct PerRayData_radiance
