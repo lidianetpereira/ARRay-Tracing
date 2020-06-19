@@ -663,6 +663,9 @@ void drawTexConfig(GLuint texture)
 {
     float viewProjection[16];
 
+    glBindTexture(GL_TEXTURE_2D, texture);
+    //glViewport(gViewport[0], gViewport[1], gViewport[2], gViewport[3]);
+
     if (!programTex) {
         GLuint vertShader = 0, fragShader = 0;
         // A simple shader pair which accepts just a vertex position and colour, no lighting.
@@ -674,8 +677,8 @@ void drawTexConfig(GLuint texture)
                 "out vec2 fragTexCoord;\n"
                 "void main()\n"
                 "{\n"
-                "fragTexCoord = vertTexCoord;\n"
                 "gl_Position = modelViewProjectionMatrix * vert;\n"
+                "fragTexCoord = vertTexCoord;\n"
                 "}\n";
         const char fragShaderStringGL3[] =
                 "#version 150\n"
@@ -686,6 +689,7 @@ void drawTexConfig(GLuint texture)
                 "{\n"
                 "finalColor = texture(tex, fragTexCoord);\n"
                 "}\n";
+
         if (programTex) arglGLDestroyShaders(0, 0, programTex);
         programTex = glCreateProgram();
         if (!programTex) {
@@ -719,8 +723,7 @@ void drawTexConfig(GLuint texture)
         arglGLDestroyShaders(vertShader, fragShader, 0); // After linking, shader objects can be deleted.
 
         // Retrieve linked uniform locations.
-        uniformsTex[UNIFORM_MVP_MATRIX_TEX] = glGetUniformLocation(programTex, "modelViewProjectionMatrix");
-        glProgramUniform1i(programTex, glGetUniformLocation(programTex, "tex"), 0);
+        glUniform1i(glGetUniformLocation(programTex, "tex"), 0);
 
     }
     glUseProgram(programTex);
@@ -741,24 +744,6 @@ void drawTex(float viewProjection[16], GLuint texture) {
     mtxLoadMatrixf(modelViewProjection, viewProjection);
     glUniformMatrix4fv(glGetUniformLocation(programTex, "modelViewProjectionMatrix"), 1, GL_FALSE, modelViewProjection);
 
-//    // set up vertex data (and buffer(s)) and configure vertex attributes
-//    // ------------------------------------------------------------------
-//    float vertices[] = {
-//            // positions         // colors
-//            0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f, 0.3, // bottom right
-//            -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f, 0.3,  // bottom left
-//            0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f, 0.3   // top
-//
-//    };
-
-//    float vertices[] = {
-//            // positions          // texture coords
-//            -1.1f, -1.1f, 0.0f,   0.0f, 0.0f,   // bottom left
-//            1.0f, -1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
-//            1.0f,  1.0f, 0.0f,   1.0f, 1.0f,   // top right
-//            -1.0f,  1.0f, 0.0f,   0.0f, 1.0f    // top left
-//    };
-
     float vertices[] = {
             // positions          // texture coords
             1.0f,  1.0f, 0.0f,   1.0f, 1.0f,   // top right
@@ -769,25 +754,25 @@ void drawTex(float viewProjection[16], GLuint texture) {
 
 //    float vertices[] = {
 //            // positions          // texture coords
-//            0.5f,  0.5f, 0.0f,   1.0f, 1.0f,   // top right
-//            0.5f, -0.5f, 0.0f,   1.0f, 0.0f,   // bottom right
-//            -0.5f, -0.5f, 0.0f,   0.0f, 0.0f,   // bottom left
-//            -0.5f,  0.5f, 0.0f,   0.0f, 1.0f    // top left
+//            1.0f,  1.0f, 0.0f,   1.0f, 1.0f,   // top right
+//            1.0f, -1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
+//            -1.0f,  1.0f, 0.0f,   0.0f, 1.0f,    // top left
+//
+//            1.0f, -1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
+//            -1.1f, -1.1f, 0.0f,   0.0f, 0.0f,   // bottom left
+//            -1.0f,  1.0f, 0.0f,   0.0f, 1.0f    // top left
 //    };
+
     unsigned int indices[] = {
             0, 1, 3, // first triangle
             1, 2, 3  // second triangle
     };
-//    unsigned int indices[] = {
-//            2, 1, 3, // first triangle
-//            1, 0, 3  // second triangle
-//    };
     unsigned int VBO, VAO, EBO;
-    glGenVertexArrays(1, &VAO);
+    //glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
 
-    glBindVertexArray(VAO);
+    //glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
@@ -807,7 +792,9 @@ void drawTex(float viewProjection[16], GLuint texture) {
     // glBindVertexArray(0);
 
     glBindTexture(GL_TEXTURE_2D, texture);
-    glBindVertexArray(VAO);
+    //glBindVertexArray(VAO);
+
+    //glDrawArrays(GL_TRIANGLES, 0, 6);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 }

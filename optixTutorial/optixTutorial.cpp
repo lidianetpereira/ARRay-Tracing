@@ -110,7 +110,7 @@ int          tutorial_number = 3;
 
 bool   m_interop;
 GLuint m_pbo;
-GLuint m_tex = 0;
+GLuint m_tex;
 
 Context m_context;
 Buffer m_buffer;
@@ -302,13 +302,13 @@ void createGeometry()
     box->setBoundingBoxProgram( box_bounds );
     box->setIntersectionProgram( box_intersect );
 
-    //Original
-    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
-    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
+//    //Original
+//    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
+//    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
 
-//    //Tranformadas
-//    box["boxmin"]->setFloat( -2.0f, 0.0f, -0.5f );
-//    box["boxmax"]->setFloat(  2.0f, 3.0f,  0.5f );
+    //Tranformadas
+    box["boxmin"]->setFloat( -2.0f, 0.0f, -0.5f );
+    box["boxmax"]->setFloat(  2.0f, 3.0f,  0.5f );
 
     // Materials
     std::string box_chname;
@@ -350,18 +350,18 @@ void setupCamera()
 //    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
 //    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 
-    camera_eye    = make_float3( 0.0f, 10.0f, -5.0f );
+    camera_eye    = make_float3( 0.0f, 0.0f, 0.0f );
     camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
     camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 
     camera_rotate  = Matrix4x4::identity();
 
 #ifdef ar
-    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
-    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
-    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
-
-    camera_rotate = Matrix4x4(invOut);
+//    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
+//    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
+//    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
+//
+//    camera_rotate = Matrix4x4(invOut);
     float divisor = 40.0f;
 
     camera_eye    = make_float3( -invOut[12]/divisor, invOut[14]/divisor, invOut[13]/divisor);
@@ -454,14 +454,14 @@ void glutRun()
 {
     glutSetWindow(optixWindow);
     // Initialize GL state
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glOrtho(0, 1, 0, 1, -1, 1);
-
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-
-    glViewport(0, 0, width, height);
+//    glMatrixMode(GL_PROJECTION);
+//    glLoadIdentity();
+//    glOrtho(-1, 1, -1, 1, -1, 1);
+//
+//    glMatrixMode(GL_MODELVIEW);
+//    glLoadIdentity();
+//
+//    glViewport(0, 0, width, height);
 
     if (m_interop)
     {
@@ -479,7 +479,7 @@ void glutRun()
 
     glGenTextures(1, &m_tex);
     if(m_tex != 0){
-        glActiveTexture(GL_TEXTURE0);
+        glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, m_tex);
 
         // Change these to GL_LINEAR for super- or sub-sampling
@@ -489,9 +489,8 @@ void glutRun()
         // GL_CLAMP_TO_EDGE for linear filtering, not relevant for nearest.
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        glBindTexture(GL_TEXTURE_2D, 0);
 
-        //glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+        glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND);
     }else{
         ARLOGe("m_tex tem tamanho zero");
     }
@@ -527,15 +526,8 @@ void glutDisplay()
 
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
-//    glBegin(GL_TRIANGLES);
-//    glColor4f (1.0, 0.0, 0.0, 0.5);
-//    glVertex2f ( 0.0,  0.5);
-//    glColor4f (1.0, 1.0, 1.0, 0.5);
-//    glVertex2f (-0.5, -0.5);
-//    glVertex2f ( 0.5, -0.5);
-//    glEnd();
-
-    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
+    //drawAux();
+    //glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
 
 //#ifdef ar
     updateCamera();
@@ -545,6 +537,7 @@ void glutDisplay()
     // Update the OpenGL texture with the results:
     if (m_interop)
     {
+        glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, m_tex);
         glBindBuffer(GL_PIXEL_UNPACK_BUFFER, m_buffer->getGLBOId());
 
@@ -554,38 +547,44 @@ void glutDisplay()
         else if ( elmt_size % 2 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 2);
         else                          glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) m_widthLaunch, (GLsizei) m_heightLaunch, 0, GL_BGRA, GL_UNSIGNED_BYTE, nullptr); // BGRA8
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, m_width, m_height, 0, GL_BGRA, GL_UNSIGNED_BYTE, nullptr); // BGRA8
         glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
     }
     else
     {
         void const* data = m_buffer->map();
-        glActiveTexture(GL_TEXTURE0);
+        glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, m_tex);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) m_widthLaunch, (GLsizei) m_heightLaunch, 0, GL_BGRA, GL_UNSIGNED_BYTE, data); // BGRA8
         m_buffer->unmap();
     }
 
-    glActiveTexture(GL_TEXTURE0);
-    drawTexConfig(m_tex);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, m_tex);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 
-//    glBindTexture(GL_TEXTURE_2D, m_tex);
-//
-//    glEnable(GL_TEXTURE_2D);
-//    glBegin(GL_QUADS);
-//    glTexCoord2f(0.0f, 0.0f); // Texture coordinates.
-//    glVertex2f(-1.0f, -1.0f);
-//    glTexCoord2f(1.0f, 0.0f);
-//    glVertex2f(1.0f, -1.0f);
-//    glTexCoord2f(1.0f, 1.0f);
-//    glVertex2f(1.0f, 1.0f);
-//    glTexCoord2f(0.0f, 1.0f);
-//    glVertex2f(-1.0f, 1.0f);
-//    glEnd();
-//    glDisable(GL_TEXTURE_2D);
-//
-//    glBindTexture(GL_TEXTURE_2D, 0);
+    glEnable(GL_TEXTURE_2D);
+    glBegin(GL_QUADS);
+    glMultiTexCoord2f(GL_TEXTURE1, 0.0f, 0.0f); // Texture coordinates.
+    glVertex2f(-1.0f, -1.0f);
+    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 0.0f);
+    glVertex2f(1.0f, -1.0f);
+    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 1.0f);
+    glVertex2f(1.0f, 1.0f);
+    glMultiTexCoord2f(GL_TEXTURE1,0.0f, 1.0f);
+    glVertex2f(-1.0f, 1.0f);
+    glEnd();
 
+    //drawTexConfig(m_tex);
+    glDisable(GL_TEXTURE_2D);
+
+    glBegin(GL_TRIANGLES);
+    glColor4f (1.0, 0.0, 0.0, 0.5);
+    glVertex2f ( 0.0,  0.5);
+    glColor4f (1.0, 1.0, 1.0, 0.5);
+    glVertex2f (-0.5, -0.5);
+    glVertex2f ( 0.5, -0.5);
+    glEnd();
 
 //    Buffer buffer = getOutputBuffer();
 //    sutil::displayBufferGL( getOutputBuffer() );
@@ -595,9 +594,9 @@ void glutDisplay()
         sutil::displayFps( frame_count++ );
     }
 //#endif
-    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
-    glBindFramebuffer(GL_DRAW_BUFFER, 0);
-    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_LINEAR);
+//    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
+//    glBindFramebuffer(GL_DRAW_BUFFER, 0);
+//    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_LINEAR);
 
     glutSwapBuffers();
 }
@@ -890,7 +889,7 @@ static void display(void)
 //#ifndef ar
 //            //Clear the context.
 //            glClearColor(0.0, 0.0, 0.0, 1.0);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 //
 //            //Display the current video frame to the current OpenGL context.
 //            arController->drawVideo(0);
