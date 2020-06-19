@@ -39,6 +39,7 @@
 #include <ARX/AR/config.h>
 #include <ARX/ARG/arg.h>
 #include <stdint.h>
+#include <GL/gl.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -54,6 +55,8 @@ void drawCleanup();
 void drawTriangle(float viewProjection[16]);
 static void drawCubeTranslucent(float viewProjection[16], float pose[16]);
 void drawAux(void);
+void drawTexConfig(GLuint texture);
+void drawTex(float viewProjection[16], GLuint texture);
 
 #ifdef __cplusplus
 }
