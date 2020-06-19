@@ -479,7 +479,7 @@ void glutRun()
 
     glGenTextures(1, &m_tex);
     if(m_tex != 0){
-        glActiveTexture(GL_TEXTURE1);
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, m_tex);
 
         // Change these to GL_LINEAR for super- or sub-sampling
@@ -490,7 +490,7 @@ void glutRun()
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
-        glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND);
+        //glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND);
     }else{
         ARLOGe("m_tex tem tamanho zero");
     }
@@ -537,7 +537,7 @@ void glutDisplay()
     // Update the OpenGL texture with the results:
     if (m_interop)
     {
-        glActiveTexture(GL_TEXTURE1);
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, m_tex);
         glBindBuffer(GL_PIXEL_UNPACK_BUFFER, m_buffer->getGLBOId());
 
@@ -553,38 +553,38 @@ void glutDisplay()
     else
     {
         void const* data = m_buffer->map();
-        glActiveTexture(GL_TEXTURE1);
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, m_tex);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) m_widthLaunch, (GLsizei) m_heightLaunch, 0, GL_BGRA, GL_UNSIGNED_BYTE, data); // BGRA8
         m_buffer->unmap();
     }
 
-    glActiveTexture(GL_TEXTURE1);
+    glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, m_tex);
-    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+    //glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 
     glEnable(GL_TEXTURE_2D);
-    glBegin(GL_QUADS);
-    glMultiTexCoord2f(GL_TEXTURE1, 0.0f, 0.0f); // Texture coordinates.
-    glVertex2f(-1.0f, -1.0f);
-    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 0.0f);
-    glVertex2f(1.0f, -1.0f);
-    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 1.0f);
-    glVertex2f(1.0f, 1.0f);
-    glMultiTexCoord2f(GL_TEXTURE1,0.0f, 1.0f);
-    glVertex2f(-1.0f, 1.0f);
-    glEnd();
+//    glBegin(GL_QUADS);
+//    glMultiTexCoord2f(GL_TEXTURE1, 0.0f, 0.0f); // Texture coordinates.
+//    glVertex2f(-1.0f, -1.0f);
+//    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 0.0f);
+//    glVertex2f(1.0f, -1.0f);
+//    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 1.0f);
+//    glVertex2f(1.0f, 1.0f);
+//    glMultiTexCoord2f(GL_TEXTURE1,0.0f, 1.0f);
+//    glVertex2f(-1.0f, 1.0f);
+//    glEnd();
 
-    //drawTexConfig(m_tex);
+    drawTexConfig(m_tex);
     glDisable(GL_TEXTURE_2D);
 
-    glBegin(GL_TRIANGLES);
-    glColor4f (1.0, 0.0, 0.0, 0.5);
-    glVertex2f ( 0.0,  0.5);
-    glColor4f (1.0, 1.0, 1.0, 0.5);
-    glVertex2f (-0.5, -0.5);
-    glVertex2f ( 0.5, -0.5);
-    glEnd();
+//    glBegin(GL_TRIANGLES);
+//    glColor4f (1.0, 0.0, 0.0, 0.5);
+//    glVertex2f ( 0.0,  0.5);
+//    glColor4f (1.0, 1.0, 1.0, 0.5);
+//    glVertex2f (-0.5, -0.5);
+//    glVertex2f ( 0.5, -0.5);
+//    glEnd();
 
 //    Buffer buffer = getOutputBuffer();
 //    sutil::displayBufferGL( getOutputBuffer() );
