@@ -56,7 +56,7 @@ void drawTriangle(float viewProjection[16]);
 static void drawCubeTranslucent(float viewProjection[16], float pose[16]);
 void drawAux(void);
 void drawTexConfig(GLuint texture);
-void drawTex(float viewProjection[16], GLuint texture);
+void drawTex(float viewProjection[16], GLuint texture, float *pDouble);
 
 #ifdef __cplusplus
 }
