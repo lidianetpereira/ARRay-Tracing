@@ -198,6 +198,8 @@ void displayBuffer()
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     }
 
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE,  GL_DECAL);
+
     glBindTexture( GL_TEXTURE_2D, gl_tex_id );
 
     // send PBO or host-mapped image data to texture

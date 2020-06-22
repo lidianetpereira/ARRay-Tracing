@@ -35,6 +35,13 @@
 
 #include "draw.h"
 #include <ARX/ARController.h>
+#if HAVE_GL
+#  if ARX_TARGET_PLATFORM_MACOS
+#    include <OpenGL/gl.h>
+#  else
+#    include <GL/gl.h>
+#  endif
+#endif // HAVE_GL
 #if HAVE_GL3
 #  include <ARX/ARG/mtx.h>
 #  include <ARX/ARG/shader_gl.h>
@@ -91,7 +98,7 @@ static GLuint axesVBO = 0;
 
 #endif // HAVE_GLES2 || HAVE_GL3
 
-static ARG_API drawAPI = ARG_API_None;
+static ARG_API drawAPI = ARG_API_GL3;
 static bool rotate90 = false;
 static bool flipH = false;
 static bool flipV = false;
@@ -145,6 +152,7 @@ void drawCleanup()
     }
 #endif // HAVE_GLES2 || HAVE_GL3
     for (int i = 0; i < DRAW_MODELS_MAX; i++) gModelLoaded[i] = false;
+
     return;
 }
 
@@ -182,13 +190,11 @@ void drawSetCamera(float projection[16], float view[16])
         }
     } else {
         mtxLoadIdentityf(gProjection);
-        mtxTranslatef(gProjection, 5.0f, 20.0f, 15.0f);
     }
     if (view) {
         mtxLoadMatrixf(gView, view);
     } else {
         mtxLoadIdentityf(gView);
-        //mtxTranslatef(gView, 5.0f, 20.0f, 15.0f);
     }
     //ARLOGi("Passou no drawSetCamera. \n");
 }
@@ -211,6 +217,15 @@ void draw()
     float viewProjection[16];
 
     glViewport(gViewport[0], gViewport[1], gViewport[2], gViewport[3]);
+
+#if HAVE_GL
+    if (drawAPI == ARG_API_GL) {
+        glMatrixMode(GL_PROJECTION);
+        glLoadMatrixf(gProjection);
+        glMatrixMode(GL_MODELVIEW);
+        glLoadMatrixf(gView);
+    }
+#endif
 
 #if HAVE_GLES2 || HAVE_GL3
     if (drawAPI == ARG_API_GLES2 || drawAPI == ARG_API_GL3) {
@@ -297,12 +312,12 @@ void draw()
     }
 #endif // HAVE_GLES2 || HAVE_GL3
 
-    //glEnable(GL_DEPTH_TEST);
+    glEnable(GL_DEPTH_TEST);
     
     for (int i = 0; i < DRAW_MODELS_MAX; i++) {
         if (gModelLoaded[i] && gModelVisbilities[i]) {
             drawAxis(viewProjection, &(gModelPoses[i][0]));
-            drawCubeTranslucent(viewProjection, &(gModelPoses[i][0]));
+            drawCube(viewProjection, &(gModelPoses[i][0]));
             //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", gCameraPoses[i][12], gCameraPoses[i][13], gCameraPoses[i][14], gCameraPoses[i][15]);
             //ARLOGi("Passou no drawCube. \n");
         }
@@ -458,13 +473,38 @@ static void drawCube(float viewProjection[16], float pose[16])
     float modelViewProjection[16];
 #endif
 
+#if HAVE_GL
+    if (drawAPI == ARG_API_GL) {
+        glPushMatrix(); // Save world coordinate system.
+        glMultMatrixf(pose);
+        //glScalef(40.0f, 40.0f, 40.0f);
+        //glTranslatef(0.0f, 0.0f, 0.5f); // Place base of cube on marker surface.
+        glDisable(GL_LIGHTING);
+        //glDisable(GL_TEXTURE_2D);
+        //glDisable(GL_BLEND);
+        glColorPointer(4, GL_UNSIGNED_BYTE, 0, cube_vertex_colors);
+        glVertexPointer(3, GL_FLOAT, 0, cube_vertices);
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glEnableClientState(GL_COLOR_ARRAY);
+        for (i = 0; i < 6; i++) {
+            glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, &(cube_faces[i][0]));
+        }
+        glDisableClientState(GL_COLOR_ARRAY);
+        glColor4ub(0, 0, 0, 255);
+        for (i = 0; i < 6; i++) {
+            glDrawElements(GL_LINE_LOOP, 4, GL_UNSIGNED_SHORT, &(cube_faces[i][0]));
+        }
+        glPopMatrix();    // Restore world coordinate system.
+    }
+#endif // HAVE_GL
+
 #if HAVE_GLES2 || HAVE_GL3
     if (drawAPI == ARG_API_GLES2 || drawAPI == ARG_API_GL3) {
         //ARLOGi("Draw API 2 ou 3\n");
         mtxLoadMatrixf(modelViewProjection, viewProjection);
         mtxMultMatrixf(modelViewProjection, pose);
         mtxScalef(modelViewProjection, 40.0f, 40.0f, 40.0f);
-        mtxTranslatef(modelViewProjection, 0.0f, 0.0f, 0.5f); // Place base of cube on marker surface.
+        //mtxTranslatef(modelViewProjection, 0.0f, 0.0f, 0.5f); // Place base of cube on marker surface.
         glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEW_PROJECTION_MATRIX], 1, GL_FALSE, modelViewProjection);
 
         if (drawAPI == ARG_API_GL3) {
@@ -662,26 +702,24 @@ static void drawAxis(float viewProjection[16], float pose[16])
 void drawTexConfig(GLuint texture)
 {
     float viewProjection[16];
+    float left, right, bottom, top;
 
-    glBindTexture(GL_TEXTURE_2D, texture);
-    //glViewport(gViewport[0], gViewport[1], gViewport[2], gViewport[3]);
+    glViewport(gViewport[0], gViewport[1], gViewport[2], gViewport[3]);
 
     if (!programTex) {
         GLuint vertShader = 0, fragShader = 0;
         // A simple shader pair which accepts just a vertex position and colour, no lighting.
         const char vertShaderStringGL3[] =
-                "#version 150\n"
-                "in vec4 vert;\n"
-                "in vec2 vertTexCoord;\n"
-                "uniform mat4 modelViewProjectionMatrix;\n"
+                "#version 330 core\n"
+                "in vec3 vert;\n"
                 "out vec2 fragTexCoord;\n"
                 "void main()\n"
                 "{\n"
-                "gl_Position = modelViewProjectionMatrix * vert;\n"
-                "fragTexCoord = vertTexCoord;\n"
+                "gl_Position = vec4(vert,1);\n"
+                "fragTexCoord = (vec2( vert.x, vert.y )+vec2(1,1))/2.0;\n"
                 "}\n";
         const char fragShaderStringGL3[] =
-                "#version 150\n"
+                "#version 330 core\n"
                 "uniform sampler2D tex;\n"
                 "in vec2 fragTexCoord;\n"
                 "out vec4 finalColor;\n"
@@ -728,21 +766,21 @@ void drawTexConfig(GLuint texture)
     }
     glUseProgram(programTex);
 
-    mtxLoadIdentityf(gProjectionTex);
-    mtxLoadIdentityf(gViewTex);
+    mtxLoadIdentityf(gProjectionGeneric);
+    mtxLoadIdentityf(gViewGeneric);
 
-    mtxLoadMatrixf(viewProjection, gProjectionTex);
-    mtxMultMatrixf(viewProjection, gViewTex);
+    mtxLoadMatrixf(viewProjection, gProjectionGeneric);
+    mtxMultMatrixf(viewProjection, gViewGeneric);
 
-    drawTex(viewProjection, texture);
+    drawTex(viewProjection, texture, &(gModelPoses[0][0]));
 }
 
-void drawTex(float viewProjection[16], GLuint texture) {
+void drawTex(float viewProjection[16], GLuint texture, float pose[16]) {
 
     float modelViewProjection[16];
 
     mtxLoadMatrixf(modelViewProjection, viewProjection);
-    glUniformMatrix4fv(glGetUniformLocation(programTex, "modelViewProjectionMatrix"), 1, GL_FALSE, modelViewProjection);
+    glUniformMatrix4fv(uniformsGeneric[UNIFORM_MVP_MATRIX_GENERIC], 1, GL_FALSE, modelViewProjection);
 
     float vertices[] = {
             // positions          // texture coords
@@ -794,7 +832,6 @@ void drawTex(float viewProjection[16], GLuint texture) {
     glBindTexture(GL_TEXTURE_2D, texture);
     //glBindVertexArray(VAO);
 
-    //glDrawArrays(GL_TRIANGLES, 0, 6);
+    //glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
 }

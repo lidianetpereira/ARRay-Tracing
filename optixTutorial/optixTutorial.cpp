@@ -78,6 +78,14 @@
 #include <stdio.h>
 #include <string.h>
 #ifdef DEBUG
+#  ifdef _WIN32
+#    define MAXPATHLEN MAX_PATH
+#    include <direct.h>               // _getcwd()
+#    define getcwd _getcwd
+#  else
+#    include <unistd.h>
+#    include <sys/param.h>
+#  endif
 #    include <unistd.h>
 #    include <sys/param.h>
 #endif
@@ -86,6 +94,12 @@
 #include <GL/gl.h>
 #include "draw.h"
 
+#if ARX_TARGET_PLATFORM_WINDOWS
+const char *vconf = "-module=WinMF -format=BGRA";
+#else
+const char *vconf = NULL;
+#endif
+const char *cpara = NULL;
 
 #define ar 1
 
@@ -135,9 +149,6 @@ int2       mouse_prev_pos;
 int        mouse_button;
 
 //--AR
-const char *vconf = NULL;
-const char *cpara = NULL;
-
 static int contextWidth = 0;
 static int contextHeight = 0;
 static bool contextWasUpdated = true;
@@ -453,15 +464,15 @@ void glutInitialize( int* argc, char** argv )
 void glutRun()
 {
     glutSetWindow(optixWindow);
-    // Initialize GL state
-//    glMatrixMode(GL_PROJECTION);
-//    glLoadIdentity();
-//    glOrtho(-1, 1, -1, 1, -1, 1);
-//
-//    glMatrixMode(GL_MODELVIEW);
-//    glLoadIdentity();
-//
-//    glViewport(0, 0, width, height);
+    //Initialize GL state
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    //glOrtho(-1, 1, -1, 1, -1, 1);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+
+    glViewport(0, 0, width, height);
 
     if (m_interop)
     {
@@ -490,7 +501,7 @@ void glutRun()
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
-        //glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND);
+        glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND);
     }else{
         ARLOGe("m_tex tem tamanho zero");
     }
@@ -527,8 +538,15 @@ void glutDisplay()
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
     //drawAux();
-    //glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
+    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
 
+//    glBegin(GL_TRIANGLES);
+//    glColor4f (1.0, 0.0, 0.0, 0.5);
+//    glVertex2f ( 0.0,  0.5);
+//    glColor4f (1.0, 1.0, 1.0, 0.5);
+//    glVertex2f (-0.5, -0.5);
+//    glVertex2f ( 0.5, -0.5);
+//    glEnd();
 //#ifdef ar
     updateCamera();
 
@@ -541,29 +559,29 @@ void glutDisplay()
         glBindTexture(GL_TEXTURE_2D, m_tex);
         glBindBuffer(GL_PIXEL_UNPACK_BUFFER, m_buffer->getGLBOId());
 
-        RTsize elmt_size = m_buffer->getElementSize();
-        if      ( elmt_size % 8 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 8);
-        else if ( elmt_size % 4 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
-        else if ( elmt_size % 2 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 2);
-        else                          glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, m_width, m_height, 0, GL_BGRA, GL_UNSIGNED_BYTE, nullptr); // BGRA8
         glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
     }
     else
     {
-        void const* data = m_buffer->map();
+        void const* data = m_buffer->map(0, RT_BUFFER_MAP_READ );
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, m_tex);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) m_widthLaunch, (GLsizei) m_heightLaunch, 0, GL_BGRA, GL_UNSIGNED_BYTE, data); // BGRA8
         m_buffer->unmap();
     }
 
+    RTsize elmt_size = m_buffer->getElementSize();
+    if      ( elmt_size % 8 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 8);
+    else if ( elmt_size % 4 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+    else if ( elmt_size % 2 == 0) glPixelStorei(GL_UNPACK_ALIGNMENT, 2);
+    else                          glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, m_tex);
-    //glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 
-    glEnable(GL_TEXTURE_2D);
+//    glEnable(GL_TEXTURE_2D);
 //    glBegin(GL_QUADS);
 //    glMultiTexCoord2f(GL_TEXTURE1, 0.0f, 0.0f); // Texture coordinates.
 //    glVertex2f(-1.0f, -1.0f);
@@ -578,13 +596,6 @@ void glutDisplay()
     drawTexConfig(m_tex);
     glDisable(GL_TEXTURE_2D);
 
-//    glBegin(GL_TRIANGLES);
-//    glColor4f (1.0, 0.0, 0.0, 0.5);
-//    glVertex2f ( 0.0,  0.5);
-//    glColor4f (1.0, 1.0, 1.0, 0.5);
-//    glVertex2f (-0.5, -0.5);
-//    glVertex2f ( 0.5, -0.5);
-//    glEnd();
 
 //    Buffer buffer = getOutputBuffer();
 //    sutil::displayBufferGL( getOutputBuffer() );
@@ -594,9 +605,9 @@ void glutDisplay()
         sutil::displayFps( frame_count++ );
     }
 //#endif
-//    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
-//    glBindFramebuffer(GL_DRAW_BUFFER, 0);
-//    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_LINEAR);
+    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
+    glBindFramebuffer(GL_DRAW_BUFFER, 0);
+    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_DECAL);
 
     glutSwapBuffers();
 }
@@ -696,6 +707,10 @@ void glutResize( int w, int h )
 //------------------------------------------------------------------------------
 
 static void init(){
+#  if ARX_TARGET_PLATFORM_MACOS
+    vconf = "-format=BGRA";
+#  endif
+
     int w = 960, h = 720;
     reshape(w, h);
 
@@ -797,7 +812,7 @@ static void displayOnce(void)
             }
 //#ifndef ar
             //Clear the context.
-            //glClearColor(0.0, 0.0, 0.0, 1.0);
+            //glClearColor(0.0, 0.0, 0.0, 0.0);
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
             //Display the current video frame to the current OpenGL context.
@@ -833,10 +848,9 @@ static void displayOnce(void)
                 drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
                 showString( str );
             }
-#ifndef ar
-            //glEnable(GL_DEPTH_TEST);
+//#ifndef ar
             draw();
-#endif
+//#endif
             done = true;
         }
     }
