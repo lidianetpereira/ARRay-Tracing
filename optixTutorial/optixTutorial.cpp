@@ -1,4 +1,6 @@
-/* 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "bugprone-narrowing-conversions"
+/*
  * Copyright (c) 2018, NVIDIA CORPORATION. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -93,6 +95,7 @@
 #include <ARX/ARUtil/time.h>
 #include <GL/gl.h>
 #include "draw.h"
+#include <ARX/ARG/mtx.h>
 
 #if ARX_TARGET_PLATFORM_WINDOWS
 const char *vconf = "-module=WinMF -format=BGRA";
@@ -116,7 +119,7 @@ const char* const SAMPLE_NAME = "optixTutorial";
 Context      context;
 uint32_t     width  = 960u;
 uint32_t     height = 720u;
-bool         use_pbo = true;
+bool         use_pbo = false;
 
 std::string  texture_path;
 const char*  tutorial_ptx;
@@ -175,13 +178,25 @@ int markerIDs[markerCount];
 int markerModelIDs[markerCount];
 
 int optixWindow;
-char str[256];
+char str[512];
 float invOut[16];
 float mView[16];
 
 unsigned int framebuffer;
 unsigned int rbo;
 
+float transform[16] = {-1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1};
+Matrix3x3 matCamPose3;
+Matrix4x4 matTrans;
+Matrix4x4 matCamPose4;
+Matrix4x4 matResult;
+
+float cameraPos[3][4];
+float q[4];
+float p[4];
+float angle;
+
+float camRotation[16];
 
 //------------------------------------------------------------------------------
 //
@@ -313,13 +328,13 @@ void createGeometry()
     box->setBoundingBoxProgram( box_bounds );
     box->setIntersectionProgram( box_intersect );
 
-//    //Original
-//    box["boxmin"]->setFloat( -2.0f, -0.5f, 0.0f );
-//    box["boxmax"]->setFloat(  2.0f, 0.5f,  3.0f );
+    //Original
+    box["boxmin"]->setFloat( -80.0f, -10.0f, 0.0f );
+    box["boxmax"]->setFloat(80.0f, 10.0f, 120.0f);
 
-    //Tranformadas
-    box["boxmin"]->setFloat( -2.0f, 0.0f, -0.5f );
-    box["boxmax"]->setFloat(  2.0f, 3.0f,  0.5f );
+//    //Transformadas
+//    box["boxmin"]->setFloat( -80.0f, 0.0f, -10.0f );
+//    box["boxmax"]->setFloat(80.0f, 120.0f, 10.0f);
 
     // Materials
     std::string box_chname;
@@ -373,13 +388,55 @@ void setupCamera()
 //    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 //
 //    camera_rotate = Matrix4x4(invOut);
+//    camera_rotate.rotate(M_PI/2, make_float3( 1.0f, 0.0f, 0.0f ));
+//    camera_rotate.rotate(M_PI, make_float3( 0.0f, 1.0f, 0.0f ));
+
+//    cameraPos[0][0] = invOut[0];
+//    cameraPos[0][1] = invOut[4];
+//    cameraPos[0][2] = invOut[8];
+//    cameraPos[0][3] = invOut[12];
+//    cameraPos[1][0] = invOut[1];
+//    cameraPos[1][1] = invOut[5];
+//    cameraPos[1][2] = invOut[9];
+//    cameraPos[1][3] = invOut[13];
+//    cameraPos[2][0] = invOut[2];
+//    cameraPos[2][1] = invOut[6];
+//    cameraPos[2][2] = invOut[10];
+//    cameraPos[2][3] = invOut[14];
+//
+//    double   w;
+//
+//    w = cameraPos[0][0] + cameraPos[1][1] + cameraPos[2][2] + 1;
+//    if( w < 0.0 ){
+//        ARLOGi("Erro! \n");
+//    }else{
+//        w = sqrt( w );
+//        q[0] = (cameraPos[1][2] - cameraPos[2][1]) / (w*2.0);
+//        q[1] = (cameraPos[2][0] - cameraPos[0][2]) / (w*2.0);
+//        q[2] = (cameraPos[0][1] - cameraPos[1][0]) / (w*2.0);
+//        q[3] = w / 2.0;
+//
+//        p[0] = cameraPos[0][3];
+//        p[1] = cameraPos[1][3];
+//        p[2] = cameraPos[2][3];
+//    }
+//    angle = -acos(q[3])*360.0/3.141592;
+//
+//    sprintf(str, "Pos: x: %3.1f  y: %3.1f  z: %3.1f Quat: qx: %3.1f  qy: %3.1f  qz: %3.1f qw: %3.1f Angle: %3.1f\n", p[0], p[1], p[2], q[0], q[1], q[2], q[3], angle);
+//
+//    mtxLoadIdentityf(camRotation);
+
+    //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
+
     float divisor = 40.0f;
 
-    camera_eye    = make_float3( -invOut[12]/divisor, invOut[14]/divisor, invOut[13]/divisor);
+    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
     camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
     camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 
-    camera_rotate  = Matrix4x4::identity();
+    camera_rotate  = Matrix4x4(invOut);
+    //camera_rotate  = Matrix4x4::identity();
+
 #endif
 }
 
@@ -389,15 +446,15 @@ void setupLights()
 
 //#ifndef ar
     BasicLight lights[] = {
-        { make_float3( -5.0f, 10.0f, -16.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+        { make_float3( 0.0f, 130.0f, -30.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
     };
 //#endif
 
-//#ifdef ar
+#ifdef ar
 //    BasicLight lights[] = {
 //            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
 //    };
-//#endif
+#endif
 
     Buffer light_buffer = context->createBuffer( RT_BUFFER_INPUT );
     light_buffer->setFormat( RT_FORMAT_USER );
@@ -424,24 +481,24 @@ void updateCamera()
             camera_eye, camera_lookat, camera_up, vfov, aspect_ratio,
             camera_u, camera_v, camera_w, true );
 
-    const Matrix4x4 frame = Matrix4x4::fromBasis(
-            normalize( camera_u ),
-            normalize( camera_v ),
-            normalize( -camera_w ),
-            camera_lookat);
-    const Matrix4x4 frame_inv = frame.inverse();
-    // Apply camera rotation twice to match old SDK behavior
-    const Matrix4x4 trans   = frame*camera_rotate*camera_rotate*frame_inv;
+//    const Matrix4x4 frame = Matrix4x4::fromBasis(
+//            normalize( camera_u ),
+//            normalize( camera_v ),
+//            normalize( -camera_w ),
+//            camera_lookat);
+//    const Matrix4x4 frame_inv = frame.inverse();
+//    // Apply camera rotation twice to match old SDK behavior
+//    const Matrix4x4 trans   = frame*camera_rotate*camera_rotate*frame_inv;
+//
+//    camera_eye    = make_float3( trans*make_float4( camera_eye,    1.0f ) );
+//    camera_lookat = make_float3( trans*make_float4( camera_lookat, 1.0f ) );
+//    camera_up     = make_float3( trans*make_float4( camera_up,     0.0f ) );
+//
+//    sutil::calculateCameraVariables(
+//            camera_eye, camera_lookat, camera_up, vfov, aspect_ratio,
+//            camera_u, camera_v, camera_w, true );
 
-    camera_eye    = make_float3( trans*make_float4( camera_eye,    1.0f ) );
-    camera_lookat = make_float3( trans*make_float4( camera_lookat, 1.0f ) );
-    camera_up     = make_float3( trans*make_float4( camera_up,     0.0f ) );
-
-    sutil::calculateCameraVariables(
-            camera_eye, camera_lookat, camera_up, vfov, aspect_ratio,
-            camera_u, camera_v, camera_w, true );
-
-    camera_rotate = Matrix4x4::identity();
+    //camera_rotate = Matrix4x4::identity();
 
     context["eye"]->setFloat( camera_eye );
     context["U"  ]->setFloat( camera_u );
@@ -467,7 +524,7 @@ void glutRun()
     //Initialize GL state
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    //glOrtho(-1, 1, -1, 1, -1, 1);
+    glOrtho(0, 1, 0, 1, -1, 1);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -538,6 +595,11 @@ void glutDisplay()
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
     //drawAux();
+    {
+        static unsigned frame_count = 0;
+        sutil::displayFps( frame_count++ );
+    }
+
     glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
 
 //    glBegin(GL_TRIANGLES);
@@ -597,13 +659,9 @@ void glutDisplay()
     glDisable(GL_TEXTURE_2D);
 
 
-//    Buffer buffer = getOutputBuffer();
-//    sutil::displayBufferGL( getOutputBuffer() );
+    Buffer buffer = getOutputBuffer();
+    sutil::displayBufferGL( getOutputBuffer() );
 
-    {
-        static unsigned frame_count = 0;
-        sutil::displayFps( frame_count++ );
-    }
 //#endif
     glBindFramebuffer(GL_READ_BUFFER, framebuffer);
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
@@ -834,15 +892,20 @@ static void displayOnce(void)
                         mView[i] = view[i];
                         //ARLOGi("View %d: %0.3f  \n", i, view[i]);
                     }
+                    mtxRotatef(view, 180.0f, 0.0f, 0.0f, 1.0f);
+                    mtxRotatef(view, 90.0f, 1.0f, 0.0f, 0.0f);
+
+                    mtxRotatef(mView, 180.0f, 0.0f, 0.0f, 1.0f);
+                    mtxRotatef(mView, 90.0f, 1.0f, 0.0f, 0.0f);
                 }
                 //Linearização por coluna
                 //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
-                //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
                 if(gluInvertMatrix(view)){
                     //for (int i = 0; i < 16; i++){
                     //ARLOGi("Inv %d: %.3f  \n", i, invOut[i]);
                     //}
-                    sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
+                    //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
+                    //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
                 }
                 //ARLOGi("%s", str);
                 drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
@@ -1232,3 +1295,5 @@ int main( int argc, char** argv )
     SUTIL_CATCH( context->get() )
 }
 
+
+#pragma clang diagnostic pop

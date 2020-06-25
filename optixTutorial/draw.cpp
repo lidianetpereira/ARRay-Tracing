@@ -125,7 +125,7 @@ void drawSetup(ARG_API drawAPI_in, bool rotate90_in, bool flipH_in, bool flipV_i
     rotate90 = rotate90_in;
     flipH = flipH_in;
     flipV = flipV_in;
-    ARLOGi("Passou no drawSetup. \n");
+    //ARLOGi("Passou no drawSetup. \n");
     return;
 }
 
@@ -193,8 +193,12 @@ void drawSetCamera(float projection[16], float view[16])
     }
     if (view) {
         mtxLoadMatrixf(gView, view);
+        //mtxRotatef(gView, 180.0f, 0.0f, 0.0f, 1.0f);
+        //mtxRotatef(gView, 90.0f, 1.0f, 0.0f, 0.0f);
     } else {
         mtxLoadIdentityf(gView);
+        //mtxRotatef(gView, 180.0f, 0.0f, 0.0f, 1.0f);
+        //mtxRotatef(gView, 90.0f, 1.0f, 0.0f, 0.0f);
     }
     //ARLOGi("Passou no drawSetCamera. \n");
 }
@@ -208,6 +212,12 @@ void drawSetModel(int modelIndex, bool visible, float pose[16], float camPose[16
     if (visible) {
         mtxLoadMatrixf(&(gModelPoses[modelIndex][0]), pose);
         mtxLoadMatrixf(&(gCameraPoses[modelIndex][0]), camPose);
+
+        //mtxRotatef(&(gModelPoses[modelIndex][0]), 180.0f, 0.0f, 0.0f, 1.0f);
+        //mtxRotatef(&(gModelPoses[modelIndex][0]), 90.0f, 1.0f, 0.0f, 0.0f);
+
+        //mtxRotatef(&(gCameraPoses[modelIndex][0]), 180.0f, 0.0f, 0.0f, 1.0f);
+        //mtxRotatef(&(gCameraPoses[modelIndex][0]), 90.0f, 1.0f, 0.0f, 0.0f);
         //ARLOGi("Passou no drawSetModel. \n");
     }
 }
@@ -448,8 +458,8 @@ static void drawCube(float viewProjection[16], float pose[16])
 //            /* -z */ {5.5f, 5.5f, -5.5f}, {5.5f, -5.5f, -5.5f}, {-5.5f, -5.5f, -5.5f}, {-5.5f, 5.5f, -5.5f} };
     // Colour cube data.
     const GLfloat cube_vertices [8][3] = {
-            /* +z */ {2.0f, 0.5f, 3.0f}, {2.0f, -0.5f, 3.0f}, {-2.0f, -0.5f, 3.0f}, {-2.0f, 0.5f, 3.0f},
-            /* -z */ {2.0f, 0.5f, 0.0f}, {2.0f, -0.5f, 0.0f}, {-2.0f, -0.5f, 0.0f}, {-2.0f, 0.5f, 0.0f} };
+            /* +z */ {80.0f, 10.0f, 120.0f}, {80.0f, -10.0f, 120.0f}, {-80.0f, -10.0f, 120.0f}, {-80.0f, 10.0f, 120.0f},
+            /* -z */ {80.0f, 10.0f, 0.0f}, {80.0f, -10.0f, 0.0f}, {-80.0f, -10.0f, 0.0f}, {-80.0f, 10.0f, 0.0f} };
 //Transformadas para desenho no Optix
 //    const GLfloat cube_vertices [8][3] = {
 //            /* +z */ {-2.0f, 3.0f, 0.5f}, {-2.0f, 3.0f, -0.5f}, {2.0f, 3.0f, -0.5f}, {2.0f, 3.0f, 0.5f},
@@ -503,7 +513,7 @@ static void drawCube(float viewProjection[16], float pose[16])
         //ARLOGi("Draw API 2 ou 3\n");
         mtxLoadMatrixf(modelViewProjection, viewProjection);
         mtxMultMatrixf(modelViewProjection, pose);
-        mtxScalef(modelViewProjection, 40.0f, 40.0f, 40.0f);
+        //mtxScalef(modelViewProjection, 40.0f, 40.0f, 40.0f);
         //mtxTranslatef(modelViewProjection, 0.0f, 0.0f, 0.5f); // Place base of cube on marker surface.
         glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEW_PROJECTION_MATRIX], 1, GL_FALSE, modelViewProjection);
 
@@ -664,16 +674,16 @@ static void drawAxis(float viewProjection[16], float pose[16])
         //ARLOGi("Draw API 2 ou 3\n");
         mtxLoadMatrixf(modelViewProjection, viewProjection);
         mtxMultMatrixf(modelViewProjection, pose);
-        mtxScalef(modelViewProjection, 15.0f, 15.0f, 15.0f);
+        //mtxScalef(modelViewProjection, 15.0f, 15.0f, 15.0f);
         glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEW_PROJECTION_MATRIX], 1, GL_FALSE, modelViewProjection);
 
         if (drawAPI == ARG_API_GL3) {
             //ARLOGi("Draw API 3\n");
 
             float vertices[] = { //6 vertices X, Y, Z, R, G, B
-                    0.0f, 0.0f, 0.0f, /* */ 1.0f, 0.0f, 0.0f, /* */ 5.0f,  0.0f,  0.0f, /* */ 1.0f, 0.0f, 0.0f, /* */
-                    0.0f, 0.0f, 0.0f, /* */ 0.0f, 1.0f, 0.0f, /* */ 0.0f,  5.0f,  0.0f, /* */ 0.0f, 1.0f, 0.0f, /* */
-                    0.0f, 0.0f, 0.0f, /* */ 0.0f, 0.0f, 1.0f, /* */ 0.0f,  0.0f,  5.0f, /* */ /* */ 0.0f, 0.0f, 1.0f
+                    0.0f, 0.0f, 0.0f, /* */ 1.0f, 0.0f, 0.0f, /* */ 80.0f,  0.0f,  0.0f, /* */ 1.0f, 0.0f, 0.0f, /* */
+                    0.0f, 0.0f, 0.0f, /* */ 0.0f, 1.0f, 0.0f, /* */ 0.0f,  80.0f,  0.0f, /* */ 0.0f, 1.0f, 0.0f, /* */
+                    0.0f, 0.0f, 0.0f, /* */ 0.0f, 0.0f, 1.0f, /* */ 0.0f,  0.0f,  80.0f, /* */ /* */ 0.0f, 0.0f, 1.0f
             };
 
             glGenBuffers(1, &axesVBO); // Generate 1 buffer

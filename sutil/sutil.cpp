@@ -659,7 +659,7 @@ void drawText( const std::string& text, float x, float y, void* font )
     for( std::string::const_iterator it = text.begin(); it != text.end(); ++it )
         glutBitmapCharacter( font, *it );
 
-    static const float3 text_color = make_float3( 0.95f );
+    static const float3 text_color = make_float3( 0.0f );
     glColor3fv( &( text_color.x) );        // main text
     glWindowPos2f(x, y);
     for( std::string::const_iterator it = text.begin(); it != text.end(); ++it )
@@ -689,7 +689,7 @@ void sutil::displayFps( unsigned int frame_count )
     if ( frame_count > 0 && fps >= 0.0 ) {
         static char fps_text[32];
         sprintf( fps_text, "fps: %7.2f", fps );
-        drawText( fps_text, 10.0f, 10.0f, GLUT_BITMAP_8_BY_13 );
+        drawText( fps_text, 860.0f, 10.0f, GLUT_BITMAP_8_BY_13 );
     }
 }
 
