@@ -689,6 +689,7 @@ void sutil::displayFps( unsigned int frame_count )
     if ( frame_count > 0 && fps >= 0.0 ) {
         static char fps_text[32];
         sprintf( fps_text, "fps: %7.2f", fps );
+        printf("fps: %7.2f \n", fps);
         drawText( fps_text, 860.0f, 10.0f, GLUT_BITMAP_8_BY_13 );
     }
 }
