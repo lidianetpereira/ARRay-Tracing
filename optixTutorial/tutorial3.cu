@@ -58,8 +58,10 @@ RT_PROGRAM void pinhole_camera()
   float2 d = make_float2(launch_index) / make_float2(screen) * 2.f - 1.f;
   float3 ray_origin = eye;
   float3 ray_direction = normalize(d.x*U + d.y*V + W);
+//    float3 ray_origin = eye + d.x *U + d.y*V;
+//    float3 ray_direction = W;
 
-  optix::Ray ray(ray_origin, ray_direction, RADIANCE_RAY_TYPE, scene_epsilon );
+    optix::Ray ray(ray_origin, ray_direction, RADIANCE_RAY_TYPE, scene_epsilon );
 
   PerRayData_radiance prd;
   prd.importance = 1.0f;

@@ -96,6 +96,7 @@
 #include <GL/gl.h>
 #include "draw.h"
 #include <ARX/ARG/mtx.h>
+#include <optixu/optixu_quaternion.h>
 
 #if ARX_TARGET_PLATFORM_WINDOWS
 const char *vconf = "-module=WinMF -format=BGRA";
@@ -180,24 +181,26 @@ int markerModelIDs[markerCount];
 int optixWindow;
 char str[512];
 float invOut[16];
-float mView[16];
 
 unsigned int framebuffer;
 unsigned int rbo;
 
-float transform[16] = {-1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1};
-Matrix3x3 matCamPose3;
-Matrix4x4 matTrans;
-Matrix4x4 matCamPose4;
-Matrix4x4 matResult;
+Group m_top_object;
+Aabb  m_aabb;
+float markerPose[16];
+float geometryPose[16];
+Transform rot_1;
+Transform rot_2;
+Transform trans_1;
 
+Quaternion q;
 float cameraPos[3][4];
-float q[4];
+float qVec[4];
 float p[4];
 float angle;
-
 float camRotation[16];
 
+float mP0[3] = {0.0f, 0.0f, 0.0f};
 //------------------------------------------------------------------------------
 //
 // Forward decls
@@ -209,12 +212,14 @@ void destroyContext();
 void registerExitHandler();
 void createContext();
 void createGeometry();
+void updateGeometry();
 void setupCamera();
 void setupLights();
 void updateCamera();
+
+
 void glutInitialize( int* argc, char** argv );
 void glutRun();
-
 void glutDisplay();
 void glutKeyboardPress( unsigned char k, int x, int y );
 void glutMousePress( int button, int state, int x, int y );
@@ -318,6 +323,9 @@ void createContext()
 
 void createGeometry()
 {
+    m_top_object = context->createGroup();
+    m_top_object->setAcceleration( context->createAcceleration("Trbvh"));
+
     const char *ptx = sutil::getPtxString( SAMPLE_NAME, "box.cu" );
     Program box_bounds    = context->createProgramFromPTXString( ptx, "box_bounds" );
     Program box_intersect = context->createProgramFromPTXString( ptx, "box_intersect" );
@@ -331,10 +339,36 @@ void createGeometry()
     //Original
     box["boxmin"]->setFloat( -80.0f, -10.0f, 0.0f );
     box["boxmax"]->setFloat(80.0f, 10.0f, 120.0f);
+//
+//    m_aabb = Aabb( make_float3(-80.0f, -10.0f, 0.0f), make_float3( 80.0f, 10.0f, 120.0f ));
 
 //    //Transformadas
 //    box["boxmin"]->setFloat( -80.0f, 0.0f, -10.0f );
 //    box["boxmax"]->setFloat(80.0f, 120.0f, 10.0f);
+
+    Geometry eX = context->createGeometry();
+    eX->setPrimitiveCount( 1u );
+    eX->setBoundingBoxProgram( box_bounds );
+    eX->setIntersectionProgram( box_intersect );
+
+    eX["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
+    eX["boxmax"]->setFloat(81.0f, 1.0f, 1.0f);
+
+    Geometry eY = context->createGeometry();
+    eY->setPrimitiveCount( 1u );
+    eY->setBoundingBoxProgram( box_bounds );
+    eY->setIntersectionProgram( box_intersect );
+
+    eY["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
+    eY["boxmax"]->setFloat(1.0f, 81.0f, 1.0f);
+
+    Geometry eZ = context->createGeometry();
+    eZ->setPrimitiveCount( 1u );
+    eZ->setBoundingBoxProgram( box_bounds );
+    eZ->setIntersectionProgram( box_intersect );
+
+    eZ["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
+    eZ["boxmax"]->setFloat(1.0f, 1.0f, 81.0f);
 
     // Materials
     std::string box_chname;
@@ -343,99 +377,98 @@ void createGeometry()
     Material box_matl = context->createMaterial();
     Program box_ch = context->createProgramFromPTXString( tutorial_ptx, box_chname.c_str() );
     box_matl->setClosestHitProgram( 0, box_ch );
-    if( tutorial_number >= 3) {
+    //if( tutorial_number >= 3) {
         Program box_ah = context->createProgramFromPTXString( tutorial_ptx, "any_hit_shadow" );
         box_matl->setAnyHitProgram( 1, box_ah );
-    }
+    //}
     box_matl["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
     box_matl["Kd"]->setFloat( 0.6f, 0.7f, 0.8f );
     box_matl["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
     box_matl["phong_exp"]->setFloat( 88 );
     box_matl["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
 
+    Material box_matX = context->createMaterial();
+    box_matX->setClosestHitProgram( 0, box_ch );
+    //if( tutorial_number >= 3) {
+        //box_matX->setAnyHitProgram( 1, box_ah );
+    //}
+    box_matX["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
+    box_matX["Kd"]->setFloat( 0.0f, 1.0f, 1.0f );
+    box_matX["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
+    box_matX["phong_exp"]->setFloat( 88 );
+    box_matX["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+
+    Material box_matY = context->createMaterial();
+    box_matY->setClosestHitProgram( 0, box_ch );
+    //if( tutorial_number >= 3) {
+    //box_matY->setAnyHitProgram( 1, box_ah );
+    //}
+    box_matY["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
+    box_matY["Kd"]->setFloat( 1.0f, 0.0f, 1.0f );
+    box_matY["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
+    box_matY["phong_exp"]->setFloat( 88 );
+    box_matY["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+
+    Material box_matZ = context->createMaterial();
+    box_matZ->setClosestHitProgram( 0, box_ch );
+    //if( tutorial_number >= 3) {
+    //box_matZ->setAnyHitProgram( 1, box_ah );
+    //}
+    box_matZ["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
+    box_matZ["Kd"]->setFloat( 1.0f, 1.0f, 0.0f );
+    box_matZ["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
+    box_matZ["phong_exp"]->setFloat( 88 );
+    box_matZ["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+
     // Create GIs for each piece of geometry
     std::vector<GeometryInstance> gis;
     gis.push_back( context->createGeometryInstance( box, &box_matl, &box_matl+1 ) );
+//    gis.push_back( context->createGeometryInstance( eX, &box_matX, &box_matX+1 ) );
+//    gis.push_back( context->createGeometryInstance( eY, &box_matY, &box_matY+1 ) );
+//    gis.push_back( context->createGeometryInstance( eZ, &box_matZ, &box_matZ+1 ) );
 
     // Place all in group
     GeometryGroup geometrygroup = context->createGeometryGroup();
+    geometrygroup->setAcceleration( context->createAcceleration("Trbvh") );
     geometrygroup->setChildCount( static_cast<unsigned int>(gis.size()) );
     geometrygroup->setChild( 0, gis[0] );
+//    geometrygroup->setChild( 1, gis[1] );
+//    geometrygroup->setChild( 2, gis[2] );
 
-    geometrygroup->setAcceleration( context->createAcceleration("Trbvh") );
-    //geometrygroup->setAcceleration( context->createAcceleration("NoAccel") );
-
-    context["top_object"]->set( geometrygroup );
-    context["top_shadower"]->set( geometrygroup );
+    m_top_object->addChild(rot_1 );
+    context["top_object"]->set( m_top_object );
+    context["top_shadower"]->set( m_top_object );
 }
-
 
 void setupCamera()
 {
-//    camera_eye    = make_float3( 10.0f, 0.0f, -15.0f );
-//    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
-//    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
 
-    camera_eye    = make_float3( 0.0f, 0.0f, 0.0f );
-    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
-    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
+//    float scalef = 1.0f;
+//    GLdouble m[16];
+//    GLdouble eyepos[3], lookat[3], up[3];
+//
+//// See detection loop in Idle() in simpleLite.c for context of the
+//    line below.
+//            arGetTransMat(&(marker_info[k]), patt_centre, patt_width, patt_trans);
+//
+//// Make patt_trans into a standard OpenGL HCT matrix (N.B.:column-
+//    major).
+//    arglCameraView(patt_trans, m, scalef);
+//
+//// This treats the marker as lying in the x-y plane, with the +z axis
+//    pointing towards the observer.
+//            eyepos[0] = m[12]; eyepos[1] = m[13]; eyepos[2] = m[14];
+//    lookat[0] = eyepos[0] - m[8]; lookat[1] = eyepos[1] - m[9]; lookat[2]
+//                                                                        = eyepos[2] - m[10];
+//    up[0] = m[4]; up[1] = m[5]; up[2] = m[6];
+
+    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14] );
+    camera_lookat = make_float3( camera_eye.x - invOut[8], camera_eye.y - invOut[9],  camera_eye.z - invOut[10] );
+    camera_up     = make_float3( invOut[4], invOut[5], invOut[6]);
 
     camera_rotate  = Matrix4x4::identity();
 
 #ifdef ar
-//    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
-//    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
-//    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
-//
-//    camera_rotate = Matrix4x4(invOut);
-//    camera_rotate.rotate(M_PI/2, make_float3( 1.0f, 0.0f, 0.0f ));
-//    camera_rotate.rotate(M_PI, make_float3( 0.0f, 1.0f, 0.0f ));
-
-//    cameraPos[0][0] = invOut[0];
-//    cameraPos[0][1] = invOut[4];
-//    cameraPos[0][2] = invOut[8];
-//    cameraPos[0][3] = invOut[12];
-//    cameraPos[1][0] = invOut[1];
-//    cameraPos[1][1] = invOut[5];
-//    cameraPos[1][2] = invOut[9];
-//    cameraPos[1][3] = invOut[13];
-//    cameraPos[2][0] = invOut[2];
-//    cameraPos[2][1] = invOut[6];
-//    cameraPos[2][2] = invOut[10];
-//    cameraPos[2][3] = invOut[14];
-//
-//    double   w;
-//
-//    w = cameraPos[0][0] + cameraPos[1][1] + cameraPos[2][2] + 1;
-//    if( w < 0.0 ){
-//        ARLOGi("Erro! \n");
-//    }else{
-//        w = sqrt( w );
-//        q[0] = (cameraPos[1][2] - cameraPos[2][1]) / (w*2.0);
-//        q[1] = (cameraPos[2][0] - cameraPos[0][2]) / (w*2.0);
-//        q[2] = (cameraPos[0][1] - cameraPos[1][0]) / (w*2.0);
-//        q[3] = w / 2.0;
-//
-//        p[0] = cameraPos[0][3];
-//        p[1] = cameraPos[1][3];
-//        p[2] = cameraPos[2][3];
-//    }
-//    angle = -acos(q[3])*360.0/3.141592;
-//
-//    sprintf(str, "Pos: x: %3.1f  y: %3.1f  z: %3.1f Quat: qx: %3.1f  qy: %3.1f  qz: %3.1f qw: %3.1f Angle: %3.1f\n", p[0], p[1], p[2], q[0], q[1], q[2], q[3], angle);
-//
-//    mtxLoadIdentityf(camRotation);
-
-    //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
-
-    float divisor = 40.0f;
-
-    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
-    camera_lookat = make_float3( 0.0f, 0.0f,  0.0f );
-    camera_up     = make_float3( 0.0f, 1.0f,  0.0f );
-
-    camera_rotate  = Matrix4x4(invOut);
-    //camera_rotate  = Matrix4x4::identity();
 
 #endif
 }
@@ -445,15 +478,15 @@ void setupLights()
 {
 
 //#ifndef ar
-    BasicLight lights[] = {
-        { make_float3( 0.0f, 130.0f, -30.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
-    };
+//    BasicLight lights[] = {
+//        { make_float3( 0.0f, 130.0f, -40.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+//    };
 //#endif
 
 #ifdef ar
-//    BasicLight lights[] = {
-//            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
-//    };
+    BasicLight lights[] = {
+            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+    };
 #endif
 
     Buffer light_buffer = context->createBuffer( RT_BUFFER_INPUT );
@@ -481,24 +514,24 @@ void updateCamera()
             camera_eye, camera_lookat, camera_up, vfov, aspect_ratio,
             camera_u, camera_v, camera_w, true );
 
-//    const Matrix4x4 frame = Matrix4x4::fromBasis(
-//            normalize( camera_u ),
-//            normalize( camera_v ),
-//            normalize( -camera_w ),
-//            camera_lookat);
-//    const Matrix4x4 frame_inv = frame.inverse();
-//    // Apply camera rotation twice to match old SDK behavior
-//    const Matrix4x4 trans   = frame*camera_rotate*camera_rotate*frame_inv;
-//
-//    camera_eye    = make_float3( trans*make_float4( camera_eye,    1.0f ) );
-//    camera_lookat = make_float3( trans*make_float4( camera_lookat, 1.0f ) );
-//    camera_up     = make_float3( trans*make_float4( camera_up,     0.0f ) );
-//
-//    sutil::calculateCameraVariables(
-//            camera_eye, camera_lookat, camera_up, vfov, aspect_ratio,
-//            camera_u, camera_v, camera_w, true );
+    const Matrix4x4 frame = Matrix4x4::fromBasis(
+            normalize( camera_u ),
+            normalize( camera_v ),
+            normalize( -camera_w ),
+            camera_lookat);
+    const Matrix4x4 frame_inv = frame.inverse();
+    // Apply camera rotation twice to match old SDK behavior
+    const Matrix4x4 trans   = frame*camera_rotate*camera_rotate*frame_inv;
 
-    //camera_rotate = Matrix4x4::identity();
+    camera_eye    = make_float3( trans*make_float4( camera_eye,    1.0f ) );
+    camera_lookat = make_float3( trans*make_float4( camera_lookat, 1.0f ) );
+    camera_up     = make_float3( trans*make_float4( camera_up,     0.0f ) );
+
+    sutil::calculateCameraVariables(
+            camera_eye, camera_lookat, camera_up, vfov, aspect_ratio,
+            camera_u, camera_v, camera_w, true );
+
+    camera_rotate = Matrix4x4::identity();
 
     context["eye"]->setFloat( camera_eye );
     context["U"  ]->setFloat( camera_u );
@@ -590,26 +623,16 @@ void glutDisplay()
 {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    //glEnable(GL_DEPTH_TEST);
 
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
-    //drawAux();
     {
         static unsigned frame_count = 0;
         sutil::displayFps( frame_count++ );
     }
 
     glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
-
-//    glBegin(GL_TRIANGLES);
-//    glColor4f (1.0, 0.0, 0.0, 0.5);
-//    glVertex2f ( 0.0,  0.5);
-//    glColor4f (1.0, 1.0, 1.0, 0.5);
-//    glVertex2f (-0.5, -0.5);
-//    glVertex2f ( 0.5, -0.5);
-//    glEnd();
-//#ifdef ar
+    
     updateCamera();
 
     context->launch( 0, width, height );
@@ -643,18 +666,6 @@ void glutDisplay()
     glBindTexture(GL_TEXTURE_2D, m_tex);
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 
-//    glEnable(GL_TEXTURE_2D);
-//    glBegin(GL_QUADS);
-//    glMultiTexCoord2f(GL_TEXTURE1, 0.0f, 0.0f); // Texture coordinates.
-//    glVertex2f(-1.0f, -1.0f);
-//    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 0.0f);
-//    glVertex2f(1.0f, -1.0f);
-//    glMultiTexCoord2f(GL_TEXTURE1,1.0f, 1.0f);
-//    glVertex2f(1.0f, 1.0f);
-//    glMultiTexCoord2f(GL_TEXTURE1,0.0f, 1.0f);
-//    glVertex2f(-1.0f, 1.0f);
-//    glEnd();
-
     drawTexConfig(m_tex);
     glDisable(GL_TEXTURE_2D);
 
@@ -662,7 +673,6 @@ void glutDisplay()
     Buffer buffer = getOutputBuffer();
     sutil::displayBufferGL( getOutputBuffer() );
 
-//#endif
     glBindFramebuffer(GL_READ_BUFFER, framebuffer);
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_DECAL);
@@ -856,7 +866,6 @@ static void displayOnce(void)
                     quit(-1);
                 }
                 drawSetup(drawAPI, false, false, false);
-                //ARLOGd("Viewport: %d %d %d %d", viewport[0], viewport[1], viewport[2], viewport[3]);
                 drawSetViewport(viewport);
                 ARdouble projectionARD[16];
                 arController->projectionMatrix(0, 0.1f, 10000.0f, projectionARD);
@@ -869,13 +878,8 @@ static void displayOnce(void)
                 contextWasUpdated = false;
             }
 //#ifndef ar
-            //Clear the context.
-            //glClearColor(0.0, 0.0, 0.0, 0.0);
-            //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
             //Display the current video frame to the current OpenGL context.
             arController->drawVideo(0);
-            //ARLOGi("Passou no drawVideo. \n");
 //#endif
 
             // Look for trackables, and draw on each found one.
@@ -885,126 +889,27 @@ static void displayOnce(void)
                 ARTrackable *marker = arController->findTrackable(markerIDs[i]);
                 float view[16];
                 if (marker->visible) {
-                    //arUtilPrintMtx16(marker->transformationMatrix);
-                    //ARLOGi("\n \n");
+                    arUtilPrintMtx16(marker->transformationMatrix);
+                    ARLOGi("\n \n");
                     for (int i = 0; i < 16; i++){
                         view[i] = (float) marker->transformationMatrix[i];
-                        mView[i] = view[i];
-                        //ARLOGi("View %d: %0.3f  \n", i, view[i]);
+                        markerPose[i] = view[i];
                     }
-                    mtxRotatef(view, 180.0f, 0.0f, 0.0f, 1.0f);
-                    mtxRotatef(view, 90.0f, 1.0f, 0.0f, 0.0f);
-
-                    mtxRotatef(mView, 180.0f, 0.0f, 0.0f, 1.0f);
-                    mtxRotatef(mView, 90.0f, 1.0f, 0.0f, 0.0f);
                 }
-                //Linearização por coluna
+                //ARLOGd("MK: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
                 //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
                 if(gluInvertMatrix(view)){
-                    //for (int i = 0; i < 16; i++){
-                    //ARLOGi("Inv %d: %.3f  \n", i, invOut[i]);
-                    //}
-                    //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
-                    //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
+                    arUtilPrintMtx16(marker->transformationMatrix);
+                    ARLOGi("--- \n");
+                    sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
+                    //ARLOGd("Cam: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
                 }
-                //ARLOGi("%s", str);
                 drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
                 showString( str );
             }
 //#ifndef ar
             draw();
 //#endif
-            done = true;
-        }
-    }
-}
-
-
-static void display(void)
-{
-
-    // Main loop.
-    bool done = false;
-    while (!done) {
-        bool gotFrame = arController->capture();
-        if (!gotFrame) {
-            arUtilSleep(1);
-        } else {
-            //ARLOGi("Got frame %ld.\n", gFrameNo);
-            gFrameNo++;
-
-            if (!arController->update()) {
-                ARLOGe("Error in ARController::update().\n");
-                quit(-1);
-            }
-
-            if (contextWasUpdated) {
-                if (!arController->drawVideoInit(0)) {
-                    ARLOGe("Error in ARController::drawVideoInit().\n");
-                    quit(-1);
-                }
-                if (!arController->drawVideoSettings(0, contextWidth, contextHeight, false, false, false,
-                                                     ARVideoView::HorizontalAlignment::H_ALIGN_CENTRE,
-                                                     ARVideoView::VerticalAlignment::V_ALIGN_CENTRE,
-                                                     ARVideoView::ScalingMode::SCALE_MODE_FIT, viewport)) {
-                    ARLOGe("Error in ARController::drawVideoSettings().\n");
-                    quit(-1);
-                }
-                drawSetup(drawAPI, false, false, false);
-                //ARLOGd("Viewport: %d %d %d %d", viewport[0], viewport[1], viewport[2], viewport[3]);
-                drawSetViewport(viewport);
-                ARdouble projectionARD[16];
-                arController->projectionMatrix(0, 0.1f, 10000.0f, projectionARD);
-                for (int i = 0; i < 16; i++) projection[i] = (float) projectionARD[i];
-                drawSetCamera(projection, NULL);
-
-                for (int i = 0; i < markerCount; i++) {
-                    markerModelIDs[i] = drawLoadModel(NULL);
-                }
-                contextWasUpdated = false;
-            }
-//#ifndef ar
-//            //Clear the context.
-//            glClearColor(0.0, 0.0, 0.0, 1.0);
-            //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-//
-//            //Display the current video frame to the current OpenGL context.
-//            arController->drawVideo(0);
-//            ARLOGi("Passou no drawVideo. \n");
-//#endif
-
-            // Look for trackables, and draw on each found one.
-            for (int i = 0; i < markerCount; i++) {
-
-                // Find the trackable for the given trackable ID.
-                ARTrackable *marker = arController->findTrackable(markerIDs[i]);
-                float view[16];
-                if (marker->visible) {
-                    //arUtilPrintMtx16(marker->transformationMatrix);
-                    //ARLOGi("\n \n");
-                    for (int i = 0; i < 16; i++){
-                        view[i] = (float) marker->transformationMatrix[i];
-                        mView[i] = view[i];
-                        //ARLOGi("View %d: %0.3f  \n", i, view[i]);
-                    }
-                }
-                //Linearização por coluna
-                //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
-                //ARLOGd("Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
-                if(gluInvertMatrix(view)){
-                    //for (int i = 0; i < 16; i++){
-                    //ARLOGi("Inv %d: %.3f  \n", i, invOut[i]);
-                    //}
-                    sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
-                }
-                //ARLOGi("%s", str);
-                drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
-                showString( str );
-            }
-#ifndef ar
-            drawAux();
-#endif
-            glutSwapBuffers();
             done = true;
         }
     }
@@ -1193,7 +1098,7 @@ void printUsageAndExit( const std::string& argv0 )
               "  -T | --tutorial-number <num>              Specify tutorial number\n"
               "  -t | --texture-path <path>                Specify path to texture directory\n"
               "App Keystrokes:\n"
-              "  q  Quit\n"
+              "  qVec  Quit\n"
               "  s  Save image to '" << SAMPLE_NAME << ".ppm'\n"
               << std::endl;
 
@@ -1263,7 +1168,7 @@ int main( int argc, char** argv )
         glewInit();
 #endif
         init();
-        //displayOnce();
+        displayOnce();
 
         // load the ptx source associated with tutorial number
         std::stringstream ss;

@@ -118,7 +118,6 @@ static bool gModelVisbilities[DRAW_MODELS_MAX];
 static void drawCube(float viewProjection[16], float pose[16]);
 static void drawAxis(float viewProjection[16], float pose[16]);
 
-
 void drawSetup(ARG_API drawAPI_in, bool rotate90_in, bool flipH_in, bool flipV_in)
 {
     drawAPI = drawAPI_in;
@@ -212,13 +211,6 @@ void drawSetModel(int modelIndex, bool visible, float pose[16], float camPose[16
     if (visible) {
         mtxLoadMatrixf(&(gModelPoses[modelIndex][0]), pose);
         mtxLoadMatrixf(&(gCameraPoses[modelIndex][0]), camPose);
-
-        //mtxRotatef(&(gModelPoses[modelIndex][0]), 180.0f, 0.0f, 0.0f, 1.0f);
-        //mtxRotatef(&(gModelPoses[modelIndex][0]), 90.0f, 1.0f, 0.0f, 0.0f);
-
-        //mtxRotatef(&(gCameraPoses[modelIndex][0]), 180.0f, 0.0f, 0.0f, 1.0f);
-        //mtxRotatef(&(gCameraPoses[modelIndex][0]), 90.0f, 1.0f, 0.0f, 0.0f);
-        //ARLOGi("Passou no drawSetModel. \n");
     }
 }
 
@@ -662,7 +654,7 @@ static void drawCubeTranslucent(float viewProjection[16], float pose[16])
 #endif // HAVE_GLES2 || HAVE_GL3
 }
 
-// Something to look at, draw a rotating colour cube.
+
 static void drawAxis(float viewProjection[16], float pose[16])
 {
 #if HAVE_GLES2 || HAVE_GL3
@@ -693,7 +685,7 @@ static void drawAxis(float viewProjection[16], float pose[16])
             glEnableVertexAttribArray(ATTRIBUTE_VERTEX);
             glEnableVertexAttribArray(ATTRIBUTE_COLOUR);
             glVertexAttribPointer(ATTRIBUTE_COLOUR, 3, GL_FLOAT, GL_FALSE, 6*sizeof(float), (void*)(3*sizeof(float)));
-            glLineWidth(2.0f);
+            glLineWidth(4.0f);
             glDrawArrays(GL_LINES, 0, 6);
 
 #ifdef DEBUG
