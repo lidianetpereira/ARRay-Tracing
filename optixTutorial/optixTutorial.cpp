@@ -435,7 +435,7 @@ void createGeometry()
 //    geometrygroup->setChild( 1, gis[1] );
 //    geometrygroup->setChild( 2, gis[2] );
 
-    m_top_object->addChild(rot_1 );
+    m_top_object->addChild( geometrygroup );
     context["top_object"]->set( m_top_object );
     context["top_shadower"]->set( m_top_object );
 }
@@ -626,13 +626,13 @@ void glutDisplay()
 
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
+
+    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
     {
         static unsigned frame_count = 0;
         sutil::displayFps( frame_count++ );
     }
 
-    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
-    
     updateCamera();
 
     context->launch( 0, width, height );
@@ -668,10 +668,6 @@ void glutDisplay()
 
     drawTexConfig(m_tex);
     glDisable(GL_TEXTURE_2D);
-
-
-    Buffer buffer = getOutputBuffer();
-    sutil::displayBufferGL( getOutputBuffer() );
 
     glBindFramebuffer(GL_READ_BUFFER, framebuffer);
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
@@ -889,8 +885,8 @@ static void displayOnce(void)
                 ARTrackable *marker = arController->findTrackable(markerIDs[i]);
                 float view[16];
                 if (marker->visible) {
-                    arUtilPrintMtx16(marker->transformationMatrix);
-                    ARLOGi("\n \n");
+                    //arUtilPrintMtx16(marker->transformationMatrix);
+                    //ARLOGi("\n \n");
                     for (int i = 0; i < 16; i++){
                         view[i] = (float) marker->transformationMatrix[i];
                         markerPose[i] = view[i];
@@ -899,16 +895,16 @@ static void displayOnce(void)
                 //ARLOGd("MK: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
                 //sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
                 if(gluInvertMatrix(view)){
-                    arUtilPrintMtx16(marker->transformationMatrix);
-                    ARLOGi("--- \n");
+                    //arUtilPrintMtx16(marker->transformationMatrix);
+                    //ARLOGi("--- \n");
                     sprintf(str, "Cam Pos: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
                     //ARLOGd("Cam: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", invOut[12], invOut[13], invOut[14], invOut[15]);
                 }
                 drawSetModel(markerModelIDs[i], marker->visible, view, invOut);
-                showString( str );
+                //showString( str );
             }
 //#ifndef ar
-            draw();
+            //draw();
 //#endif
             done = true;
         }
