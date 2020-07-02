@@ -326,112 +326,194 @@ void createGeometry()
     m_top_object = context->createGroup();
     m_top_object->setAcceleration( context->createAcceleration("Trbvh"));
 
-    const char *ptx = sutil::getPtxString( SAMPLE_NAME, "box.cu" );
-    Program box_bounds    = context->createProgramFromPTXString( ptx, "box_bounds" );
-    Program box_intersect = context->createProgramFromPTXString( ptx, "box_intersect" );
+    // Create glass sphere geometry
+    Geometry glass_sphere = context->createGeometry();
+    glass_sphere->setPrimitiveCount( 1u );
 
-    // Create box
-    Geometry box = context->createGeometry();
-    box->setPrimitiveCount( 1u );
-    box->setBoundingBoxProgram( box_bounds );
-    box->setIntersectionProgram( box_intersect );
+    const char *ptx = sutil::getPtxString( SAMPLE_NAME, "sphere_shell.cu" );
+    glass_sphere->setBoundingBoxProgram( context->createProgramFromPTXString( ptx, "bounds" ) );
+    glass_sphere->setIntersectionProgram( context->createProgramFromPTXString( ptx, "intersect" ) );
+    glass_sphere["center"]->setFloat( 45.0f, 0.0f, 20.0f );
+    glass_sphere["radius1"]->setFloat( 18.0f );
+    glass_sphere["radius2"]->setFloat( 20.0f );
 
-    //Original
-    box["boxmin"]->setFloat( -80.0f, -10.0f, 0.0f );
-    box["boxmax"]->setFloat(80.0f, 10.0f, 120.0f);
+    // Create glass sphere geometry
+    Geometry spec_sphere = context->createGeometry();
+    spec_sphere->setPrimitiveCount( 1u );
+
+    spec_sphere->setBoundingBoxProgram( context->createProgramFromPTXString( ptx, "bounds" ) );
+    spec_sphere->setIntersectionProgram( context->createProgramFromPTXString( ptx, "intersect" ) );
+    spec_sphere["center"]->setFloat( -45.0f, 0.0f, 20.0f );
+    spec_sphere["radius1"]->setFloat( 18.0f );
+    spec_sphere["radius2"]->setFloat( 20.0f );
+
+    // Metal sphere geometry
+    Geometry metal_sphere = context->createGeometry();
+    metal_sphere->setPrimitiveCount( 1u );
+    ptx = sutil::getPtxString( SAMPLE_NAME, "sphere.cu" );
+    metal_sphere->setBoundingBoxProgram( context->createProgramFromPTXString( ptx, "bounds" ) );
+    metal_sphere->setIntersectionProgram( context->createProgramFromPTXString( ptx, "robust_intersect" ) );
+    metal_sphere["sphere"]->setFloat( 0.0f, 0.0f, 20.0f, 20.0f );
+
+    // Glass material
+    ptx = sutil::getPtxString( SAMPLE_NAME, "glass.cu" );
+    Program glass_ch = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
+    Program glass_ah = context->createProgramFromPTXString( ptx, "any_hit_shadow" );
+    Material glass_matl = context->createMaterial();
+    glass_matl->setClosestHitProgram( 0, glass_ch );
+    glass_matl->setAnyHitProgram( 1, glass_ah );
+
+    glass_matl["importance_cutoff"]->setFloat( 1e-2f );
+    glass_matl["cutoff_color"]->setFloat( 0.034f, 0.055f, 0.085f );
+    glass_matl["fresnel_exponent"]->setFloat( 3.0f );
+    glass_matl["fresnel_minimum"]->setFloat( 0.1f );
+    glass_matl["fresnel_maximum"]->setFloat( 1.0f );
+    glass_matl["refraction_index"]->setFloat( 1.4f );
+    glass_matl["refraction_color"]->setFloat( 1.0f, 1.0f, 1.0f );
+    glass_matl["reflection_color"]->setFloat( 1.0f, 1.0f, 1.0f );
+    glass_matl["refraction_maxdepth"]->setInt( 10 );
+    glass_matl["reflection_maxdepth"]->setInt( 5 );
+    const float3 extinction = make_float3(.83f, .83f, .83f);
+    glass_matl["extinction_constant"]->setFloat( log(extinction.x), log(extinction.y), log(extinction.z) );
+    glass_matl["shadow_attenuation"]->setFloat( 0.6f, 0.6f, 0.6f );
+
+    // Metal material
+    ptx = sutil::getPtxString( SAMPLE_NAME, "phong.cu" );
+    Program phong_ch = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
+    Program phong_ah = context->createProgramFromPTXString( ptx, "any_hit_shadow" );
+    Material metal_matl = context->createMaterial();
+    metal_matl->setClosestHitProgram( 0, phong_ch );
+    metal_matl->setAnyHitProgram( 1, phong_ah );
+    metal_matl["Ka"]->setFloat(0.5f, 0.2f, 0.1f);
+    metal_matl["Kd"]->setFloat(0.6f, 0.0f, 0.1f);
+    metal_matl["Ks"]->setFloat( 0.9f, 0.9f, 0.9f );
+    metal_matl["phong_exp"]->setFloat( 64 );
+    metal_matl["Kr"]->setFloat( 0.0f,  0.0f,  0.0f);
+
+    // Metal material
+    ptx = sutil::getPtxString( SAMPLE_NAME, "phong.cu" );
+    phong_ch = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
+    phong_ah = context->createProgramFromPTXString( ptx, "any_hit_shadow" );
+    Material metal_matSpec = context->createMaterial();
+    metal_matSpec->setClosestHitProgram( 0, phong_ch );
+    metal_matSpec->setAnyHitProgram( 1, phong_ah );
+    metal_matSpec["Ka"]->setFloat(0.5f, 0.2f, 0.1f);
+    metal_matSpec["Kd"]->setFloat(0.6f, 0.0f, 0.1f);
+    metal_matSpec["Ks"]->setFloat( 0.9f, 0.9f, 0.9f );
+    metal_matSpec["phong_exp"]->setFloat( 64 );
+    metal_matSpec["Kr"]->setFloat( 0.6f,  0.6f,  0.6f);
+
+//    const char *ptx = sutil::getPtxString( SAMPLE_NAME, "box.cu" );
+//    Program box_bounds    = context->createProgramFromPTXString( ptx, "box_bounds" );
+//    Program box_intersect = context->createProgramFromPTXString( ptx, "box_intersect" );
+//
+//    // Create box
+//    Geometry box = context->createGeometry();
+//    box->setPrimitiveCount( 1u );
+//    box->setBoundingBoxProgram( box_bounds );
+//    box->setIntersectionProgram( box_intersect );
+//
+//    //Original
+//    box["boxmin"]->setFloat( -80.0f, -10.0f, 0.0f );
+//    box["boxmax"]->setFloat(80.0f, 10.0f, 120.0f);
 //
 //    m_aabb = Aabb( make_float3(-80.0f, -10.0f, 0.0f), make_float3( 80.0f, 10.0f, 120.0f ));
 
 //    //Transformadas
 //    box["boxmin"]->setFloat( -80.0f, 0.0f, -10.0f );
 //    box["boxmax"]->setFloat(80.0f, 120.0f, 10.0f);
-
-    Geometry eX = context->createGeometry();
-    eX->setPrimitiveCount( 1u );
-    eX->setBoundingBoxProgram( box_bounds );
-    eX->setIntersectionProgram( box_intersect );
-
-    eX["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
-    eX["boxmax"]->setFloat(81.0f, 1.0f, 1.0f);
-
-    Geometry eY = context->createGeometry();
-    eY->setPrimitiveCount( 1u );
-    eY->setBoundingBoxProgram( box_bounds );
-    eY->setIntersectionProgram( box_intersect );
-
-    eY["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
-    eY["boxmax"]->setFloat(1.0f, 81.0f, 1.0f);
-
-    Geometry eZ = context->createGeometry();
-    eZ->setPrimitiveCount( 1u );
-    eZ->setBoundingBoxProgram( box_bounds );
-    eZ->setIntersectionProgram( box_intersect );
-
-    eZ["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
-    eZ["boxmax"]->setFloat(1.0f, 1.0f, 81.0f);
-
-    // Materials
-    std::string box_chname;
-    box_chname = "closest_hit_radiance3";
-
-    Material box_matl = context->createMaterial();
-    Program box_ch = context->createProgramFromPTXString( tutorial_ptx, box_chname.c_str() );
-    box_matl->setClosestHitProgram( 0, box_ch );
-    //if( tutorial_number >= 3) {
-        Program box_ah = context->createProgramFromPTXString( tutorial_ptx, "any_hit_shadow" );
-        box_matl->setAnyHitProgram( 1, box_ah );
-    //}
-    box_matl["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-    box_matl["Kd"]->setFloat( 0.6f, 0.7f, 0.8f );
-    box_matl["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-    box_matl["phong_exp"]->setFloat( 88 );
-    box_matl["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
-
-    Material box_matX = context->createMaterial();
-    box_matX->setClosestHitProgram( 0, box_ch );
-    //if( tutorial_number >= 3) {
-        //box_matX->setAnyHitProgram( 1, box_ah );
-    //}
-    box_matX["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-    box_matX["Kd"]->setFloat( 0.0f, 1.0f, 1.0f );
-    box_matX["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-    box_matX["phong_exp"]->setFloat( 88 );
-    box_matX["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
-
-    Material box_matY = context->createMaterial();
-    box_matY->setClosestHitProgram( 0, box_ch );
-    //if( tutorial_number >= 3) {
-    //box_matY->setAnyHitProgram( 1, box_ah );
-    //}
-    box_matY["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-    box_matY["Kd"]->setFloat( 1.0f, 0.0f, 1.0f );
-    box_matY["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-    box_matY["phong_exp"]->setFloat( 88 );
-    box_matY["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
-
-    Material box_matZ = context->createMaterial();
-    box_matZ->setClosestHitProgram( 0, box_ch );
-    //if( tutorial_number >= 3) {
-    //box_matZ->setAnyHitProgram( 1, box_ah );
-    //}
-    box_matZ["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-    box_matZ["Kd"]->setFloat( 1.0f, 1.0f, 0.0f );
-    box_matZ["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-    box_matZ["phong_exp"]->setFloat( 88 );
-    box_matZ["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+//
+//    Geometry eX = context->createGeometry();
+//    eX->setPrimitiveCount( 1u );
+//    eX->setBoundingBoxProgram( box_bounds );
+//    eX->setIntersectionProgram( box_intersect );
+//
+//    eX["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
+//    eX["boxmax"]->setFloat(81.0f, 1.0f, 1.0f);
+//
+//    Geometry eY = context->createGeometry();
+//    eY->setPrimitiveCount( 1u );
+//    eY->setBoundingBoxProgram( box_bounds );
+//    eY->setIntersectionProgram( box_intersect );
+//
+//    eY["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
+//    eY["boxmax"]->setFloat(1.0f, 81.0f, 1.0f);
+//
+//    Geometry eZ = context->createGeometry();
+//    eZ->setPrimitiveCount( 1u );
+//    eZ->setBoundingBoxProgram( box_bounds );
+//    eZ->setIntersectionProgram( box_intersect );
+//
+//    eZ["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
+//    eZ["boxmax"]->setFloat(1.0f, 1.0f, 81.0f);
+//
+//    // Materials
+//    std::string box_chname;
+//    box_chname = "closest_hit_radiance3";
+//
+//    Material box_matl = context->createMaterial();
+//    Program box_ch = context->createProgramFromPTXString( tutorial_ptx, box_chname.c_str() );
+//    box_matl->setClosestHitProgram( 0, box_ch );
+//    //if( tutorial_number >= 3) {
+//        Program box_ah = context->createProgramFromPTXString( tutorial_ptx, "any_hit_shadow" );
+//        box_matl->setAnyHitProgram( 1, box_ah );
+//    //}
+//    box_matl["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
+//    box_matl["Kd"]->setFloat( 0.6f, 0.7f, 0.8f );
+//    box_matl["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
+//    box_matl["phong_exp"]->setFloat( 88 );
+//    box_matl["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+//
+//    Material box_matX = context->createMaterial();
+//    box_matX->setClosestHitProgram( 0, box_ch );
+//    //if( tutorial_number >= 3) {
+//        //box_matX->setAnyHitProgram( 1, box_ah );
+//    //}
+//    box_matX["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
+//    box_matX["Kd"]->setFloat( 0.0f, 1.0f, 1.0f );
+//    box_matX["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
+//    box_matX["phong_exp"]->setFloat( 88 );
+//    box_matX["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+//
+//    Material box_matY = context->createMaterial();
+//    box_matY->setClosestHitProgram( 0, box_ch );
+//    //if( tutorial_number >= 3) {
+//    //box_matY->setAnyHitProgram( 1, box_ah );
+//    //}
+//    box_matY["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
+//    box_matY["Kd"]->setFloat( 1.0f, 0.0f, 1.0f );
+//    box_matY["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
+//    box_matY["phong_exp"]->setFloat( 88 );
+//    box_matY["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+//
+//    Material box_matZ = context->createMaterial();
+//    box_matZ->setClosestHitProgram( 0, box_ch );
+//    //if( tutorial_number >= 3) {
+//    //box_matZ->setAnyHitProgram( 1, box_ah );
+//    //}
+//    box_matZ["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
+//    box_matZ["Kd"]->setFloat( 1.0f, 1.0f, 0.0f );
+//    box_matZ["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
+//    box_matZ["phong_exp"]->setFloat( 88 );
+//    box_matZ["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
 
     // Create GIs for each piece of geometry
     std::vector<GeometryInstance> gis;
-    gis.push_back( context->createGeometryInstance( box, &box_matl, &box_matl+1 ) );
+//    gis.push_back( context->createGeometryInstance( box, &box_matl, &box_matl+1 ) );
 //    gis.push_back( context->createGeometryInstance( eX, &box_matX, &box_matX+1 ) );
 //    gis.push_back( context->createGeometryInstance( eY, &box_matY, &box_matY+1 ) );
 //    gis.push_back( context->createGeometryInstance( eZ, &box_matZ, &box_matZ+1 ) );
+    gis.push_back( context->createGeometryInstance( glass_sphere, &glass_matl, &glass_matl+1 ) );
+    gis.push_back( context->createGeometryInstance( metal_sphere,  &metal_matl,  &metal_matl+1 ) );
+    gis.push_back( context->createGeometryInstance( spec_sphere,  &metal_matSpec,  &metal_matSpec+1 ) );
 
     // Place all in group
     GeometryGroup geometrygroup = context->createGeometryGroup();
     geometrygroup->setAcceleration( context->createAcceleration("Trbvh") );
     geometrygroup->setChildCount( static_cast<unsigned int>(gis.size()) );
     geometrygroup->setChild( 0, gis[0] );
+    geometrygroup->setChild( 1, gis[1] );
+    geometrygroup->setChild( 2, gis[2] );
 //    geometrygroup->setChild( 1, gis[1] );
 //    geometrygroup->setChild( 2, gis[2] );
 
@@ -478,15 +560,15 @@ void setupLights()
 {
 
 //#ifndef ar
-//    BasicLight lights[] = {
-//        { make_float3( 0.0f, 130.0f, -40.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
-//    };
+    BasicLight lights[] = {
+        { make_float3( 0.0f, -130.0f, 40.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+    };
 //#endif
 
 #ifdef ar
-    BasicLight lights[] = {
-            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
-    };
+//    BasicLight lights[] = {
+//            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+//    };
 #endif
 
     Buffer light_buffer = context->createBuffer( RT_BUFFER_INPUT );
@@ -626,12 +708,12 @@ void glutDisplay()
 
     glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
-
-    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
     {
         static unsigned frame_count = 0;
         sutil::displayFps( frame_count++ );
     }
+
+    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
 
     updateCamera();
 

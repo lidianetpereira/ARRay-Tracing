@@ -46,10 +46,15 @@ if(GLUT_FOUND AND OPENGL_FOUND)
     tutorial9.cu
     tutorial10.cu
     tutorial11.cu
+    glass.cu
+    phong.cu
 
     # These files are common among multiple samples
     box.cu
+    sphere.cu
+    sphere_shell.cu
     common.h
+    phong.h
     parallelogram.cu
     random.h
     draw.h

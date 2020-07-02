@@ -254,6 +254,9 @@
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/draw.h">
 			<Option target="optixTutorial"/>
 		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/glass.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/hiro.patt">
 			<Option target="optixTutorial"/>
 		</Unit>
@@ -266,7 +269,19 @@
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/parallelogram.cu">
 			<Option target="optixTutorial"/>
 		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/phong.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/phong.h">
+			<Option target="optixTutorial"/>
+		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/random.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/sphere.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/sphere_shell.cu">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial.h">
