@@ -269,6 +269,9 @@
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/random.h">
 			<Option target="optixTutorial"/>
 		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/triangle_mesh.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial.h">
 			<Option target="optixTutorial"/>
 		</Unit>

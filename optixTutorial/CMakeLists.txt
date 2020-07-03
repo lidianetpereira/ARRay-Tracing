@@ -46,6 +46,7 @@ if(GLUT_FOUND AND OPENGL_FOUND)
     tutorial9.cu
     tutorial10.cu
     tutorial11.cu
+    triangle_mesh.cu
 
     # These files are common among multiple samples
     box.cu
