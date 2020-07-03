@@ -120,33 +120,28 @@ const char* const SAMPLE_NAME = "optixTutorial";
 Context      context;
 uint32_t     width  = 960u;
 uint32_t     height = 720u;
-bool         use_pbo = false;
 
 std::string  texture_path;
-const char*  tutorial_ptx;
 int          tutorial_number = 3;
 
 bool   m_interop;
 GLuint m_pbo;
 GLuint m_tex;
 
-Context m_context;
 Buffer m_buffer;
 
 // Viewport size
 int m_width = 960;
 int m_height = 720;
 
-// OptiX launch size
-unsigned int m_widthLaunch = 960u;
-unsigned int m_heightLaunch = 720u;
-
 // Camera state
 float3       camera_up;
 float3       camera_lookat;
 float3       camera_eye;
+float3       camera_eyeOld;
 Matrix4x4    camera_rotate;
 sutil::Arcball arcball;
+bool  camera_dirty = true;
 
 // Mouse state
 int2       mouse_prev_pos;
@@ -178,29 +173,16 @@ static const int markerCount = (sizeof(markers)/sizeof(markers[0]));
 int markerIDs[markerCount];
 int markerModelIDs[markerCount];
 
-int optixWindow;
 char str[512];
 float invOut[16];
 
-unsigned int framebuffer;
-unsigned int rbo;
-
 Group m_top_object;
-Aabb  m_aabb;
-float markerPose[16];
-float geometryPose[16];
-Transform rot_1;
-Transform rot_2;
-Transform trans_1;
-
-Quaternion q;
-float cameraPos[3][4];
-float qVec[4];
-float p[4];
-float angle;
-float camRotation[16];
-
-float mP0[3] = {0.0f, 0.0f, 0.0f};
+Transform rotation;
+float transformMat[16];
+Program pgram_intersection = 0;
+Program pgram_bounding_box = 0;
+Program diffuse_ch = 0;
+Program diffuse_ah = 0;
 //------------------------------------------------------------------------------
 //
 // Forward decls
@@ -212,7 +194,6 @@ void destroyContext();
 void registerExitHandler();
 void createContext();
 void createGeometry();
-void updateGeometry();
 void setupCamera();
 void setupLights();
 void updateCamera();
@@ -233,13 +214,22 @@ static void init();
 void showString(std::string str);
 bool gluInvertMatrix(float m[16]);
 static void displayOnce(void);
-static void display(void);
+bool distanceBigger(float3 P, float3 Q);
 
 //------------------------------------------------------------------------------
 //
 //  Helper functions
 //
 //------------------------------------------------------------------------------
+
+bool distanceBigger(float3 P, float3 Q){
+    float threshold = 4.0f;
+
+    float distance = sqrt(pow(P.x - Q.x, 2.0)+ pow(P.y - Q.y, 2.0) + pow(P.z - Q.z, 2.0));
+    printf("d = %f\n", distance);
+    return distance > threshold;
+}
+
 
 Buffer getOutputBuffer()
 {
@@ -274,50 +264,93 @@ void createContext()
     context = Context::create();
     context->setRayTypeCount( 2 );
     context->setEntryPointCount( 1 );
-    context->setStackSize( 4640 );
-    context->setMaxTraceDepth( 5 );
+    context->setStackSize( 2800 );
+    context->setMaxTraceDepth( 12 );
 
     // Note: high max depth for reflection and refraction through glass
-    context["max_depth"]->setInt( 100 );
+    context["max_depth"]->setInt( 10 );
+    context["frame"]->setUint( 0u );
     context["scene_epsilon"]->setFloat( 1.e-4f );
-    context["importance_cutoff"]->setFloat( 0.01f );
-    context["ambient_light_color"]->setFloat( 0.31f, 0.33f, 0.28f );
-
-//    // Output buffer
-//    // First allocate the memory for the GL buffer, then attach it to OptiX.
-//    GLuint vbo = 0;
-//    glGenBuffers( 1, &vbo );
-//    glBindBuffer( GL_ARRAY_BUFFER, vbo );
-//    glBufferData( GL_ARRAY_BUFFER, 4 * width * height, 0, GL_STREAM_DRAW);
-//    glBindBuffer( GL_ARRAY_BUFFER, 0 );
-//
-//    //printf("Buffer Optix: W: %d H: %d \n", width, height);
-//    Buffer buffer = sutil::createOutputBuffer( context, RT_FORMAT_UNSIGNED_BYTE4, width, height, use_pbo );
-//    context["output_buffer"]->set( buffer );
+    context["ambient_light_color"]->setFloat( 0.3f, 0.3f, 0.1f );
 
     // OptiX buffer initialization:
     m_buffer = (m_interop) ? context->createBufferFromGLBO(RT_BUFFER_OUTPUT, m_pbo)
                            : context->createBuffer(RT_BUFFER_OUTPUT);
     m_buffer->setFormat(RT_FORMAT_UNSIGNED_BYTE4); // BGRA8
-    m_buffer->setSize(m_widthLaunch, m_heightLaunch);
+    m_buffer->setSize(width, height);
     context["output_buffer"]->set(m_buffer);
 
+    // Accumulation buffer.  This scene has a lot of high frequency detail and
+    // benefits from accumulation of samples.
+    Buffer accum_buffer = context->createBuffer( RT_BUFFER_INPUT_OUTPUT | RT_BUFFER_GPU_LOCAL,
+                                                 RT_FORMAT_FLOAT4, width, height );
+    context["accum_buffer"]->set( accum_buffer );
+
     // Ray generation program
-    const std::string camera_name = "pinhole_camera";
-    Program ray_gen_program = context->createProgramFromPTXString( tutorial_ptx, camera_name );
+    const char *ptx = sutil::getPtxString( SAMPLE_NAME, "accum_camera.cu" );
+    Program ray_gen_program = context->createProgramFromPTXString( ptx, "pinhole_camera" );
     context->setRayGenerationProgram( 0, ray_gen_program );
 
     // Exception program
-    Program exception_program = context->createProgramFromPTXString( tutorial_ptx, "exception" );
+    Program exception_program = context->createProgramFromPTXString( ptx, "exception" );
     context->setExceptionProgram( 0, exception_program );
-    //context["bad_color"]->setFloat( 1.0f, 0.0f, 1.0f );
-    context["bad_color"]->setFloat(1.0f, 0.0f, 1.0f);
+    context["bad_color"]->setFloat( 1.0f, 0.0f, 1.0f );
 
     // Miss program
-    const std::string miss_name = "miss";
-    context->setMissProgram( 0, context->createProgramFromPTXString( tutorial_ptx, miss_name ) );
-//    context["bg_color"]->setFloat( make_float3( 0.34f, 0.55f, 0.85f ) );
-    context["bg_color"]->setFloat( make_float3( 1.0f, 1.0f, 0.0f ) );
+    context->setMissProgram( 0, context->createProgramFromPTXString( sutil::getPtxString( SAMPLE_NAME, "constantbg.cu" ), "miss" ) );
+    context["bg_color"]->setFloat( 0.0f, 0.0f, 3.0f );
+}
+
+
+void setMaterial(GeometryInstance& gi, Material material)
+{
+    gi->addMaterial(material);
+}
+
+
+Material createMaterial(const float3& color){
+
+    Material diffuse = context->createMaterial();
+    diffuse->setClosestHitProgram( 0, diffuse_ch );
+    diffuse->setAnyHitProgram( 1, diffuse_ah );
+    diffuse["Kd1"]->setFloat( color);
+    diffuse["Ka1"]->setFloat( color);
+    diffuse["Ks1"]->setFloat( 0.0f, 0.0f, 0.0f);
+    diffuse["Kd2"]->setFloat( color);
+    diffuse["Ka2"]->setFloat( color);
+    diffuse["Ks2"]->setFloat( 0.0f, 0.0f, 0.0f);
+    diffuse["inv_checker_size"]->setFloat( 32.0f, 16.0f, 1.0f );
+    diffuse["phong_exp1"]->setFloat( 0.0f );
+    diffuse["phong_exp2"]->setFloat( 0.0f );
+    diffuse["Kr1"]->setFloat( 0.0f, 0.0f, 0.0f);
+    diffuse["Kr2"]->setFloat( 0.0f, 0.0f, 0.0f);
+
+    return diffuse;
+}
+
+
+GeometryInstance createParallelogram( const float3& anchor, const float3& offset1, const float3& offset2)
+{
+    Geometry parallelogram = context->createGeometry();
+    parallelogram->setPrimitiveCount( 1u );
+    parallelogram->setIntersectionProgram( pgram_intersection );
+    parallelogram->setBoundingBoxProgram( pgram_bounding_box );
+
+    float3 normal = normalize( cross( offset1, offset2 ) );
+    float d = dot( normal, anchor );
+    float4 plane = make_float4( normal, d );
+
+    float3 v1 = offset1 / dot( offset1, offset1 );
+    float3 v2 = offset2 / dot( offset2, offset2 );
+
+    parallelogram["plane"]->setFloat( plane );
+    parallelogram["anchor"]->setFloat( anchor );
+    parallelogram["v1"]->setFloat( v1 );
+    parallelogram["v2"]->setFloat( v2 );
+
+    GeometryInstance gi = context->createGeometryInstance();
+    gi->setGeometry(parallelogram);
+    return gi;
 }
 
 
@@ -333,19 +366,9 @@ void createGeometry()
     const char *ptx = sutil::getPtxString( SAMPLE_NAME, "sphere_shell.cu" );
     glass_sphere->setBoundingBoxProgram( context->createProgramFromPTXString( ptx, "bounds" ) );
     glass_sphere->setIntersectionProgram( context->createProgramFromPTXString( ptx, "intersect" ) );
-    glass_sphere["center"]->setFloat( 45.0f, 0.0f, 20.0f );
-    glass_sphere["radius1"]->setFloat( 18.0f );
-    glass_sphere["radius2"]->setFloat( 20.0f );
-
-    // Create glass sphere geometry
-    Geometry spec_sphere = context->createGeometry();
-    spec_sphere->setPrimitiveCount( 1u );
-
-    spec_sphere->setBoundingBoxProgram( context->createProgramFromPTXString( ptx, "bounds" ) );
-    spec_sphere->setIntersectionProgram( context->createProgramFromPTXString( ptx, "intersect" ) );
-    spec_sphere["center"]->setFloat( -45.0f, 0.0f, 20.0f );
-    spec_sphere["radius1"]->setFloat( 18.0f );
-    spec_sphere["radius2"]->setFloat( 20.0f );
+    glass_sphere["center"]->setFloat( 120.0f, 100.0f, 100.0f );
+    glass_sphere["radius1"]->setFloat( 99.6f );
+    glass_sphere["radius2"]->setFloat( 100.0f );
 
     // Metal sphere geometry
     Geometry metal_sphere = context->createGeometry();
@@ -353,7 +376,12 @@ void createGeometry()
     ptx = sutil::getPtxString( SAMPLE_NAME, "sphere.cu" );
     metal_sphere->setBoundingBoxProgram( context->createProgramFromPTXString( ptx, "bounds" ) );
     metal_sphere->setIntersectionProgram( context->createProgramFromPTXString( ptx, "robust_intersect" ) );
-    metal_sphere["sphere"]->setFloat( 0.0f, 0.0f, 20.0f, 20.0f );
+    metal_sphere["sphere"]->setFloat( -120.0f, 100.0f, -100.0f, 100.0f );
+
+    // Set up parallelogram programs
+    ptx = sutil::getPtxString( SAMPLE_NAME, "parallelogram.cu" );
+    pgram_bounding_box = context->createProgramFromPTXString( ptx, "bounds" );
+    pgram_intersection = context->createProgramFromPTXString( ptx, "intersect" );
 
     // Glass material
     ptx = sutil::getPtxString( SAMPLE_NAME, "glass.cu" );
@@ -384,143 +412,78 @@ void createGeometry()
     Material metal_matl = context->createMaterial();
     metal_matl->setClosestHitProgram( 0, phong_ch );
     metal_matl->setAnyHitProgram( 1, phong_ah );
-    metal_matl["Ka"]->setFloat(0.5f, 0.2f, 0.1f);
-    metal_matl["Kd"]->setFloat(0.6f, 0.0f, 0.1f);
+    metal_matl["Ka"]->setFloat( 0.2f, 0.5f, 0.5f );
+    metal_matl["Kd"]->setFloat( 0.2f, 0.7f, 0.8f );
     metal_matl["Ks"]->setFloat( 0.9f, 0.9f, 0.9f );
     metal_matl["phong_exp"]->setFloat( 64 );
-    metal_matl["Kr"]->setFloat( 0.0f,  0.0f,  0.0f);
+    metal_matl["Kr"]->setFloat( 0.5f,  0.5f,  0.5f);
 
-    // Metal material
-    ptx = sutil::getPtxString( SAMPLE_NAME, "phong.cu" );
-    phong_ch = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
-    phong_ah = context->createProgramFromPTXString( ptx, "any_hit_shadow" );
-    Material metal_matSpec = context->createMaterial();
-    metal_matSpec->setClosestHitProgram( 0, phong_ch );
-    metal_matSpec->setAnyHitProgram( 1, phong_ah );
-    metal_matSpec["Ka"]->setFloat(0.5f, 0.2f, 0.1f);
-    metal_matSpec["Kd"]->setFloat(0.6f, 0.0f, 0.1f);
-    metal_matSpec["Ks"]->setFloat( 0.9f, 0.9f, 0.9f );
-    metal_matSpec["phong_exp"]->setFloat( 64 );
-    metal_matSpec["Kr"]->setFloat( 0.6f,  0.6f,  0.6f);
+    ptx = sutil::getPtxString( SAMPLE_NAME, "checker.cu" );
+    diffuse_ch = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
+    diffuse_ah = context->createProgramFromPTXString( ptx, "any_hit_shadow" );
 
-//    const char *ptx = sutil::getPtxString( SAMPLE_NAME, "box.cu" );
-//    Program box_bounds    = context->createProgramFromPTXString( ptx, "box_bounds" );
-//    Program box_intersect = context->createProgramFromPTXString( ptx, "box_intersect" );
-//
-//    // Create box
-//    Geometry box = context->createGeometry();
-//    box->setPrimitiveCount( 1u );
-//    box->setBoundingBoxProgram( box_bounds );
-//    box->setIntersectionProgram( box_intersect );
-//
-//    //Original
-//    box["boxmin"]->setFloat( -80.0f, -10.0f, 0.0f );
-//    box["boxmax"]->setFloat(80.0f, 10.0f, 120.0f);
-//
-//    m_aabb = Aabb( make_float3(-80.0f, -10.0f, 0.0f), make_float3( 80.0f, 10.0f, 120.0f ));
-
-//    //Transformadas
-//    box["boxmin"]->setFloat( -80.0f, 0.0f, -10.0f );
-//    box["boxmax"]->setFloat(80.0f, 120.0f, 10.0f);
-//
-//    Geometry eX = context->createGeometry();
-//    eX->setPrimitiveCount( 1u );
-//    eX->setBoundingBoxProgram( box_bounds );
-//    eX->setIntersectionProgram( box_intersect );
-//
-//    eX["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
-//    eX["boxmax"]->setFloat(81.0f, 1.0f, 1.0f);
-//
-//    Geometry eY = context->createGeometry();
-//    eY->setPrimitiveCount( 1u );
-//    eY->setBoundingBoxProgram( box_bounds );
-//    eY->setIntersectionProgram( box_intersect );
-//
-//    eY["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
-//    eY["boxmax"]->setFloat(1.0f, 81.0f, 1.0f);
-//
-//    Geometry eZ = context->createGeometry();
-//    eZ->setPrimitiveCount( 1u );
-//    eZ->setBoundingBoxProgram( box_bounds );
-//    eZ->setIntersectionProgram( box_intersect );
-//
-//    eZ["boxmin"]->setFloat( 0.0f, 0.0f, 0.0f );
-//    eZ["boxmax"]->setFloat(1.0f, 1.0f, 81.0f);
-//
-//    // Materials
-//    std::string box_chname;
-//    box_chname = "closest_hit_radiance3";
-//
-//    Material box_matl = context->createMaterial();
-//    Program box_ch = context->createProgramFromPTXString( tutorial_ptx, box_chname.c_str() );
-//    box_matl->setClosestHitProgram( 0, box_ch );
-//    //if( tutorial_number >= 3) {
-//        Program box_ah = context->createProgramFromPTXString( tutorial_ptx, "any_hit_shadow" );
-//        box_matl->setAnyHitProgram( 1, box_ah );
-//    //}
-//    box_matl["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-//    box_matl["Kd"]->setFloat( 0.6f, 0.7f, 0.8f );
-//    box_matl["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-//    box_matl["phong_exp"]->setFloat( 88 );
-//    box_matl["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
-//
-//    Material box_matX = context->createMaterial();
-//    box_matX->setClosestHitProgram( 0, box_ch );
-//    //if( tutorial_number >= 3) {
-//        //box_matX->setAnyHitProgram( 1, box_ah );
-//    //}
-//    box_matX["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-//    box_matX["Kd"]->setFloat( 0.0f, 1.0f, 1.0f );
-//    box_matX["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-//    box_matX["phong_exp"]->setFloat( 88 );
-//    box_matX["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
-//
-//    Material box_matY = context->createMaterial();
-//    box_matY->setClosestHitProgram( 0, box_ch );
-//    //if( tutorial_number >= 3) {
-//    //box_matY->setAnyHitProgram( 1, box_ah );
-//    //}
-//    box_matY["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-//    box_matY["Kd"]->setFloat( 1.0f, 0.0f, 1.0f );
-//    box_matY["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-//    box_matY["phong_exp"]->setFloat( 88 );
-//    box_matY["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
-//
-//    Material box_matZ = context->createMaterial();
-//    box_matZ->setClosestHitProgram( 0, box_ch );
-//    //if( tutorial_number >= 3) {
-//    //box_matZ->setAnyHitProgram( 1, box_ah );
-//    //}
-//    box_matZ["Ka"]->setFloat( 0.3f, 0.3f, 0.3f );
-//    box_matZ["Kd"]->setFloat( 1.0f, 1.0f, 0.0f );
-//    box_matZ["Ks"]->setFloat( 0.8f, 0.9f, 0.8f );
-//    box_matZ["phong_exp"]->setFloat( 88 );
-//    box_matZ["reflectivity_n"]->setFloat( 0.2f, 0.2f, 0.2f );
+    const float3 white = make_float3( 0.8f, 0.8f, 0.8f );
+    const float3 green = make_float3( 0.05f, 0.8f, 0.05f );
+    const float3 red   = make_float3( 0.8f, 0.05f, 0.05f );
+    const float3 light_em = make_float3( 0.9f, 0.9f, 0.9f );
 
     // Create GIs for each piece of geometry
     std::vector<GeometryInstance> gis;
-//    gis.push_back( context->createGeometryInstance( box, &box_matl, &box_matl+1 ) );
-//    gis.push_back( context->createGeometryInstance( eX, &box_matX, &box_matX+1 ) );
-//    gis.push_back( context->createGeometryInstance( eY, &box_matY, &box_matY+1 ) );
-//    gis.push_back( context->createGeometryInstance( eZ, &box_matZ, &box_matZ+1 ) );
     gis.push_back( context->createGeometryInstance( glass_sphere, &glass_matl, &glass_matl+1 ) );
     gis.push_back( context->createGeometryInstance( metal_sphere,  &metal_matl,  &metal_matl+1 ) );
-    gis.push_back( context->createGeometryInstance( spec_sphere,  &metal_matSpec,  &metal_matSpec+1 ) );
 
-    // Place all in group
-    GeometryGroup geometrygroup = context->createGeometryGroup();
+    // Floor
+    gis.push_back( createParallelogram( make_float3( -278.0f, 0.0f, -279.6f ),
+                                        make_float3( 0.0f, 0.0f, 559.2f ),
+                                        make_float3( 556.0f, 0.0f, 0.0f ) ) );
+    setMaterial(gis.back(), createMaterial(white));
+
+    // Ceiling
+    gis.push_back( createParallelogram( make_float3( -278.0f, 548.8f, -279.6f ),
+                                        make_float3( 556.0f, 0.0f, 0.0f ),
+                                        make_float3( 0.0f, 0.0f, 559.2f ) ) );
+    setMaterial(gis.back(), createMaterial(white));
+
+    // Back wall
+    gis.push_back( createParallelogram( make_float3( -278.0f, 0.0f, -279.6f),
+                                        make_float3( 0.0f, 548.8f, 0.0f),
+                                        make_float3( 556.0f, 0.0f, 0.0f) ) );
+    setMaterial(gis.back(), createMaterial(white));
+
+    // Right wall
+    gis.push_back( createParallelogram( make_float3( -278.0f, 0.0f, -279.6f ),
+                                        make_float3( 0.0f, 548.8f, 0.0f ),
+                                        make_float3( 0.0f, 0.0f, 559.2f ) ) );
+    setMaterial(gis.back(), createMaterial(green));
+
+    // Left wall
+    gis.push_back( createParallelogram( make_float3( 278.0f, 0.0f, -279.6f ),
+                                        make_float3( 0.0f, 0.0f, 559.2f ),
+                                        make_float3( 0.0f, 548.8f, 0.0f ) ) );
+    setMaterial(gis.back(), createMaterial(red));
+
+    // Light
+    gis.push_back( createParallelogram( make_float3( 65.0f, 548.6f, -52.5f),
+                                        make_float3( -130.0f, 0.0f, 0.0f),
+                                        make_float3( 0.0f, 0.0f, 105.0f) ) );
+    setMaterial(gis.back(), createMaterial(light_em));
+
+    GeometryGroup geometrygroup = context->createGeometryGroup(gis.begin(), gis.end());
     geometrygroup->setAcceleration( context->createAcceleration("Trbvh") );
-    geometrygroup->setChildCount( static_cast<unsigned int>(gis.size()) );
-    geometrygroup->setChild( 0, gis[0] );
-    geometrygroup->setChild( 1, gis[1] );
-    geometrygroup->setChild( 2, gis[2] );
-//    geometrygroup->setChild( 1, gis[1] );
-//    geometrygroup->setChild( 2, gis[2] );
 
-    m_top_object->addChild( geometrygroup );
+    mtxLoadIdentityf(transformMat);
+    mtxScalef(transformMat, 0.2, 0.2, 0.2);
+    mtxRotatef(transformMat, -90.0f, 1.0f, 0.0f, 0.0f);
+
+    rotation = context->createTransform();
+    rotation->setMatrix( false, transformMat, 0 );
+
+    rotation->setChild( geometrygroup );
+    m_top_object->addChild(rotation );
     context["top_object"]->set( m_top_object );
     context["top_shadower"]->set( m_top_object );
 }
+
 
 void setupCamera()
 {
@@ -549,27 +512,21 @@ void setupCamera()
     camera_up     = make_float3( invOut[4], invOut[5], invOut[6]);
 
     camera_rotate  = Matrix4x4::identity();
-
-#ifdef ar
-
-#endif
+    camera_dirty = true;
 }
 
 
 void setupLights()
 {
-
-//#ifndef ar
-    BasicLight lights[] = {
-        { make_float3( 0.0f, -130.0f, 40.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
-    };
-//#endif
-
 #ifdef ar
 //    BasicLight lights[] = {
 //            { camera_eye, make_float3( 1.0f, 1.0f, 1.0f ), 1 }
 //    };
 #endif
+
+    BasicLight lights[] = {
+            { make_float3( 0.0f, 0.0f , 108.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 }
+    };
 
     Buffer light_buffer = context->createBuffer( RT_BUFFER_INPUT );
     light_buffer->setFormat( RT_FORMAT_USER );
@@ -584,17 +541,14 @@ void setupLights()
 
 void updateCamera()
 {
-#ifdef ar
-    setupCamera();
-#endif
-    const float vfov = 45.0f;
+    const float vfov  = 45.0f;
     const float aspect_ratio = static_cast<float>(width) /
                                static_cast<float>(height);
 
     float3 camera_u, camera_v, camera_w;
     sutil::calculateCameraVariables(
             camera_eye, camera_lookat, camera_up, vfov, aspect_ratio,
-            camera_u, camera_v, camera_w, true );
+            camera_u, camera_v, camera_w, /*fov_is_vertical*/ true );
 
     const Matrix4x4 frame = Matrix4x4::fromBasis(
             normalize( camera_u ),
@@ -619,6 +573,8 @@ void updateCamera()
     context["U"  ]->setFloat( camera_u );
     context["V"  ]->setFloat( camera_v );
     context["W"  ]->setFloat( camera_w );
+
+    camera_dirty = false;
 }
 
 
@@ -628,22 +584,19 @@ void glutInitialize( int* argc, char** argv )
     glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE);
     glutInitWindowSize( width, height );
     glutInitWindowPosition( 100, 100 );
-    optixWindow = glutCreateWindow( SAMPLE_NAME );
+    glutCreateWindow( SAMPLE_NAME );
     glutHideWindow();
 }
 
 
 void glutRun()
 {
-    glutSetWindow(optixWindow);
     //Initialize GL state
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(0, 1, 0, 1, -1, 1);
-
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
     glViewport(0, 0, width, height);
 
     if (m_interop)
@@ -657,7 +610,6 @@ void glutRun()
             ARLOGe("m_pbo tem tamanho zero");
         }
     }
-
     // glPixelStorei(GL_UNPACK_ALIGNMENT, 4); // default, works for BGRA8, RGBA16F, and RGBA32F.
 
     glGenTextures(1, &m_tex);
@@ -706,17 +658,29 @@ void glutDisplay()
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    glBindFramebuffer(GL_DRAW_BUFFER, 0);
     displayOnce();
+
     {
         static unsigned frame_count = 0;
         sutil::displayFps( frame_count++ );
     }
 
-    glBindFramebuffer(GL_DRAW_BUFFER, framebuffer);
+    float3 eyeTemp = make_float3(invOut[12], invOut[13], invOut[14]);
+    if(distanceBigger(camera_eyeOld, eyeTemp)){
+        camera_eyeOld = eyeTemp;
+        camera_eye    = make_float3( invOut[12], invOut[13], invOut[14] );
+        camera_lookat = make_float3( camera_eye.x - invOut[8], camera_eye.y - invOut[9],  camera_eye.z - invOut[10] );
+        camera_up     = make_float3( invOut[4], invOut[5], invOut[6]);
+        camera_dirty = true;
+    }
 
-    updateCamera();
+    static unsigned int accumulation_frame = 0;
+    if( camera_dirty ) {
+        updateCamera();
+        accumulation_frame = 0;
+    }
 
+    context["frame"]->setUint( accumulation_frame++ );
     context->launch( 0, width, height );
 
     // Update the OpenGL texture with the results:
@@ -734,7 +698,7 @@ void glutDisplay()
         void const* data = m_buffer->map(0, RT_BUFFER_MAP_READ );
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, m_tex);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) m_widthLaunch, (GLsizei) m_heightLaunch, 0, GL_BGRA, GL_UNSIGNED_BYTE, data); // BGRA8
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei) width, (GLsizei) height, 0, GL_BGRA, GL_UNSIGNED_BYTE, data); // BGRA8
         m_buffer->unmap();
     }
 
@@ -747,13 +711,8 @@ void glutDisplay()
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, m_tex);
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
-
     drawTexConfig(m_tex);
     glDisable(GL_TEXTURE_2D);
-
-    glBindFramebuffer(GL_READ_BUFFER, framebuffer);
-    glBindFramebuffer(GL_DRAW_BUFFER, 0);
-    glBlitFramebuffer(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_DECAL);
 
     glutSwapBuffers();
 }
@@ -812,6 +771,7 @@ void glutMouseMotion( int x, int y)
         const float dmax = fabsf( dx ) > fabs( dy ) ? dx : dy;
         const float scale = fminf( dmax, 0.9f );
         camera_eye = camera_eye + (camera_lookat - camera_eye)*scale;
+        camera_dirty = true;
     }
     else if( mouse_button == GLUT_LEFT_BUTTON )
     {
@@ -824,6 +784,7 @@ void glutMouseMotion( int x, int y)
         const float2 b = { to.x   / width, to.y   / height };
 
         camera_rotate = arcball.rotate( b, a );
+        camera_dirty = true;
     }
 
     mouse_prev_pos = make_int2( x, y );
@@ -839,6 +800,7 @@ void glutResize( int w, int h )
     sutil::ensureMinimumSize(width, height);
 
     sutil::resizeBuffer( getOutputBuffer(), width, height );
+    sutil::resizeBuffer( context[ "accum_buffer" ]->getBuffer(), width, height );
 
     glViewport(0, 0, width, height);
 
@@ -862,20 +824,6 @@ static void init(){
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-    glGenFramebuffers(1, &framebuffer);
-    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, framebuffer);
-
-    glGenRenderbuffers(1, &rbo);
-    glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_RGBA, w, h);
-    glBindRenderbuffer(GL_RENDERBUFFER, 0);
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, rbo);
-
-    if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-        std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
-
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
     // Initialise the ARController.
     arController = new ARController();
@@ -971,7 +919,6 @@ static void displayOnce(void)
                     //ARLOGi("\n \n");
                     for (int i = 0; i < 16; i++){
                         view[i] = (float) marker->transformationMatrix[i];
-                        markerPose[i] = view[i];
                     }
                 }
                 //ARLOGd("MK: x: %3.1f  y: %3.1f  z: %3.1f w: %3.1f \n", view[12], view[13], view[14], view[15]);
@@ -992,6 +939,7 @@ static void displayOnce(void)
         }
     }
 }
+
 
 void showString(std::string str){
     int   i;
@@ -1206,7 +1154,7 @@ int main( int argc, char** argv )
         }
         else if( arg == "-n" || arg == "--nopbo"  )
         {
-            use_pbo = false;
+            m_interop = false;
         }
         else if ( arg == "-t" || arg == "--texture-path" )
         {
@@ -1248,14 +1196,9 @@ int main( int argc, char** argv )
         init();
         displayOnce();
 
-        // load the ptx source associated with tutorial number
-        std::stringstream ss;
-        ss << "tutorial" << tutorial_number << ".cu";
-        std::string tutorial_ptx_path = ss.str();
-        tutorial_ptx = sutil::getPtxString( SAMPLE_NAME, tutorial_ptx_path.c_str() );
-
         createContext();
         createGeometry();
+        camera_eyeOld = make_float3( invOut[12], invOut[13], invOut[14] );
         setupCamera();
         setupLights();
 
@@ -1270,7 +1213,6 @@ int main( int argc, char** argv )
             updateCamera();
             context->launch( 0, width, height );
             sutil::displayBufferPPM( out_file.c_str(), getOutputBuffer() );
-            //showString(str);
             destroyContext();
         }
         return 0;
