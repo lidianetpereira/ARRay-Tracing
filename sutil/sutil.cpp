@@ -82,6 +82,8 @@ bufferPixelFormat g_image_buffer_format = BUFFER_PIXEL_FORMAT_DEFAULT;
 bool      g_glut_initialized         = false;
 bool      g_disable_srgb_conversion  = false;
 
+float acumFrames = 0;
+float acumFPS = 0;
 
 // Converts the buffer format to gl format
 GLenum glFormatFromBufferFormat(bufferPixelFormat pixel_format, RTformat buffer_format)
@@ -669,7 +671,7 @@ void drawText( const std::string& text, float x, float y, void* font )
     glPopAttrib();
 }
 
-static const float FPS_UPDATE_INTERVAL = 0.5;  //seconds
+static const float FPS_UPDATE_INTERVAL = 1.0;  //seconds
 
 } // namespace
 
@@ -686,12 +688,14 @@ void sutil::displayFps( unsigned int frame_count )
         last_frame_count = frame_count;
         last_update_time = current_time;
     }
+    //printf("fps: %7.2f frame_count: %d, last_frame_count: %d , current_time: %7.2f, last_update_time: %7.2f\n", fps, frame_count, last_frame_count, current_time, last_update_time);
     if ( frame_count > 0 && fps >= 0.0 ) {
         static char fps_text[32];
         sprintf( fps_text, "fps: %7.2f", fps );
-        drawText( fps_text, 860.0f, 10.0f, GLUT_BITMAP_8_BY_13 );
+        //drawText( fps_text, 690.0f, 10.0f, GLUT_BITMAP_8_BY_13 );
+        //printf("fps: %7.2f \n", fps );
     }
-    printf("fps: %7.2f \n", fps);
+
 }
 
 

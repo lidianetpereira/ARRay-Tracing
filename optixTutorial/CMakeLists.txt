@@ -33,28 +33,22 @@ if(GLUT_FOUND AND OPENGL_FOUND)
   # See top level CMakeLists.txt file for documentation of OPTIX_add_sample_executable.
   OPTIX_add_sample_executable( optixTutorial
     optixTutorial.cpp
-    tutorial.h
-    tutorial0.cu
-    tutorial1.cu
-    tutorial2.cu
-    tutorial3.cu
-    tutorial4.cu
-    tutorial5.cu
-    tutorial6.cu
-    tutorial7.cu
-    tutorial8.cu
-    tutorial9.cu
-    tutorial10.cu
-    tutorial11.cu
-    triangle_mesh.cu
-
-    # These files are common among multiple samples
-    box.cu
-    common.h
-    parallelogram.cu
-    random.h
     draw.h
     draw.cpp
+    accum_camera.cu
+    checker.cu
+    common.h
+    constantbg.cu
+    glass.cu
+    helpers.h
+    parallelogram.cu
+    phong.h
+    phong.cu
+    random.h
+    sphere.cu
+    sphere_shell.cu
+    tutorial.h
+    tutorial11.cu
     )
 else()
   # GLUT or OpenGL not found

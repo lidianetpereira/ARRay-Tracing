@@ -28,6 +28,7 @@
 
 #include <optix_world.h>
 
+
 rtDeclareVariable(float3, bg_color, , );
 
 struct PerRayData_radiance
@@ -35,7 +36,6 @@ struct PerRayData_radiance
   float3 result;
   float importance;
   int depth;
-  int alpha;
 };
 
 rtDeclareVariable(PerRayData_radiance, prd_radiance, rtPayload, );

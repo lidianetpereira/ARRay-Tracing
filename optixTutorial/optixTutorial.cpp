@@ -102,7 +102,7 @@
 #if ARX_TARGET_PLATFORM_WINDOWS
 const char *vconf = "-module=WinMF -format=BGRA";
 #else
-const char *vconf = NULL;
+const char *vconf = "-width=640 -height=480";
 #endif
 const char *cpara = NULL;
 
@@ -119,8 +119,8 @@ const char* const SAMPLE_NAME = "optixTutorial";
 //------------------------------------------------------------------------------
 
 Context      context;
-uint32_t     width  = 960u;
-uint32_t     height = 720u;
+uint32_t     width  = 800u;
+uint32_t     height = 600u;
 
 std::string  texture_path;
 int          tutorial_number = 3;
@@ -134,8 +134,8 @@ bool  ignore_mats = false;
 Buffer m_buffer;
 
 // Viewport size
-int m_width = 960;
-int m_height = 720;
+int m_width = 800;
+int m_height = 600;
 
 // Camera state
 float3       camera_up;
@@ -185,10 +185,13 @@ std::string mesh_teapotLid = std::string(sutil::samplesDir()) + "/data/teapot_li
 std::string mesh_al = std::string(sutil::samplesDir()) + "/data/al.obj";
 std::string mesh_flowers = std::string(sutil::samplesDir()) + "/data/flowers.obj";
 std::string mesh_rosevase = std::string(sutil::samplesDir()) + "/data/rose+vase.obj";
-std::string mesh_bunny = std::string(sutil::samplesDir()) + "/data/bunny.obj";
+std::string mesh_bunny = std::string(sutil::samplesDir()) + "/data/bun_zipper.ply";
 std::string mesh_suzanne = std::string(sutil::samplesDir()) + "/data/suzanne.obj";
 std::string mesh_tyra = std::string(sutil::samplesDir()) + "/data/tyra.obj";
 std::string mesh_armadillo = std::string(sutil::samplesDir()) + "/data/armadillo.obj";
+std::string mesh_lucy = std::string(sutil::samplesDir()) + "/data/lucy.ply";
+std::string mesh_happy = std::string(sutil::samplesDir()) + "/data/happy_vrip.ply";
+std::string mesh_dragon = std::string(sutil::samplesDir()) + "/data/dragon_vrip.ply";
 optix::Aabb  aabb;
 
 Program pgram_intersection = 0;
@@ -198,6 +201,9 @@ Program diffuse_ah = 0;
 
 Matrix4x4 teapotPose;
 Matrix4x4 bunnyPose;
+Matrix4x4 lucyPose;
+Matrix4x4 happyPose;
+Matrix4x4 dragonPose;
 Matrix4x4 suzannePose;
 Matrix4x4 rosePose;
 Matrix4x4 flowersPose;
@@ -206,6 +212,9 @@ Matrix4x4 transformsObj;
 Transform cornellPose;
 Transform scale;
 Transform bunnyT;
+Transform lucyT;
+Transform happyT;
+Transform dragonT;
 Transform suzzaneT;
 Transform roseT;
 Transform flowersT;
@@ -214,6 +223,7 @@ float transformMat[16];
 float scaleMat[16];
 
 int scene = 6;
+const float3 DEFAULT_TRANSMITTANCE = make_float3( 0.1f, 0.63f, 0.3f );
 //------------------------------------------------------------------------------
 //
 // Forward decls
@@ -254,7 +264,7 @@ bool distanceBigger(float3 P, float3 Q);
 //------------------------------------------------------------------------------
 
 bool distanceBigger(float3 P, float3 Q){
-    float threshold = 4.0f;
+    float threshold = 1.5f;
 
     float distance = sqrt(pow(P.x - Q.x, 2.0)+ pow(P.y - Q.y, 2.0) + pow(P.z - Q.z, 2.0));
     //printf("d = %f\n", distance);
@@ -296,7 +306,7 @@ void createContext()
     context->setRayTypeCount( 2 );
     context->setEntryPointCount( 1 );
     context->setStackSize( 2800 );
-    context->setMaxTraceDepth( 12 );
+    context->setMaxTraceDepth( 15);
 
     // Note: high max depth for reflection and refraction through glass
     context["max_depth"]->setInt( 10 );
@@ -385,7 +395,7 @@ GeometryInstance createParallelogram( const float3& anchor, const float3& offset
 }
 
 
-GeometryInstance loadMesh(const std::string& filename)
+GeometryInstance loadMesh(const std::string& filename, Material mat)
 {
     //const char *ptx = sutil::getPtxString( SAMPLE_NAME, "glass.cu" );
 
@@ -393,12 +403,13 @@ GeometryInstance loadMesh(const std::string& filename)
     mesh.context = context;
     mesh.use_tri_api = use_tri_api;
     mesh.ignore_mats = false;
+    mesh.material = mat;
 //    mesh.closest_hit = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
 //    mesh.any_hit = context->createProgramFromPTXString( ptx, "any_hit_shadow" );
 //
-//    ptx = sutil::getPtxString( SAMPLE_NAME, "triangle_mesh.cu" );
-//    mesh.intersection = context->createProgramFromPTXString( ptx, "mesh_intersect_refine" );
-//    mesh.bounds = context->createProgramFromPTXString( ptx, "mesh_bounds" );
+    const char *ptx = sutil::getPtxString( SAMPLE_NAME, "triangle_mesh.cu" );
+    mesh.intersection = context->createProgramFromPTXString( ptx, "mesh_intersect_refine" );
+    mesh.bounds = context->createProgramFromPTXString( ptx, "mesh_bounds" );
     loadMesh(filename, mesh);
     aabb.set(mesh.bbox_min, mesh.bbox_max);
 
@@ -435,6 +446,27 @@ void createGeometry()
     pgram_bounding_box = context->createProgramFromPTXString( ptx, "bounds" );
     pgram_intersection = context->createProgramFromPTXString( ptx, "intersect" );
 
+    // Glass material for solid objects
+    ptx = sutil::getPtxString( SAMPLE_NAME, "tutorial11.cu" );
+    Program glass_chSolid = context->createProgramFromPTXString( ptx, "glass_closest_hit_radiance" );
+    Program glass_ahSolid = context->createProgramFromPTXString( ptx, "glass_any_hit_shadow" );
+    Material glass_solid = context->createMaterial();
+    glass_solid->setClosestHitProgram( 0, glass_chSolid );
+    glass_solid->setAnyHitProgram( 1, glass_ahSolid );
+    glass_solid["importance_cutoff"]->setFloat( 1e-2f );
+    glass_solid["cutoff_color"]->setFloat( 0.34f, 0.55f, 0.85f );
+    glass_solid["fresnel_exponent"]->setFloat( 4.0f );
+    glass_solid["fresnel_minimum"]->setFloat( 0.1f );
+    glass_solid["fresnel_maximum"]->setFloat( 1.0f );
+    glass_solid["refraction_index"]->setFloat( 1.4f );
+    glass_solid["refraction_color"]->setFloat( 1.0f, 1.0f, 1.0f );
+    glass_solid["reflection_color"]->setFloat( 1.0f, 1.0f, 1.0f );
+    glass_solid["refraction_maxdepth"]->setInt( 100 );
+    glass_solid["reflection_maxdepth"]->setInt( 100 );
+    float3 extinctionSolid = make_float3(.80f, .89f, .75f);
+    glass_solid["extinction_constant"]->setFloat( log(extinctionSolid.x), log(extinctionSolid.y), log(extinctionSolid.z) );
+    glass_solid["shadow_attenuation"]->setFloat( 0.4f, 0.7f, 0.4f );
+
     // Glass material
     ptx = sutil::getPtxString( SAMPLE_NAME, "glass.cu" );
     Program glass_ch = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
@@ -456,15 +488,6 @@ void createGeometry()
     glass_matl["extinction_constant"]->setFloat( log(extinction.x), log(extinction.y), log(extinction.z) );
     glass_matl["shadow_attenuation"]->setFloat( 0.6f, 0.6f, 0.6f );
 
-    Material colored_glass = context->createMaterial();
-    colored_glass->setClosestHitProgram( 0, glass_ch );
-    colored_glass["fresnel_exponent"]->setFloat( 4.0f );
-    colored_glass["fresnel_minimum"]->setFloat( 0.1f );
-    colored_glass["fresnel_maximum"]->setFloat( 1.0f );
-    colored_glass["refraction_index"]->setFloat( 1.4f );
-    colored_glass["refraction_color"]->setFloat( 0.99f, 0.99f, 0.99f );
-    colored_glass["reflection_color"]->setFloat( 0.99f, 0.99f, 0.99f );
-    colored_glass["extinction_constant"]->setFloat( log(extinction.x), log(extinction.y), log(extinction.z) );
 
     // Metal material
     ptx = sutil::getPtxString( SAMPLE_NAME, "phong.cu" );
@@ -483,75 +506,70 @@ void createGeometry()
     diffuse_ch = context->createProgramFromPTXString( ptx, "closest_hit_radiance" );
     diffuse_ah = context->createProgramFromPTXString( ptx, "any_hit_shadow" );
 
-    const float3 white = make_float3( 0.8f, 0.8f, 0.8f );
+    const float3 white = make_float3( 0.4f, 0.4f, 0.4f );
+    const float3 soft_yellow = make_float3( 0.8f, 0.8f, 0.8f );
     const float3 green = make_float3( 0.05f, 0.8f, 0.05f );
     const float3 red   = make_float3( 0.8f, 0.05f, 0.05f );
     const float3 light_em = make_float3( 0.9f, 0.9f, 0.9f );
 
     // Create GIs for each piece of geometry
     std::vector<GeometryInstance> gis;
-//    gis.push_back( context->createGeometryInstance( glass_sphere, &glass_matl, &glass_matl+1 ) );
-//    gis.push_back( context->createGeometryInstance( metal_sphere,  &metal_matl,  &metal_matl+1 ) );
-
     // Floor
     gis.push_back( createParallelogram( make_float3( -278.0f, 0.0f, -279.6f ),
                                         make_float3( 0.0f, 0.0f, 559.2f ),
                                         make_float3( 556.0f, 0.0f, 0.0f ) ) );
     setMaterial(gis.back(), createMaterial(white));
 
-    // Ceiling
-    gis.push_back( createParallelogram( make_float3( -278.0f, 548.8f, -279.6f ),
-                                        make_float3( 556.0f, 0.0f, 0.0f ),
-                                        make_float3( 0.0f, 0.0f, 559.2f ) ) );
-    setMaterial(gis.back(), createMaterial(white));
-
+//    // Ceiling
+//    gis.push_back( createParallelogram( make_float3( -278.0f, 548.8f, -279.6f ),
+//                                        make_float3( 556.0f, 0.0f, 0.0f ),
+//                                        make_float3( 0.0f, 0.0f, 559.2f ) ) );
+//    setMaterial(gis.back(), createMaterial(white));
+//
     // Back wall
     gis.push_back( createParallelogram( make_float3( -278.0f, 0.0f, -279.6f),
                                         make_float3( 0.0f, 548.8f, 0.0f),
                                         make_float3( 556.0f, 0.0f, 0.0f) ) );
-    setMaterial(gis.back(), createMaterial(white));
-
-    // Right wall
-    gis.push_back( createParallelogram( make_float3( -278.0f, 0.0f, -279.6f ),
-                                        make_float3( 0.0f, 548.8f, 0.0f ),
-                                        make_float3( 0.0f, 0.0f, 559.2f ) ) );
-    setMaterial(gis.back(), createMaterial(green));
-
-    // Left wall
-    gis.push_back( createParallelogram( make_float3( 278.0f, 0.0f, -279.6f ),
-                                        make_float3( 0.0f, 0.0f, 559.2f ),
-                                        make_float3( 0.0f, 548.8f, 0.0f ) ) );
-    setMaterial(gis.back(), createMaterial(red));
-
-    // Light
-    gis.push_back( createParallelogram( make_float3( 65.0f, 548.6f, -52.5f),
-                                        make_float3( -130.0f, 0.0f, 0.0f),
-                                        make_float3( 0.0f, 0.0f, 105.0f) ) );
-    setMaterial(gis.back(), createMaterial(light_em));
+    setMaterial(gis.back(), createMaterial(soft_yellow));
+//
+//    // Right wall
+//    gis.push_back( createParallelogram( make_float3( -278.0f, 0.0f, -279.6f ),
+//                                        make_float3( 0.0f, 548.8f, 0.0f ),
+//                                        make_float3( 0.0f, 0.0f, 559.2f ) ) );
+//    setMaterial(gis.back(), createMaterial(green));
+//
+//    // Left wall
+//    gis.push_back( createParallelogram( make_float3( 278.0f, 0.0f, -279.6f ),
+//                                        make_float3( 0.0f, 0.0f, 559.2f ),
+//                                        make_float3( 0.0f, 548.8f, 0.0f ) ) );
+//    setMaterial(gis.back(), createMaterial(red));
+//
+//    //Light
+//    gis.push_back( createParallelogram( make_float3( 65.0f, 548.6f, -52.5f),
+//                                        make_float3( -130.0f, 0.0f, 0.0f),
+//                                        make_float3( 0.0f, 0.0f, 105.0f) ) );
+//    setMaterial(gis.back(), createMaterial(light_em));
 
     // Red metalic material
     ptx = sutil::getPtxString( SAMPLE_NAME, "phong.cu" );
     Material red_matl = context->createMaterial();
     red_matl->setClosestHitProgram( 0, phong_ch );
     red_matl->setAnyHitProgram( 1, phong_ah );
-    red_matl["Ka"]->setFloat(0.5f, 0.2f, 0.1f);
-    red_matl["Kd"]->setFloat(0.6f, 0.0f, 0.1f);
-    red_matl["Ks"]->setFloat( 0.9f, 0.9f, 0.9f );
+    red_matl["Ka"]->setFloat(0.1f, 0.0f, 0.0f);
+    red_matl["Kd"]->setFloat(1.0f, 0.0f, 0.0f);
+    red_matl["Ks"]->setFloat( 1.0f, 0.9f, 0.9f );
     red_matl["phong_exp"]->setFloat( 64 );
     red_matl["Kr"]->setFloat( 0.0f,  0.0f,  0.0f);
 
     std::vector<GeometryInstance> gisUnit;
-    GeometryGroup geometrygroup, obj1, obj2, obj3, obj4;
+    GeometryGroup geometrygroup, bunny_gg, obj2, obj3, obj4;
     GeometryGroup geometry_groupMesh;
     Geometry glass_sphere2;
 
-    scene = 6;
+    scene = 0;
 
     switch(scene){
-        case 0 : {
-            gis.push_back(context->createGeometryInstance(glass_sphere, &glass_matl, &glass_matl + 1));
-            gis.push_back(context->createGeometryInstance(metal_sphere, &metal_matl, &metal_matl + 1));
-
+        case 0 : { //Bunny
             geometrygroup = context->createGeometryGroup(gis.begin(), gis.end());
             geometrygroup->setAcceleration(context->createAcceleration("Trbvh"));
 
@@ -562,16 +580,41 @@ void createGeometry()
             cornellPose = context->createTransform();
             cornellPose->setMatrix(false, transformMat, 0);
 
-            cornellPose = context->createTransform();
-            cornellPose->setMatrix(false, transformMat, 0);
+            { bunny_gg = context->createGeometryGroup();
+                bunny_gg->addChild(loadMesh(mesh_lucy, glass_solid));
+                bunny_gg->setAcceleration(context->createAcceleration("Trbvh"));
 
+                //printf("Min: %f, %f, %f Max: %f, %f, %f Center: %f, %f, %f\n", aabb.m_min.x, aabb.m_min.y, aabb.m_min.z, aabb.m_max.x, aabb.m_max.y, aabb.m_max.z, aabb.center().x, aabb.center().y, aabb.center().z);
+
+//                bunnyPose = Matrix4x4::translate(make_float3(0.0, 0.0, -25));
+//                bunnyPose = bunnyPose * Matrix4x4::rotate(M_PI/2, make_float3(1.0f, 0.0f, 0.0f));
+//                bunnyPose = bunnyPose * Matrix4x4::scale(make_float3(500.0, 500.0, 500.0));
+
+
+                bunnyPose = Matrix4x4::translate(make_float3(41.0f, -7.5f, 36.0f));
+                bunnyPose = bunnyPose * Matrix4x4::rotate(M_PI, make_float3(0.0f, 0.0f, 1.0f));
+                bunnyPose = bunnyPose * Matrix4x4::scale(make_float3(0.06, 0.06, 0.06));
+
+//                bunnyPose = Matrix4x4::translate(make_float3(-464.92*0.06, -121.53*0.06, 605.89*0.06));
+//                bunnyPose = bunnyPose * Matrix4x4::rotate(M_PI, make_float3(0.0f, 0.0f, 1.0f));
+//                bunnyPose = bunnyPose * Matrix4x4::scale(make_float3(0.06, 0.06, 0.06));
+
+                bunnyT = context->createTransform();
+                bunnyT->setMatrix(false, bunnyPose.getData(), 0 );}
+
+                //printf("Depois Min: %f, %f, %f Max: %f, %f, %f \n", aabb.m_min.x, aabb.m_min.y, aabb.m_min.z, aabb.m_max.x, aabb.m_max.y, aabb.m_max.z);
+
+
+            bunnyT->setChild(bunny_gg);
             cornellPose->setChild(geometrygroup);
-            m_top_object->addChild(cornellPose);
 
-            context["top_object"]->set(m_top_object);
-            context["top_shadower"]->set(m_top_object);
+            m_top_object->addChild(cornellPose);
+            m_top_object->addChild( bunnyT );
+
+            context["top_object"]->set( m_top_object );
+            context["top_shadower"]->set( m_top_object );
             break;
-        } //two spheres and Cornell
+        } //Bunny
         case 1 : {
             gis.push_back(context->createGeometryInstance(glass_sphere, &glass_matl, &glass_matl + 1));
             gis.push_back(context->createGeometryInstance(metal_sphere, &metal_matl, &metal_matl + 1));
@@ -593,19 +636,20 @@ void createGeometry()
             context["top_object"]->set(m_top_object);
             context["top_shadower"]->set(m_top_object);
             break;
-        }
-        case 3: //two spheres and Bunny
-            metal_sphere["sphere"]->setFloat( 0.0f, 0.0f, 20.0f, 20.0f );
+        } //Two spheres + cornell
+        case 3: { //two spheres and Bunny
+            metal_sphere["sphere"]->setFloat(0.0f, 0.0f, 20.0f, 20.0f);
 
-            gisUnit.push_back( context->createGeometryInstance( metal_sphere, &red_matl, &red_matl+1 ) );
+            gisUnit.push_back(context->createGeometryInstance(metal_sphere, &red_matl, &red_matl + 1));
 
             geometrygroup = context->createGeometryGroup(gisUnit.begin(), gisUnit.end());
-            geometrygroup->setAcceleration( context->createAcceleration("Trbvh") );
+            geometrygroup->setAcceleration(context->createAcceleration("Trbvh"));
 
-            m_top_object->addChild( geometrygroup );
-            context["top_object"]->set( m_top_object );
-            context["top_shadower"]->set( m_top_object );
+            m_top_object->addChild(geometrygroup);
+            context["top_object"]->set(m_top_object);
+            context["top_shadower"]->set(m_top_object);
             break;
+        }
         case 4: //two spheres and flowers
         {
             glass_sphere["center"]->setFloat(170.0f, 100.0f, 60.0f);
@@ -627,7 +671,7 @@ void createGeometry()
             cornellPose->setMatrix(false, transformMat, 0);
 
             geometry_groupMesh = context->createGeometryGroup();
-            geometry_groupMesh->addChild(loadMesh(mesh_flowers));
+            geometry_groupMesh->addChild(loadMesh(mesh_flowers, metal_matl));
             geometry_groupMesh->setAcceleration(context->createAcceleration("Trbvh"));
 
             transformsObj = Matrix4x4::translate(make_float3(0.0f, 0.0f, 30.0f));
@@ -668,7 +712,7 @@ void createGeometry()
             cornellPose->setMatrix(false, transformMat, 0);
 
             geometry_groupMesh = context->createGeometryGroup();
-            geometry_groupMesh->addChild(loadMesh(mesh_rosevase));
+            geometry_groupMesh->addChild(loadMesh(mesh_rosevase, metal_matl));
             geometry_groupMesh->setAcceleration(context->createAcceleration("Trbvh"));
 
             transformsObj = Matrix4x4::translate(make_float3(0.0f, 0.0f, 20.0f));
@@ -690,13 +734,13 @@ void createGeometry()
         }
         case 6: //Bunny, Suzanne, Rose and 2 Spheres
         {
-            glass_sphere["center"]->setFloat(-120.0f, 220.0f, 180.0f);
-            glass_sphere["radius1"]->setFloat(149.7f);
-            glass_sphere["radius2"]->setFloat(150.0f);
-            metal_sphere["sphere"]->setFloat(170.0f, 100.0f, -150.0f, 100.0f);
+//            glass_sphere["center"]->setFloat(-120.0f, 220.0f, 180.0f);
+//            glass_sphere["radius1"]->setFloat(149.7f);
+//            glass_sphere["radius2"]->setFloat(150.0f);
+//            metal_sphere["sphere"]->setFloat(170.0f, 100.0f, -150.0f, 100.0f);
 
-            gis.push_back(context->createGeometryInstance(glass_sphere, &glass_matl, &glass_matl + 1));
-            gis.push_back(context->createGeometryInstance(metal_sphere, &metal_matl, &metal_matl + 1));
+            //gis.push_back(context->createGeometryInstance(glass_sphere, &glass_matl, &glass_matl + 1));
+            //gis.push_back(context->createGeometryInstance(metal_sphere, &metal_matl, &metal_matl + 1));
 
             geometrygroup = context->createGeometryGroup(gis.begin(), gis.end());
             geometrygroup->setAcceleration(context->createAcceleration("Trbvh"));
@@ -709,48 +753,52 @@ void createGeometry()
             cornellPose->setMatrix(false, transformMat, 0);
         }
 
-            {obj1 = context->createGeometryGroup();
-            obj1->addChild(loadMesh(mesh_bunny));
-            obj1->setAcceleration(context->createAcceleration("Trbvh"));
+            { bunny_gg = context->createGeometryGroup();
+            bunny_gg->addChild(loadMesh(mesh_teapotBody, metal_matl));
+            bunny_gg->addChild(loadMesh(mesh_teapotLid, metal_matl));
+            bunny_gg->setAcceleration(context->createAcceleration("Trbvh"));
 
-            bunnyPose = Matrix4x4::translate(make_float3(-20.0f, 30.0f, -10.0f));
-            bunnyPose = bunnyPose * Matrix4x4::scale(make_float3(250.0, 250.0, 250.0));
-            bunnyPose = bunnyPose * Matrix4x4::rotate(M_PI / 2, make_float3(1.0f, 0.0f, 0.0f));
+            printf("Min: %f, %f, %f Max: %f, %f, %f Center: %f, %f, %f\n", aabb.m_min.x, aabb.m_min.y, aabb.m_min.z, aabb.m_max.x, aabb.m_max.y, aabb.m_max.z, aabb.center().x, aabb.center().y, aabb.center().z);
+
+            bunnyPose = Matrix4x4::translate(make_float3(-3.0f, 0.0f, 1.0f));
+            bunnyPose = bunnyPose * Matrix4x4::scale(make_float3(10.0, 10.0, 10.0));
+            bunnyPose = bunnyPose * Matrix4x4::rotate(M_PI/2, make_float3(1.0f, 0.0f, 0.0f));
+            bunnyPose = bunnyPose * Matrix4x4::rotate(M_PI/2, make_float3(0.0f, 1.0f, 0.0f));
 
             bunnyT = context->createTransform();
             bunnyT->setMatrix(false, bunnyPose.getData(), 0 );}
 
-            {obj2 = context->createGeometryGroup();
-                obj2->addChild(loadMesh(mesh_suzanne));
-                obj2->setAcceleration(context->createAcceleration("Trbvh"));
-
-                suzannePose = Matrix4x4::translate(make_float3(0.0f, 0.0f, 25.0f));
-                suzannePose = suzannePose * Matrix4x4::scale(make_float3(15.0, 15.0, 15.0));
-                suzannePose = suzannePose * Matrix4x4::rotate(M_PI / 2, make_float3(1.0f, 0.0f, 0.0f));
-
-                suzzaneT = context->createTransform();
-                suzzaneT->setMatrix(false, suzannePose.getData(), 0 );}
-
-            {obj3 = context->createGeometryGroup();
-                obj3->addChild(loadMesh(mesh_rosevase));
-                obj3->setAcceleration(context->createAcceleration("Trbvh"));
-
-                rosePose = Matrix4x4::translate(make_float3(30.0f, -40.0f, 20.0f));
-                rosePose = rosePose * Matrix4x4::scale(make_float3(0.4, 0.4, 0.4));
-                rosePose = rosePose * Matrix4x4::rotate(M_PI / 2, make_float3(1.0f, 0.0f, 0.0f));
-
-                roseT = context->createTransform();
-                roseT->setMatrix(false, rosePose.getData(), 0 );}
+//            {obj2 = context->createGeometryGroup();
+//                obj2->addChild(loadMesh(mesh_suzanne, metal_matl));
+//                obj2->setAcceleration(context->createAcceleration("Trbvh"));
+//
+//                suzannePose = Matrix4x4::translate(make_float3(0.0f, 0.0f, 25.0f));
+//                suzannePose = suzannePose * Matrix4x4::scale(make_float3(15.0, 15.0, 15.0));
+//                suzannePose = suzannePose * Matrix4x4::rotate(M_PI / 2, make_float3(1.0f, 0.0f, 0.0f));
+//
+//                suzzaneT = context->createTransform();
+//                suzzaneT->setMatrix(false, suzannePose.getData(), 0 );}
+//
+//            {obj3 = context->createGeometryGroup();
+//                obj3->addChild(loadMesh(mesh_rosevase, metal_matl));
+//                obj3->setAcceleration(context->createAcceleration("Trbvh"));
+//
+//                rosePose = Matrix4x4::translate(make_float3(30.0f, -40.0f, 20.0f));
+//                rosePose = rosePose * Matrix4x4::scale(make_float3(0.4, 0.4, 0.4));
+//                rosePose = rosePose * Matrix4x4::rotate(M_PI / 2, make_float3(1.0f, 0.0f, 0.0f));
+//
+//                roseT = context->createTransform();
+//                roseT->setMatrix(false, rosePose.getData(), 0 );}
 
             cornellPose->setChild( geometrygroup );
-            bunnyT->setChild(obj1);
-            suzzaneT->setChild(obj2);
-            roseT->setChild(obj3);
+            bunnyT->setChild(bunny_gg);
+            //suzzaneT->setChild(obj2);
+            //roseT->setChild(obj3);
 
             m_top_object->addChild( cornellPose );
             m_top_object->addChild( bunnyT );
-            m_top_object->addChild( suzzaneT );
-            m_top_object->addChild( roseT );
+            //m_top_object->addChild( suzzaneT );
+            //m_top_object->addChild( roseT );
 
             context["top_object"]->set( m_top_object );
             context["top_shadower"]->set( m_top_object );
@@ -798,7 +846,15 @@ void setupCamera()
 //                                                                        = eyepos[2] - m[10];
 //    up[0] = m[4]; up[1] = m[5]; up[2] = m[6];
 
-    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14] );
+
+
+//Lucy close
+//    camera_eye    = make_float3( invOut[12], invOut[13]+80.0f, invOut[14]-10.0f );
+//Lucy for cornell
+//    camera_eye    = make_float3( invOut[12]+6.0f, invOut[13]+65.0f, invOut[14]-12.0f );
+//Teapot close
+//    camera_eye    = make_float3( invOut[12], invOut[13]+130.0f, invOut[14]-40.0f );
+    camera_eye    = make_float3( invOut[12], invOut[13], invOut[14]);
     camera_lookat = make_float3( camera_eye.x - invOut[8], camera_eye.y - invOut[9],  camera_eye.z - invOut[10] );
     camera_up     = make_float3( invOut[4], invOut[5], invOut[6]);
 
@@ -815,8 +871,13 @@ void setupLights()
 //    };
 #endif
 
+//    BasicLight lights[] = {
+//            { make_float3( 0.0f, 0.0f , 108.0f ), make_float3( 0.3f, 0.3f, 0.1f ), 1 }
+//    };
+
     BasicLight lights[] = {
-            { make_float3( 0.0f, 0.0f , 108.0f ), make_float3( 0.3f, 0.3f, 0.1f ), 1 }
+            { make_float3( 0.0f, -60.0f, 90.0f ), make_float3( 1.0f, 1.0f, 1.0f ), 1 },
+            //{ make_float3( 0.0f, 0.0f , 108.0f ), make_float3( 0.3f, 0.3f, 0.3f ), 1 }
     };
 
     Buffer light_buffer = context->createBuffer( RT_BUFFER_INPUT );
@@ -875,7 +936,7 @@ void glutInitialize( int* argc, char** argv )
     glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE);
     glutInitWindowSize( width, height );
     glutInitWindowPosition( 100, 100 );
-    glutCreateWindow( SAMPLE_NAME );
+    glutCreateWindow( "ARRay-Tracing" );
     glutHideWindow();
 }
 
@@ -1160,7 +1221,7 @@ static void init(){
     vconf = "-format=BGRA";
 #  endif
 
-    int w = 960, h = 720;
+    int w = m_width , h = m_height;
     reshape(w, h);
 
     glEnable(GL_BLEND);

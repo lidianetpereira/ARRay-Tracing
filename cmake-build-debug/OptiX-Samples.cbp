@@ -242,16 +242,28 @@
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/cuda/triangle_mesh.cu">
 			<Option target="sutil_sdk"/>
 		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/box.cu">
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/accum_camera.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/checker.cu">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/common.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/constantbg.cu">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/draw.cpp">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/draw.h">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/glass.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/helpers.h">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/hiro.patt">
@@ -266,49 +278,25 @@
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/parallelogram.cu">
 			<Option target="optixTutorial"/>
 		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/phong.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/phong.h">
+			<Option target="optixTutorial"/>
+		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/random.h">
 			<Option target="optixTutorial"/>
 		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/triangle_mesh.cu">
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/sphere.cu">
+			<Option target="optixTutorial"/>
+		</Unit>
+		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/sphere_shell.cu">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial.h">
 			<Option target="optixTutorial"/>
 		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial0.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial1.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial10.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial11.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial2.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial3.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial4.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial5.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial6.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial7.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial8.cu">
-			<Option target="optixTutorial"/>
-		</Unit>
-		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/optixTutorial/tutorial9.cu">
 			<Option target="optixTutorial"/>
 		</Unit>
 		<Unit filename="/home/lidiane/CLionProjects/optix/SDK/sutil/Arcball.cpp">
