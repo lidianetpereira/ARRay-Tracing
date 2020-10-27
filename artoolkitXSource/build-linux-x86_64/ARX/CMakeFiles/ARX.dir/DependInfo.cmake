@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/trackingSub.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/trackingSub.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -28,22 +28,22 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../ARX/OCVT/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARController.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARController.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARPattern.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable2d.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquare.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquareAuto.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableNFT.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableSquare.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker2d.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerNFT.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerSquare.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoSource.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoView.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARX_c.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/mapper.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARController.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARController.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARPattern.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable2d.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquare.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquareAuto.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableNFT.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableSquare.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker2d.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerNFT.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerSquare.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoSource.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoView.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARX_c.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/mapper.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -68,20 +68,20 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/libARX.so" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/libARX.so.1.0.6"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/libARX.so.1" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/libARX.so.1.0.6"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/libARX.so" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/libARX.so.1.0.6"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/libARX.so.1" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/libARX.so.1.0.6"
   )
 
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR/CMakeFiles/AR.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARVideo/CMakeFiles/ARVideo.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARG/CMakeFiles/ARG.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR2/CMakeFiles/AR2.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/KPM/CMakeFiles/KPM.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR/CMakeFiles/AR.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARVideo/CMakeFiles/ARVideo.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARG/CMakeFiles/ARG.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR2/CMakeFiles/AR2.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/KPM/CMakeFiles/KPM.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

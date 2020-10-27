@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/progress.marks
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ARX/ARUtil/CMakeFiles/ARUtil.dir/rule:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/CMakeFiles/ARUtil.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARUtil/CMakeFiles/ARUtil.dir/rule
 .PHONY : ARX/ARUtil/CMakeFiles/ARUtil.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ ARUtil: ARX/ARUtil/CMakeFiles/ARUtil.dir/rule
 
 # fast build rule for target.
 ARUtil/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/build
 .PHONY : ARUtil/fast
 
 android_system_property_get.o: android_system_property_get.c.o
@@ -177,7 +177,7 @@ android_system_property_get.o: android_system_property_get.c.o
 
 # target to build an object file
 android_system_property_get.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.o
 .PHONY : android_system_property_get.c.o
 
 android_system_property_get.i: android_system_property_get.c.i
@@ -186,7 +186,7 @@ android_system_property_get.i: android_system_property_get.c.i
 
 # target to preprocess a source file
 android_system_property_get.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.i
 .PHONY : android_system_property_get.c.i
 
 android_system_property_get.s: android_system_property_get.c.s
@@ -195,7 +195,7 @@ android_system_property_get.s: android_system_property_get.c.s
 
 # target to generate assembly for a file
 android_system_property_get.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.s
 .PHONY : android_system_property_get.c.s
 
 crypt.o: crypt.c.o
@@ -204,7 +204,7 @@ crypt.o: crypt.c.o
 
 # target to build an object file
 crypt.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.o
 .PHONY : crypt.c.o
 
 crypt.i: crypt.c.i
@@ -213,7 +213,7 @@ crypt.i: crypt.c.i
 
 # target to preprocess a source file
 crypt.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.i
 .PHONY : crypt.c.i
 
 crypt.s: crypt.c.s
@@ -222,7 +222,7 @@ crypt.s: crypt.c.s
 
 # target to generate assembly for a file
 crypt.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.s
 .PHONY : crypt.c.s
 
 file_utils.o: file_utils.c.o
@@ -231,7 +231,7 @@ file_utils.o: file_utils.c.o
 
 # target to build an object file
 file_utils.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.o
 .PHONY : file_utils.c.o
 
 file_utils.i: file_utils.c.i
@@ -240,7 +240,7 @@ file_utils.i: file_utils.c.i
 
 # target to preprocess a source file
 file_utils.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.i
 .PHONY : file_utils.c.i
 
 file_utils.s: file_utils.c.s
@@ -249,7 +249,7 @@ file_utils.s: file_utils.c.s
 
 # target to generate assembly for a file
 file_utils.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.s
 .PHONY : file_utils.c.s
 
 image_utils.o: image_utils.cpp.o
@@ -258,7 +258,7 @@ image_utils.o: image_utils.cpp.o
 
 # target to build an object file
 image_utils.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.o
 .PHONY : image_utils.cpp.o
 
 image_utils.i: image_utils.cpp.i
@@ -267,7 +267,7 @@ image_utils.i: image_utils.cpp.i
 
 # target to preprocess a source file
 image_utils.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.i
 .PHONY : image_utils.cpp.i
 
 image_utils.s: image_utils.cpp.s
@@ -276,7 +276,7 @@ image_utils.s: image_utils.cpp.s
 
 # target to generate assembly for a file
 image_utils.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.s
 .PHONY : image_utils.cpp.s
 
 ioapi.o: ioapi.c.o
@@ -285,7 +285,7 @@ ioapi.o: ioapi.c.o
 
 # target to build an object file
 ioapi.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.o
 .PHONY : ioapi.c.o
 
 ioapi.i: ioapi.c.i
@@ -294,7 +294,7 @@ ioapi.i: ioapi.c.i
 
 # target to preprocess a source file
 ioapi.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.i
 .PHONY : ioapi.c.i
 
 ioapi.s: ioapi.c.s
@@ -303,7 +303,7 @@ ioapi.s: ioapi.c.s
 
 # target to generate assembly for a file
 ioapi.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.s
 .PHONY : ioapi.c.s
 
 log.o: log.c.o
@@ -312,7 +312,7 @@ log.o: log.c.o
 
 # target to build an object file
 log.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.o
 .PHONY : log.c.o
 
 log.i: log.c.i
@@ -321,7 +321,7 @@ log.i: log.c.i
 
 # target to preprocess a source file
 log.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.i
 .PHONY : log.c.i
 
 log.s: log.c.s
@@ -330,7 +330,7 @@ log.s: log.c.s
 
 # target to generate assembly for a file
 log.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.s
 .PHONY : log.c.s
 
 profile.o: profile.c.o
@@ -339,7 +339,7 @@ profile.o: profile.c.o
 
 # target to build an object file
 profile.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.o
 .PHONY : profile.c.o
 
 profile.i: profile.c.i
@@ -348,7 +348,7 @@ profile.i: profile.c.i
 
 # target to preprocess a source file
 profile.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.i
 .PHONY : profile.c.i
 
 profile.s: profile.c.s
@@ -357,7 +357,7 @@ profile.s: profile.c.s
 
 # target to generate assembly for a file
 profile.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.s
 .PHONY : profile.c.s
 
 system.o: system.c.o
@@ -366,7 +366,7 @@ system.o: system.c.o
 
 # target to build an object file
 system.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.o
 .PHONY : system.c.o
 
 system.i: system.c.i
@@ -375,7 +375,7 @@ system.i: system.c.i
 
 # target to preprocess a source file
 system.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.i
 .PHONY : system.c.i
 
 system.s: system.c.s
@@ -384,7 +384,7 @@ system.s: system.c.s
 
 # target to generate assembly for a file
 system.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.s
 .PHONY : system.c.s
 
 thread_sub.o: thread_sub.c.o
@@ -393,7 +393,7 @@ thread_sub.o: thread_sub.c.o
 
 # target to build an object file
 thread_sub.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.o
 .PHONY : thread_sub.c.o
 
 thread_sub.i: thread_sub.c.i
@@ -402,7 +402,7 @@ thread_sub.i: thread_sub.c.i
 
 # target to preprocess a source file
 thread_sub.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.i
 .PHONY : thread_sub.c.i
 
 thread_sub.s: thread_sub.c.s
@@ -411,7 +411,7 @@ thread_sub.s: thread_sub.c.s
 
 # target to generate assembly for a file
 thread_sub.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.s
 .PHONY : thread_sub.c.s
 
 thread_sub_winrt.o: thread_sub_winrt.cpp.o
@@ -420,7 +420,7 @@ thread_sub_winrt.o: thread_sub_winrt.cpp.o
 
 # target to build an object file
 thread_sub_winrt.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.o
 .PHONY : thread_sub_winrt.cpp.o
 
 thread_sub_winrt.i: thread_sub_winrt.cpp.i
@@ -429,7 +429,7 @@ thread_sub_winrt.i: thread_sub_winrt.cpp.i
 
 # target to preprocess a source file
 thread_sub_winrt.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.i
 .PHONY : thread_sub_winrt.cpp.i
 
 thread_sub_winrt.s: thread_sub_winrt.cpp.s
@@ -438,7 +438,7 @@ thread_sub_winrt.s: thread_sub_winrt.cpp.s
 
 # target to generate assembly for a file
 thread_sub_winrt.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.s
 .PHONY : thread_sub_winrt.cpp.s
 
 time.o: time.c.o
@@ -447,7 +447,7 @@ time.o: time.c.o
 
 # target to build an object file
 time.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.o
 .PHONY : time.c.o
 
 time.i: time.c.i
@@ -456,7 +456,7 @@ time.i: time.c.i
 
 # target to preprocess a source file
 time.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.i
 .PHONY : time.c.i
 
 time.s: time.c.s
@@ -465,7 +465,7 @@ time.s: time.c.s
 
 # target to generate assembly for a file
 time.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.s
 .PHONY : time.c.s
 
 unzip.o: unzip.c.o
@@ -474,7 +474,7 @@ unzip.o: unzip.c.o
 
 # target to build an object file
 unzip.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.o
 .PHONY : unzip.c.o
 
 unzip.i: unzip.c.i
@@ -483,7 +483,7 @@ unzip.i: unzip.c.i
 
 # target to preprocess a source file
 unzip.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.i
 .PHONY : unzip.c.i
 
 unzip.s: unzip.c.s
@@ -492,7 +492,7 @@ unzip.s: unzip.c.s
 
 # target to generate assembly for a file
 unzip.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.s
 .PHONY : unzip.c.s
 
 zip.o: zip.c.o
@@ -501,7 +501,7 @@ zip.o: zip.c.o
 
 # target to build an object file
 zip.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.o
 .PHONY : zip.c.o
 
 zip.i: zip.c.i
@@ -510,7 +510,7 @@ zip.i: zip.c.i
 
 # target to preprocess a source file
 zip.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.i
 .PHONY : zip.c.i
 
 zip.s: zip.c.s
@@ -519,7 +519,7 @@ zip.s: zip.c.s
 
 # target to generate assembly for a file
 zip.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARUtil/CMakeFiles/ARUtil.dir/build.make ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.s
 .PHONY : zip.c.s
 
 # Help Target
@@ -585,6 +585,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

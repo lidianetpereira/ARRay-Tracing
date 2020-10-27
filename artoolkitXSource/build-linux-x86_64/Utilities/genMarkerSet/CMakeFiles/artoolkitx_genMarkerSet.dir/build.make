@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 # Include any dependencies generated for this target.
 include Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/depend.make
@@ -59,16 +59,16 @@ include Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/flags.make
 
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o: Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/flags.make
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o: ../Utilities/genMarkerSet/genMarkerSet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genMarkerSet && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/genMarkerSet/genMarkerSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/genMarkerSet/genMarkerSet.cpp
 
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genMarkerSet && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/genMarkerSet/genMarkerSet.cpp > CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/genMarkerSet/genMarkerSet.cpp > CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.i
 
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genMarkerSet && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/genMarkerSet/genMarkerSet.cpp -o CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/genMarkerSet/genMarkerSet.cpp -o CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.s
 
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o.requires:
 
@@ -111,8 +111,8 @@ Utilities/genMarkerSet/artoolkitx_genMarkerSet: /usr/lib/x86_64-linux-gnu/libGL.
 Utilities/genMarkerSet/artoolkitx_genMarkerSet: /usr/lib/x86_64-linux-gnu/libGLU.so
 Utilities/genMarkerSet/artoolkitx_genMarkerSet: /usr/lib/x86_64-linux-gnu/libGLESv2.so
 Utilities/genMarkerSet/artoolkitx_genMarkerSet: Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable artoolkitx_genMarkerSet"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genMarkerSet && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_genMarkerSet.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable artoolkitx_genMarkerSet"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_genMarkerSet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build: Utilities/genMarkerSet/artoolkitx_genMarkerSet
@@ -124,10 +124,10 @@ Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/requires: Utilitie
 .PHONY : Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/requires
 
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genMarkerSet && $(CMAKE_COMMAND) -P CMakeFiles/artoolkitx_genMarkerSet.dir/cmake_clean.cmake
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet && $(CMAKE_COMMAND) -P CMakeFiles/artoolkitx_genMarkerSet.dir/cmake_clean.cmake
 .PHONY : Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/clean
 
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/Downloads/artoolkitx-master/Source /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/genMarkerSet /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genMarkerSet /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/ARRay-TracingGit/artoolkitXSource /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/genMarkerSet /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/depend
 

@@ -378,7 +378,7 @@ sdkddkver.h
 windows.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARController.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARController.cpp
 ARX/ARController.h
 -
 ARX/Error.h
@@ -388,7 +388,7 @@ ARX/ARG/mtx.h
 syslog.h
 -
 trackingSub.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.h
 ARX/AR/paramGL.h
 -
 stdarg.h
@@ -400,13 +400,13 @@ string
 sstream
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARPattern.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARPattern.cpp
 ARX/ARPattern.h
 -
 ARX/ARController.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable.cpp
 ARX/ARTrackable.h
 -
 ARX/ARTrackableSquare.h
@@ -424,57 +424,57 @@ ARX/AR/paramGL.h
 sys/param.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable2d.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable2d.cpp
 ARX/ARTrackable2d.h
 -
 ARX/ARUtil/image_utils.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquare.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquare.cpp
 ARX/ARTrackableMultiSquare.h
 -
 ARX/ARController.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquareAuto.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquareAuto.cpp
 ARX/ARTrackableMultiSquareAuto.h
 -
 mapper.hpp
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.hpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.hpp
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableNFT.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableNFT.cpp
 ARX/ARTrackableNFT.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableSquare.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableSquare.cpp
 ARX/ARTrackableSquare.h
 -
 ARX/ARController.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker.cpp
 ARX/ARTracker.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker2d.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker2d.cpp
 ARX/ARTracker2d.h
 -
 ARX/ARTrackable2d.h
 -
 trackingSub.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.h
 ARX/OCVT/PlanarTracker.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerNFT.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerNFT.cpp
 ARX/ARTrackerNFT.h
 -
 ARX/ARTrackableNFT.h
 -
 trackingSub.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerSquare.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerSquare.cpp
 ARX/ARTrackerSquare.h
 -
 ARX/ARTrackableSquare.h
@@ -486,7 +486,7 @@ ARX/ARTrackableMultiSquareAuto.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoSource.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoSource.cpp
 ARX/Platform.h
 -
 ARX/ARVideoSource.h
@@ -500,7 +500,7 @@ ARX/ARVideo/videoRGBA.h
 arm_neon.h
 -
 cpu-features.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/cpu-features.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/cpu-features.h
 stdlib.h
 -
 inttypes.h
@@ -508,7 +508,7 @@ inttypes.h
 math.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoView.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoView.cpp
 ARX/ARVideoView.h
 -
 ARX/ARG/glStateCache2.h
@@ -516,7 +516,7 @@ ARX/ARG/glStateCache2.h
 algorithm
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARX_c.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARX_c.cpp
 ARX/ARX_c.h
 -
 ARX/ARController.h
@@ -532,17 +532,17 @@ stdio.h
 pthread.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.cpp
 ARX/AR/config.h
 -
 mapper.hpp
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.hpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.hpp
 gtsam/base/Vector.h
 -
 gtsam/slam/PriorFactor.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.hpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.hpp
 gtsam/inference/Symbol.h
 -
 gtsam/geometry/Pose3.h
@@ -560,7 +560,7 @@ ARX/AR/ar.h
 ARX/AR/arMulti.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.h
 ARX/Platform.h
 -
 ARX/AR/ar.h

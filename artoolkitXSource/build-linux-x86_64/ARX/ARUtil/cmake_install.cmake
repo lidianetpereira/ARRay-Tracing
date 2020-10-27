@@ -1,8 +1,8 @@
-# Install script for directory: /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil
+# Install script for directory: /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lidiane/Downloads/artoolkitx-master/Source/../SDK")
+  set(CMAKE_INSTALL_PREFIX "/home/lidiane/ARRay-TracingGit/artoolkitXSource/../SDK")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

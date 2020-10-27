@@ -120,33 +120,33 @@ ARX/ARVideo/video.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/AVFoundation/videoAVFoundation.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/AVFoundation/videoAVFoundation.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Android/sqlite3.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Android/sqlite3.h
 stdarg.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Android/videoAndroid.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Android/videoAndroid.h
 ARX/ARVideo/video.h
 -
 jni.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Dummy/videoDummy.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.c
 videoDummy.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Dummy/videoDummy.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.h
 string.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Dummy/videoDummy.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/GStreamer/videoGStreamer.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.c
 videoGStreamer.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/GStreamer/videoGStreamer.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.h
 glib.h
 -
 gst/gst.h
@@ -154,25 +154,25 @@ gst/gst.h
 string.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/GStreamer/videoGStreamer.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Image/videoImage.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/videoImage.c
 videoImage.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Image/videoImage.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/videoImage.h
 string.h
 -
 jpeglib.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Image/jpeglib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/jpeglib.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Image/videoImage.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/videoImage.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Video4Linux2/videoV4L2.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.c
 videoV4L2.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Video4Linux2/videoV4L2.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.h
 sys/ioctl.h
 -
 sys/types.h
@@ -206,25 +206,25 @@ linux/videodev2.h
 libudev.h
 -
 ../cparamSearch.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/cparamSearch.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cparamSearch.h
 ARX/ARVideo/videoRGBA.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Video4Linux2/videoV4L2.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/WindowsMediaCapture/videoWindowsMediaCapture.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/WindowsMediaCapture/videoWindowsMediaCapture.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/WindowsMediaFoundation/videoWindowsMediaFoundation.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/WindowsMediaFoundation/videoWindowsMediaFoundation.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/cparamSearch.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cparamSearch.c
 cparamSearch.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/cparamSearch.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cparamSearch.h
 stdio.h
 -
 string.h
@@ -246,7 +246,7 @@ unistd.h
 float.h
 -
 Android/sqlite3.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Android/sqlite3.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Android/sqlite3.h
 sqlite3.h
 -
 curl/curl.h
@@ -260,17 +260,17 @@ ARX/ARUtil/system.h
 ARX/ARUtil/file_utils.h
 -
 nxjson.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/nxjson.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/nxjson.h
 CommonCrypto/CommonDigest.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/cparamSearch.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cparamSearch.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.c
 video1394.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
 sys/ioctl.h
 -
 sys/types.h
@@ -306,13 +306,13 @@ pthread.h
 ARX/ARUtil/time.h
 -
 video1394Private.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394Private.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394Format.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Format.c
 ARX/ARVideo/video.h
 -
 stdio.h
@@ -322,19 +322,19 @@ stdlib.h
 string.h
 -
 video1394Private.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394Private.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394Private.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
 video1394.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
 dc1394/camera.h
 -
 pthread.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394Setting.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Setting.c
 video1394.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
 sys/ioctl.h
 -
 sys/types.h
@@ -356,11 +356,11 @@ string.h
 dc1394/dc1394.h
 -
 video1394Private.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394Private.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/nxjson.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/nxjson.c
 nxjson.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/nxjson.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/nxjson.h
 stdlib.h
 -
 stdio.h
@@ -376,17 +376,17 @@ jni.h
 android/log.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/nxjson.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/nxjson.h
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/video.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/video.c
 stdio.h
 -
 ARX/ARVideo/video.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/video2.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/video2.c
 stdio.h
 -
 string.h
@@ -400,25 +400,25 @@ ARX/AR/config.h
 ARX/ARUtil/time.h
 -
 Dummy/videoDummy.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Dummy/videoDummy.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.h
 Video4Linux2/videoV4L2.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Video4Linux2/videoV4L2.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.h
 libdc1394/video1394.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/libdc1394/video1394.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
 GStreamer/videoGStreamer.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/GStreamer/videoGStreamer.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.h
 AVFoundation/videoAVFoundation.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/AVFoundation/videoAVFoundation.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/AVFoundation/videoAVFoundation.h
 Image/videoImage.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Image/videoImage.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/videoImage.h
 Android/videoAndroid.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/Android/videoAndroid.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Android/videoAndroid.h
 WindowsMediaFoundation/videoWindowsMediaFoundation.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/WindowsMediaFoundation/videoWindowsMediaFoundation.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/WindowsMediaFoundation/videoWindowsMediaFoundation.h
 WindowsMediaCapture/videoWindowsMediaCapture.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/WindowsMediaCapture/videoWindowsMediaCapture.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/WindowsMediaCapture/videoWindowsMediaCapture.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/videoAspectRatio.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoAspectRatio.c
 ARX/ARVideo/video.h
 -
 stdio.h
@@ -426,7 +426,7 @@ stdio.h
 string.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/videoLuma.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoLuma.c
 ARX/ARVideo/video.h
 -
 stdlib.h
@@ -440,9 +440,9 @@ pmmintrin.h
 tmmintrin.h
 -
 cpu-features.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/cpu-features.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cpu-features.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/videoRGBA.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoRGBA.c
 stdbool.h
 -
 ARX/ARVideo/videoRGBA.h
@@ -450,9 +450,9 @@ ARX/ARVideo/videoRGBA.h
 arm_neon.h
 -
 cpu-features.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/cpu-features.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cpu-features.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/videoSaveImage.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoSaveImage.c
 ARX/ARVideo/video.h
 -
 stdio.h
@@ -460,7 +460,7 @@ stdio.h
 string.h
 -
 jpeglib.h
-/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/jpeglib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/jpeglib.h
 
 /usr/include/glib-2.0/glib-object.h
 gobject/gbinding.h

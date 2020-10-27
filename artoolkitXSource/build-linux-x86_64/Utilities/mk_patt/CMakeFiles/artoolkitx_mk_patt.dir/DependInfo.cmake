@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidiane/Downloads/artoolkitx-master/Source/Utilities/mk_patt/mk_patt.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/mk_patt/mk_patt.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -28,12 +28,12 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR/CMakeFiles/AR.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARVideo/CMakeFiles/ARVideo.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARG/CMakeFiles/ARG.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/depends/common/src/Eden/CMakeFiles/Eden.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR/CMakeFiles/AR.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARVideo/CMakeFiles/ARVideo.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARG/CMakeFiles/ARG.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/depends/common/src/Eden/CMakeFiles/Eden.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

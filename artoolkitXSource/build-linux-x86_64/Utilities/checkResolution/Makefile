@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/checkResolution/CMakeFiles/progress.marks
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/rule:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/rule
 .PHONY : Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ artoolkitx_checkResolution: Utilities/checkResolution/CMakeFiles/artoolkitx_chec
 
 # fast build rule for target.
 artoolkitx_checkResolution/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build
 .PHONY : artoolkitx_checkResolution/fast
 
 checkResolution.o: checkResolution.c.o
@@ -177,7 +177,7 @@ checkResolution.o: checkResolution.c.o
 
 # target to build an object file
 checkResolution.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o
 .PHONY : checkResolution.c.o
 
 checkResolution.i: checkResolution.c.i
@@ -186,7 +186,7 @@ checkResolution.i: checkResolution.c.i
 
 # target to preprocess a source file
 checkResolution.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.i
 .PHONY : checkResolution.c.i
 
 checkResolution.s: checkResolution.c.s
@@ -195,7 +195,7 @@ checkResolution.s: checkResolution.c.s
 
 # target to generate assembly for a file
 checkResolution.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.s
 .PHONY : checkResolution.c.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

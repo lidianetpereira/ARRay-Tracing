@@ -104,7 +104,7 @@ ARX/ARUtil/types.h
 
 ../ARX/ARUtil/include/ARX/ARUtil/types.h
 
-/home/lidiane/Downloads/artoolkitx-master/Source/Utilities/checkResolution/checkResolution.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/checkResolution/checkResolution.c
 stdio.h
 -
 string.h

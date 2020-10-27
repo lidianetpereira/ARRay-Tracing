@@ -2,12 +2,6 @@
 -- Found OpenGLES2: /usr/include
 /usr/usr/local/opt/local
 -- Opting for desktop OpenGL. Set GL_PREFER_EMBEDDED to change.
-CMake Error at CMakeLists.txt:162 (include):
-  include could not find load file:
-
-    /home/lidiane/ARRay-TracingGit/SDK/lib/ARX/ARX.cmake
-
-
 CMake Error at CMake/FindOptiX.cmake:92 (message):
   optix library not found.  Please locate before proceeding.
 Call Stack (most recent call first):

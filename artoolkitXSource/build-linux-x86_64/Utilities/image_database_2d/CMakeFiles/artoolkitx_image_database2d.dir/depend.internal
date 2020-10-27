@@ -42,5 +42,5 @@ Utilities/image_database_2d/CMakeFiles/artoolkitx_image_database2d.dir/image_dat
  ../ARX/include/ARX/ARVideoSource.h
  ../ARX/include/ARX/ARVideoView.h
  ../ARX/include/ARX/Platform.h
- /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/image_database_2d/image_database2d.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/image_database_2d/image_database2d.cpp
  ARX/AR/include/ARX/AR/config.h

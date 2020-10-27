@@ -5,17 +5,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/android_system_property_get.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/crypt.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/file_utils.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/ioapi.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/log.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/profile.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/system.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/thread_sub.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/time.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/unzip.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/zip.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/android_system_property_get.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/android_system_property_get.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/crypt.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/crypt.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/file_utils.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/file_utils.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ioapi.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/ioapi.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/log.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/log.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/profile.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/profile.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/system.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/system.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/time.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/time.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/unzip.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/unzip.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zip.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/zip.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -32,8 +32,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../depends/linux/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/image_utils.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/thread_sub_winrt.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/image_utils.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/image_utils.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARUtil/CMakeFiles/ARUtil.dir/thread_sub_winrt.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

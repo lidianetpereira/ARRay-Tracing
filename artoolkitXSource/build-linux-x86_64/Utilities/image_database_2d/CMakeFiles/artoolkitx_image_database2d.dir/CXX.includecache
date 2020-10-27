@@ -328,7 +328,7 @@ sdkddkver.h
 windows.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/Utilities/image_database_2d/image_database2d.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/image_database_2d/image_database2d.cpp
 ARX/AR/ar.h
 -
 ARX/ARController.h

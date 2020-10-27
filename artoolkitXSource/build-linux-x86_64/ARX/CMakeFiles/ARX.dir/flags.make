@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =  -std=gnu11 -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/Downloads/artoolkitx-master/Source/depends/linux/lib -O3 -DNDEBUG -fPIC  
+C_FLAGS =  -std=gnu11 -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib -O3 -DNDEBUG -fPIC  
 
 C_DEFINES = -DARX_EXPORTS -DARX_EXPORTS=1 -DARX_TARGET_PLATFORM_LINUX=1
 
-C_INCLUDES = -I/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARG/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR2/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/KPM/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/include 
+C_INCLUDES = -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/include 
 
-CXX_FLAGS =  -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/Downloads/artoolkitx-master/Source/depends/linux/lib -O3 -DNDEBUG -fPIC   -std=c++11
+CXX_FLAGS =  -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib -O3 -DNDEBUG -fPIC   -std=c++11
 
 CXX_DEFINES = -DARX_EXPORTS -DARX_EXPORTS=1 -DARX_TARGET_PLATFORM_LINUX=1
 
-CXX_INCLUDES = -I/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideo/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARG/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR2/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/KPM/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/include 
+CXX_INCLUDES = -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/include 
 

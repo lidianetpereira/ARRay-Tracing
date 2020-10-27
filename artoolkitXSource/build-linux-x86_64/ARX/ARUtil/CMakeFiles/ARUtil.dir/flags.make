@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =  -std=gnu11 -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/Downloads/artoolkitx-master/Source/depends/linux/lib -O3 -DNDEBUG  
+C_FLAGS =  -std=gnu11 -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib -O3 -DNDEBUG  
 
 C_DEFINES = -DARX_EXPORTS=1 -DARX_TARGET_PLATFORM_LINUX=1
 
-C_INCLUDES = -I/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/include -I/home/lidiane/Downloads/artoolkitx-master/Source/depends/linux/include 
+C_INCLUDES = -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/include 
 
-CXX_FLAGS =  -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/Downloads/artoolkitx-master/Source/depends/linux/lib -O3 -DNDEBUG   -std=c++11
+CXX_FLAGS =  -march=core2 -fPIC -Wl,-rpath-link,/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib -O3 -DNDEBUG   -std=c++11
 
 CXX_DEFINES = -DARX_EXPORTS=1 -DARX_TARGET_PLATFORM_LINUX=1
 
-CXX_INCLUDES = -I/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR/include -I/home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARUtil/include -I/home/lidiane/Downloads/artoolkitx-master/Source/depends/linux/include 
+CXX_INCLUDES = -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/include -I/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/include 
 

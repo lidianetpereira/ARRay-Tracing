@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lidiane/Downloads/artoolkitx-master/Source/Utilities/checkResolution/checkResolution.c" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/checkResolution/checkResolution.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -24,8 +24,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR2/CMakeFiles/AR2.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR2/CMakeFiles/AR2.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

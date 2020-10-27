@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 # Include any dependencies generated for this target.
 include ARX/AR/CMakeFiles/AR.dir/depend.make
@@ -59,16 +59,16 @@ include ARX/AR/CMakeFiles/AR.dir/flags.make
 
 ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.o: ../ARX/AR/ar3DCreateHandle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/ar3DCreateHandle.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/ar3DCreateHandle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/ar3DCreateHandle.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DCreateHandle.c
 
 ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/ar3DCreateHandle.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/ar3DCreateHandle.c > CMakeFiles/AR.dir/ar3DCreateHandle.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DCreateHandle.c > CMakeFiles/AR.dir/ar3DCreateHandle.c.i
 
 ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/ar3DCreateHandle.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/ar3DCreateHandle.c -o CMakeFiles/AR.dir/ar3DCreateHandle.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DCreateHandle.c -o CMakeFiles/AR.dir/ar3DCreateHandle.c.s
 
 ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.o.requires:
 
@@ -83,16 +83,16 @@ ARX/AR/CMakeFiles/AR.dir/ar3DCreateHandle.c.o.provides.build: ARX/AR/CMakeFiles/
 
 ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.o: ../ARX/AR/ar3DUtil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/ar3DUtil.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/ar3DUtil.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/ar3DUtil.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DUtil.c
 
 ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/ar3DUtil.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/ar3DUtil.c > CMakeFiles/AR.dir/ar3DUtil.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DUtil.c > CMakeFiles/AR.dir/ar3DUtil.c.i
 
 ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/ar3DUtil.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/ar3DUtil.c -o CMakeFiles/AR.dir/ar3DUtil.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DUtil.c -o CMakeFiles/AR.dir/ar3DUtil.c.s
 
 ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.o.requires:
 
@@ -107,16 +107,16 @@ ARX/AR/CMakeFiles/AR.dir/ar3DUtil.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/a
 
 ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.o: ../ARX/AR/arCreateHandle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arCreateHandle.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arCreateHandle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arCreateHandle.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arCreateHandle.c
 
 ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arCreateHandle.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arCreateHandle.c > CMakeFiles/AR.dir/arCreateHandle.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arCreateHandle.c > CMakeFiles/AR.dir/arCreateHandle.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arCreateHandle.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arCreateHandle.c -o CMakeFiles/AR.dir/arCreateHandle.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arCreateHandle.c -o CMakeFiles/AR.dir/arCreateHandle.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.o.requires:
 
@@ -131,16 +131,16 @@ ARX/AR/CMakeFiles/AR.dir/arCreateHandle.c.o.provides.build: ARX/AR/CMakeFiles/AR
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.o: ../ARX/AR/arDetectMarker.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arDetectMarker.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arDetectMarker.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arDetectMarker.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker.c
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arDetectMarker.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arDetectMarker.c > CMakeFiles/AR.dir/arDetectMarker.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker.c > CMakeFiles/AR.dir/arDetectMarker.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arDetectMarker.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arDetectMarker.c -o CMakeFiles/AR.dir/arDetectMarker.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker.c -o CMakeFiles/AR.dir/arDetectMarker.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.o.requires:
 
@@ -155,16 +155,16 @@ ARX/AR/CMakeFiles/AR.dir/arDetectMarker.c.o.provides.build: ARX/AR/CMakeFiles/AR
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.o: ../ARX/AR/arDetectMarker2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arDetectMarker2.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arDetectMarker2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arDetectMarker2.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker2.c
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arDetectMarker2.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arDetectMarker2.c > CMakeFiles/AR.dir/arDetectMarker2.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker2.c > CMakeFiles/AR.dir/arDetectMarker2.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arDetectMarker2.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arDetectMarker2.c -o CMakeFiles/AR.dir/arDetectMarker2.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker2.c -o CMakeFiles/AR.dir/arDetectMarker2.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.o.requires:
 
@@ -179,16 +179,16 @@ ARX/AR/CMakeFiles/AR.dir/arDetectMarker2.c.o.provides.build: ARX/AR/CMakeFiles/A
 
 ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.o: ../ARX/AR/arFilterTransMat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arFilterTransMat.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arFilterTransMat.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arFilterTransMat.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arFilterTransMat.c
 
 ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arFilterTransMat.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arFilterTransMat.c > CMakeFiles/AR.dir/arFilterTransMat.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arFilterTransMat.c > CMakeFiles/AR.dir/arFilterTransMat.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arFilterTransMat.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arFilterTransMat.c -o CMakeFiles/AR.dir/arFilterTransMat.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arFilterTransMat.c -o CMakeFiles/AR.dir/arFilterTransMat.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.o.requires:
 
@@ -203,16 +203,16 @@ ARX/AR/CMakeFiles/AR.dir/arFilterTransMat.c.o.provides.build: ARX/AR/CMakeFiles/
 
 ARX/AR/CMakeFiles/AR.dir/arGetLine.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arGetLine.c.o: ../ARX/AR/arGetLine.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetLine.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetLine.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetLine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetLine.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetLine.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetLine.c
 
 ARX/AR/CMakeFiles/AR.dir/arGetLine.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arGetLine.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetLine.c > CMakeFiles/AR.dir/arGetLine.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetLine.c > CMakeFiles/AR.dir/arGetLine.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arGetLine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arGetLine.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetLine.c -o CMakeFiles/AR.dir/arGetLine.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetLine.c -o CMakeFiles/AR.dir/arGetLine.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arGetLine.c.o.requires:
 
@@ -227,16 +227,16 @@ ARX/AR/CMakeFiles/AR.dir/arGetLine.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/
 
 ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.o: ../ARX/AR/arGetMarkerInfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetMarkerInfo.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetMarkerInfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetMarkerInfo.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetMarkerInfo.c
 
 ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arGetMarkerInfo.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetMarkerInfo.c > CMakeFiles/AR.dir/arGetMarkerInfo.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetMarkerInfo.c > CMakeFiles/AR.dir/arGetMarkerInfo.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arGetMarkerInfo.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetMarkerInfo.c -o CMakeFiles/AR.dir/arGetMarkerInfo.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetMarkerInfo.c -o CMakeFiles/AR.dir/arGetMarkerInfo.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.o.requires:
 
@@ -251,16 +251,16 @@ ARX/AR/CMakeFiles/AR.dir/arGetMarkerInfo.c.o.provides.build: ARX/AR/CMakeFiles/A
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.o: ../ARX/AR/arGetTransMat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetTransMat.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetTransMat.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetTransMat.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMat.c
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arGetTransMat.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetTransMat.c > CMakeFiles/AR.dir/arGetTransMat.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMat.c > CMakeFiles/AR.dir/arGetTransMat.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arGetTransMat.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetTransMat.c -o CMakeFiles/AR.dir/arGetTransMat.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMat.c -o CMakeFiles/AR.dir/arGetTransMat.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.o.requires:
 
@@ -275,16 +275,16 @@ ARX/AR/CMakeFiles/AR.dir/arGetTransMat.c.o.provides.build: ARX/AR/CMakeFiles/AR.
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.o: ../ARX/AR/arGetTransMatStereo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetTransMatStereo.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetTransMatStereo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arGetTransMatStereo.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMatStereo.c
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arGetTransMatStereo.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetTransMatStereo.c > CMakeFiles/AR.dir/arGetTransMatStereo.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMatStereo.c > CMakeFiles/AR.dir/arGetTransMatStereo.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arGetTransMatStereo.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arGetTransMatStereo.c -o CMakeFiles/AR.dir/arGetTransMatStereo.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMatStereo.c -o CMakeFiles/AR.dir/arGetTransMatStereo.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.o.requires:
 
@@ -299,16 +299,16 @@ ARX/AR/CMakeFiles/AR.dir/arGetTransMatStereo.c.o.provides.build: ARX/AR/CMakeFil
 
 ARX/AR/CMakeFiles/AR.dir/arImageProc.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arImageProc.c.o: ../ARX/AR/arImageProc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object ARX/AR/CMakeFiles/AR.dir/arImageProc.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arImageProc.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arImageProc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object ARX/AR/CMakeFiles/AR.dir/arImageProc.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arImageProc.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arImageProc.c
 
 ARX/AR/CMakeFiles/AR.dir/arImageProc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arImageProc.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arImageProc.c > CMakeFiles/AR.dir/arImageProc.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arImageProc.c > CMakeFiles/AR.dir/arImageProc.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arImageProc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arImageProc.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arImageProc.c -o CMakeFiles/AR.dir/arImageProc.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arImageProc.c -o CMakeFiles/AR.dir/arImageProc.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arImageProc.c.o.requires:
 
@@ -323,16 +323,16 @@ ARX/AR/CMakeFiles/AR.dir/arImageProc.c.o.provides.build: ARX/AR/CMakeFiles/AR.di
 
 ARX/AR/CMakeFiles/AR.dir/arLabeling.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabeling.c.o: ../ARX/AR/arLabeling.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabeling.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabeling.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabeling.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabeling.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabeling.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabeling.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabeling.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabeling.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabeling.c > CMakeFiles/AR.dir/arLabeling.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabeling.c > CMakeFiles/AR.dir/arLabeling.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabeling.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabeling.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabeling.c -o CMakeFiles/AR.dir/arLabeling.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabeling.c -o CMakeFiles/AR.dir/arLabeling.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabeling.c.o.requires:
 
@@ -347,16 +347,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabeling.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubDBIC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBIC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBIC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o.requires:
 
@@ -371,16 +371,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBIC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubDBRC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBRC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBRC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o.requires:
 
@@ -395,16 +395,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBRC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o: ../ARX/AR/arLabelingSub/arLabelingSubDBZ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBZ.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBZ.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDBZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o.requires:
 
@@ -419,16 +419,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDBZ.c.o.provides.build: ARX/
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubDWIC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWIC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWIC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o.requires:
 
@@ -443,16 +443,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWIC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubDWRC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWRC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWRC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o.requires:
 
@@ -467,16 +467,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWRC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o: ../ARX/AR/arLabelingSub/arLabelingSubDWZ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWZ.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWZ.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubDWZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o.requires:
 
@@ -491,16 +491,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubDWZ.c.o.provides.build: ARX/
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubEBIC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBIC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBIC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o.requires:
 
@@ -515,16 +515,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBIC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubEBRC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBRC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBRC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o.requires:
 
@@ -539,16 +539,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBRC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o: ../ARX/AR/arLabelingSub/arLabelingSubEBZ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBZ.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBZ.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEBZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o.requires:
 
@@ -563,16 +563,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEBZ.c.o.provides.build: ARX/
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubEWIC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWIC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWIC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWIC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWIC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o.requires:
 
@@ -587,16 +587,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWIC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o: ../ARX/AR/arLabelingSub/arLabelingSubEWRC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWRC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWRC.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWRC.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWRC.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o.requires:
 
@@ -611,16 +611,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWRC.c.o.provides.build: ARX
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o: ../ARX/AR/arLabelingSub/arLabelingSubEWZ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWZ.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWZ.c
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWZ.c > CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arLabelingSub/arLabelingSubEWZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWZ.c -o CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o.requires:
 
@@ -635,16 +635,16 @@ ARX/AR/CMakeFiles/AR.dir/arLabelingSub/arLabelingSubEWZ.c.o.provides.build: ARX/
 
 ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.o: ../ARX/AR/arMultiEditConfig.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiEditConfig.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiEditConfig.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiEditConfig.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiEditConfig.c
 
 ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arMultiEditConfig.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiEditConfig.c > CMakeFiles/AR.dir/arMultiEditConfig.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiEditConfig.c > CMakeFiles/AR.dir/arMultiEditConfig.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arMultiEditConfig.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiEditConfig.c -o CMakeFiles/AR.dir/arMultiEditConfig.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiEditConfig.c -o CMakeFiles/AR.dir/arMultiEditConfig.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.o.requires:
 
@@ -659,16 +659,16 @@ ARX/AR/CMakeFiles/AR.dir/arMultiEditConfig.c.o.provides.build: ARX/AR/CMakeFiles
 
 ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.o: ../ARX/AR/arMultiFreeConfig.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiFreeConfig.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiFreeConfig.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiFreeConfig.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiFreeConfig.c
 
 ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arMultiFreeConfig.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiFreeConfig.c > CMakeFiles/AR.dir/arMultiFreeConfig.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiFreeConfig.c > CMakeFiles/AR.dir/arMultiFreeConfig.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arMultiFreeConfig.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiFreeConfig.c -o CMakeFiles/AR.dir/arMultiFreeConfig.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiFreeConfig.c -o CMakeFiles/AR.dir/arMultiFreeConfig.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.o.requires:
 
@@ -683,16 +683,16 @@ ARX/AR/CMakeFiles/AR.dir/arMultiFreeConfig.c.o.provides.build: ARX/AR/CMakeFiles
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.o: ../ARX/AR/arMultiGetTransMat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiGetTransMat.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiGetTransMat.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiGetTransMat.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMat.c
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arMultiGetTransMat.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiGetTransMat.c > CMakeFiles/AR.dir/arMultiGetTransMat.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMat.c > CMakeFiles/AR.dir/arMultiGetTransMat.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arMultiGetTransMat.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiGetTransMat.c -o CMakeFiles/AR.dir/arMultiGetTransMat.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMat.c -o CMakeFiles/AR.dir/arMultiGetTransMat.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.o.requires:
 
@@ -707,16 +707,16 @@ ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMat.c.o.provides.build: ARX/AR/CMakeFile
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o: ../ARX/AR/arMultiGetTransMatStereo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiGetTransMatStereo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMatStereo.c
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiGetTransMatStereo.c > CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMatStereo.c > CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiGetTransMatStereo.c -o CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMatStereo.c -o CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o.requires:
 
@@ -731,16 +731,16 @@ ARX/AR/CMakeFiles/AR.dir/arMultiGetTransMatStereo.c.o.provides.build: ARX/AR/CMa
 
 ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.o: ../ARX/AR/arMultiReadConfigFile.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiReadConfigFile.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiReadConfigFile.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arMultiReadConfigFile.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiReadConfigFile.c
 
 ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arMultiReadConfigFile.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiReadConfigFile.c > CMakeFiles/AR.dir/arMultiReadConfigFile.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiReadConfigFile.c > CMakeFiles/AR.dir/arMultiReadConfigFile.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arMultiReadConfigFile.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arMultiReadConfigFile.c -o CMakeFiles/AR.dir/arMultiReadConfigFile.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiReadConfigFile.c -o CMakeFiles/AR.dir/arMultiReadConfigFile.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.o.requires:
 
@@ -755,16 +755,16 @@ ARX/AR/CMakeFiles/AR.dir/arMultiReadConfigFile.c.o.provides.build: ARX/AR/CMakeF
 
 ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.o: ../ARX/AR/arPattAttach.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattAttach.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattAttach.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattAttach.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattAttach.c
 
 ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arPattAttach.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattAttach.c > CMakeFiles/AR.dir/arPattAttach.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattAttach.c > CMakeFiles/AR.dir/arPattAttach.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arPattAttach.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattAttach.c -o CMakeFiles/AR.dir/arPattAttach.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattAttach.c -o CMakeFiles/AR.dir/arPattAttach.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.o.requires:
 
@@ -779,16 +779,16 @@ ARX/AR/CMakeFiles/AR.dir/arPattAttach.c.o.provides.build: ARX/AR/CMakeFiles/AR.d
 
 ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.o: ../ARX/AR/arPattCreateHandle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattCreateHandle.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattCreateHandle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattCreateHandle.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattCreateHandle.c
 
 ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arPattCreateHandle.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattCreateHandle.c > CMakeFiles/AR.dir/arPattCreateHandle.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattCreateHandle.c > CMakeFiles/AR.dir/arPattCreateHandle.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arPattCreateHandle.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattCreateHandle.c -o CMakeFiles/AR.dir/arPattCreateHandle.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattCreateHandle.c -o CMakeFiles/AR.dir/arPattCreateHandle.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.o.requires:
 
@@ -803,16 +803,16 @@ ARX/AR/CMakeFiles/AR.dir/arPattCreateHandle.c.o.provides.build: ARX/AR/CMakeFile
 
 ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.o: ../ARX/AR/arPattGetID.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattGetID.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattGetID.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattGetID.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattGetID.c
 
 ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arPattGetID.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattGetID.c > CMakeFiles/AR.dir/arPattGetID.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattGetID.c > CMakeFiles/AR.dir/arPattGetID.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arPattGetID.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattGetID.c -o CMakeFiles/AR.dir/arPattGetID.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattGetID.c -o CMakeFiles/AR.dir/arPattGetID.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.o.requires:
 
@@ -827,16 +827,16 @@ ARX/AR/CMakeFiles/AR.dir/arPattGetID.c.o.provides.build: ARX/AR/CMakeFiles/AR.di
 
 ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.o: ../ARX/AR/arPattLoad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattLoad.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattLoad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattLoad.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattLoad.c
 
 ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arPattLoad.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattLoad.c > CMakeFiles/AR.dir/arPattLoad.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattLoad.c > CMakeFiles/AR.dir/arPattLoad.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arPattLoad.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattLoad.c -o CMakeFiles/AR.dir/arPattLoad.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattLoad.c -o CMakeFiles/AR.dir/arPattLoad.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.o.requires:
 
@@ -851,16 +851,16 @@ ARX/AR/CMakeFiles/AR.dir/arPattLoad.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir
 
 ARX/AR/CMakeFiles/AR.dir/arPattSave.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arPattSave.c.o: ../ARX/AR/arPattSave.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattSave.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattSave.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattSave.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object ARX/AR/CMakeFiles/AR.dir/arPattSave.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arPattSave.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattSave.c
 
 ARX/AR/CMakeFiles/AR.dir/arPattSave.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arPattSave.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattSave.c > CMakeFiles/AR.dir/arPattSave.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattSave.c > CMakeFiles/AR.dir/arPattSave.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arPattSave.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arPattSave.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arPattSave.c -o CMakeFiles/AR.dir/arPattSave.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattSave.c -o CMakeFiles/AR.dir/arPattSave.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arPattSave.c.o.requires:
 
@@ -875,16 +875,16 @@ ARX/AR/CMakeFiles/AR.dir/arPattSave.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir
 
 ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.o: ../ARX/AR/arRefineCorners.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AR.dir/arRefineCorners.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arRefineCorners.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AR.dir/arRefineCorners.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.cpp
 
 ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AR.dir/arRefineCorners.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arRefineCorners.cpp > CMakeFiles/AR.dir/arRefineCorners.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.cpp > CMakeFiles/AR.dir/arRefineCorners.cpp.i
 
 ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AR.dir/arRefineCorners.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arRefineCorners.cpp -o CMakeFiles/AR.dir/arRefineCorners.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.cpp -o CMakeFiles/AR.dir/arRefineCorners.cpp.s
 
 ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.o.requires:
 
@@ -899,16 +899,16 @@ ARX/AR/CMakeFiles/AR.dir/arRefineCorners.cpp.o.provides.build: ARX/AR/CMakeFiles
 
 ARX/AR/CMakeFiles/AR.dir/arUtil.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/arUtil.c.o: ../ARX/AR/arUtil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object ARX/AR/CMakeFiles/AR.dir/arUtil.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arUtil.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arUtil.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object ARX/AR/CMakeFiles/AR.dir/arUtil.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/arUtil.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arUtil.c
 
 ARX/AR/CMakeFiles/AR.dir/arUtil.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/arUtil.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arUtil.c > CMakeFiles/AR.dir/arUtil.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arUtil.c > CMakeFiles/AR.dir/arUtil.c.i
 
 ARX/AR/CMakeFiles/AR.dir/arUtil.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/arUtil.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/arUtil.c -o CMakeFiles/AR.dir/arUtil.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arUtil.c -o CMakeFiles/AR.dir/arUtil.c.s
 
 ARX/AR/CMakeFiles/AR.dir/arUtil.c.o.requires:
 
@@ -923,16 +923,16 @@ ARX/AR/CMakeFiles/AR.dir/arUtil.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/arU
 
 ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.o: ../ARX/AR/icpCalibStereo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpCalibStereo.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpCalibStereo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpCalibStereo.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCalibStereo.c
 
 ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpCalibStereo.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpCalibStereo.c > CMakeFiles/AR.dir/icpCalibStereo.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCalibStereo.c > CMakeFiles/AR.dir/icpCalibStereo.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpCalibStereo.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpCalibStereo.c -o CMakeFiles/AR.dir/icpCalibStereo.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCalibStereo.c -o CMakeFiles/AR.dir/icpCalibStereo.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.o.requires:
 
@@ -947,16 +947,16 @@ ARX/AR/CMakeFiles/AR.dir/icpCalibStereo.c.o.provides.build: ARX/AR/CMakeFiles/AR
 
 ARX/AR/CMakeFiles/AR.dir/icpCore.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpCore.c.o: ../ARX/AR/icpCore.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object ARX/AR/CMakeFiles/AR.dir/icpCore.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpCore.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpCore.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object ARX/AR/CMakeFiles/AR.dir/icpCore.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpCore.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCore.c
 
 ARX/AR/CMakeFiles/AR.dir/icpCore.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpCore.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpCore.c > CMakeFiles/AR.dir/icpCore.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCore.c > CMakeFiles/AR.dir/icpCore.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpCore.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpCore.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpCore.c -o CMakeFiles/AR.dir/icpCore.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCore.c -o CMakeFiles/AR.dir/icpCore.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpCore.c.o.requires:
 
@@ -971,16 +971,16 @@ ARX/AR/CMakeFiles/AR.dir/icpCore.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/ic
 
 ARX/AR/CMakeFiles/AR.dir/icpHandle.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpHandle.c.o: ../ARX/AR/icpHandle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object ARX/AR/CMakeFiles/AR.dir/icpHandle.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpHandle.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpHandle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object ARX/AR/CMakeFiles/AR.dir/icpHandle.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpHandle.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpHandle.c
 
 ARX/AR/CMakeFiles/AR.dir/icpHandle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpHandle.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpHandle.c > CMakeFiles/AR.dir/icpHandle.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpHandle.c > CMakeFiles/AR.dir/icpHandle.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpHandle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpHandle.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpHandle.c -o CMakeFiles/AR.dir/icpHandle.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpHandle.c -o CMakeFiles/AR.dir/icpHandle.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpHandle.c.o.requires:
 
@@ -995,16 +995,16 @@ ARX/AR/CMakeFiles/AR.dir/icpHandle.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/
 
 ARX/AR/CMakeFiles/AR.dir/icpPoint.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpPoint.c.o: ../ARX/AR/icpPoint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object ARX/AR/CMakeFiles/AR.dir/icpPoint.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpPoint.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpPoint.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object ARX/AR/CMakeFiles/AR.dir/icpPoint.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpPoint.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPoint.c
 
 ARX/AR/CMakeFiles/AR.dir/icpPoint.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpPoint.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpPoint.c > CMakeFiles/AR.dir/icpPoint.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPoint.c > CMakeFiles/AR.dir/icpPoint.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpPoint.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpPoint.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpPoint.c -o CMakeFiles/AR.dir/icpPoint.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPoint.c -o CMakeFiles/AR.dir/icpPoint.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpPoint.c.o.requires:
 
@@ -1019,16 +1019,16 @@ ARX/AR/CMakeFiles/AR.dir/icpPoint.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/i
 
 ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.o: ../ARX/AR/icpPointRobust.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpPointRobust.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpPointRobust.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpPointRobust.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPointRobust.c
 
 ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpPointRobust.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpPointRobust.c > CMakeFiles/AR.dir/icpPointRobust.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPointRobust.c > CMakeFiles/AR.dir/icpPointRobust.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpPointRobust.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpPointRobust.c -o CMakeFiles/AR.dir/icpPointRobust.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPointRobust.c -o CMakeFiles/AR.dir/icpPointRobust.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.o.requires:
 
@@ -1043,16 +1043,16 @@ ARX/AR/CMakeFiles/AR.dir/icpPointRobust.c.o.provides.build: ARX/AR/CMakeFiles/AR
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.o: ../ARX/AR/icpStereoHandle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpStereoHandle.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoHandle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpStereoHandle.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoHandle.c
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpStereoHandle.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoHandle.c > CMakeFiles/AR.dir/icpStereoHandle.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoHandle.c > CMakeFiles/AR.dir/icpStereoHandle.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpStereoHandle.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoHandle.c -o CMakeFiles/AR.dir/icpStereoHandle.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoHandle.c -o CMakeFiles/AR.dir/icpStereoHandle.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.o.requires:
 
@@ -1067,16 +1067,16 @@ ARX/AR/CMakeFiles/AR.dir/icpStereoHandle.c.o.provides.build: ARX/AR/CMakeFiles/A
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.o: ../ARX/AR/icpStereoPoint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpStereoPoint.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoPoint.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpStereoPoint.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPoint.c
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpStereoPoint.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoPoint.c > CMakeFiles/AR.dir/icpStereoPoint.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPoint.c > CMakeFiles/AR.dir/icpStereoPoint.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpStereoPoint.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoPoint.c -o CMakeFiles/AR.dir/icpStereoPoint.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPoint.c -o CMakeFiles/AR.dir/icpStereoPoint.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.o.requires:
 
@@ -1091,16 +1091,16 @@ ARX/AR/CMakeFiles/AR.dir/icpStereoPoint.c.o.provides.build: ARX/AR/CMakeFiles/AR
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.o: ../ARX/AR/icpStereoPointRobust.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpStereoPointRobust.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoPointRobust.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpStereoPointRobust.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPointRobust.c
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpStereoPointRobust.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoPointRobust.c > CMakeFiles/AR.dir/icpStereoPointRobust.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPointRobust.c > CMakeFiles/AR.dir/icpStereoPointRobust.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpStereoPointRobust.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpStereoPointRobust.c -o CMakeFiles/AR.dir/icpStereoPointRobust.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPointRobust.c -o CMakeFiles/AR.dir/icpStereoPointRobust.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.o.requires:
 
@@ -1115,16 +1115,16 @@ ARX/AR/CMakeFiles/AR.dir/icpStereoPointRobust.c.o.provides.build: ARX/AR/CMakeFi
 
 ARX/AR/CMakeFiles/AR.dir/icpUtil.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/icpUtil.c.o: ../ARX/AR/icpUtil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object ARX/AR/CMakeFiles/AR.dir/icpUtil.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpUtil.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpUtil.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object ARX/AR/CMakeFiles/AR.dir/icpUtil.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/icpUtil.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpUtil.c
 
 ARX/AR/CMakeFiles/AR.dir/icpUtil.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/icpUtil.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpUtil.c > CMakeFiles/AR.dir/icpUtil.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpUtil.c > CMakeFiles/AR.dir/icpUtil.c.i
 
 ARX/AR/CMakeFiles/AR.dir/icpUtil.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/icpUtil.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/icpUtil.c -o CMakeFiles/AR.dir/icpUtil.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpUtil.c -o CMakeFiles/AR.dir/icpUtil.c.s
 
 ARX/AR/CMakeFiles/AR.dir/icpUtil.c.o.requires:
 
@@ -1139,16 +1139,16 @@ ARX/AR/CMakeFiles/AR.dir/icpUtil.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/ic
 
 ARX/AR/CMakeFiles/AR.dir/mAlloc.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mAlloc.c.o: ../ARX/AR/mAlloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object ARX/AR/CMakeFiles/AR.dir/mAlloc.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAlloc.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAlloc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object ARX/AR/CMakeFiles/AR.dir/mAlloc.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAlloc.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAlloc.c
 
 ARX/AR/CMakeFiles/AR.dir/mAlloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mAlloc.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAlloc.c > CMakeFiles/AR.dir/mAlloc.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAlloc.c > CMakeFiles/AR.dir/mAlloc.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mAlloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mAlloc.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAlloc.c -o CMakeFiles/AR.dir/mAlloc.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAlloc.c -o CMakeFiles/AR.dir/mAlloc.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mAlloc.c.o.requires:
 
@@ -1163,16 +1163,16 @@ ARX/AR/CMakeFiles/AR.dir/mAlloc.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mAl
 
 ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.o: ../ARX/AR/mAllocDup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocDup.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocDup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocDup.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocDup.c
 
 ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mAllocDup.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocDup.c > CMakeFiles/AR.dir/mAllocDup.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocDup.c > CMakeFiles/AR.dir/mAllocDup.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mAllocDup.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocDup.c -o CMakeFiles/AR.dir/mAllocDup.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocDup.c -o CMakeFiles/AR.dir/mAllocDup.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.o.requires:
 
@@ -1187,16 +1187,16 @@ ARX/AR/CMakeFiles/AR.dir/mAllocDup.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/
 
 ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.o: ../ARX/AR/mAllocInv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocInv.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocInv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocInv.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocInv.c
 
 ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mAllocInv.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocInv.c > CMakeFiles/AR.dir/mAllocInv.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocInv.c > CMakeFiles/AR.dir/mAllocInv.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mAllocInv.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocInv.c -o CMakeFiles/AR.dir/mAllocInv.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocInv.c -o CMakeFiles/AR.dir/mAllocInv.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.o.requires:
 
@@ -1211,16 +1211,16 @@ ARX/AR/CMakeFiles/AR.dir/mAllocInv.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/
 
 ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.o: ../ARX/AR/mAllocMul.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocMul.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocMul.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocMul.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocMul.c
 
 ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mAllocMul.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocMul.c > CMakeFiles/AR.dir/mAllocMul.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocMul.c > CMakeFiles/AR.dir/mAllocMul.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mAllocMul.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocMul.c -o CMakeFiles/AR.dir/mAllocMul.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocMul.c -o CMakeFiles/AR.dir/mAllocMul.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.o.requires:
 
@@ -1235,16 +1235,16 @@ ARX/AR/CMakeFiles/AR.dir/mAllocMul.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/
 
 ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.o: ../ARX/AR/mAllocTrans.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocTrans.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocTrans.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocTrans.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocTrans.c
 
 ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mAllocTrans.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocTrans.c > CMakeFiles/AR.dir/mAllocTrans.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocTrans.c > CMakeFiles/AR.dir/mAllocTrans.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mAllocTrans.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocTrans.c -o CMakeFiles/AR.dir/mAllocTrans.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocTrans.c -o CMakeFiles/AR.dir/mAllocTrans.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.o.requires:
 
@@ -1259,16 +1259,16 @@ ARX/AR/CMakeFiles/AR.dir/mAllocTrans.c.o.provides.build: ARX/AR/CMakeFiles/AR.di
 
 ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.o: ../ARX/AR/mAllocUnit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocUnit.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocUnit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mAllocUnit.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocUnit.c
 
 ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mAllocUnit.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocUnit.c > CMakeFiles/AR.dir/mAllocUnit.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocUnit.c > CMakeFiles/AR.dir/mAllocUnit.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mAllocUnit.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mAllocUnit.c -o CMakeFiles/AR.dir/mAllocUnit.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocUnit.c -o CMakeFiles/AR.dir/mAllocUnit.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.o.requires:
 
@@ -1283,16 +1283,16 @@ ARX/AR/CMakeFiles/AR.dir/mAllocUnit.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir
 
 ARX/AR/CMakeFiles/AR.dir/mDet.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mDet.c.o: ../ARX/AR/mDet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object ARX/AR/CMakeFiles/AR.dir/mDet.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mDet.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDet.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object ARX/AR/CMakeFiles/AR.dir/mDet.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mDet.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDet.c
 
 ARX/AR/CMakeFiles/AR.dir/mDet.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mDet.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDet.c > CMakeFiles/AR.dir/mDet.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDet.c > CMakeFiles/AR.dir/mDet.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mDet.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mDet.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDet.c -o CMakeFiles/AR.dir/mDet.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDet.c -o CMakeFiles/AR.dir/mDet.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mDet.c.o.requires:
 
@@ -1307,16 +1307,16 @@ ARX/AR/CMakeFiles/AR.dir/mDet.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mDet.
 
 ARX/AR/CMakeFiles/AR.dir/mDisp.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mDisp.c.o: ../ARX/AR/mDisp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object ARX/AR/CMakeFiles/AR.dir/mDisp.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mDisp.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDisp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object ARX/AR/CMakeFiles/AR.dir/mDisp.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mDisp.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDisp.c
 
 ARX/AR/CMakeFiles/AR.dir/mDisp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mDisp.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDisp.c > CMakeFiles/AR.dir/mDisp.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDisp.c > CMakeFiles/AR.dir/mDisp.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mDisp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mDisp.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDisp.c -o CMakeFiles/AR.dir/mDisp.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDisp.c -o CMakeFiles/AR.dir/mDisp.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mDisp.c.o.requires:
 
@@ -1331,16 +1331,16 @@ ARX/AR/CMakeFiles/AR.dir/mDisp.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mDis
 
 ARX/AR/CMakeFiles/AR.dir/mDup.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mDup.c.o: ../ARX/AR/mDup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object ARX/AR/CMakeFiles/AR.dir/mDup.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mDup.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object ARX/AR/CMakeFiles/AR.dir/mDup.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mDup.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDup.c
 
 ARX/AR/CMakeFiles/AR.dir/mDup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mDup.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDup.c > CMakeFiles/AR.dir/mDup.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDup.c > CMakeFiles/AR.dir/mDup.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mDup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mDup.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mDup.c -o CMakeFiles/AR.dir/mDup.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDup.c -o CMakeFiles/AR.dir/mDup.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mDup.c.o.requires:
 
@@ -1355,16 +1355,16 @@ ARX/AR/CMakeFiles/AR.dir/mDup.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mDup.
 
 ARX/AR/CMakeFiles/AR.dir/mFree.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mFree.c.o: ../ARX/AR/mFree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object ARX/AR/CMakeFiles/AR.dir/mFree.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mFree.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mFree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object ARX/AR/CMakeFiles/AR.dir/mFree.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mFree.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mFree.c
 
 ARX/AR/CMakeFiles/AR.dir/mFree.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mFree.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mFree.c > CMakeFiles/AR.dir/mFree.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mFree.c > CMakeFiles/AR.dir/mFree.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mFree.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mFree.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mFree.c -o CMakeFiles/AR.dir/mFree.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mFree.c -o CMakeFiles/AR.dir/mFree.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mFree.c.o.requires:
 
@@ -1379,16 +1379,16 @@ ARX/AR/CMakeFiles/AR.dir/mFree.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mFre
 
 ARX/AR/CMakeFiles/AR.dir/mInv.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mInv.c.o: ../ARX/AR/mInv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object ARX/AR/CMakeFiles/AR.dir/mInv.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mInv.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mInv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object ARX/AR/CMakeFiles/AR.dir/mInv.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mInv.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mInv.c
 
 ARX/AR/CMakeFiles/AR.dir/mInv.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mInv.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mInv.c > CMakeFiles/AR.dir/mInv.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mInv.c > CMakeFiles/AR.dir/mInv.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mInv.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mInv.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mInv.c -o CMakeFiles/AR.dir/mInv.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mInv.c -o CMakeFiles/AR.dir/mInv.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mInv.c.o.requires:
 
@@ -1403,16 +1403,16 @@ ARX/AR/CMakeFiles/AR.dir/mInv.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mInv.
 
 ARX/AR/CMakeFiles/AR.dir/mMul.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mMul.c.o: ../ARX/AR/mMul.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object ARX/AR/CMakeFiles/AR.dir/mMul.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mMul.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mMul.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object ARX/AR/CMakeFiles/AR.dir/mMul.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mMul.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mMul.c
 
 ARX/AR/CMakeFiles/AR.dir/mMul.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mMul.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mMul.c > CMakeFiles/AR.dir/mMul.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mMul.c > CMakeFiles/AR.dir/mMul.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mMul.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mMul.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mMul.c -o CMakeFiles/AR.dir/mMul.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mMul.c -o CMakeFiles/AR.dir/mMul.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mMul.c.o.requires:
 
@@ -1427,16 +1427,16 @@ ARX/AR/CMakeFiles/AR.dir/mMul.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mMul.
 
 ARX/AR/CMakeFiles/AR.dir/mPCA.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mPCA.c.o: ../ARX/AR/mPCA.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object ARX/AR/CMakeFiles/AR.dir/mPCA.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mPCA.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mPCA.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object ARX/AR/CMakeFiles/AR.dir/mPCA.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mPCA.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mPCA.c
 
 ARX/AR/CMakeFiles/AR.dir/mPCA.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mPCA.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mPCA.c > CMakeFiles/AR.dir/mPCA.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mPCA.c > CMakeFiles/AR.dir/mPCA.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mPCA.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mPCA.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mPCA.c -o CMakeFiles/AR.dir/mPCA.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mPCA.c -o CMakeFiles/AR.dir/mPCA.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mPCA.c.o.requires:
 
@@ -1451,16 +1451,16 @@ ARX/AR/CMakeFiles/AR.dir/mPCA.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mPCA.
 
 ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.o: ../ARX/AR/mSelfInv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mSelfInv.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mSelfInv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mSelfInv.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mSelfInv.c
 
 ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mSelfInv.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mSelfInv.c > CMakeFiles/AR.dir/mSelfInv.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mSelfInv.c > CMakeFiles/AR.dir/mSelfInv.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mSelfInv.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mSelfInv.c -o CMakeFiles/AR.dir/mSelfInv.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mSelfInv.c -o CMakeFiles/AR.dir/mSelfInv.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.o.requires:
 
@@ -1475,16 +1475,16 @@ ARX/AR/CMakeFiles/AR.dir/mSelfInv.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/m
 
 ARX/AR/CMakeFiles/AR.dir/mTrans.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mTrans.c.o: ../ARX/AR/mTrans.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object ARX/AR/CMakeFiles/AR.dir/mTrans.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mTrans.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mTrans.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object ARX/AR/CMakeFiles/AR.dir/mTrans.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mTrans.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mTrans.c
 
 ARX/AR/CMakeFiles/AR.dir/mTrans.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mTrans.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mTrans.c > CMakeFiles/AR.dir/mTrans.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mTrans.c > CMakeFiles/AR.dir/mTrans.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mTrans.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mTrans.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mTrans.c -o CMakeFiles/AR.dir/mTrans.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mTrans.c -o CMakeFiles/AR.dir/mTrans.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mTrans.c.o.requires:
 
@@ -1499,16 +1499,16 @@ ARX/AR/CMakeFiles/AR.dir/mTrans.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mTr
 
 ARX/AR/CMakeFiles/AR.dir/mUnit.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/mUnit.c.o: ../ARX/AR/mUnit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object ARX/AR/CMakeFiles/AR.dir/mUnit.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mUnit.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mUnit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object ARX/AR/CMakeFiles/AR.dir/mUnit.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/mUnit.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mUnit.c
 
 ARX/AR/CMakeFiles/AR.dir/mUnit.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/mUnit.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mUnit.c > CMakeFiles/AR.dir/mUnit.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mUnit.c > CMakeFiles/AR.dir/mUnit.c.i
 
 ARX/AR/CMakeFiles/AR.dir/mUnit.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/mUnit.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/mUnit.c -o CMakeFiles/AR.dir/mUnit.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mUnit.c -o CMakeFiles/AR.dir/mUnit.c.s
 
 ARX/AR/CMakeFiles/AR.dir/mUnit.c.o.requires:
 
@@ -1523,16 +1523,16 @@ ARX/AR/CMakeFiles/AR.dir/mUnit.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/mUni
 
 ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.o: ../ARX/AR/paramChangeSize.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramChangeSize.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramChangeSize.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramChangeSize.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramChangeSize.c
 
 ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramChangeSize.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramChangeSize.c > CMakeFiles/AR.dir/paramChangeSize.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramChangeSize.c > CMakeFiles/AR.dir/paramChangeSize.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramChangeSize.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramChangeSize.c -o CMakeFiles/AR.dir/paramChangeSize.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramChangeSize.c -o CMakeFiles/AR.dir/paramChangeSize.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.o.requires:
 
@@ -1547,16 +1547,16 @@ ARX/AR/CMakeFiles/AR.dir/paramChangeSize.c.o.provides.build: ARX/AR/CMakeFiles/A
 
 ARX/AR/CMakeFiles/AR.dir/paramClear.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramClear.c.o: ../ARX/AR/paramClear.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object ARX/AR/CMakeFiles/AR.dir/paramClear.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramClear.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramClear.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object ARX/AR/CMakeFiles/AR.dir/paramClear.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramClear.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramClear.c
 
 ARX/AR/CMakeFiles/AR.dir/paramClear.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramClear.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramClear.c > CMakeFiles/AR.dir/paramClear.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramClear.c > CMakeFiles/AR.dir/paramClear.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramClear.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramClear.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramClear.c -o CMakeFiles/AR.dir/paramClear.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramClear.c -o CMakeFiles/AR.dir/paramClear.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramClear.c.o.requires:
 
@@ -1571,16 +1571,16 @@ ARX/AR/CMakeFiles/AR.dir/paramClear.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir
 
 ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.o: ../ARX/AR/paramDecomp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramDecomp.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDecomp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramDecomp.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDecomp.c
 
 ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramDecomp.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDecomp.c > CMakeFiles/AR.dir/paramDecomp.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDecomp.c > CMakeFiles/AR.dir/paramDecomp.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramDecomp.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDecomp.c -o CMakeFiles/AR.dir/paramDecomp.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDecomp.c -o CMakeFiles/AR.dir/paramDecomp.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.o.requires:
 
@@ -1595,16 +1595,16 @@ ARX/AR/CMakeFiles/AR.dir/paramDecomp.c.o.provides.build: ARX/AR/CMakeFiles/AR.di
 
 ARX/AR/CMakeFiles/AR.dir/paramDisp.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramDisp.c.o: ../ARX/AR/paramDisp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object ARX/AR/CMakeFiles/AR.dir/paramDisp.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramDisp.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDisp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object ARX/AR/CMakeFiles/AR.dir/paramDisp.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramDisp.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDisp.c
 
 ARX/AR/CMakeFiles/AR.dir/paramDisp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramDisp.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDisp.c > CMakeFiles/AR.dir/paramDisp.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDisp.c > CMakeFiles/AR.dir/paramDisp.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramDisp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramDisp.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDisp.c -o CMakeFiles/AR.dir/paramDisp.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDisp.c -o CMakeFiles/AR.dir/paramDisp.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramDisp.c.o.requires:
 
@@ -1619,16 +1619,16 @@ ARX/AR/CMakeFiles/AR.dir/paramDisp.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/
 
 ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.o: ../ARX/AR/paramDistortion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramDistortion.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDistortion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramDistortion.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDistortion.c
 
 ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramDistortion.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDistortion.c > CMakeFiles/AR.dir/paramDistortion.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDistortion.c > CMakeFiles/AR.dir/paramDistortion.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramDistortion.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramDistortion.c -o CMakeFiles/AR.dir/paramDistortion.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDistortion.c -o CMakeFiles/AR.dir/paramDistortion.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.o.requires:
 
@@ -1643,16 +1643,16 @@ ARX/AR/CMakeFiles/AR.dir/paramDistortion.c.o.provides.build: ARX/AR/CMakeFiles/A
 
 ARX/AR/CMakeFiles/AR.dir/paramFile.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramFile.c.o: ../ARX/AR/paramFile.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object ARX/AR/CMakeFiles/AR.dir/paramFile.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramFile.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramFile.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object ARX/AR/CMakeFiles/AR.dir/paramFile.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramFile.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramFile.c
 
 ARX/AR/CMakeFiles/AR.dir/paramFile.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramFile.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramFile.c > CMakeFiles/AR.dir/paramFile.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramFile.c > CMakeFiles/AR.dir/paramFile.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramFile.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramFile.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramFile.c -o CMakeFiles/AR.dir/paramFile.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramFile.c -o CMakeFiles/AR.dir/paramFile.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramFile.c.o.requires:
 
@@ -1667,16 +1667,16 @@ ARX/AR/CMakeFiles/AR.dir/paramFile.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/
 
 ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.o: ../ARX/AR/paramGetPerspective.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramGetPerspective.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramGetPerspective.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramGetPerspective.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGetPerspective.c
 
 ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramGetPerspective.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramGetPerspective.c > CMakeFiles/AR.dir/paramGetPerspective.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGetPerspective.c > CMakeFiles/AR.dir/paramGetPerspective.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramGetPerspective.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramGetPerspective.c -o CMakeFiles/AR.dir/paramGetPerspective.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGetPerspective.c -o CMakeFiles/AR.dir/paramGetPerspective.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.o.requires:
 
@@ -1691,16 +1691,16 @@ ARX/AR/CMakeFiles/AR.dir/paramGetPerspective.c.o.provides.build: ARX/AR/CMakeFil
 
 ARX/AR/CMakeFiles/AR.dir/paramGL.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramGL.c.o: ../ARX/AR/paramGL.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object ARX/AR/CMakeFiles/AR.dir/paramGL.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramGL.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramGL.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object ARX/AR/CMakeFiles/AR.dir/paramGL.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramGL.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGL.c
 
 ARX/AR/CMakeFiles/AR.dir/paramGL.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramGL.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramGL.c > CMakeFiles/AR.dir/paramGL.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGL.c > CMakeFiles/AR.dir/paramGL.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramGL.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramGL.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramGL.c -o CMakeFiles/AR.dir/paramGL.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGL.c -o CMakeFiles/AR.dir/paramGL.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramGL.c.o.requires:
 
@@ -1715,16 +1715,16 @@ ARX/AR/CMakeFiles/AR.dir/paramGL.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/pa
 
 ARX/AR/CMakeFiles/AR.dir/paramLT.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/paramLT.c.o: ../ARX/AR/paramLT.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object ARX/AR/CMakeFiles/AR.dir/paramLT.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramLT.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramLT.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object ARX/AR/CMakeFiles/AR.dir/paramLT.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/paramLT.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramLT.c
 
 ARX/AR/CMakeFiles/AR.dir/paramLT.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/paramLT.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramLT.c > CMakeFiles/AR.dir/paramLT.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramLT.c > CMakeFiles/AR.dir/paramLT.c.i
 
 ARX/AR/CMakeFiles/AR.dir/paramLT.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/paramLT.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/paramLT.c -o CMakeFiles/AR.dir/paramLT.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramLT.c -o CMakeFiles/AR.dir/paramLT.c.s
 
 ARX/AR/CMakeFiles/AR.dir/paramLT.c.o.requires:
 
@@ -1739,16 +1739,16 @@ ARX/AR/CMakeFiles/AR.dir/paramLT.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/pa
 
 ARX/AR/CMakeFiles/AR.dir/vAlloc.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/vAlloc.c.o: ../ARX/AR/vAlloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object ARX/AR/CMakeFiles/AR.dir/vAlloc.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vAlloc.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vAlloc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object ARX/AR/CMakeFiles/AR.dir/vAlloc.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vAlloc.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vAlloc.c
 
 ARX/AR/CMakeFiles/AR.dir/vAlloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/vAlloc.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vAlloc.c > CMakeFiles/AR.dir/vAlloc.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vAlloc.c > CMakeFiles/AR.dir/vAlloc.c.i
 
 ARX/AR/CMakeFiles/AR.dir/vAlloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/vAlloc.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vAlloc.c -o CMakeFiles/AR.dir/vAlloc.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vAlloc.c -o CMakeFiles/AR.dir/vAlloc.c.s
 
 ARX/AR/CMakeFiles/AR.dir/vAlloc.c.o.requires:
 
@@ -1763,16 +1763,16 @@ ARX/AR/CMakeFiles/AR.dir/vAlloc.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/vAl
 
 ARX/AR/CMakeFiles/AR.dir/vDisp.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/vDisp.c.o: ../ARX/AR/vDisp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object ARX/AR/CMakeFiles/AR.dir/vDisp.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vDisp.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vDisp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object ARX/AR/CMakeFiles/AR.dir/vDisp.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vDisp.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vDisp.c
 
 ARX/AR/CMakeFiles/AR.dir/vDisp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/vDisp.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vDisp.c > CMakeFiles/AR.dir/vDisp.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vDisp.c > CMakeFiles/AR.dir/vDisp.c.i
 
 ARX/AR/CMakeFiles/AR.dir/vDisp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/vDisp.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vDisp.c -o CMakeFiles/AR.dir/vDisp.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vDisp.c -o CMakeFiles/AR.dir/vDisp.c.s
 
 ARX/AR/CMakeFiles/AR.dir/vDisp.c.o.requires:
 
@@ -1787,16 +1787,16 @@ ARX/AR/CMakeFiles/AR.dir/vDisp.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/vDis
 
 ARX/AR/CMakeFiles/AR.dir/vFree.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/vFree.c.o: ../ARX/AR/vFree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object ARX/AR/CMakeFiles/AR.dir/vFree.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vFree.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vFree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object ARX/AR/CMakeFiles/AR.dir/vFree.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vFree.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vFree.c
 
 ARX/AR/CMakeFiles/AR.dir/vFree.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/vFree.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vFree.c > CMakeFiles/AR.dir/vFree.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vFree.c > CMakeFiles/AR.dir/vFree.c.i
 
 ARX/AR/CMakeFiles/AR.dir/vFree.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/vFree.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vFree.c -o CMakeFiles/AR.dir/vFree.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vFree.c -o CMakeFiles/AR.dir/vFree.c.s
 
 ARX/AR/CMakeFiles/AR.dir/vFree.c.o.requires:
 
@@ -1811,16 +1811,16 @@ ARX/AR/CMakeFiles/AR.dir/vFree.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/vFre
 
 ARX/AR/CMakeFiles/AR.dir/vHouse.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/vHouse.c.o: ../ARX/AR/vHouse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object ARX/AR/CMakeFiles/AR.dir/vHouse.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vHouse.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vHouse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object ARX/AR/CMakeFiles/AR.dir/vHouse.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vHouse.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vHouse.c
 
 ARX/AR/CMakeFiles/AR.dir/vHouse.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/vHouse.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vHouse.c > CMakeFiles/AR.dir/vHouse.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vHouse.c > CMakeFiles/AR.dir/vHouse.c.i
 
 ARX/AR/CMakeFiles/AR.dir/vHouse.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/vHouse.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vHouse.c -o CMakeFiles/AR.dir/vHouse.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vHouse.c -o CMakeFiles/AR.dir/vHouse.c.s
 
 ARX/AR/CMakeFiles/AR.dir/vHouse.c.o.requires:
 
@@ -1835,16 +1835,16 @@ ARX/AR/CMakeFiles/AR.dir/vHouse.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/vHo
 
 ARX/AR/CMakeFiles/AR.dir/vInnerP.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/vInnerP.c.o: ../ARX/AR/vInnerP.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object ARX/AR/CMakeFiles/AR.dir/vInnerP.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vInnerP.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vInnerP.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object ARX/AR/CMakeFiles/AR.dir/vInnerP.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vInnerP.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vInnerP.c
 
 ARX/AR/CMakeFiles/AR.dir/vInnerP.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/vInnerP.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vInnerP.c > CMakeFiles/AR.dir/vInnerP.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vInnerP.c > CMakeFiles/AR.dir/vInnerP.c.i
 
 ARX/AR/CMakeFiles/AR.dir/vInnerP.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/vInnerP.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vInnerP.c -o CMakeFiles/AR.dir/vInnerP.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vInnerP.c -o CMakeFiles/AR.dir/vInnerP.c.s
 
 ARX/AR/CMakeFiles/AR.dir/vInnerP.c.o.requires:
 
@@ -1859,16 +1859,16 @@ ARX/AR/CMakeFiles/AR.dir/vInnerP.c.o.provides.build: ARX/AR/CMakeFiles/AR.dir/vI
 
 ARX/AR/CMakeFiles/AR.dir/vTridiag.c.o: ARX/AR/CMakeFiles/AR.dir/flags.make
 ARX/AR/CMakeFiles/AR.dir/vTridiag.c.o: ../ARX/AR/vTridiag.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object ARX/AR/CMakeFiles/AR.dir/vTridiag.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vTridiag.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vTridiag.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object ARX/AR/CMakeFiles/AR.dir/vTridiag.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/AR.dir/vTridiag.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vTridiag.c
 
 ARX/AR/CMakeFiles/AR.dir/vTridiag.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/AR.dir/vTridiag.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vTridiag.c > CMakeFiles/AR.dir/vTridiag.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vTridiag.c > CMakeFiles/AR.dir/vTridiag.c.i
 
 ARX/AR/CMakeFiles/AR.dir/vTridiag.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/AR.dir/vTridiag.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR/vTridiag.c -o CMakeFiles/AR.dir/vTridiag.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vTridiag.c -o CMakeFiles/AR.dir/vTridiag.c.s
 
 ARX/AR/CMakeFiles/AR.dir/vTridiag.c.o.requires:
 
@@ -2041,9 +2041,9 @@ ARX/AR/libAR.a: ARX/AR/CMakeFiles/AR.dir/vInnerP.c.o
 ARX/AR/libAR.a: ARX/AR/CMakeFiles/AR.dir/vTridiag.c.o
 ARX/AR/libAR.a: ARX/AR/CMakeFiles/AR.dir/build.make
 ARX/AR/libAR.a: ARX/AR/CMakeFiles/AR.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Linking CXX static library libAR.a"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && $(CMAKE_COMMAND) -P CMakeFiles/AR.dir/cmake_clean_target.cmake
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AR.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Linking CXX static library libAR.a"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && $(CMAKE_COMMAND) -P CMakeFiles/AR.dir/cmake_clean_target.cmake
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AR.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ARX/AR/CMakeFiles/AR.dir/build: ARX/AR/libAR.a
@@ -2130,10 +2130,10 @@ ARX/AR/CMakeFiles/AR.dir/requires: ARX/AR/CMakeFiles/AR.dir/vTridiag.c.o.require
 .PHONY : ARX/AR/CMakeFiles/AR.dir/requires
 
 ARX/AR/CMakeFiles/AR.dir/clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR && $(CMAKE_COMMAND) -P CMakeFiles/AR.dir/cmake_clean.cmake
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR && $(CMAKE_COMMAND) -P CMakeFiles/AR.dir/cmake_clean.cmake
 .PHONY : ARX/AR/CMakeFiles/AR.dir/clean
 
 ARX/AR/CMakeFiles/AR.dir/depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/Downloads/artoolkitx-master/Source /home/lidiane/Downloads/artoolkitx-master/Source/ARX/AR /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/AR/CMakeFiles/AR.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/ARRay-TracingGit/artoolkitXSource /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR/CMakeFiles/AR.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ARX/AR/CMakeFiles/AR.dir/depend
 

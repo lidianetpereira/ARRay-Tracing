@@ -80,9 +80,9 @@ ARX/OCVT/CMakeFiles/OCVT.dir/HarrisDetector.cpp.o
  ../depends/linux/include/opencv2/video/tracking_c.h
  ../depends/linux/include/opencv2/videoio.hpp
  ../depends/linux/include/opencv2/videoio/videoio_c.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HarrisDetector.cpp
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HarrisDetector.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVConfig.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 ARX/OCVT/CMakeFiles/OCVT.dir/HomographyInfo.cpp.o
  ../depends/linux/include/opencv2/calib3d.hpp
  ../depends/linux/include/opencv2/calib3d/calib3d_c.h
@@ -162,9 +162,9 @@ ARX/OCVT/CMakeFiles/OCVT.dir/HomographyInfo.cpp.o
  ../depends/linux/include/opencv2/video/tracking_c.h
  ../depends/linux/include/opencv2/videoio.hpp
  ../depends/linux/include/opencv2/videoio/videoio_c.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HomographyInfo.cpp
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HomographyInfo.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVConfig.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 ARX/OCVT/CMakeFiles/OCVT.dir/OCVConfig.cpp.o
  ../depends/linux/include/opencv2/calib3d.hpp
  ../depends/linux/include/opencv2/calib3d/calib3d_c.h
@@ -244,8 +244,8 @@ ARX/OCVT/CMakeFiles/OCVT.dir/OCVConfig.cpp.o
  ../depends/linux/include/opencv2/video/tracking_c.h
  ../depends/linux/include/opencv2/videoio.hpp
  ../depends/linux/include/opencv2/videoio/videoio_c.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVConfig.cpp
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVConfig.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 ARX/OCVT/CMakeFiles/OCVT.dir/OCVFeatureDetector.cpp.o
  ../depends/linux/include/opencv2/calib3d.hpp
  ../depends/linux/include/opencv2/calib3d/calib3d_c.h
@@ -325,8 +325,8 @@ ARX/OCVT/CMakeFiles/OCVT.dir/OCVFeatureDetector.cpp.o
  ../depends/linux/include/opencv2/video/tracking_c.h
  ../depends/linux/include/opencv2/videoio.hpp
  ../depends/linux/include/opencv2/videoio/videoio_c.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVFeatureDetector.cpp
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVFeatureDetector.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
 ARX/OCVT/CMakeFiles/OCVT.dir/PlanarTracker.cpp.o
  ../ARX/OCVT/../AR/include/ARX/AR/ar.h
  ../ARX/OCVT/../AR/include/ARX/AR/arConfig.h
@@ -416,15 +416,15 @@ ARX/OCVT/CMakeFiles/OCVT.dir/PlanarTracker.cpp.o
  ../depends/linux/include/opencv2/video/tracking_c.h
  ../depends/linux/include/opencv2/videoio.hpp
  ../depends/linux/include/opencv2/videoio/videoio_c.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HarrisDetector.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HomographyInfo.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVConfig.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVFeatureDetector.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVUtils.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/PlanarTracker.cpp
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackableInfo.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackedPoint.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackingPointSelector.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVUtils.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/PlanarTracker.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackableInfo.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h
  ARX/AR/include/ARX/AR/config.h
 ARX/OCVT/CMakeFiles/OCVT.dir/TrackedPoint.cpp.o
  ../depends/linux/include/opencv2/calib3d.hpp
@@ -505,8 +505,8 @@ ARX/OCVT/CMakeFiles/OCVT.dir/TrackedPoint.cpp.o
  ../depends/linux/include/opencv2/video/tracking_c.h
  ../depends/linux/include/opencv2/videoio.hpp
  ../depends/linux/include/opencv2/videoio/videoio_c.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackedPoint.cpp
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackedPoint.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.h
 ARX/OCVT/CMakeFiles/OCVT.dir/TrackingPointSelector.cpp.o
  ../depends/linux/include/opencv2/calib3d.hpp
  ../depends/linux/include/opencv2/calib3d/calib3d_c.h
@@ -586,7 +586,7 @@ ARX/OCVT/CMakeFiles/OCVT.dir/TrackingPointSelector.cpp.o
  ../depends/linux/include/opencv2/video/tracking_c.h
  ../depends/linux/include/opencv2/videoio.hpp
  ../depends/linux/include/opencv2/videoio/videoio_c.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVConfig.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackedPoint.h
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackingPointSelector.cpp
- /home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackingPointSelector.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h

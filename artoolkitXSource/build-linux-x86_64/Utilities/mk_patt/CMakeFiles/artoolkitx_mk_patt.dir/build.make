@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 # Include any dependencies generated for this target.
 include Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/depend.make
@@ -59,16 +59,16 @@ include Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/flags.make
 
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o: Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/flags.make
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o: ../Utilities/mk_patt/mk_patt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/mk_patt/mk_patt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/mk_patt/mk_patt.cpp
 
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/mk_patt/mk_patt.cpp > CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/mk_patt/mk_patt.cpp > CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.i
 
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/mk_patt/mk_patt.cpp -o CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/mk_patt/mk_patt.cpp -o CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.s
 
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o.requires:
 
@@ -114,8 +114,8 @@ Utilities/mk_patt/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libcurl.so
 Utilities/mk_patt/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libjpeg.so
 Utilities/mk_patt/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libGLESv2.so
 Utilities/mk_patt/artoolkitx_mk_patt: Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable artoolkitx_mk_patt"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_mk_patt.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable artoolkitx_mk_patt"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_mk_patt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build: Utilities/mk_patt/artoolkitx_mk_patt
@@ -127,10 +127,10 @@ Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/requires: Utilities/mk_patt/
 .PHONY : Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/requires
 
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt && $(CMAKE_COMMAND) -P CMakeFiles/artoolkitx_mk_patt.dir/cmake_clean.cmake
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt && $(CMAKE_COMMAND) -P CMakeFiles/artoolkitx_mk_patt.dir/cmake_clean.cmake
 .PHONY : Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/clean
 
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/Downloads/artoolkitx-master/Source /home/lidiane/Downloads/artoolkitx-master/Source/Utilities/mk_patt /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/ARRay-TracingGit/artoolkitXSource /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/mk_patt /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/depend
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/progress.marks
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ARX/CMakeFiles/ARX.dir/rule:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/CMakeFiles/ARX.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/CMakeFiles/ARX.dir/rule
 .PHONY : ARX/CMakeFiles/ARX.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ ARX: ARX/CMakeFiles/ARX.dir/rule
 
 # fast build rule for target.
 ARX/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/build
 .PHONY : ARX/fast
 
 ARController.o: ARController.cpp.o
@@ -177,7 +177,7 @@ ARController.o: ARController.cpp.o
 
 # target to build an object file
 ARController.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARController.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARController.cpp.o
 .PHONY : ARController.cpp.o
 
 ARController.i: ARController.cpp.i
@@ -186,7 +186,7 @@ ARController.i: ARController.cpp.i
 
 # target to preprocess a source file
 ARController.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARController.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARController.cpp.i
 .PHONY : ARController.cpp.i
 
 ARController.s: ARController.cpp.s
@@ -195,7 +195,7 @@ ARController.s: ARController.cpp.s
 
 # target to generate assembly for a file
 ARController.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARController.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARController.cpp.s
 .PHONY : ARController.cpp.s
 
 ARPattern.o: ARPattern.cpp.o
@@ -204,7 +204,7 @@ ARPattern.o: ARPattern.cpp.o
 
 # target to build an object file
 ARPattern.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o
 .PHONY : ARPattern.cpp.o
 
 ARPattern.i: ARPattern.cpp.i
@@ -213,7 +213,7 @@ ARPattern.i: ARPattern.cpp.i
 
 # target to preprocess a source file
 ARPattern.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARPattern.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARPattern.cpp.i
 .PHONY : ARPattern.cpp.i
 
 ARPattern.s: ARPattern.cpp.s
@@ -222,7 +222,7 @@ ARPattern.s: ARPattern.cpp.s
 
 # target to generate assembly for a file
 ARPattern.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARPattern.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARPattern.cpp.s
 .PHONY : ARPattern.cpp.s
 
 ARTrackable.o: ARTrackable.cpp.o
@@ -231,7 +231,7 @@ ARTrackable.o: ARTrackable.cpp.o
 
 # target to build an object file
 ARTrackable.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o
 .PHONY : ARTrackable.cpp.o
 
 ARTrackable.i: ARTrackable.cpp.i
@@ -240,7 +240,7 @@ ARTrackable.i: ARTrackable.cpp.i
 
 # target to preprocess a source file
 ARTrackable.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.i
 .PHONY : ARTrackable.cpp.i
 
 ARTrackable.s: ARTrackable.cpp.s
@@ -249,7 +249,7 @@ ARTrackable.s: ARTrackable.cpp.s
 
 # target to generate assembly for a file
 ARTrackable.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.s
 .PHONY : ARTrackable.cpp.s
 
 ARTrackable2d.o: ARTrackable2d.cpp.o
@@ -258,7 +258,7 @@ ARTrackable2d.o: ARTrackable2d.cpp.o
 
 # target to build an object file
 ARTrackable2d.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o
 .PHONY : ARTrackable2d.cpp.o
 
 ARTrackable2d.i: ARTrackable2d.cpp.i
@@ -267,7 +267,7 @@ ARTrackable2d.i: ARTrackable2d.cpp.i
 
 # target to preprocess a source file
 ARTrackable2d.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.i
 .PHONY : ARTrackable2d.cpp.i
 
 ARTrackable2d.s: ARTrackable2d.cpp.s
@@ -276,7 +276,7 @@ ARTrackable2d.s: ARTrackable2d.cpp.s
 
 # target to generate assembly for a file
 ARTrackable2d.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.s
 .PHONY : ARTrackable2d.cpp.s
 
 ARTrackableMultiSquare.o: ARTrackableMultiSquare.cpp.o
@@ -285,7 +285,7 @@ ARTrackableMultiSquare.o: ARTrackableMultiSquare.cpp.o
 
 # target to build an object file
 ARTrackableMultiSquare.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o
 .PHONY : ARTrackableMultiSquare.cpp.o
 
 ARTrackableMultiSquare.i: ARTrackableMultiSquare.cpp.i
@@ -294,7 +294,7 @@ ARTrackableMultiSquare.i: ARTrackableMultiSquare.cpp.i
 
 # target to preprocess a source file
 ARTrackableMultiSquare.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.i
 .PHONY : ARTrackableMultiSquare.cpp.i
 
 ARTrackableMultiSquare.s: ARTrackableMultiSquare.cpp.s
@@ -303,7 +303,7 @@ ARTrackableMultiSquare.s: ARTrackableMultiSquare.cpp.s
 
 # target to generate assembly for a file
 ARTrackableMultiSquare.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.s
 .PHONY : ARTrackableMultiSquare.cpp.s
 
 ARTrackableMultiSquareAuto.o: ARTrackableMultiSquareAuto.cpp.o
@@ -312,7 +312,7 @@ ARTrackableMultiSquareAuto.o: ARTrackableMultiSquareAuto.cpp.o
 
 # target to build an object file
 ARTrackableMultiSquareAuto.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o
 .PHONY : ARTrackableMultiSquareAuto.cpp.o
 
 ARTrackableMultiSquareAuto.i: ARTrackableMultiSquareAuto.cpp.i
@@ -321,7 +321,7 @@ ARTrackableMultiSquareAuto.i: ARTrackableMultiSquareAuto.cpp.i
 
 # target to preprocess a source file
 ARTrackableMultiSquareAuto.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.i
 .PHONY : ARTrackableMultiSquareAuto.cpp.i
 
 ARTrackableMultiSquareAuto.s: ARTrackableMultiSquareAuto.cpp.s
@@ -330,7 +330,7 @@ ARTrackableMultiSquareAuto.s: ARTrackableMultiSquareAuto.cpp.s
 
 # target to generate assembly for a file
 ARTrackableMultiSquareAuto.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.s
 .PHONY : ARTrackableMultiSquareAuto.cpp.s
 
 ARTrackableNFT.o: ARTrackableNFT.cpp.o
@@ -339,7 +339,7 @@ ARTrackableNFT.o: ARTrackableNFT.cpp.o
 
 # target to build an object file
 ARTrackableNFT.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o
 .PHONY : ARTrackableNFT.cpp.o
 
 ARTrackableNFT.i: ARTrackableNFT.cpp.i
@@ -348,7 +348,7 @@ ARTrackableNFT.i: ARTrackableNFT.cpp.i
 
 # target to preprocess a source file
 ARTrackableNFT.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.i
 .PHONY : ARTrackableNFT.cpp.i
 
 ARTrackableNFT.s: ARTrackableNFT.cpp.s
@@ -357,7 +357,7 @@ ARTrackableNFT.s: ARTrackableNFT.cpp.s
 
 # target to generate assembly for a file
 ARTrackableNFT.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.s
 .PHONY : ARTrackableNFT.cpp.s
 
 ARTrackableSquare.o: ARTrackableSquare.cpp.o
@@ -366,7 +366,7 @@ ARTrackableSquare.o: ARTrackableSquare.cpp.o
 
 # target to build an object file
 ARTrackableSquare.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o
 .PHONY : ARTrackableSquare.cpp.o
 
 ARTrackableSquare.i: ARTrackableSquare.cpp.i
@@ -375,7 +375,7 @@ ARTrackableSquare.i: ARTrackableSquare.cpp.i
 
 # target to preprocess a source file
 ARTrackableSquare.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.i
 .PHONY : ARTrackableSquare.cpp.i
 
 ARTrackableSquare.s: ARTrackableSquare.cpp.s
@@ -384,7 +384,7 @@ ARTrackableSquare.s: ARTrackableSquare.cpp.s
 
 # target to generate assembly for a file
 ARTrackableSquare.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.s
 .PHONY : ARTrackableSquare.cpp.s
 
 ARTracker.o: ARTracker.cpp.o
@@ -393,7 +393,7 @@ ARTracker.o: ARTracker.cpp.o
 
 # target to build an object file
 ARTracker.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o
 .PHONY : ARTracker.cpp.o
 
 ARTracker.i: ARTracker.cpp.i
@@ -402,7 +402,7 @@ ARTracker.i: ARTracker.cpp.i
 
 # target to preprocess a source file
 ARTracker.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker.cpp.i
 .PHONY : ARTracker.cpp.i
 
 ARTracker.s: ARTracker.cpp.s
@@ -411,7 +411,7 @@ ARTracker.s: ARTracker.cpp.s
 
 # target to generate assembly for a file
 ARTracker.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker.cpp.s
 .PHONY : ARTracker.cpp.s
 
 ARTracker2d.o: ARTracker2d.cpp.o
@@ -420,7 +420,7 @@ ARTracker2d.o: ARTracker2d.cpp.o
 
 # target to build an object file
 ARTracker2d.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o
 .PHONY : ARTracker2d.cpp.o
 
 ARTracker2d.i: ARTracker2d.cpp.i
@@ -429,7 +429,7 @@ ARTracker2d.i: ARTracker2d.cpp.i
 
 # target to preprocess a source file
 ARTracker2d.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.i
 .PHONY : ARTracker2d.cpp.i
 
 ARTracker2d.s: ARTracker2d.cpp.s
@@ -438,7 +438,7 @@ ARTracker2d.s: ARTracker2d.cpp.s
 
 # target to generate assembly for a file
 ARTracker2d.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.s
 .PHONY : ARTracker2d.cpp.s
 
 ARTrackerNFT.o: ARTrackerNFT.cpp.o
@@ -447,7 +447,7 @@ ARTrackerNFT.o: ARTrackerNFT.cpp.o
 
 # target to build an object file
 ARTrackerNFT.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o
 .PHONY : ARTrackerNFT.cpp.o
 
 ARTrackerNFT.i: ARTrackerNFT.cpp.i
@@ -456,7 +456,7 @@ ARTrackerNFT.i: ARTrackerNFT.cpp.i
 
 # target to preprocess a source file
 ARTrackerNFT.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.i
 .PHONY : ARTrackerNFT.cpp.i
 
 ARTrackerNFT.s: ARTrackerNFT.cpp.s
@@ -465,7 +465,7 @@ ARTrackerNFT.s: ARTrackerNFT.cpp.s
 
 # target to generate assembly for a file
 ARTrackerNFT.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.s
 .PHONY : ARTrackerNFT.cpp.s
 
 ARTrackerSquare.o: ARTrackerSquare.cpp.o
@@ -474,7 +474,7 @@ ARTrackerSquare.o: ARTrackerSquare.cpp.o
 
 # target to build an object file
 ARTrackerSquare.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o
 .PHONY : ARTrackerSquare.cpp.o
 
 ARTrackerSquare.i: ARTrackerSquare.cpp.i
@@ -483,7 +483,7 @@ ARTrackerSquare.i: ARTrackerSquare.cpp.i
 
 # target to preprocess a source file
 ARTrackerSquare.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.i
 .PHONY : ARTrackerSquare.cpp.i
 
 ARTrackerSquare.s: ARTrackerSquare.cpp.s
@@ -492,7 +492,7 @@ ARTrackerSquare.s: ARTrackerSquare.cpp.s
 
 # target to generate assembly for a file
 ARTrackerSquare.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.s
 .PHONY : ARTrackerSquare.cpp.s
 
 ARVideoSource.o: ARVideoSource.cpp.o
@@ -501,7 +501,7 @@ ARVideoSource.o: ARVideoSource.cpp.o
 
 # target to build an object file
 ARVideoSource.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o
 .PHONY : ARVideoSource.cpp.o
 
 ARVideoSource.i: ARVideoSource.cpp.i
@@ -510,7 +510,7 @@ ARVideoSource.i: ARVideoSource.cpp.i
 
 # target to preprocess a source file
 ARVideoSource.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.i
 .PHONY : ARVideoSource.cpp.i
 
 ARVideoSource.s: ARVideoSource.cpp.s
@@ -519,7 +519,7 @@ ARVideoSource.s: ARVideoSource.cpp.s
 
 # target to generate assembly for a file
 ARVideoSource.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.s
 .PHONY : ARVideoSource.cpp.s
 
 ARVideoView.o: ARVideoView.cpp.o
@@ -528,7 +528,7 @@ ARVideoView.o: ARVideoView.cpp.o
 
 # target to build an object file
 ARVideoView.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o
 .PHONY : ARVideoView.cpp.o
 
 ARVideoView.i: ARVideoView.cpp.i
@@ -537,7 +537,7 @@ ARVideoView.i: ARVideoView.cpp.i
 
 # target to preprocess a source file
 ARVideoView.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.i
 .PHONY : ARVideoView.cpp.i
 
 ARVideoView.s: ARVideoView.cpp.s
@@ -546,7 +546,7 @@ ARVideoView.s: ARVideoView.cpp.s
 
 # target to generate assembly for a file
 ARVideoView.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.s
 .PHONY : ARVideoView.cpp.s
 
 ARX_c.o: ARX_c.cpp.o
@@ -555,7 +555,7 @@ ARX_c.o: ARX_c.cpp.o
 
 # target to build an object file
 ARX_c.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o
 .PHONY : ARX_c.cpp.o
 
 ARX_c.i: ARX_c.cpp.i
@@ -564,7 +564,7 @@ ARX_c.i: ARX_c.cpp.i
 
 # target to preprocess a source file
 ARX_c.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARX_c.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARX_c.cpp.i
 .PHONY : ARX_c.cpp.i
 
 ARX_c.s: ARX_c.cpp.s
@@ -573,7 +573,7 @@ ARX_c.s: ARX_c.cpp.s
 
 # target to generate assembly for a file
 ARX_c.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARX_c.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/ARX_c.cpp.s
 .PHONY : ARX_c.cpp.s
 
 mapper.o: mapper.cpp.o
@@ -582,7 +582,7 @@ mapper.o: mapper.cpp.o
 
 # target to build an object file
 mapper.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/mapper.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/mapper.cpp.o
 .PHONY : mapper.cpp.o
 
 mapper.i: mapper.cpp.i
@@ -591,7 +591,7 @@ mapper.i: mapper.cpp.i
 
 # target to preprocess a source file
 mapper.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/mapper.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/mapper.cpp.i
 .PHONY : mapper.cpp.i
 
 mapper.s: mapper.cpp.s
@@ -600,7 +600,7 @@ mapper.s: mapper.cpp.s
 
 # target to generate assembly for a file
 mapper.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/mapper.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/mapper.cpp.s
 .PHONY : mapper.cpp.s
 
 trackingSub.o: trackingSub.c.o
@@ -609,7 +609,7 @@ trackingSub.o: trackingSub.c.o
 
 # target to build an object file
 trackingSub.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/trackingSub.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/trackingSub.c.o
 .PHONY : trackingSub.c.o
 
 trackingSub.i: trackingSub.c.i
@@ -618,7 +618,7 @@ trackingSub.i: trackingSub.c.i
 
 # target to preprocess a source file
 trackingSub.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/trackingSub.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/trackingSub.c.i
 .PHONY : trackingSub.c.i
 
 trackingSub.s: trackingSub.c.s
@@ -627,7 +627,7 @@ trackingSub.s: trackingSub.c.s
 
 # target to generate assembly for a file
 trackingSub.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/trackingSub.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/trackingSub.c.s
 .PHONY : trackingSub.c.s
 
 # Help Target
@@ -705,6 +705,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

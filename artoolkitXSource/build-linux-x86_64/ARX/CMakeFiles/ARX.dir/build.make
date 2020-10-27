@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 # Include any dependencies generated for this target.
 include ARX/CMakeFiles/ARX.dir/depend.make
@@ -59,16 +59,16 @@ include ARX/CMakeFiles/ARX.dir/flags.make
 
 ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o: ../ARX/ARX_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARX_c.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARX_c.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARX_c.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARX_c.cpp
 
 ARX/CMakeFiles/ARX.dir/ARX_c.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARX_c.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARX_c.cpp > CMakeFiles/ARX.dir/ARX_c.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARX_c.cpp > CMakeFiles/ARX.dir/ARX_c.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARX_c.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARX_c.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARX_c.cpp -o CMakeFiles/ARX.dir/ARX_c.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARX_c.cpp -o CMakeFiles/ARX.dir/ARX_c.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o.requires:
 
@@ -83,16 +83,16 @@ ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir/ARX_c.
 
 ARX/CMakeFiles/ARX.dir/ARController.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARController.cpp.o: ../ARX/ARController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ARX/CMakeFiles/ARX.dir/ARController.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARController.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ARX/CMakeFiles/ARX.dir/ARController.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARController.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARController.cpp
 
 ARX/CMakeFiles/ARX.dir/ARController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARController.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARController.cpp > CMakeFiles/ARX.dir/ARController.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARController.cpp > CMakeFiles/ARX.dir/ARController.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARController.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARController.cpp -o CMakeFiles/ARX.dir/ARController.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARController.cpp -o CMakeFiles/ARX.dir/ARController.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARController.cpp.o.requires:
 
@@ -107,16 +107,16 @@ ARX/CMakeFiles/ARX.dir/ARController.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir
 
 ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o: ../ARX/ARTrackable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackable.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackable.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackable.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable.cpp > CMakeFiles/ARX.dir/ARTrackable.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable.cpp > CMakeFiles/ARX.dir/ARTrackable.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackable.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable.cpp -o CMakeFiles/ARX.dir/ARTrackable.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable.cpp -o CMakeFiles/ARX.dir/ARTrackable.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o.requires:
 
@@ -131,16 +131,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir/
 
 ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o: ../ARX/ARPattern.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARPattern.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARPattern.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARPattern.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARPattern.cpp
 
 ARX/CMakeFiles/ARX.dir/ARPattern.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARPattern.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARPattern.cpp > CMakeFiles/ARX.dir/ARPattern.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARPattern.cpp > CMakeFiles/ARX.dir/ARPattern.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARPattern.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARPattern.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARPattern.cpp -o CMakeFiles/ARX.dir/ARPattern.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARPattern.cpp -o CMakeFiles/ARX.dir/ARPattern.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o.requires:
 
@@ -155,16 +155,16 @@ ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir/AR
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o: ../ARX/ARTrackableMultiSquareAuto.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquareAuto.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquareAuto.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquareAuto.cpp > CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquareAuto.cpp > CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquareAuto.cpp -o CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquareAuto.cpp -o CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o.requires:
 
@@ -179,16 +179,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o.provides.build: ARX/CMak
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o: ../ARX/ARTrackableMultiSquare.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquare.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquare.cpp > CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquare.cpp > CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableMultiSquare.cpp -o CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableMultiSquare.cpp -o CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o.requires:
 
@@ -203,16 +203,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o.provides.build: ARX/CMakeFil
 
 ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o: ../ARX/ARTrackableNFT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableNFT.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableNFT.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackableNFT.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableNFT.cpp > CMakeFiles/ARX.dir/ARTrackableNFT.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableNFT.cpp > CMakeFiles/ARX.dir/ARTrackableNFT.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackableNFT.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableNFT.cpp -o CMakeFiles/ARX.dir/ARTrackableNFT.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableNFT.cpp -o CMakeFiles/ARX.dir/ARTrackableNFT.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o.requires:
 
@@ -227,16 +227,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o.provides.build: ARX/CMakeFiles/ARX.d
 
 ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o: ../ARX/ARTrackable2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackable2d.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackable2d.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable2d.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackable2d.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable2d.cpp > CMakeFiles/ARX.dir/ARTrackable2d.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable2d.cpp > CMakeFiles/ARX.dir/ARTrackable2d.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackable2d.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackable2d.cpp -o CMakeFiles/ARX.dir/ARTrackable2d.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackable2d.cpp -o CMakeFiles/ARX.dir/ARTrackable2d.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o.requires:
 
@@ -251,16 +251,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o.provides.build: ARX/CMakeFiles/ARX.di
 
 ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o: ../ARX/ARTrackableSquare.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableSquare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableSquare.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackableSquare.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableSquare.cpp > CMakeFiles/ARX.dir/ARTrackableSquare.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableSquare.cpp > CMakeFiles/ARX.dir/ARTrackableSquare.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackableSquare.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackableSquare.cpp -o CMakeFiles/ARX.dir/ARTrackableSquare.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackableSquare.cpp -o CMakeFiles/ARX.dir/ARTrackableSquare.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o.requires:
 
@@ -275,16 +275,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o.provides.build: ARX/CMakeFiles/AR
 
 ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o: ../ARX/ARTracker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTracker.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTracker.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTracker.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker.cpp > CMakeFiles/ARX.dir/ARTracker.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker.cpp > CMakeFiles/ARX.dir/ARTracker.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTracker.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker.cpp -o CMakeFiles/ARX.dir/ARTracker.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker.cpp -o CMakeFiles/ARX.dir/ARTracker.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o.requires:
 
@@ -299,16 +299,16 @@ ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir/AR
 
 ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o: ../ARX/ARTrackerNFT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerNFT.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerNFT.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackerNFT.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerNFT.cpp > CMakeFiles/ARX.dir/ARTrackerNFT.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerNFT.cpp > CMakeFiles/ARX.dir/ARTrackerNFT.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackerNFT.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerNFT.cpp -o CMakeFiles/ARX.dir/ARTrackerNFT.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerNFT.cpp -o CMakeFiles/ARX.dir/ARTrackerNFT.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o.requires:
 
@@ -323,16 +323,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir
 
 ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o: ../ARX/ARTracker2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTracker2d.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTracker2d.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker2d.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTracker2d.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker2d.cpp > CMakeFiles/ARX.dir/ARTracker2d.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker2d.cpp > CMakeFiles/ARX.dir/ARTracker2d.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTracker2d.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTracker2d.cpp -o CMakeFiles/ARX.dir/ARTracker2d.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTracker2d.cpp -o CMakeFiles/ARX.dir/ARTracker2d.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o.requires:
 
@@ -347,16 +347,16 @@ ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir/
 
 ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o: ../ARX/ARTrackerSquare.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerSquare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerSquare.cpp
 
 ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARTrackerSquare.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerSquare.cpp > CMakeFiles/ARX.dir/ARTrackerSquare.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerSquare.cpp > CMakeFiles/ARX.dir/ARTrackerSquare.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARTrackerSquare.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARTrackerSquare.cpp -o CMakeFiles/ARX.dir/ARTrackerSquare.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARTrackerSquare.cpp -o CMakeFiles/ARX.dir/ARTrackerSquare.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o.requires:
 
@@ -371,16 +371,16 @@ ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o.provides.build: ARX/CMakeFiles/ARX.
 
 ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o: ../ARX/ARVideoSource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARVideoSource.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoSource.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARVideoSource.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoSource.cpp
 
 ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARVideoSource.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoSource.cpp > CMakeFiles/ARX.dir/ARVideoSource.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoSource.cpp > CMakeFiles/ARX.dir/ARVideoSource.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARVideoSource.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoSource.cpp -o CMakeFiles/ARX.dir/ARVideoSource.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoSource.cpp -o CMakeFiles/ARX.dir/ARVideoSource.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o.requires:
 
@@ -395,16 +395,16 @@ ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o.provides.build: ARX/CMakeFiles/ARX.di
 
 ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o: ../ARX/ARVideoView.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARVideoView.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/ARVideoView.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoView.cpp
 
 ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/ARVideoView.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoView.cpp > CMakeFiles/ARX.dir/ARVideoView.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoView.cpp > CMakeFiles/ARX.dir/ARVideoView.cpp.i
 
 ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/ARVideoView.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/ARVideoView.cpp -o CMakeFiles/ARX.dir/ARVideoView.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideoView.cpp -o CMakeFiles/ARX.dir/ARVideoView.cpp.s
 
 ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o.requires:
 
@@ -419,16 +419,16 @@ ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o.provides.build: ARX/CMakeFiles/ARX.dir/
 
 ARX/CMakeFiles/ARX.dir/trackingSub.c.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/trackingSub.c.o: ../ARX/trackingSub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object ARX/CMakeFiles/ARX.dir/trackingSub.c.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ARX.dir/trackingSub.c.o   -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object ARX/CMakeFiles/ARX.dir/trackingSub.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ARX.dir/trackingSub.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.c
 
 ARX/CMakeFiles/ARX.dir/trackingSub.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ARX.dir/trackingSub.c.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.c > CMakeFiles/ARX.dir/trackingSub.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.c > CMakeFiles/ARX.dir/trackingSub.c.i
 
 ARX/CMakeFiles/ARX.dir/trackingSub.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ARX.dir/trackingSub.c.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/trackingSub.c -o CMakeFiles/ARX.dir/trackingSub.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.c -o CMakeFiles/ARX.dir/trackingSub.c.s
 
 ARX/CMakeFiles/ARX.dir/trackingSub.c.o.requires:
 
@@ -443,16 +443,16 @@ ARX/CMakeFiles/ARX.dir/trackingSub.c.o.provides.build: ARX/CMakeFiles/ARX.dir/tr
 
 ARX/CMakeFiles/ARX.dir/mapper.cpp.o: ARX/CMakeFiles/ARX.dir/flags.make
 ARX/CMakeFiles/ARX.dir/mapper.cpp.o: ../ARX/mapper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object ARX/CMakeFiles/ARX.dir/mapper.cpp.o"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/mapper.cpp.o -c /home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object ARX/CMakeFiles/ARX.dir/mapper.cpp.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ARX.dir/mapper.cpp.o -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.cpp
 
 ARX/CMakeFiles/ARX.dir/mapper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ARX.dir/mapper.cpp.i"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.cpp > CMakeFiles/ARX.dir/mapper.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.cpp > CMakeFiles/ARX.dir/mapper.cpp.i
 
 ARX/CMakeFiles/ARX.dir/mapper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ARX.dir/mapper.cpp.s"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/Downloads/artoolkitx-master/Source/ARX/mapper.cpp -o CMakeFiles/ARX.dir/mapper.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/mapper.cpp -o CMakeFiles/ARX.dir/mapper.cpp.s
 
 ARX/CMakeFiles/ARX.dir/mapper.cpp.o.requires:
 
@@ -528,9 +528,9 @@ ARX/libARX.so.1.0.6: ../depends/linux/lib/libopencv_imgproc.so
 ARX/libARX.so.1.0.6: ../depends/linux/lib/libopencv_core.so
 ARX/libARX.so.1.0.6: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ARX/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX shared library libARX.so"
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ARX.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -E cmake_symlink_library libARX.so.1.0.6 libARX.so.1 libARX.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX shared library libARX.so"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ARX.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -E cmake_symlink_library libARX.so.1.0.6 libARX.so.1 libARX.so
 
 ARX/libARX.so.1: ARX/libARX.so.1.0.6
 	@$(CMAKE_COMMAND) -E touch_nocreate ARX/libARX.so.1
@@ -564,10 +564,10 @@ ARX/CMakeFiles/ARX.dir/requires: ARX/CMakeFiles/ARX.dir/mapper.cpp.o.requires
 .PHONY : ARX/CMakeFiles/ARX.dir/requires
 
 ARX/CMakeFiles/ARX.dir/clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -P CMakeFiles/ARX.dir/cmake_clean.cmake
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -P CMakeFiles/ARX.dir/cmake_clean.cmake
 .PHONY : ARX/CMakeFiles/ARX.dir/clean
 
 ARX/CMakeFiles/ARX.dir/depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/Downloads/artoolkitx-master/Source /home/lidiane/Downloads/artoolkitx-master/Source/ARX /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/ARRay-TracingGit/artoolkitXSource /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ARX/CMakeFiles/ARX.dir/depend
 

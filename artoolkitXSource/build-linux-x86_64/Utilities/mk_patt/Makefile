@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/mk_patt/CMakeFiles/progress.marks
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/rule:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/rule
 .PHONY : Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ artoolkitx_mk_patt: Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/rule
 
 # fast build rule for target.
 artoolkitx_mk_patt/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build
 .PHONY : artoolkitx_mk_patt/fast
 
 mk_patt.o: mk_patt.cpp.o
@@ -177,7 +177,7 @@ mk_patt.o: mk_patt.cpp.o
 
 # target to build an object file
 mk_patt.cpp.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o
 .PHONY : mk_patt.cpp.o
 
 mk_patt.i: mk_patt.cpp.i
@@ -186,7 +186,7 @@ mk_patt.i: mk_patt.cpp.i
 
 # target to preprocess a source file
 mk_patt.cpp.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.i
 .PHONY : mk_patt.cpp.i
 
 mk_patt.s: mk_patt.cpp.s
@@ -195,7 +195,7 @@ mk_patt.s: mk_patt.cpp.s
 
 # target to generate assembly for a file
 mk_patt.cpp.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.s
 .PHONY : mk_patt.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

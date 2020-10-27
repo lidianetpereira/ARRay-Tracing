@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HarrisDetector.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/HarrisDetector.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/HomographyInfo.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/HomographyInfo.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVConfig.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/OCVConfig.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/OCVFeatureDetector.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/OCVFeatureDetector.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/PlanarTracker.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/PlanarTracker.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackedPoint.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/TrackedPoint.cpp.o"
-  "/home/lidiane/Downloads/artoolkitx-master/Source/ARX/OCVT/TrackingPointSelector.cpp" "/home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/TrackingPointSelector.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/HarrisDetector.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/HomographyInfo.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/OCVConfig.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/OCVFeatureDetector.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/PlanarTracker.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/PlanarTracker.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/TrackedPoint.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/OCVT/CMakeFiles/OCVT.dir/TrackingPointSelector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

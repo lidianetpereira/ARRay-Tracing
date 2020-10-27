@@ -134,7 +134,7 @@ Eden/Eden.h
 Eden/EdenError.h
 -
 
-/home/lidiane/Downloads/artoolkitx-master/Source/Utilities/dispTexData/dispTexData.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/dispTexData/dispTexData.cpp
 windows.h
 -
 stdio.h

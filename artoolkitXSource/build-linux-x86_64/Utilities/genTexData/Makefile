@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Downloads/artoolkitx-master/Source
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/Utilities/genTexData/CMakeFiles/progress.marks
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genTexData/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/rule:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/rule
 .PHONY : Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ artoolkitx_genTexData: Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir
 
 # fast build rule for target.
 artoolkitx_genTexData/fast:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build
 .PHONY : artoolkitx_genTexData/fast
 
 genTexData.o: genTexData.c.o
@@ -177,7 +177,7 @@ genTexData.o: genTexData.c.o
 
 # target to build an object file
 genTexData.c.o:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o
 .PHONY : genTexData.c.o
 
 genTexData.i: genTexData.c.i
@@ -186,7 +186,7 @@ genTexData.i: genTexData.c.i
 
 # target to preprocess a source file
 genTexData.c.i:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.i
 .PHONY : genTexData.c.i
 
 genTexData.s: genTexData.c.s
@@ -195,7 +195,7 @@ genTexData.s: genTexData.c.s
 
 # target to generate assembly for a file
 genTexData.c.s:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.s
 .PHONY : genTexData.c.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Downloads/artoolkitx-master/Source/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
