@@ -1,24 +1,6 @@
 /home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lidiane/ARRay-TracingGit
--- The C compiler identification is GNU 7.5.0
--- The CXX compiler identification is GNU 7.5.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found OpenCV: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;/usr/lib/x86_64-linux-gnu/libopencv_videoio.so;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so;/usr/lib/x86_64-linux-gnu/libopencv_video.so;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;/usr/lib/x86_64-linux-gnu/libopencv_core.so  
--- Found GLUT: /usr/local/lib/libglut.so  
--- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
 -- Found OpenGLES2: /usr/include
 /usr/usr/local/opt/local
--- Found OpenGL3: GL  
 -- Opting for desktop OpenGL. Set GL_PREFER_EMBEDDED to change.
 CMake Error at CMakeLists.txt:162 (include):
   include could not find load file:
@@ -26,20 +8,6 @@ CMake Error at CMakeLists.txt:162 (include):
     /home/lidiane/ARRay-TracingGit/SDK/lib/ARX/ARX.cmake
 
 
--- Performing Test OPTIX_CXX_ACCEPTS_NO_UNUSED_RESULT
--- Performing Test OPTIX_CXX_ACCEPTS_NO_UNUSED_RESULT - Success
--- Performing Test SSE_41_AVAILABLE
--- Performing Test SSE_41_AVAILABLE - Success
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
--- Found CUDA: /usr/local/cuda (found suitable version "10.2", minimum required is "5.0") 
 CMake Error at CMake/FindOptiX.cmake:92 (message):
   optix library not found.  Please locate before proceeding.
 Call Stack (most recent call first):
