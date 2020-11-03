@@ -992,9 +992,9 @@ opencv2/core.hpp
 opencv2/core/core_c.h
 ../depends/linux/include/opencv2/videoio/opencv2/core/core_c.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arRefineCorners.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.cpp
 arRefineCorners.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arRefineCorners.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.h
 opencv2/opencv.hpp
 -
 opencv2/highgui.hpp
@@ -1006,7 +1006,7 @@ opencv2/imgproc/imgproc_c.h
 vector
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arRefineCorners.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.h
 ARX/AR/ar.h
 -
 

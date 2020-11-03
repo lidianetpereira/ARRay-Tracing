@@ -1,8 +1,8 @@
-# Install script for directory: /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/check_id
+# Install script for directory: /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/check_id
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lidiane/Documentos/arraytracing/artoolkitXSource/../SDK")
+  set(CMAKE_INSTALL_PREFIX "/home/lidiane/ARRay-TracingGit/artoolkitXSource/../SDK")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,12 +44,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_check_id"
          RPATH "$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/check_id/artoolkitx_check_id")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/check_id/artoolkitx_check_id")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_check_id" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_check_id")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_check_id"
-         OLD_RPATH "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX:/usr/local/lib:"
+         OLD_RPATH "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX:/usr/local/lib:"
          NEW_RPATH "$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_check_id")

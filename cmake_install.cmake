@@ -1,8 +1,8 @@
-# Install script for directory: /home/lidiane/Documentos/arraytracing
+# Install script for directory: /home/lidiane/ARRay-TracingGit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lidiane/Documentos/arraytracing/ARSDK")
+  set(CMAKE_INSTALL_PREFIX "/home/lidiane/ARRay-TracingGit/ARSDK")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lidiane/Documentos/arraytracing/optixTutorial/cmake_install.cmake")
-  include("/home/lidiane/Documentos/arraytracing/sutil/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/optixTutorial/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/sutil/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lidiane/Documentos/arraytracing/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lidiane/ARRay-TracingGit/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

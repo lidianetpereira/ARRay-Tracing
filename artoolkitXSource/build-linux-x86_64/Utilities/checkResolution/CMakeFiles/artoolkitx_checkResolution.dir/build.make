@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 # Include any dependencies generated for this target.
 include Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/depend.make
@@ -59,16 +59,16 @@ include Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/flag
 
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o: Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/flags.make
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o: ../Utilities/checkResolution/checkResolution.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o"
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o   -c /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/checkResolution/checkResolution.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o   -c /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/checkResolution/checkResolution.c
 
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.i"
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/checkResolution/checkResolution.c > CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/checkResolution/checkResolution.c > CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.i
 
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.s"
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/checkResolution/checkResolution.c -o CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/checkResolution/checkResolution.c -o CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.s
 
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o.requires:
 
@@ -96,8 +96,8 @@ Utilities/checkResolution/artoolkitx_checkResolution: /usr/lib/x86_64-linux-gnu/
 Utilities/checkResolution/artoolkitx_checkResolution: /usr/lib/x86_64-linux-gnu/libGLU.so
 Utilities/checkResolution/artoolkitx_checkResolution: /usr/lib/x86_64-linux-gnu/libjpeg.so
 Utilities/checkResolution/artoolkitx_checkResolution: Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable artoolkitx_checkResolution"
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_checkResolution.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable artoolkitx_checkResolution"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_checkResolution.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build: Utilities/checkResolution/artoolkitx_checkResolution
@@ -109,10 +109,10 @@ Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/requires: Ut
 .PHONY : Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/requires
 
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/clean:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && $(CMAKE_COMMAND) -P CMakeFiles/artoolkitx_checkResolution.dir/cmake_clean.cmake
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && $(CMAKE_COMMAND) -P CMakeFiles/artoolkitx_checkResolution.dir/cmake_clean.cmake
 .PHONY : Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/clean
 
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/depend:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/Documentos/arraytracing/artoolkitXSource /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/checkResolution /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidiane/ARRay-TracingGit/artoolkitXSource /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/checkResolution /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/depend
 

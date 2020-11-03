@@ -1006,27 +1006,27 @@ opencv2/core.hpp
 opencv2/core/core_c.h
 ../depends/linux/include/opencv2/videoio/opencv2/core/core_c.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HarrisDetector.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.cpp
 HarrisDetector.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HarrisDetector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HarrisDetector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.h
 OCVConfig.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HomographyInfo.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.cpp
 HomographyInfo.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HomographyInfo.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HomographyInfo.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.h
 OCVConfig.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.cpp
 OCVConfig.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 opencv2/core.hpp
 -
 opencv2/highgui.hpp
@@ -1036,11 +1036,11 @@ opencv2/imgproc.hpp
 opencv2/calib3d.hpp
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.cpp
 OCVFeatureDetector.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
 opencv2/features2d.hpp
 -
 vector
@@ -1048,25 +1048,25 @@ vector
 map
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVUtils.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVUtils.h
 OCVConfig.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/PlanarTracker.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/PlanarTracker.cpp
 PlanarTracker.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/PlanarTracker.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/PlanarTracker.h
 OCVConfig.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 OCVFeatureDetector.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVFeatureDetector.h
 HarrisDetector.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HarrisDetector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HarrisDetector.h
 TrackableInfo.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackableInfo.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackableInfo.h
 HomographyInfo.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/HomographyInfo.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/HomographyInfo.h
 OCVUtils.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVUtils.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVUtils.h
 opencv2/video.hpp
 -
 opencv2/highgui.hpp
@@ -1074,31 +1074,31 @@ opencv2/highgui.hpp
 iostream
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackableInfo.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackableInfo.h
 TrackingPointSelector.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackedPoint.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.cpp
 TrackedPoint.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackedPoint.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackedPoint.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.h
 opencv2/core.hpp
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackingPointSelector.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.cpp
 TrackingPointSelector.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackingPointSelector.h
 vector
 -
 map
 -
 OCVConfig.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/OCVConfig.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/OCVConfig.h
 TrackedPoint.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/OCVT/TrackedPoint.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/OCVT/TrackedPoint.h
 
 ARX/AR/include/ARX/AR/config.h
 sdkddkver.h

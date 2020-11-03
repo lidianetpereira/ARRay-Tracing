@@ -62,7 +62,7 @@ string.h
 assert.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/image_utils.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/image_utils.cpp
 ARX/ARUtil/image_utils.h
 -
 memory
@@ -72,11 +72,11 @@ stb_image/stb_image_write.h
 stb_image/stb_image.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.cpp
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.cpp
 thread_sub_winrt.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
 ARX/ARUtil/thread_sub.h
 -
 sdkddkver.h

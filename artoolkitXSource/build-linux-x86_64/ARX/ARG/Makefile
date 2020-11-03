@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX/ARG/CMakeFiles/progress.marks
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARG/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ARX/ARG/CMakeFiles/ARG.dir/rule:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/CMakeFiles/ARG.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARG/CMakeFiles/ARG.dir/rule
 .PHONY : ARX/ARG/CMakeFiles/ARG.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ ARG: ARX/ARG/CMakeFiles/ARG.dir/rule
 
 # fast build rule for target.
 ARG/fast:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/build
 .PHONY : ARG/fast
 
 arg.o: arg.c.o
@@ -177,7 +177,7 @@ arg.o: arg.c.o
 
 # target to build an object file
 arg.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg.c.o
 .PHONY : arg.c.o
 
 arg.i: arg.c.i
@@ -186,7 +186,7 @@ arg.i: arg.c.i
 
 # target to preprocess a source file
 arg.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg.c.i
 .PHONY : arg.c.i
 
 arg.s: arg.c.s
@@ -195,7 +195,7 @@ arg.s: arg.c.s
 
 # target to generate assembly for a file
 arg.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg.c.s
 .PHONY : arg.c.s
 
 arg_gl.o: arg_gl.c.o
@@ -204,7 +204,7 @@ arg_gl.o: arg_gl.c.o
 
 # target to build an object file
 arg_gl.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl.c.o
 .PHONY : arg_gl.c.o
 
 arg_gl.i: arg_gl.c.i
@@ -213,7 +213,7 @@ arg_gl.i: arg_gl.c.i
 
 # target to preprocess a source file
 arg_gl.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl.c.i
 .PHONY : arg_gl.c.i
 
 arg_gl.s: arg_gl.c.s
@@ -222,7 +222,7 @@ arg_gl.s: arg_gl.c.s
 
 # target to generate assembly for a file
 arg_gl.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl.c.s
 .PHONY : arg_gl.c.s
 
 arg_gl3.o: arg_gl3.c.o
@@ -231,7 +231,7 @@ arg_gl3.o: arg_gl3.c.o
 
 # target to build an object file
 arg_gl3.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl3.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl3.c.o
 .PHONY : arg_gl3.c.o
 
 arg_gl3.i: arg_gl3.c.i
@@ -240,7 +240,7 @@ arg_gl3.i: arg_gl3.c.i
 
 # target to preprocess a source file
 arg_gl3.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl3.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl3.c.i
 .PHONY : arg_gl3.c.i
 
 arg_gl3.s: arg_gl3.c.s
@@ -249,7 +249,7 @@ arg_gl3.s: arg_gl3.c.s
 
 # target to generate assembly for a file
 arg_gl3.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl3.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gl3.c.s
 .PHONY : arg_gl3.c.s
 
 arg_gles2.o: arg_gles2.c.o
@@ -258,7 +258,7 @@ arg_gles2.o: arg_gles2.c.o
 
 # target to build an object file
 arg_gles2.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gles2.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gles2.c.o
 .PHONY : arg_gles2.c.o
 
 arg_gles2.i: arg_gles2.c.i
@@ -267,7 +267,7 @@ arg_gles2.i: arg_gles2.c.i
 
 # target to preprocess a source file
 arg_gles2.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gles2.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gles2.c.i
 .PHONY : arg_gles2.c.i
 
 arg_gles2.s: arg_gles2.c.s
@@ -276,7 +276,7 @@ arg_gles2.s: arg_gles2.c.s
 
 # target to generate assembly for a file
 arg_gles2.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gles2.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/arg_gles2.c.s
 .PHONY : arg_gles2.c.s
 
 glStateCache2.o: glStateCache2.c.o
@@ -285,7 +285,7 @@ glStateCache2.o: glStateCache2.c.o
 
 # target to build an object file
 glStateCache2.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/glStateCache2.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/glStateCache2.c.o
 .PHONY : glStateCache2.c.o
 
 glStateCache2.i: glStateCache2.c.i
@@ -294,7 +294,7 @@ glStateCache2.i: glStateCache2.c.i
 
 # target to preprocess a source file
 glStateCache2.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/glStateCache2.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/glStateCache2.c.i
 .PHONY : glStateCache2.c.i
 
 glStateCache2.s: glStateCache2.c.s
@@ -303,7 +303,7 @@ glStateCache2.s: glStateCache2.c.s
 
 # target to generate assembly for a file
 glStateCache2.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/glStateCache2.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/glStateCache2.c.s
 .PHONY : glStateCache2.c.s
 
 mtx.o: mtx.c.o
@@ -312,7 +312,7 @@ mtx.o: mtx.c.o
 
 # target to build an object file
 mtx.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/mtx.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/mtx.c.o
 .PHONY : mtx.c.o
 
 mtx.i: mtx.c.i
@@ -321,7 +321,7 @@ mtx.i: mtx.c.i
 
 # target to preprocess a source file
 mtx.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/mtx.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/mtx.c.i
 .PHONY : mtx.c.i
 
 mtx.s: mtx.c.s
@@ -330,7 +330,7 @@ mtx.s: mtx.c.s
 
 # target to generate assembly for a file
 mtx.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/mtx.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/mtx.c.s
 .PHONY : mtx.c.s
 
 shader_gl.o: shader_gl.c.o
@@ -339,7 +339,7 @@ shader_gl.o: shader_gl.c.o
 
 # target to build an object file
 shader_gl.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/shader_gl.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/shader_gl.c.o
 .PHONY : shader_gl.c.o
 
 shader_gl.i: shader_gl.c.i
@@ -348,7 +348,7 @@ shader_gl.i: shader_gl.c.i
 
 # target to preprocess a source file
 shader_gl.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/shader_gl.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/shader_gl.c.i
 .PHONY : shader_gl.c.i
 
 shader_gl.s: shader_gl.c.s
@@ -357,7 +357,7 @@ shader_gl.s: shader_gl.c.s
 
 # target to generate assembly for a file
 shader_gl.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/shader_gl.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARG/CMakeFiles/ARG.dir/build.make ARX/ARG/CMakeFiles/ARG.dir/shader_gl.c.s
 .PHONY : shader_gl.c.s
 
 # Help Target
@@ -405,6 +405,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -22,7 +22,7 @@ Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o
  ../depends/common/src/Eden/Eden.h
  ../depends/common/src/Eden/EdenError.h
  ../depends/common/src/Eden/EdenGLFont.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/mk_patt/mk_patt.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/mk_patt/mk_patt.cpp
  /usr/local/include/SDL2/SDL.h
  /usr/local/include/SDL2/SDL_assert.h
  /usr/local/include/SDL2/SDL_atomic.h

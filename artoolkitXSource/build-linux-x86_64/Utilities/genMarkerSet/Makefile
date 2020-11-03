@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet/CMakeFiles/progress.marks
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/rule:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/rule
 .PHONY : Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ artoolkitx_genMarkerSet: Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerS
 
 # fast build rule for target.
 artoolkitx_genMarkerSet/fast:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build
 .PHONY : artoolkitx_genMarkerSet/fast
 
 genMarkerSet.o: genMarkerSet.cpp.o
@@ -177,7 +177,7 @@ genMarkerSet.o: genMarkerSet.cpp.o
 
 # target to build an object file
 genMarkerSet.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.o
 .PHONY : genMarkerSet.cpp.o
 
 genMarkerSet.i: genMarkerSet.cpp.i
@@ -186,7 +186,7 @@ genMarkerSet.i: genMarkerSet.cpp.i
 
 # target to preprocess a source file
 genMarkerSet.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.i
 .PHONY : genMarkerSet.cpp.i
 
 genMarkerSet.s: genMarkerSet.cpp.s
@@ -195,7 +195,7 @@ genMarkerSet.s: genMarkerSet.cpp.s
 
 # target to generate assembly for a file
 genMarkerSet.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/genMarkerSet.cpp.s
 .PHONY : genMarkerSet.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

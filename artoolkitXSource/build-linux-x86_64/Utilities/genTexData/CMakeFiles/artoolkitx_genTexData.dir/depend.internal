@@ -18,5 +18,5 @@ Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o
  ../ARX/ARUtil/include/ARX/ARUtil/types.h
  ../ARX/KPM/include/ARX/KPM/kpm.h
  ../ARX/KPM/include/ARX/KPM/kpmType.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/genTexData/genTexData.c
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/genTexData/genTexData.c
  ARX/AR/include/ARX/AR/config.h

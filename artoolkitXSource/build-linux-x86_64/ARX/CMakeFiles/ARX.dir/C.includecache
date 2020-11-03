@@ -96,9 +96,9 @@ sdkddkver.h
 windows.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/trackingSub.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.c
 trackingSub.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/trackingSub.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.h
 stdio.h
 -
 stdlib.h
@@ -106,7 +106,7 @@ stdlib.h
 string.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/trackingSub.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/trackingSub.h
 ARX/Platform.h
 -
 ARX/AR/ar.h

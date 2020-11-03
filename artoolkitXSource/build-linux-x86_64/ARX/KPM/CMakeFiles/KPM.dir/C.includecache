@@ -86,7 +86,7 @@ ARX/KPM/kpmType.h
 ARX/KPM/surfSub.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmFopen.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmFopen.c
 stdio.h
 -
 stdlib.h
@@ -96,11 +96,11 @@ string.h
 ARX/KPM/kpm.h
 -
 kpmFopen.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmFopen.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmFopen.h
 sys/param.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmFopen.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmFopen.h
 stdio.h
 -
 

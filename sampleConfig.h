@@ -26,8 +26,8 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#define SAMPLES_DIR "/home/lidiane/Documentos/arraytracing"
-#define SAMPLES_PTX_DIR "/home/lidiane/Documentos/arraytracing/lib/ptx"
+#define SAMPLES_DIR "/home/lidiane/ARRay-TracingGit"
+#define SAMPLES_PTX_DIR "/home/lidiane/ARRay-TracingGit/lib/ptx"
 #define SAMPLES_CUDA_DIR ""
 
 // Include directories
@@ -35,10 +35,10 @@
   "/sutil", \
   "/cuda", 
 #define SAMPLES_ABSOLUTE_INCLUDE_DIRS \
-  "/home/lidiane/Documentos/arraytracing/include", \
-  "/home/lidiane/Documentos/arraytracing/include/optixu", \
-  "/home/lidiane/Documentos/arraytracing/support/mdl-sdk/include", \
-  "/usr/local/cuda/include", 
+  "/home/lidiane/ARRay-TracingGit/include", \
+  "/home/lidiane/ARRay-TracingGit/include/optixu", \
+  "/home/lidiane/ARRay-TracingGit/support/mdl-sdk/include", \
+  "/usr/local/cuda-10.2/include", 
 
 // Signal whether to use NVRTC or not
 #define CUDA_NVRTC_ENABLED 1

@@ -16,5 +16,5 @@ Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolut
  ../ARX/AR2/include/ARX/AR2/util.h
  ../ARX/ARUtil/include/ARX/ARUtil/log.h
  ../ARX/ARUtil/include/ARX/ARUtil/types.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/checkResolution/checkResolution.c
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/checkResolution/checkResolution.c
  ARX/AR/include/ARX/AR/config.h

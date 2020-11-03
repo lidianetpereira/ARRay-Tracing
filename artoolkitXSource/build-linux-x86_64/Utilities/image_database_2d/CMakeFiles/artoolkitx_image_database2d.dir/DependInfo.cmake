@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/image_database_2d/image_database2d.cpp" "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/image_database_2d/CMakeFiles/artoolkitx_image_database2d.dir/image_database2d.cpp.o"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/image_database_2d/image_database2d.cpp" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/image_database_2d/CMakeFiles/artoolkitx_image_database2d.dir/image_database2d.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -28,7 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
+  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

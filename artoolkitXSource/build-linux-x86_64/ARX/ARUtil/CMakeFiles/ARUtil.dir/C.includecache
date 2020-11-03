@@ -56,7 +56,7 @@ ARX/ARUtil/types.h
 
 ../ARX/ARUtil/include/ARX/ARUtil/types.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/android_system_property_get.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/android_system_property_get.c
 ARX/ARUtil/android.h
 -
 stddef.h
@@ -66,7 +66,7 @@ dlfcn.h
 android/log.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/crypt.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/crypt.c
 stdio.h
 -
 stdlib.h
@@ -86,13 +86,13 @@ fcntl.h
 unistd.h
 -
 zlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zlib.h
 crypt.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/crypt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/crypt.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/crypt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/crypt.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/file_utils.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/file_utils.c
 ARX/ARUtil/file_utils.h
 -
 stdio.h
@@ -122,7 +122,7 @@ sys/param.h
 utime.h
 -
 ftw.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/ftw.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ftw.h
 ftw.h
 -
 termios.h
@@ -134,17 +134,17 @@ errno.h
 time.h
 -
 unzip.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/unzip.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/unzip.h
 zip.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zip.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zip.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/ftw.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ftw.h
 sys/types.h
 -
 sys/stat.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/ioapi.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ioapi.c
 stdlib.h
 -
 string.h
@@ -154,9 +154,9 @@ sys/types.h
 unistd.h
 -
 ioapi.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/ioapi.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ioapi.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/ioapi.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ioapi.h
 stdio.h
 -
 stdlib.h
@@ -164,9 +164,9 @@ stdlib.h
 stdint.h
 -
 zlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zlib.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/log.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/log.c
 ARX/ARUtil/log.h
 -
 pthread.h
@@ -178,7 +178,7 @@ os/log.h
 Windows.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/profile.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/profile.c
 jni.h
 -
 android/log.h
@@ -192,7 +192,7 @@ sys/time.h
 ARX/ARUtil/profile.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/system.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/system.c
 ARX/ARUtil/system.h
 -
 stdio.h
@@ -216,7 +216,7 @@ ARX/ARUtil/android.h
 sys/utsname.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/thread_sub.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub.c
 windows.h
 -
 unistd.h
@@ -230,11 +230,11 @@ ARX/ARUtil/thread_sub.h
 pthread.h
 -
 thread_sub_winrt.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
 process.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/thread_sub_winrt.h
 ARX/ARUtil/thread_sub.h
 -
 sdkddkver.h
@@ -242,7 +242,7 @@ sdkddkver.h
 windows.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/time.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/time.c
 ARX/ARUtil/time.h
 -
 windows.h
@@ -254,7 +254,7 @@ time.h
 sys/time.h
 -
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/unzip.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/unzip.c
 stdio.h
 -
 stdlib.h
@@ -266,27 +266,27 @@ string.h
 errno.h
 -
 zlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zlib.h
 unzip.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/unzip.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/unzip.h
 aes/aes.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/aes/aes.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/aes/aes.h
 aes/fileenc.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/aes/fileenc.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/aes/fileenc.h
 compression.h
 -
 crypt.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/crypt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/crypt.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/unzip.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/unzip.h
 zlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zlib.h
 ioapi.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/ioapi.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ioapi.h
 bzlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/bzlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/bzlib.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zip.c
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zip.c
 stdio.h
 -
 stdlib.h
@@ -298,25 +298,25 @@ string.h
 errno.h
 -
 zlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zlib.h
 zip.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zip.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zip.h
 aes/aes.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/aes/aes.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/aes/aes.h
 aes/fileenc.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/aes/fileenc.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/aes/fileenc.h
 aes/prng.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/aes/prng.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/aes/prng.h
 compression.h
 -
 crypt.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/crypt.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/crypt.h
 
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zip.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zip.h
 zlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/zlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/zlib.h
 ioapi.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/ioapi.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/ioapi.h
 bzlib.h
-/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARUtil/bzlib.h
+/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARUtil/bzlib.h
 

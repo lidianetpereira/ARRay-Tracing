@@ -1,8 +1,8 @@
-# Install script for directory: /home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities
+# Install script for directory: /home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lidiane/Documentos/arraytracing/artoolkitXSource/../SDK")
+  set(CMAKE_INSTALL_PREFIX "/home/lidiane/ARRay-TracingGit/artoolkitXSource/../SDK")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/check_id/cmake_install.cmake")
-  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet/cmake_install.cmake")
-  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt/cmake_install.cmake")
-  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/cmake_install.cmake")
-  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/genTexData/cmake_install.cmake")
-  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/dispTexData/cmake_install.cmake")
-  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/image_database_2d/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/check_id/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genTexData/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/dispTexData/cmake_install.cmake")
+  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/image_database_2d/cmake_install.cmake")
 
 endif()
 

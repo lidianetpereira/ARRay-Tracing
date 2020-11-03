@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource
+CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX/KPM/CMakeFiles/progress.marks
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/KPM/CMakeFiles/progress.marks
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/clean
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/preinstall
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ARX/KPM/CMakeFiles/KPM.dir/rule:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/CMakeFiles/KPM.dir/rule
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/KPM/CMakeFiles/KPM.dir/rule
 .PHONY : ARX/KPM/CMakeFiles/KPM.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ KPM: ARX/KPM/CMakeFiles/KPM.dir/rule
 
 # fast build rule for target.
 KPM/fast:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/build
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/build
 .PHONY : KPM/fast
 
 FreakMatcher/detectors/DoG_scale_invariant_detector.o: FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.o
@@ -177,7 +177,7 @@ FreakMatcher/detectors/DoG_scale_invariant_detector.o: FreakMatcher/detectors/Do
 
 # target to build an object file
 FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.o
 .PHONY : FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.o
 
 FreakMatcher/detectors/DoG_scale_invariant_detector.i: FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.i
@@ -186,7 +186,7 @@ FreakMatcher/detectors/DoG_scale_invariant_detector.i: FreakMatcher/detectors/Do
 
 # target to preprocess a source file
 FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.i
 .PHONY : FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.i
 
 FreakMatcher/detectors/DoG_scale_invariant_detector.s: FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.s
@@ -195,7 +195,7 @@ FreakMatcher/detectors/DoG_scale_invariant_detector.s: FreakMatcher/detectors/Do
 
 # target to generate assembly for a file
 FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.s
 .PHONY : FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.s
 
 FreakMatcher/detectors/gaussian_scale_space_pyramid.o: FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.o
@@ -204,7 +204,7 @@ FreakMatcher/detectors/gaussian_scale_space_pyramid.o: FreakMatcher/detectors/ga
 
 # target to build an object file
 FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.o
 .PHONY : FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.o
 
 FreakMatcher/detectors/gaussian_scale_space_pyramid.i: FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.i
@@ -213,7 +213,7 @@ FreakMatcher/detectors/gaussian_scale_space_pyramid.i: FreakMatcher/detectors/ga
 
 # target to preprocess a source file
 FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.i
 .PHONY : FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.i
 
 FreakMatcher/detectors/gaussian_scale_space_pyramid.s: FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.s
@@ -222,7 +222,7 @@ FreakMatcher/detectors/gaussian_scale_space_pyramid.s: FreakMatcher/detectors/ga
 
 # target to generate assembly for a file
 FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.s
 .PHONY : FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.s
 
 FreakMatcher/detectors/gradients.o: FreakMatcher/detectors/gradients.cpp.o
@@ -231,7 +231,7 @@ FreakMatcher/detectors/gradients.o: FreakMatcher/detectors/gradients.cpp.o
 
 # target to build an object file
 FreakMatcher/detectors/gradients.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gradients.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gradients.cpp.o
 .PHONY : FreakMatcher/detectors/gradients.cpp.o
 
 FreakMatcher/detectors/gradients.i: FreakMatcher/detectors/gradients.cpp.i
@@ -240,7 +240,7 @@ FreakMatcher/detectors/gradients.i: FreakMatcher/detectors/gradients.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/detectors/gradients.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gradients.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gradients.cpp.i
 .PHONY : FreakMatcher/detectors/gradients.cpp.i
 
 FreakMatcher/detectors/gradients.s: FreakMatcher/detectors/gradients.cpp.s
@@ -249,7 +249,7 @@ FreakMatcher/detectors/gradients.s: FreakMatcher/detectors/gradients.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/detectors/gradients.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gradients.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gradients.cpp.s
 .PHONY : FreakMatcher/detectors/gradients.cpp.s
 
 FreakMatcher/detectors/harris.o: FreakMatcher/detectors/harris.cpp.o
@@ -258,7 +258,7 @@ FreakMatcher/detectors/harris.o: FreakMatcher/detectors/harris.cpp.o
 
 # target to build an object file
 FreakMatcher/detectors/harris.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.o
 .PHONY : FreakMatcher/detectors/harris.cpp.o
 
 FreakMatcher/detectors/harris.i: FreakMatcher/detectors/harris.cpp.i
@@ -267,7 +267,7 @@ FreakMatcher/detectors/harris.i: FreakMatcher/detectors/harris.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/detectors/harris.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.i
 .PHONY : FreakMatcher/detectors/harris.cpp.i
 
 FreakMatcher/detectors/harris.s: FreakMatcher/detectors/harris.cpp.s
@@ -276,7 +276,7 @@ FreakMatcher/detectors/harris.s: FreakMatcher/detectors/harris.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/detectors/harris.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.s
 .PHONY : FreakMatcher/detectors/harris.cpp.s
 
 FreakMatcher/detectors/orientation_assignment.o: FreakMatcher/detectors/orientation_assignment.cpp.o
@@ -285,7 +285,7 @@ FreakMatcher/detectors/orientation_assignment.o: FreakMatcher/detectors/orientat
 
 # target to build an object file
 FreakMatcher/detectors/orientation_assignment.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.o
 .PHONY : FreakMatcher/detectors/orientation_assignment.cpp.o
 
 FreakMatcher/detectors/orientation_assignment.i: FreakMatcher/detectors/orientation_assignment.cpp.i
@@ -294,7 +294,7 @@ FreakMatcher/detectors/orientation_assignment.i: FreakMatcher/detectors/orientat
 
 # target to preprocess a source file
 FreakMatcher/detectors/orientation_assignment.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.i
 .PHONY : FreakMatcher/detectors/orientation_assignment.cpp.i
 
 FreakMatcher/detectors/orientation_assignment.s: FreakMatcher/detectors/orientation_assignment.cpp.s
@@ -303,7 +303,7 @@ FreakMatcher/detectors/orientation_assignment.s: FreakMatcher/detectors/orientat
 
 # target to generate assembly for a file
 FreakMatcher/detectors/orientation_assignment.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.s
 .PHONY : FreakMatcher/detectors/orientation_assignment.cpp.s
 
 FreakMatcher/detectors/pyramid.o: FreakMatcher/detectors/pyramid.cpp.o
@@ -312,7 +312,7 @@ FreakMatcher/detectors/pyramid.o: FreakMatcher/detectors/pyramid.cpp.o
 
 # target to build an object file
 FreakMatcher/detectors/pyramid.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.o
 .PHONY : FreakMatcher/detectors/pyramid.cpp.o
 
 FreakMatcher/detectors/pyramid.i: FreakMatcher/detectors/pyramid.cpp.i
@@ -321,7 +321,7 @@ FreakMatcher/detectors/pyramid.i: FreakMatcher/detectors/pyramid.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/detectors/pyramid.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.i
 .PHONY : FreakMatcher/detectors/pyramid.cpp.i
 
 FreakMatcher/detectors/pyramid.s: FreakMatcher/detectors/pyramid.cpp.s
@@ -330,7 +330,7 @@ FreakMatcher/detectors/pyramid.s: FreakMatcher/detectors/pyramid.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/detectors/pyramid.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.s
 .PHONY : FreakMatcher/detectors/pyramid.cpp.s
 
 FreakMatcher/facade/visual_database_facade.o: FreakMatcher/facade/visual_database_facade.cpp.o
@@ -339,7 +339,7 @@ FreakMatcher/facade/visual_database_facade.o: FreakMatcher/facade/visual_databas
 
 # target to build an object file
 FreakMatcher/facade/visual_database_facade.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.o
 .PHONY : FreakMatcher/facade/visual_database_facade.cpp.o
 
 FreakMatcher/facade/visual_database_facade.i: FreakMatcher/facade/visual_database_facade.cpp.i
@@ -348,7 +348,7 @@ FreakMatcher/facade/visual_database_facade.i: FreakMatcher/facade/visual_databas
 
 # target to preprocess a source file
 FreakMatcher/facade/visual_database_facade.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.i
 .PHONY : FreakMatcher/facade/visual_database_facade.cpp.i
 
 FreakMatcher/facade/visual_database_facade.s: FreakMatcher/facade/visual_database_facade.cpp.s
@@ -357,7 +357,7 @@ FreakMatcher/facade/visual_database_facade.s: FreakMatcher/facade/visual_databas
 
 # target to generate assembly for a file
 FreakMatcher/facade/visual_database_facade.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.s
 .PHONY : FreakMatcher/facade/visual_database_facade.cpp.s
 
 FreakMatcher/framework/date_time.o: FreakMatcher/framework/date_time.cpp.o
@@ -366,7 +366,7 @@ FreakMatcher/framework/date_time.o: FreakMatcher/framework/date_time.cpp.o
 
 # target to build an object file
 FreakMatcher/framework/date_time.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/date_time.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/date_time.cpp.o
 .PHONY : FreakMatcher/framework/date_time.cpp.o
 
 FreakMatcher/framework/date_time.i: FreakMatcher/framework/date_time.cpp.i
@@ -375,7 +375,7 @@ FreakMatcher/framework/date_time.i: FreakMatcher/framework/date_time.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/framework/date_time.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/date_time.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/date_time.cpp.i
 .PHONY : FreakMatcher/framework/date_time.cpp.i
 
 FreakMatcher/framework/date_time.s: FreakMatcher/framework/date_time.cpp.s
@@ -384,7 +384,7 @@ FreakMatcher/framework/date_time.s: FreakMatcher/framework/date_time.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/framework/date_time.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/date_time.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/date_time.cpp.s
 .PHONY : FreakMatcher/framework/date_time.cpp.s
 
 FreakMatcher/framework/image.o: FreakMatcher/framework/image.cpp.o
@@ -393,7 +393,7 @@ FreakMatcher/framework/image.o: FreakMatcher/framework/image.cpp.o
 
 # target to build an object file
 FreakMatcher/framework/image.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/image.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/image.cpp.o
 .PHONY : FreakMatcher/framework/image.cpp.o
 
 FreakMatcher/framework/image.i: FreakMatcher/framework/image.cpp.i
@@ -402,7 +402,7 @@ FreakMatcher/framework/image.i: FreakMatcher/framework/image.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/framework/image.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/image.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/image.cpp.i
 .PHONY : FreakMatcher/framework/image.cpp.i
 
 FreakMatcher/framework/image.s: FreakMatcher/framework/image.cpp.s
@@ -411,7 +411,7 @@ FreakMatcher/framework/image.s: FreakMatcher/framework/image.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/framework/image.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/image.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/image.cpp.s
 .PHONY : FreakMatcher/framework/image.cpp.s
 
 FreakMatcher/framework/logger.o: FreakMatcher/framework/logger.cpp.o
@@ -420,7 +420,7 @@ FreakMatcher/framework/logger.o: FreakMatcher/framework/logger.cpp.o
 
 # target to build an object file
 FreakMatcher/framework/logger.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/logger.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/logger.cpp.o
 .PHONY : FreakMatcher/framework/logger.cpp.o
 
 FreakMatcher/framework/logger.i: FreakMatcher/framework/logger.cpp.i
@@ -429,7 +429,7 @@ FreakMatcher/framework/logger.i: FreakMatcher/framework/logger.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/framework/logger.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/logger.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/logger.cpp.i
 .PHONY : FreakMatcher/framework/logger.cpp.i
 
 FreakMatcher/framework/logger.s: FreakMatcher/framework/logger.cpp.s
@@ -438,7 +438,7 @@ FreakMatcher/framework/logger.s: FreakMatcher/framework/logger.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/framework/logger.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/logger.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/logger.cpp.s
 .PHONY : FreakMatcher/framework/logger.cpp.s
 
 FreakMatcher/framework/timers.o: FreakMatcher/framework/timers.cpp.o
@@ -447,7 +447,7 @@ FreakMatcher/framework/timers.o: FreakMatcher/framework/timers.cpp.o
 
 # target to build an object file
 FreakMatcher/framework/timers.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/timers.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/timers.cpp.o
 .PHONY : FreakMatcher/framework/timers.cpp.o
 
 FreakMatcher/framework/timers.i: FreakMatcher/framework/timers.cpp.i
@@ -456,7 +456,7 @@ FreakMatcher/framework/timers.i: FreakMatcher/framework/timers.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/framework/timers.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/timers.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/timers.cpp.i
 .PHONY : FreakMatcher/framework/timers.cpp.i
 
 FreakMatcher/framework/timers.s: FreakMatcher/framework/timers.cpp.s
@@ -465,7 +465,7 @@ FreakMatcher/framework/timers.s: FreakMatcher/framework/timers.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/framework/timers.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/timers.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/timers.cpp.s
 .PHONY : FreakMatcher/framework/timers.cpp.s
 
 FreakMatcher/matchers/freak.o: FreakMatcher/matchers/freak.cpp.o
@@ -474,7 +474,7 @@ FreakMatcher/matchers/freak.o: FreakMatcher/matchers/freak.cpp.o
 
 # target to build an object file
 FreakMatcher/matchers/freak.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.o
 .PHONY : FreakMatcher/matchers/freak.cpp.o
 
 FreakMatcher/matchers/freak.i: FreakMatcher/matchers/freak.cpp.i
@@ -483,7 +483,7 @@ FreakMatcher/matchers/freak.i: FreakMatcher/matchers/freak.cpp.i
 
 # target to preprocess a source file
 FreakMatcher/matchers/freak.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.i
 .PHONY : FreakMatcher/matchers/freak.cpp.i
 
 FreakMatcher/matchers/freak.s: FreakMatcher/matchers/freak.cpp.s
@@ -492,7 +492,7 @@ FreakMatcher/matchers/freak.s: FreakMatcher/matchers/freak.cpp.s
 
 # target to generate assembly for a file
 FreakMatcher/matchers/freak.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.s
 .PHONY : FreakMatcher/matchers/freak.cpp.s
 
 FreakMatcher/matchers/hough_similarity_voting.o: FreakMatcher/matchers/hough_similarity_voting.cpp.o
@@ -501,7 +501,7 @@ FreakMatcher/matchers/hough_similarity_voting.o: FreakMatcher/matchers/hough_sim
 
 # target to build an object file
 FreakMatcher/matchers/hough_similarity_voting.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.o
 .PHONY : FreakMatcher/matchers/hough_similarity_voting.cpp.o
 
 FreakMatcher/matchers/hough_similarity_voting.i: FreakMatcher/matchers/hough_similarity_voting.cpp.i
@@ -510,7 +510,7 @@ FreakMatcher/matchers/hough_similarity_voting.i: FreakMatcher/matchers/hough_sim
 
 # target to preprocess a source file
 FreakMatcher/matchers/hough_similarity_voting.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.i
 .PHONY : FreakMatcher/matchers/hough_similarity_voting.cpp.i
 
 FreakMatcher/matchers/hough_similarity_voting.s: FreakMatcher/matchers/hough_similarity_voting.cpp.s
@@ -519,7 +519,7 @@ FreakMatcher/matchers/hough_similarity_voting.s: FreakMatcher/matchers/hough_sim
 
 # target to generate assembly for a file
 FreakMatcher/matchers/hough_similarity_voting.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.s
 .PHONY : FreakMatcher/matchers/hough_similarity_voting.cpp.s
 
 kpmFopen.o: kpmFopen.c.o
@@ -528,7 +528,7 @@ kpmFopen.o: kpmFopen.c.o
 
 # target to build an object file
 kpmFopen.c.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmFopen.c.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmFopen.c.o
 .PHONY : kpmFopen.c.o
 
 kpmFopen.i: kpmFopen.c.i
@@ -537,7 +537,7 @@ kpmFopen.i: kpmFopen.c.i
 
 # target to preprocess a source file
 kpmFopen.c.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmFopen.c.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmFopen.c.i
 .PHONY : kpmFopen.c.i
 
 kpmFopen.s: kpmFopen.c.s
@@ -546,7 +546,7 @@ kpmFopen.s: kpmFopen.c.s
 
 # target to generate assembly for a file
 kpmFopen.c.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmFopen.c.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmFopen.c.s
 .PHONY : kpmFopen.c.s
 
 kpmHandle.o: kpmHandle.cpp.o
@@ -555,7 +555,7 @@ kpmHandle.o: kpmHandle.cpp.o
 
 # target to build an object file
 kpmHandle.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.o
 .PHONY : kpmHandle.cpp.o
 
 kpmHandle.i: kpmHandle.cpp.i
@@ -564,7 +564,7 @@ kpmHandle.i: kpmHandle.cpp.i
 
 # target to preprocess a source file
 kpmHandle.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.i
 .PHONY : kpmHandle.cpp.i
 
 kpmHandle.s: kpmHandle.cpp.s
@@ -573,7 +573,7 @@ kpmHandle.s: kpmHandle.cpp.s
 
 # target to generate assembly for a file
 kpmHandle.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.s
 .PHONY : kpmHandle.cpp.s
 
 kpmMatching.o: kpmMatching.cpp.o
@@ -582,7 +582,7 @@ kpmMatching.o: kpmMatching.cpp.o
 
 # target to build an object file
 kpmMatching.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.o
 .PHONY : kpmMatching.cpp.o
 
 kpmMatching.i: kpmMatching.cpp.i
@@ -591,7 +591,7 @@ kpmMatching.i: kpmMatching.cpp.i
 
 # target to preprocess a source file
 kpmMatching.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.i
 .PHONY : kpmMatching.cpp.i
 
 kpmMatching.s: kpmMatching.cpp.s
@@ -600,7 +600,7 @@ kpmMatching.s: kpmMatching.cpp.s
 
 # target to generate assembly for a file
 kpmMatching.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.s
 .PHONY : kpmMatching.cpp.s
 
 kpmRefDataSet.o: kpmRefDataSet.cpp.o
@@ -609,7 +609,7 @@ kpmRefDataSet.o: kpmRefDataSet.cpp.o
 
 # target to build an object file
 kpmRefDataSet.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.o
 .PHONY : kpmRefDataSet.cpp.o
 
 kpmRefDataSet.i: kpmRefDataSet.cpp.i
@@ -618,7 +618,7 @@ kpmRefDataSet.i: kpmRefDataSet.cpp.i
 
 # target to preprocess a source file
 kpmRefDataSet.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.i
 .PHONY : kpmRefDataSet.cpp.i
 
 kpmRefDataSet.s: kpmRefDataSet.cpp.s
@@ -627,7 +627,7 @@ kpmRefDataSet.s: kpmRefDataSet.cpp.s
 
 # target to generate assembly for a file
 kpmRefDataSet.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.s
 .PHONY : kpmRefDataSet.cpp.s
 
 kpmResult.o: kpmResult.cpp.o
@@ -636,7 +636,7 @@ kpmResult.o: kpmResult.cpp.o
 
 # target to build an object file
 kpmResult.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.o
 .PHONY : kpmResult.cpp.o
 
 kpmResult.i: kpmResult.cpp.i
@@ -645,7 +645,7 @@ kpmResult.i: kpmResult.cpp.i
 
 # target to preprocess a source file
 kpmResult.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.i
 .PHONY : kpmResult.cpp.i
 
 kpmResult.s: kpmResult.cpp.s
@@ -654,7 +654,7 @@ kpmResult.s: kpmResult.cpp.s
 
 # target to generate assembly for a file
 kpmResult.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.s
 .PHONY : kpmResult.cpp.s
 
 kpmUtil.o: kpmUtil.cpp.o
@@ -663,7 +663,7 @@ kpmUtil.o: kpmUtil.cpp.o
 
 # target to build an object file
 kpmUtil.cpp.o:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.o
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.o
 .PHONY : kpmUtil.cpp.o
 
 kpmUtil.i: kpmUtil.cpp.i
@@ -672,7 +672,7 @@ kpmUtil.i: kpmUtil.cpp.i
 
 # target to preprocess a source file
 kpmUtil.cpp.i:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.i
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.i
 .PHONY : kpmUtil.cpp.i
 
 kpmUtil.s: kpmUtil.cpp.s
@@ -681,7 +681,7 @@ kpmUtil.s: kpmUtil.cpp.s
 
 # target to generate assembly for a file
 kpmUtil.cpp.s:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.s
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/KPM/CMakeFiles/KPM.dir/build.make ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.s
 .PHONY : kpmUtil.cpp.s
 
 # Help Target
@@ -765,6 +765,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

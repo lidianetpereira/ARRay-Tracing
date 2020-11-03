@@ -13,8 +13,8 @@ ARX/KPM/CMakeFiles/KPM.dir/kpmFopen.c.o
  ../ARX/KPM/../ARUtil/include/ARX/ARUtil/types.h
  ../ARX/KPM/include/ARX/KPM/kpm.h
  ../ARX/KPM/include/ARX/KPM/kpmType.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmFopen.c
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmFopen.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmFopen.c
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmFopen.h
  ARX/AR/include/ARX/AR/config.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp.o
  ../ARX/KPM/FreakMatcher/framework/error.h
@@ -25,22 +25,22 @@ ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/DoG_scale_invariant_detector.c
  ../ARX/KPM/FreakMatcher/math/math_utils.h
  ../ARX/KPM/FreakMatcher/math/matrix.h
  ../ARX/KPM/FreakMatcher/utils/point.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/DoG_scale_invariant_detector.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/interpolate.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/orientation_assignment.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/DoG_scale_invariant_detector.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/DoG_scale_invariant_detector.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/interpolate.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/orientation_assignment.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp.o
  ../ARX/KPM/FreakMatcher/framework/error.h
  ../ARX/KPM/FreakMatcher/framework/exception.h
  ../ARX/KPM/FreakMatcher/framework/image.h
  ../ARX/KPM/FreakMatcher/math/math_utils.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/gradients.cpp.o
  ../ARX/KPM/FreakMatcher/math/math_utils.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gradients.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gradients.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gradients.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gradients.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.o
  ../ARX/KPM/FreakMatcher/framework/error.h
  ../ARX/KPM/FreakMatcher/math/linear_algebra.h
@@ -48,9 +48,9 @@ ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/harris.cpp.o
  ../ARX/KPM/FreakMatcher/math/math_utils.h
  ../ARX/KPM/FreakMatcher/math/matrix.h
  ../ARX/KPM/FreakMatcher/utils/point.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/harris-inline.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/harris.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/harris.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/harris-inline.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/harris.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/harris.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.o
  ../ARX/KPM/FreakMatcher/framework/error.h
  ../ARX/KPM/FreakMatcher/framework/exception.h
@@ -59,10 +59,10 @@ ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/orientation_assignment.cpp.o
  ../ARX/KPM/FreakMatcher/math/math_io.h
  ../ARX/KPM/FreakMatcher/math/math_utils.h
  ../ARX/KPM/FreakMatcher/math/polynomial.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gradients.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/orientation_assignment.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/orientation_assignment.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gradients.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/orientation_assignment.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/orientation_assignment.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.o
  ../ARX/KPM/FreakMatcher/framework/error.h
  ../ARX/KPM/FreakMatcher/framework/exception.h
@@ -70,10 +70,10 @@ ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/detectors/pyramid.cpp.o
  ../ARX/KPM/FreakMatcher/math/indexing.h
  ../ARX/KPM/FreakMatcher/math/math_io.h
  ../ARX/KPM/FreakMatcher/math/math_utils.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/pyramid-inline.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/pyramid.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/pyramid.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/pyramid-inline.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/pyramid.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/detectors/pyramid.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.o
  ../ARX/KPM/FreakMatcher/Eigen/Cholesky
  ../ARX/KPM/FreakMatcher/Eigen/Core
@@ -326,28 +326,28 @@ ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/facade/visual_database_facade.cpp.o
  ../ARX/KPM/FreakMatcher/unsupported/Eigen/src/MatrixFunctions/StemFunction.h
  ../ARX/KPM/FreakMatcher/utils/partial_sort.h
  ../ARX/KPM/FreakMatcher/utils/point.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/facade/visual_database_facade.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/facade/visual_database_facade.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/facade/visual_database_facade.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/facade/visual_database_facade.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/date_time.cpp.o
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/image.cpp.o
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/exception.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/image.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/image.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/exception.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/image.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/image.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/logger.cpp.o
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/logger.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/logger.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/logger.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/logger.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/framework/timers.cpp.o
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/logger.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/timers.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/framework/timers.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/date_time.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/error.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/logger.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/timers.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/framework/timers.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.o
  ../ARX/KPM/FreakMatcher/detectors/gaussian_scale_space_pyramid.h
  ../ARX/KPM/FreakMatcher/detectors/interpolate.h
@@ -362,11 +362,11 @@ ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/freak.cpp.o
  ../ARX/KPM/FreakMatcher/math/math_utils.h
  ../ARX/KPM/FreakMatcher/math/matrix.h
  ../ARX/KPM/FreakMatcher/utils/point.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/feature_point.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/feature_store.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/freak.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/freak.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/freak84-inline.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/feature_point.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/feature_store.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/freak.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/freak.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/freak84-inline.h
 ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.o
  ../ARX/KPM/FreakMatcher/framework/error.h
  ../ARX/KPM/FreakMatcher/math/geometry.h
@@ -376,8 +376,8 @@ ARX/KPM/CMakeFiles/KPM.dir/FreakMatcher/matchers/hough_similarity_voting.cpp.o
  ../ARX/KPM/FreakMatcher/math/math_utils.h
  ../ARX/KPM/FreakMatcher/math/matrix.h
  ../ARX/KPM/FreakMatcher/utils/partial_sort.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/hough_similarity_voting.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/hough_similarity_voting.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/hough_similarity_voting.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/FreakMatcher/matchers/hough_similarity_voting.h
 ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.o
  ../ARX/KPM/../AR/include/ARX/AR/ar.h
  ../ARX/KPM/../AR/include/ARX/AR/arConfig.h
@@ -394,8 +394,8 @@ ARX/KPM/CMakeFiles/KPM.dir/kpmHandle.cpp.o
  ../ARX/KPM/FreakMatcher/utils/point.h
  ../ARX/KPM/include/ARX/KPM/kpm.h
  ../ARX/KPM/include/ARX/KPM/kpmType.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmHandle.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmPrivate.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmHandle.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmPrivate.h
  ARX/AR/include/ARX/AR/config.h
 ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.o
  ../ARX/KPM/../AR/include/ARX/AR/ar.h
@@ -413,8 +413,8 @@ ARX/KPM/CMakeFiles/KPM.dir/kpmMatching.cpp.o
  ../ARX/KPM/FreakMatcher/utils/point.h
  ../ARX/KPM/include/ARX/KPM/kpm.h
  ../ARX/KPM/include/ARX/KPM/kpmType.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmMatching.cpp
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmPrivate.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmMatching.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmPrivate.h
  ARX/AR/include/ARX/AR/config.h
 ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.o
  ../ARX/KPM/../AR/include/ARX/AR/ar.h
@@ -432,9 +432,9 @@ ARX/KPM/CMakeFiles/KPM.dir/kpmRefDataSet.cpp.o
  ../ARX/KPM/FreakMatcher/utils/point.h
  ../ARX/KPM/include/ARX/KPM/kpm.h
  ../ARX/KPM/include/ARX/KPM/kpmType.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmFopen.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmPrivate.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmRefDataSet.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmFopen.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmPrivate.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmRefDataSet.cpp
  ARX/AR/include/ARX/AR/config.h
 ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.o
  ../ARX/KPM/../AR/include/ARX/AR/ar.h
@@ -452,8 +452,8 @@ ARX/KPM/CMakeFiles/KPM.dir/kpmResult.cpp.o
  ../ARX/KPM/FreakMatcher/utils/point.h
  ../ARX/KPM/include/ARX/KPM/kpm.h
  ../ARX/KPM/include/ARX/KPM/kpmType.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmPrivate.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmResult.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmPrivate.h
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmResult.cpp
  ARX/AR/include/ARX/AR/config.h
 ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.o
  ../ARX/KPM/../AR/include/ARX/AR/ar.h
@@ -471,5 +471,5 @@ ARX/KPM/CMakeFiles/KPM.dir/kpmUtil.cpp.o
  ../ARX/KPM/FreakMatcher/utils/point.h
  ../ARX/KPM/include/ARX/KPM/kpm.h
  ../ARX/KPM/include/ARX/KPM/kpmType.h
- /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/KPM/kpmUtil.cpp
+ /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/KPM/kpmUtil.cpp
  ARX/AR/include/ARX/AR/config.h
