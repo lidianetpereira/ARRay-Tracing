@@ -545,7 +545,7 @@ void createGeometry()
     GeometryGroup geometry_groupMesh;
     Geometry glass_sphere2;
 
-    scene = 6;
+    scene = 0;
 
     switch(scene){
         case 0 : {
@@ -1182,7 +1182,7 @@ static void init(){
     ARLOGd("CWD is '%s'.\n", getcwd(buf, sizeof(buf)));
 #endif
     //char *resourcesDir = arUtilGetResourcesDirectoryPath(AR_UTIL_RESOURCES_DIRECTORY_BEHAVIOR_BEST);
-    char *resourcesDir = "/home/lidiane/CLionProjects/optix/SDK";
+    char *resourcesDir = "../";
     ARLOGd("Resources are in'%s'.\n", resourcesDir);
     for (int i = 0; i < markerCount; i++) {
         std::string markerConfig = "single;" + std::string(resourcesDir) + '/' + markers[i].name + ';' + std::to_string(markers[i].height);

@@ -1,7 +1,0 @@
-/home/lidiane/CLionProjects/axisView/build/CMakeFiles/install/strip.dir
-/home/lidiane/CLionProjects/axisView/build/CMakeFiles/edit_cache.dir
-/home/lidiane/CLionProjects/axisView/build/CMakeFiles/axisView.dir
-/home/lidiane/CLionProjects/axisView/build/CMakeFiles/list_install_components.dir
-/home/lidiane/CLionProjects/axisView/build/CMakeFiles/install/local.dir
-/home/lidiane/CLionProjects/axisView/build/CMakeFiles/rebuild_cache.dir
-/home/lidiane/CLionProjects/axisView/build/CMakeFiles/install.dir

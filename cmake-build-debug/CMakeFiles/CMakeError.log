@@ -1,24 +1,24 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_c8e8a/fast && /usr/bin/make -f CMakeFiles/cmTC_c8e8a.dir/build.make CMakeFiles/cmTC_c8e8a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_1b27c/fast && /usr/bin/make -f CMakeFiles/cmTC_1b27c.dir/build.make CMakeFiles/cmTC_1b27c.dir/build
 make[1]: Entering directory '/home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c8e8a.dir/src.c.o
-/usr/bin/cc   -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c8e8a.dir/src.c.o   -c /home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_c8e8a
-/home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8e8a.dir/link.txt --verbose=1
-/usr/bin/cc -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_c8e8a.dir/src.c.o  -o cmTC_c8e8a 
-CMakeFiles/cmTC_c8e8a.dir/src.c.o: Na função "main":
+Building C object CMakeFiles/cmTC_1b27c.dir/src.c.o
+/usr/bin/cc   -fPIC -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_1b27c.dir/src.c.o   -c /home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1b27c
+/home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b27c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_1b27c.dir/src.c.o  -o cmTC_1b27c 
+CMakeFiles/cmTC_1b27c.dir/src.c.o: Na função "main":
 src.c:(.text+0x3e): referência não definida para "pthread_create"
 src.c:(.text+0x4a): referência não definida para "pthread_detach"
 src.c:(.text+0x5b): referência não definida para "pthread_join"
 src.c:(.text+0x6f): referência não definida para "pthread_atfork"
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c8e8a.dir/build.make:86: recipe for target 'cmTC_c8e8a' failed
-make[1]: *** [cmTC_c8e8a] Error 1
+CMakeFiles/cmTC_1b27c.dir/build.make:86: recipe for target 'cmTC_1b27c' failed
+make[1]: *** [cmTC_1b27c] Error 1
 make[1]: Leaving directory '/home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_c8e8a/fast' failed
-make: *** [cmTC_c8e8a/fast] Error 2
+Makefile:121: recipe for target 'cmTC_1b27c/fast' failed
+make: *** [cmTC_1b27c/fast] Error 2
 
 
 Source file was:
@@ -44,20 +44,20 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_eb99e/fast && /usr/bin/make -f CMakeFiles/cmTC_eb99e.dir/build.make CMakeFiles/cmTC_eb99e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_f7625/fast && /usr/bin/make -f CMakeFiles/cmTC_f7625.dir/build.make CMakeFiles/cmTC_f7625.dir/build
 make[1]: Entering directory '/home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_eb99e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eb99e.dir/CheckFunctionExists.c.o   -c /home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/CheckFunctionExists.c
-Linking C executable cmTC_eb99e
-/home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb99e.dir/link.txt --verbose=1
-/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_eb99e.dir/CheckFunctionExists.c.o  -o cmTC_eb99e -lpthreads 
+Building C object CMakeFiles/cmTC_f7625.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f7625.dir/CheckFunctionExists.c.o   -c /home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/share/cmake-3.15/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f7625
+/home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7625.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f7625.dir/CheckFunctionExists.c.o  -o cmTC_f7625 -lpthreads 
 /usr/bin/ld: não foi possível localizar -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_eb99e.dir/build.make:86: recipe for target 'cmTC_eb99e' failed
-make[1]: *** [cmTC_eb99e] Error 1
+CMakeFiles/cmTC_f7625.dir/build.make:86: recipe for target 'cmTC_f7625' failed
+make[1]: *** [cmTC_f7625] Error 1
 make[1]: Leaving directory '/home/lidiane/ARRay-TracingGit/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_eb99e/fast' failed
-make: *** [cmTC_eb99e/fast] Error 2
+Makefile:121: recipe for target 'cmTC_f7625/fast' failed
+make: *** [cmTC_f7625/fast] Error 2
 
 
 

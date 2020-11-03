@@ -83,7 +83,7 @@ project(OptiX-Samples)
 
 # This enforces a particular version of CMake that we require to process the script files
 # properly.
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8.8 FATAL_ERROR)
 
 # As of CMake 2.6 policies were introduced in order to provide a mechanism for
 # adding backwards compatibility one feature at a time.  We will just specify
@@ -123,18 +123,18 @@ if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
 endif()
 
 # Search prefix.
-list(APPEND CMAKE_MODULE_PATH "${ARTOOLKITX_HOME}/cmake")
+list(APPEND CMAKE_MODULE_PATH "${ARTOOLKITX_HOME}/artoolkitXSource/cmake")
 if(ARX_TARGET_PLATFORM_VARIANT)
-  list(APPEND CMAKE_FIND_ROOT_PATH "${ARTOOLKITX_HOME}/depends/linux-${ARX_TARGET_PLATFORM_VARIANT}")
+  list(APPEND CMAKE_FIND_ROOT_PATH "${ARTOOLKITX_HOME}/artoolkitXSource/depends/linux-${ARX_TARGET_PLATFORM_VARIANT}")
 else()
-  list(APPEND CMAKE_FIND_ROOT_PATH "${ARTOOLKITX_HOME}/depends/linux")
+  list(APPEND CMAKE_FIND_ROOT_PATH "${ARTOOLKITX_HOME}/artoolkitXSource/depends/linux")
 endif()
 
 # Installation settings.
 # If the user didn't define CMAKE_INSTALL_PREFIX, set a local install destination.
 # When building packages, this will typically be overridden with DESTDIR (e.g. "make install DESTDIR=/tmp").
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-  set (CMAKE_INSTALL_PREFIX "${ARTOOLKITX_HOME}/SDK" CACHE PATH "default install path" FORCE )
+  set (CMAKE_INSTALL_PREFIX "${ARTOOLKITX_HOME}/ARSDK" CACHE PATH "default install path" FORCE )
 endif()
 
 # Enable C++11 for GCC/Clang compilers.
@@ -159,7 +159,7 @@ if ((OPENGL_FOUND OR OpenGL3_FOUND) AND OPENGLES2_FOUND)
   endif()
 endif()
 
-include(${ARTOOLKITX_HOME}/SDK/lib/ARX/ARX.cmake)
+include(${ARTOOLKITX_HOME}/ARSDK/lib/ARX/ARX.cmake)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${DEVICE_FLAGS} -DGL_GLEXT_PROTOTYPES=1 -fPIC")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${DEVICE_FLAGS} -DGL_GLEXT_PROTOTYPES=1 -fPIC")
@@ -255,7 +255,7 @@ if( APPLE )
 endif()
 
 # Locate the NVRT distribution.  Search the SDK first, then look in the system.
-set(OptiX_INSTALL_DIR "${CMAKE_SOURCE_DIR}/../" CACHE PATH "Path to OptiX installed location.")
+set(OptiX_INSTALL_DIR "${CMAKE_CURRENT_SOURCE_DIR}" CACHE PATH "Path to OptiX installed location.")
 
 # Search for the OptiX libraries and include files.
 find_package(OptiX REQUIRED)
@@ -367,7 +367,6 @@ function(OPTIX_add_sample_executable target_name)
     CUDA_WRAP_SRCS( ${target_name} PTX generated_files ${source_files} ${cmake_options} OPTIONS ${options} )
   endif()
 
-
   set(RESOURCES
           hiro.patt
           kanji.patt
@@ -389,12 +388,12 @@ function(OPTIX_add_sample_executable target_name)
     )
 
   add_dependencies(${target_name}
-    ARX
-    )
+          ARX
+          )
 
   set_target_properties(${target_name} PROPERTIES
-    INSTALL_RPATH "\$ORIGIN/../lib"
-  )
+          INSTALL_RPATH "\$ORIGIN/../lib"
+          )
 
   # Most of the samples link against the sutil library and the optix library.  Here is the
   # rule that specifies this linkage.
@@ -415,15 +414,14 @@ function(OPTIX_add_sample_executable target_name)
   if(USING_GNU_CXX)
     target_link_libraries( ${target_name} m ) # Explicitly link against math library (C samples don't do that by default)
   endif()
-
   if(OpenGL3_FOUND)
     target_include_directories(${target_name} PRIVATE ${OpenGL3_INCLUDE_PATH})
   endif()
   target_include_directories(${target_name} PRIVATE ${GLUT_INCLUDE_DIRS})
 
   install(TARGETS ${target_name}
-    RUNTIME DESTINATION bin
-  )
+          RUNTIME DESTINATION bin
+          )
 
   install(FILES ${RESOURCES} DESTINATION share/${target_name})
 
@@ -487,3 +485,4 @@ endif(WIN32)
 # We use this variable to set certain defaults only on the first pass, so that we don't
 # continually set them over and over again.
 set(PASSED_FIRST_CONFIGURE ON CACHE INTERNAL "Already Configured once?")
+

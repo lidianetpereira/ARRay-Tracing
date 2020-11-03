@@ -28,7 +28,7 @@
 
 #include <optix.h>
 #include <optixu/optixu_math_namespace.h>
-#include <common.h>
+#include "common.h"
 #include "helpers.h"
 
 using namespace optix;

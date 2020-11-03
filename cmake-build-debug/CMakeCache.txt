@@ -105,8 +105,8 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
-//default install path
-CMAKE_INSTALL_PREFIX:PATH=/home/lidiane/ARRay-TracingGit/SDK
+//Install path prefix, prepended onto install directories.
+CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -266,16 +266,17 @@ CUDA_NVCC_EXECUTABLE:FILEPATH=/usr/local/cuda/bin/nvcc
 //Semi-colon delimit multiple arguments.
 CUDA_NVCC_FLAGS:STRING=-arch;sm_30;--use_fast_math
 
-//Semi-colon delimit multiple arguments.
+//Semi-colon delimit multiple arguments. during DEBUG builds.
 CUDA_NVCC_FLAGS_DEBUG:STRING=
 
-//Semi-colon delimit multiple arguments.
+//Semi-colon delimit multiple arguments. during MINSIZEREL builds.
 CUDA_NVCC_FLAGS_MINSIZEREL:STRING=
 
-//Semi-colon delimit multiple arguments.
+//Semi-colon delimit multiple arguments. during RELEASE builds.
 CUDA_NVCC_FLAGS_RELEASE:STRING=
 
-//Semi-colon delimit multiple arguments.
+//Semi-colon delimit multiple arguments. during RELWITHDEBINFO
+// builds.
 CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
 
 //Semi-colon delimit multiple arguments.
@@ -349,6 +350,36 @@ CUDA_nppc_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppc.so
 //"nppi" library
 CUDA_nppi_LIBRARY:FILEPATH=CUDA_nppi_LIBRARY-NOTFOUND
 
+//"nppial" library
+CUDA_nppial_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppial.so
+
+//"nppicc" library
+CUDA_nppicc_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppicc.so
+
+//"nppicom" library
+CUDA_nppicom_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppicom.so
+
+//"nppidei" library
+CUDA_nppidei_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppidei.so
+
+//"nppif" library
+CUDA_nppif_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppif.so
+
+//"nppig" library
+CUDA_nppig_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppig.so
+
+//"nppim" library
+CUDA_nppim_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppim.so
+
+//"nppist" library
+CUDA_nppist_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppist.so
+
+//"nppisu" library
+CUDA_nppisu_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppisu.so
+
+//"nppitc" library
+CUDA_nppitc_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnppitc.so
+
 //"npps" library
 CUDA_npps_LIBRARY:FILEPATH=/usr/local/cuda/lib64/libnpps.so
 
@@ -401,34 +432,34 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
 //Path to a file.
-OpenCV_INCLUDE_DIR:PATH=/usr/include
+OpenCV_INCLUDE_DIR:PATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/include
 
 //Path to a library.
-OpenCV_LIB_CALIB32:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so
+OpenCV_LIB_CALIB32:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_calib3d.so
 
 //Path to a library.
-OpenCV_LIB_CORE:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_core.so
+OpenCV_LIB_CORE:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_core.so
 
 //Path to a library.
-OpenCV_LIB_FEATURES2D:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_features2d.so
+OpenCV_LIB_FEATURES2D:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_features2d.so
 
 //Path to a library.
-OpenCV_LIB_FLANN:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_flann.so
+OpenCV_LIB_FLANN:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_flann.so
 
 //Path to a library.
-OpenCV_LIB_HIGHGUI:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_highgui.so
+OpenCV_LIB_HIGHGUI:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_highgui.so
 
 //Path to a library.
-OpenCV_LIB_IMGCODECS:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so
+OpenCV_LIB_IMGCODECS:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_imgcodecs.so
 
 //Path to a library.
-OpenCV_LIB_IMGPROC:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so
+OpenCV_LIB_IMGPROC:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_imgproc.so
 
 //Path to a library.
-OpenCV_LIB_VIDEO:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_video.so
+OpenCV_LIB_VIDEO:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_video.so
 
 //Path to a library.
-OpenCV_LIB_VIDEOIO:FILEPATH=/usr/lib/x86_64-linux-gnu/libopencv_videoio.so
+OpenCV_LIB_VIDEOIO:FILEPATH=/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_videoio.so
 
 //The directory where GL/glcorearb.h resides
 OpenGL3_INCLUDE_PATH:PATH=/usr/include
@@ -441,6 +472,9 @@ OptiX-Samples_BINARY_DIR:STATIC=/home/lidiane/ARRay-TracingGit/cmake-build-debug
 
 //Value Computed by CMake
 OptiX-Samples_SOURCE_DIR:STATIC=/home/lidiane/ARRay-TracingGit
+
+//The directory containing a CMake configuration file for OptiX.
+OptiX_DIR:PATH=OptiX_DIR-NOTFOUND
 
 //Path to a file.
 OptiX_INCLUDE:PATH=OptiX_INCLUDE-NOTFOUND
@@ -702,6 +736,26 @@ CUDA_make2cmake:INTERNAL=/home/lidiane/ARRay-TracingGit/CMake/FindCUDA/make2cmak
 CUDA_nppc_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nppi_LIBRARY
 CUDA_nppi_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppial_LIBRARY
+CUDA_nppial_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppicc_LIBRARY
+CUDA_nppicc_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppicom_LIBRARY
+CUDA_nppicom_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppidei_LIBRARY
+CUDA_nppidei_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppif_LIBRARY
+CUDA_nppif_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppig_LIBRARY
+CUDA_nppig_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppim_LIBRARY
+CUDA_nppim_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppist_LIBRARY
+CUDA_nppist_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppisu_LIBRARY
+CUDA_nppisu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppitc_LIBRARY
+CUDA_nppitc_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_npps_LIBRARY
 CUDA_npps_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nvrtc_LIBRARY
@@ -715,7 +769,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda][/usr/local/cuda/bin
 //Details about finding GLUT
 FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/usr/local/lib/libglut.so][/usr/local/include][v()]
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;/usr/lib/x86_64-linux-gnu/libopencv_videoio.so;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so;/usr/lib/x86_64-linux-gnu/libopencv_video.so;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;/usr/lib/x86_64-linux-gnu/libopencv_core.so][/usr/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_calib3d.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_features2d.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_flann.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_highgui.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_videoio.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_imgcodecs.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_video.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_imgproc.so;/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib/libopencv_core.so][/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/include][v()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding OpenGL3
