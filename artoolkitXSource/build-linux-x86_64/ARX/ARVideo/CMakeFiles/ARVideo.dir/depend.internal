@@ -14,8 +14,8 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/Dummy/videoDummy.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.h
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -30,8 +30,8 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.h
  /usr/include/glib-2.0/glib-object.h
  /usr/include/glib-2.0/glib.h
  /usr/include/glib-2.0/glib/deprecated/gallocator.h
@@ -218,8 +218,8 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/Image/videoImage.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/videoImage.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/videoImage.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Image/videoImage.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Image/videoImage.h
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -235,9 +235,9 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoRGBA.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cparamSearch.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/cparamSearch.h
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -255,10 +255,10 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Android/sqlite3.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cparamSearch.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/cparamSearch.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/nxjson.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Android/sqlite3.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/cparamSearch.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/cparamSearch.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/nxjson.h
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -274,9 +274,9 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -291,9 +291,9 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Format.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Format.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -308,9 +308,9 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Setting.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Private.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394Setting.c
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -325,8 +325,8 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/nxjson.c
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/nxjson.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/nxjson.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/nxjson.h
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -341,7 +341,7 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/video.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/video.c
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -357,16 +357,16 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/AVFoundation/videoAVFoundation.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Android/videoAndroid.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Image/videoImage.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/WindowsMediaCapture/videoWindowsMediaCapture.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/WindowsMediaFoundation/videoWindowsMediaFoundation.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/video2.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/AVFoundation/videoAVFoundation.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Android/videoAndroid.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Dummy/videoDummy.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/GStreamer/videoGStreamer.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Image/videoImage.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/Video4Linux2/videoV4L2.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/WindowsMediaCapture/videoWindowsMediaCapture.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/WindowsMediaFoundation/videoWindowsMediaFoundation.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/libdc1394/video1394.h
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/video2.c
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -381,7 +381,7 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoAspectRatio.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/videoAspectRatio.c
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -396,7 +396,7 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoLuma.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/videoLuma.c
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -412,7 +412,7 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoRGBA.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoRGBA.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/videoRGBA.c
  ARX/AR/include/ARX/AR/config.h
 ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.o
  ../ARX/ARVideo/../AR/include/ARX/AR/ar.h
@@ -427,5 +427,5 @@ ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.o
  ../ARX/ARVideo/include/ARX/ARVideo/video.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoConfig.h
  ../ARX/ARVideo/include/ARX/ARVideo/videoLuma.h
- /home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARVideo/videoSaveImage.c
+ /home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARVideo/videoSaveImage.c
  ARX/AR/include/ARX/AR/config.h

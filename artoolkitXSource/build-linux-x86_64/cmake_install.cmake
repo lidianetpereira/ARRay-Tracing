@@ -1,8 +1,8 @@
-# Install script for directory: /home/lidiane/ARRay-TracingGit/artoolkitXSource
+# Install script for directory: /home/lidiane/Documentos/arraytracing/artoolkitXSource
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lidiane/ARRay-TracingGit/artoolkitXSource/../SDK")
+  set(CMAKE_INSTALL_PREFIX "/home/lidiane/Documentos/arraytracing/artoolkitXSource/../SDK")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/cmake_install.cmake")
-  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/depends/cmake_install.cmake")
-  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/cmake_install.cmake")
+  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX/cmake_install.cmake")
+  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/depends/cmake_install.cmake")
+  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

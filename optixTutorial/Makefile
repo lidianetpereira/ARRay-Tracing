@@ -48,10 +48,10 @@ RM = /home/lidiane/Downloads/CLion-2019.3.5/clion-2019.3.5/bin/cmake/linux/bin/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit
+CMAKE_SOURCE_DIR = /home/lidiane/Documentos/arraytracing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit
+CMAKE_BINARY_DIR = /home/lidiane/Documentos/arraytracing
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/ARRay-TracingGit && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/CMakeFiles /home/lidiane/ARRay-TracingGit/optixTutorial/CMakeFiles/progress.marks
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/CMakeFiles 0
+	cd /home/lidiane/Documentos/arraytracing && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/CMakeFiles /home/lidiane/Documentos/arraytracing/optixTutorial/CMakeFiles/progress.marks
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/clean
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/preinstall
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/preinstall
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/ARRay-TracingGit && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/Documentos/arraytracing && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 optixTutorial/CMakeFiles/optixTutorial.dir/rule:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/CMakeFiles/optixTutorial.dir/rule
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f CMakeFiles/Makefile2 optixTutorial/CMakeFiles/optixTutorial.dir/rule
 .PHONY : optixTutorial/CMakeFiles/optixTutorial.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ optixTutorial: optixTutorial/CMakeFiles/optixTutorial.dir/rule
 
 # fast build rule for target.
 optixTutorial/fast:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/build
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/build
 .PHONY : optixTutorial/fast
 
 draw.o: draw.cpp.o
@@ -177,7 +177,7 @@ draw.o: draw.cpp.o
 
 # target to build an object file
 draw.cpp.o:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/draw.cpp.o
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/draw.cpp.o
 .PHONY : draw.cpp.o
 
 draw.i: draw.cpp.i
@@ -186,7 +186,7 @@ draw.i: draw.cpp.i
 
 # target to preprocess a source file
 draw.cpp.i:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/draw.cpp.i
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/draw.cpp.i
 .PHONY : draw.cpp.i
 
 draw.s: draw.cpp.s
@@ -195,7 +195,7 @@ draw.s: draw.cpp.s
 
 # target to generate assembly for a file
 draw.cpp.s:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/draw.cpp.s
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/draw.cpp.s
 .PHONY : draw.cpp.s
 
 optixTutorial.o: optixTutorial.cpp.o
@@ -204,7 +204,7 @@ optixTutorial.o: optixTutorial.cpp.o
 
 # target to build an object file
 optixTutorial.cpp.o:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/optixTutorial.cpp.o
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/optixTutorial.cpp.o
 .PHONY : optixTutorial.cpp.o
 
 optixTutorial.i: optixTutorial.cpp.i
@@ -213,7 +213,7 @@ optixTutorial.i: optixTutorial.cpp.i
 
 # target to preprocess a source file
 optixTutorial.cpp.i:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/optixTutorial.cpp.i
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/optixTutorial.cpp.i
 .PHONY : optixTutorial.cpp.i
 
 optixTutorial.s: optixTutorial.cpp.s
@@ -222,7 +222,7 @@ optixTutorial.s: optixTutorial.cpp.s
 
 # target to generate assembly for a file
 optixTutorial.cpp.s:
-	cd /home/lidiane/ARRay-TracingGit && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/optixTutorial.cpp.s
+	cd /home/lidiane/Documentos/arraytracing && $(MAKE) -f optixTutorial/CMakeFiles/optixTutorial.dir/build.make optixTutorial/CMakeFiles/optixTutorial.dir/optixTutorial.cpp.s
 .PHONY : optixTutorial.cpp.s
 
 # Help Target
@@ -255,6 +255,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/ARRay-TracingGit && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/Documentos/arraytracing && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

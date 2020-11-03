@@ -102,13 +102,13 @@ ARX/AR/ar.h
 ARX/AR/param.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DCreateHandle.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/ar3DCreateHandle.c
 ARX/AR/ar.h
 -
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/ar3DUtil.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/ar3DUtil.c
 stdlib.h
 -
 math.h
@@ -118,7 +118,7 @@ ARX/AR/ar.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arCreateHandle.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arCreateHandle.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -126,7 +126,7 @@ stdio.h
 math.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arDetectMarker.c
 stdio.h
 -
 ARX/AR/ar.h
@@ -134,33 +134,33 @@ ARX/AR/ar.h
 ARX/AR/arImageProc.h
 -
 arRefineCorners.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arRefineCorners.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arDetectMarker2.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arDetectMarker2.c
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arFilterTransMat.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arFilterTransMat.c
 ARX/AR/arFilterTransMat.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetLine.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arGetLine.c
 stdio.h
 -
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetMarkerInfo.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arGetMarkerInfo.c
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMat.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arGetTransMat.c
 ARX/AR/ar.h
 -
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arGetTransMatStereo.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arGetTransMatStereo.c
 stdlib.h
 -
 math.h
@@ -168,7 +168,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arImageProc.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arImageProc.c
 string.h
 -
 ARX/AR/arImageProc.h
@@ -176,7 +176,7 @@ ARX/AR/arImageProc.h
 Accelerate/Accelerate.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabeling.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabeling.c
 stdlib.h
 -
 stdio.h
@@ -186,13 +186,13 @@ ARX/AR/ar.h
 ARX/AR/config.h
 -
 arLabelingSub/arLabelingPrivate.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingPrivate.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingPrivate.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingPrivate.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingPrivate.h
 ARX/AR/config.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 stdlib.h
 -
 stdio.h
@@ -202,73 +202,73 @@ string.h
 ARX/AR/ar.h
 -
 arLabelingPrivate.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingPrivate.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingPrivate.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBIC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBIC.c
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBRC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBRC.c
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBZ.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDBZ.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWIC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWIC.c
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWRC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWRC.c
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWZ.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubDWZ.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBIC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBIC.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBRC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBRC.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBZ.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEBZ.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWIC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWIC.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWRC.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWRC.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWZ.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSubEWZ.c
 ARX/AR/config.h
 -
 arLabelingSub.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arLabelingSub/arLabelingSub.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiEditConfig.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arMultiEditConfig.c
 ARX/AR/ar.h
 -
 ARX/AR/arMulti.h
@@ -276,7 +276,7 @@ ARX/AR/arMulti.h
 string.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiFreeConfig.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arMultiFreeConfig.c
 stdio.h
 -
 stdlib.h
@@ -288,7 +288,7 @@ ARX/AR/ar.h
 ARX/AR/arMulti.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMat.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arMultiGetTransMat.c
 stdio.h
 -
 stdlib.h
@@ -300,7 +300,7 @@ ARX/AR/ar.h
 ARX/AR/arMulti.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiGetTransMatStereo.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arMultiGetTransMatStereo.c
 stdio.h
 -
 stdlib.h
@@ -312,7 +312,7 @@ ARX/AR/ar.h
 ARX/AR/arMulti.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arMultiReadConfigFile.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arMultiReadConfigFile.c
 stdio.h
 -
 stdlib.h
@@ -330,11 +330,11 @@ ARX/AR/ar.h
 ARX/AR/arMulti.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattAttach.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arPattAttach.c
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattCreateHandle.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arPattCreateHandle.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -342,7 +342,7 @@ stdio.h
 math.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattGetID.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arPattGetID.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -358,7 +358,7 @@ GL/gl.h
 OpenGL/gl.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattLoad.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arPattLoad.c
 stdio.h
 -
 math.h
@@ -370,17 +370,17 @@ string.h
 ARX/ARUtil/file_utils.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arPattSave.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arPattSave.c
 stdio.h
 -
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arRefineCorners.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arRefineCorners.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/arUtil.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/arUtil.c
 ARX/AR/ar.h
 -
 math.h
@@ -406,7 +406,7 @@ Foundation/Foundation.h
 ARX/ARUtil/file_utils.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCalibStereo.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpCalibStereo.c
 stdio.h
 -
 stdlib.h
@@ -420,7 +420,7 @@ ARX/AR/icpCore.h
 ARX/AR/icpCalib.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpCore.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpCore.c
 stdio.h
 -
 stdlib.h
@@ -432,7 +432,7 @@ ARX/AR/ar.h
 ARX/AR/icpCore.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpHandle.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpHandle.c
 stdio.h
 -
 stdlib.h
@@ -444,7 +444,7 @@ ARX/AR/ar.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPoint.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpPoint.c
 stdio.h
 -
 stdlib.h
@@ -458,7 +458,7 @@ ARX/AR/matrix.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpPointRobust.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpPointRobust.c
 stdio.h
 -
 stdlib.h
@@ -470,7 +470,7 @@ ARX/AR/ar.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoHandle.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpStereoHandle.c
 stdio.h
 -
 stdlib.h
@@ -482,7 +482,7 @@ ARX/AR/ar.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPoint.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpStereoPoint.c
 stdio.h
 -
 stdlib.h
@@ -494,7 +494,7 @@ ARX/AR/ar.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpStereoPointRobust.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpStereoPointRobust.c
 stdio.h
 -
 stdlib.h
@@ -506,7 +506,7 @@ ARX/AR/ar.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/icpUtil.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/icpUtil.c
 stdio.h
 -
 stdlib.h
@@ -518,7 +518,7 @@ ARX/AR/ar.h
 ARX/AR/icp.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAlloc.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mAlloc.c
 stdio.h
 -
 math.h
@@ -530,7 +530,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocDup.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mAllocDup.c
 stdio.h
 -
 math.h
@@ -542,7 +542,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocInv.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mAllocInv.c
 stdio.h
 -
 math.h
@@ -554,7 +554,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocMul.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mAllocMul.c
 stdio.h
 -
 math.h
@@ -566,7 +566,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocTrans.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mAllocTrans.c
 stdio.h
 -
 math.h
@@ -578,7 +578,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mAllocUnit.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mAllocUnit.c
 stdio.h
 -
 math.h
@@ -590,7 +590,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDet.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mDet.c
 stdio.h
 -
 math.h
@@ -598,7 +598,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDisp.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mDisp.c
 stdio.h
 -
 math.h
@@ -606,7 +606,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mDup.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mDup.c
 stdio.h
 -
 math.h
@@ -614,7 +614,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mFree.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mFree.c
 stdio.h
 -
 math.h
@@ -626,7 +626,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mInv.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mInv.c
 stdio.h
 -
 math.h
@@ -634,7 +634,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mMul.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mMul.c
 stdio.h
 -
 math.h
@@ -642,7 +642,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mPCA.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mPCA.c
 stdio.h
 -
 math.h
@@ -650,7 +650,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mSelfInv.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mSelfInv.c
 stdio.h
 -
 math.h
@@ -658,7 +658,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mTrans.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mTrans.c
 stdio.h
 -
 math.h
@@ -666,7 +666,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/mUnit.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/mUnit.c
 stdio.h
 -
 math.h
@@ -674,7 +674,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramChangeSize.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramChangeSize.c
 stdio.h
 -
 math.h
@@ -682,7 +682,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramClear.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramClear.c
 stdio.h
 -
 math.h
@@ -690,7 +690,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDecomp.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramDecomp.c
 stdio.h
 -
 math.h
@@ -698,7 +698,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDisp.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramDisp.c
 stdio.h
 -
 stdarg.h
@@ -706,7 +706,7 @@ stdarg.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramDistortion.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramDistortion.c
 stdio.h
 -
 math.h
@@ -714,7 +714,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramFile.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramFile.c
 stdio.h
 -
 stdarg.h
@@ -726,11 +726,11 @@ ARX/AR/ar.h
 errno.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGL.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramGL.c
 ARX/AR/paramGL.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramGetPerspective.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramGetPerspective.c
 stdio.h
 -
 math.h
@@ -738,7 +738,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/paramLT.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/paramLT.c
 stdio.h
 -
 string.h
@@ -750,7 +750,7 @@ ARX/AR/ar.h
 ARX/AR/param.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vAlloc.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/vAlloc.c
 stdio.h
 -
 malloc.h
@@ -762,7 +762,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vDisp.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/vDisp.c
 stdio.h
 -
 math.h
@@ -770,7 +770,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vFree.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/vFree.c
 stdio.h
 -
 math.h
@@ -782,7 +782,7 @@ stdlib.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vHouse.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/vHouse.c
 stdio.h
 -
 math.h
@@ -790,7 +790,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vInnerP.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/vInnerP.c
 stdlib.h
 -
 stdio.h
@@ -800,7 +800,7 @@ math.h
 ARX/AR/ar.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR/vTridiag.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR/vTridiag.c
 stdio.h
 -
 math.h

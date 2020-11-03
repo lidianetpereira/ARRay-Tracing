@@ -112,7 +112,7 @@ OpenGL/gl3.h
 GL/glcorearb.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg.c
 ARX/ARG/arg.h
 -
 OpenGL/gl3.h
@@ -132,15 +132,15 @@ GLES2/gl2.h
 string.h
 -
 arg_gl.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl.h
 arg_gl3.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl3.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl3.h
 arg_gles2.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gles2.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gles2.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl.c
 arg_gl.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl.h
 stdio.h
 -
 string.h
@@ -150,9 +150,9 @@ windows.h
 GL/gl.h
 -
 GL/glext.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/GL/glext.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/GL/glext.h
 GL/wglext.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/GL/wglext.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/GL/wglext.h
 GL/glext.h
 -
 GL/glx.h
@@ -162,13 +162,13 @@ OpenGL/gl.h
 OpenGL/glext.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl.h
 arg_private.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_private.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_private.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl3.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl3.c
 arg_gl3.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl3.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl3.h
 OpenGL/gl3.h
 -
 GL/glcorearb.h
@@ -184,13 +184,13 @@ ARX/ARG/shader_gl.h
 windows.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gl3.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gl3.h
 arg_private.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_private.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_private.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gles2.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gles2.c
 arg_gles2.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gles2.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gles2.h
 ARX/ARG/glStateCache2.h
 -
 stdio.h
@@ -202,15 +202,15 @@ ARX/ARG/mtx.h
 ARX/ARG/shader_gl.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_gles2.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_gles2.h
 arg_private.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_private.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_private.h
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/arg_private.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/arg_private.h
 ARX/ARG/arg.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/glStateCache2.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/glStateCache2.c
 ARX/ARG/glStateCache2.h
 -
 stddef.h
@@ -222,13 +222,13 @@ string.h
 float.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/mtx.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/mtx.c
 math.h
 -
 ARX/ARG/mtx.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/ARG/shader_gl.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/ARG/shader_gl.c
 ARX/ARG/shader_gl.h
 -
 stdio.h

@@ -1,8 +1,8 @@
-# Install script for directory: /home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/common/src
+# Install script for directory: /home/lidiane/Documentos/arraytracing/artoolkitXSource/depends/common/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lidiane/ARRay-TracingGit/artoolkitXSource/../SDK")
+  set(CMAKE_INSTALL_PREFIX "/home/lidiane/Documentos/arraytracing/artoolkitXSource/../SDK")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/depends/common/src/Eden/cmake_install.cmake")
+  include("/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/depends/common/src/Eden/cmake_install.cmake")
 
 endif()
 

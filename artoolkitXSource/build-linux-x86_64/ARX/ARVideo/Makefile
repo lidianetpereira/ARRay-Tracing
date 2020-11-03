@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource
+CMAKE_SOURCE_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64
+CMAKE_BINARY_DIR = /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/ARVideo/CMakeFiles/progress.marks
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX/ARVideo/CMakeFiles/progress.marks
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/clean
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/preinstall
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/preinstall
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ARX/ARVideo/CMakeFiles/ARVideo.dir/rule:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/CMakeFiles/ARVideo.dir/rule
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f CMakeFiles/Makefile2 ARX/ARVideo/CMakeFiles/ARVideo.dir/rule
 .PHONY : ARX/ARVideo/CMakeFiles/ARVideo.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ ARVideo: ARX/ARVideo/CMakeFiles/ARVideo.dir/rule
 
 # fast build rule for target.
 ARVideo/fast:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/build
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/build
 .PHONY : ARVideo/fast
 
 Dummy/videoDummy.o: Dummy/videoDummy.c.o
@@ -177,7 +177,7 @@ Dummy/videoDummy.o: Dummy/videoDummy.c.o
 
 # target to build an object file
 Dummy/videoDummy.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Dummy/videoDummy.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Dummy/videoDummy.c.o
 .PHONY : Dummy/videoDummy.c.o
 
 Dummy/videoDummy.i: Dummy/videoDummy.c.i
@@ -186,7 +186,7 @@ Dummy/videoDummy.i: Dummy/videoDummy.c.i
 
 # target to preprocess a source file
 Dummy/videoDummy.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Dummy/videoDummy.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Dummy/videoDummy.c.i
 .PHONY : Dummy/videoDummy.c.i
 
 Dummy/videoDummy.s: Dummy/videoDummy.c.s
@@ -195,7 +195,7 @@ Dummy/videoDummy.s: Dummy/videoDummy.c.s
 
 # target to generate assembly for a file
 Dummy/videoDummy.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Dummy/videoDummy.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Dummy/videoDummy.c.s
 .PHONY : Dummy/videoDummy.c.s
 
 GStreamer/videoGStreamer.o: GStreamer/videoGStreamer.c.o
@@ -204,7 +204,7 @@ GStreamer/videoGStreamer.o: GStreamer/videoGStreamer.c.o
 
 # target to build an object file
 GStreamer/videoGStreamer.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.o
 .PHONY : GStreamer/videoGStreamer.c.o
 
 GStreamer/videoGStreamer.i: GStreamer/videoGStreamer.c.i
@@ -213,7 +213,7 @@ GStreamer/videoGStreamer.i: GStreamer/videoGStreamer.c.i
 
 # target to preprocess a source file
 GStreamer/videoGStreamer.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.i
 .PHONY : GStreamer/videoGStreamer.c.i
 
 GStreamer/videoGStreamer.s: GStreamer/videoGStreamer.c.s
@@ -222,7 +222,7 @@ GStreamer/videoGStreamer.s: GStreamer/videoGStreamer.c.s
 
 # target to generate assembly for a file
 GStreamer/videoGStreamer.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/GStreamer/videoGStreamer.c.s
 .PHONY : GStreamer/videoGStreamer.c.s
 
 Image/videoImage.o: Image/videoImage.c.o
@@ -231,7 +231,7 @@ Image/videoImage.o: Image/videoImage.c.o
 
 # target to build an object file
 Image/videoImage.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Image/videoImage.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Image/videoImage.c.o
 .PHONY : Image/videoImage.c.o
 
 Image/videoImage.i: Image/videoImage.c.i
@@ -240,7 +240,7 @@ Image/videoImage.i: Image/videoImage.c.i
 
 # target to preprocess a source file
 Image/videoImage.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Image/videoImage.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Image/videoImage.c.i
 .PHONY : Image/videoImage.c.i
 
 Image/videoImage.s: Image/videoImage.c.s
@@ -249,7 +249,7 @@ Image/videoImage.s: Image/videoImage.c.s
 
 # target to generate assembly for a file
 Image/videoImage.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Image/videoImage.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Image/videoImage.c.s
 .PHONY : Image/videoImage.c.s
 
 Video4Linux2/videoV4L2.o: Video4Linux2/videoV4L2.c.o
@@ -258,7 +258,7 @@ Video4Linux2/videoV4L2.o: Video4Linux2/videoV4L2.c.o
 
 # target to build an object file
 Video4Linux2/videoV4L2.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.o
 .PHONY : Video4Linux2/videoV4L2.c.o
 
 Video4Linux2/videoV4L2.i: Video4Linux2/videoV4L2.c.i
@@ -267,7 +267,7 @@ Video4Linux2/videoV4L2.i: Video4Linux2/videoV4L2.c.i
 
 # target to preprocess a source file
 Video4Linux2/videoV4L2.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.i
 .PHONY : Video4Linux2/videoV4L2.c.i
 
 Video4Linux2/videoV4L2.s: Video4Linux2/videoV4L2.c.s
@@ -276,7 +276,7 @@ Video4Linux2/videoV4L2.s: Video4Linux2/videoV4L2.c.s
 
 # target to generate assembly for a file
 Video4Linux2/videoV4L2.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/Video4Linux2/videoV4L2.c.s
 .PHONY : Video4Linux2/videoV4L2.c.s
 
 cparamSearch.o: cparamSearch.c.o
@@ -285,7 +285,7 @@ cparamSearch.o: cparamSearch.c.o
 
 # target to build an object file
 cparamSearch.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.o
 .PHONY : cparamSearch.c.o
 
 cparamSearch.i: cparamSearch.c.i
@@ -294,7 +294,7 @@ cparamSearch.i: cparamSearch.c.i
 
 # target to preprocess a source file
 cparamSearch.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.i
 .PHONY : cparamSearch.c.i
 
 cparamSearch.s: cparamSearch.c.s
@@ -303,7 +303,7 @@ cparamSearch.s: cparamSearch.c.s
 
 # target to generate assembly for a file
 cparamSearch.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/cparamSearch.c.s
 .PHONY : cparamSearch.c.s
 
 libdc1394/video1394.o: libdc1394/video1394.c.o
@@ -312,7 +312,7 @@ libdc1394/video1394.o: libdc1394/video1394.c.o
 
 # target to build an object file
 libdc1394/video1394.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.o
 .PHONY : libdc1394/video1394.c.o
 
 libdc1394/video1394.i: libdc1394/video1394.c.i
@@ -321,7 +321,7 @@ libdc1394/video1394.i: libdc1394/video1394.c.i
 
 # target to preprocess a source file
 libdc1394/video1394.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.i
 .PHONY : libdc1394/video1394.c.i
 
 libdc1394/video1394.s: libdc1394/video1394.c.s
@@ -330,7 +330,7 @@ libdc1394/video1394.s: libdc1394/video1394.c.s
 
 # target to generate assembly for a file
 libdc1394/video1394.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394.c.s
 .PHONY : libdc1394/video1394.c.s
 
 libdc1394/video1394Format.o: libdc1394/video1394Format.c.o
@@ -339,7 +339,7 @@ libdc1394/video1394Format.o: libdc1394/video1394Format.c.o
 
 # target to build an object file
 libdc1394/video1394Format.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.o
 .PHONY : libdc1394/video1394Format.c.o
 
 libdc1394/video1394Format.i: libdc1394/video1394Format.c.i
@@ -348,7 +348,7 @@ libdc1394/video1394Format.i: libdc1394/video1394Format.c.i
 
 # target to preprocess a source file
 libdc1394/video1394Format.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.i
 .PHONY : libdc1394/video1394Format.c.i
 
 libdc1394/video1394Format.s: libdc1394/video1394Format.c.s
@@ -357,7 +357,7 @@ libdc1394/video1394Format.s: libdc1394/video1394Format.c.s
 
 # target to generate assembly for a file
 libdc1394/video1394Format.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Format.c.s
 .PHONY : libdc1394/video1394Format.c.s
 
 libdc1394/video1394Setting.o: libdc1394/video1394Setting.c.o
@@ -366,7 +366,7 @@ libdc1394/video1394Setting.o: libdc1394/video1394Setting.c.o
 
 # target to build an object file
 libdc1394/video1394Setting.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.o
 .PHONY : libdc1394/video1394Setting.c.o
 
 libdc1394/video1394Setting.i: libdc1394/video1394Setting.c.i
@@ -375,7 +375,7 @@ libdc1394/video1394Setting.i: libdc1394/video1394Setting.c.i
 
 # target to preprocess a source file
 libdc1394/video1394Setting.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.i
 .PHONY : libdc1394/video1394Setting.c.i
 
 libdc1394/video1394Setting.s: libdc1394/video1394Setting.c.s
@@ -384,7 +384,7 @@ libdc1394/video1394Setting.s: libdc1394/video1394Setting.c.s
 
 # target to generate assembly for a file
 libdc1394/video1394Setting.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/libdc1394/video1394Setting.c.s
 .PHONY : libdc1394/video1394Setting.c.s
 
 nxjson.o: nxjson.c.o
@@ -393,7 +393,7 @@ nxjson.o: nxjson.c.o
 
 # target to build an object file
 nxjson.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.o
 .PHONY : nxjson.c.o
 
 nxjson.i: nxjson.c.i
@@ -402,7 +402,7 @@ nxjson.i: nxjson.c.i
 
 # target to preprocess a source file
 nxjson.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.i
 .PHONY : nxjson.c.i
 
 nxjson.s: nxjson.c.s
@@ -411,7 +411,7 @@ nxjson.s: nxjson.c.s
 
 # target to generate assembly for a file
 nxjson.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/nxjson.c.s
 .PHONY : nxjson.c.s
 
 video.o: video.c.o
@@ -420,7 +420,7 @@ video.o: video.c.o
 
 # target to build an object file
 video.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.o
 .PHONY : video.c.o
 
 video.i: video.c.i
@@ -429,7 +429,7 @@ video.i: video.c.i
 
 # target to preprocess a source file
 video.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.i
 .PHONY : video.c.i
 
 video.s: video.c.s
@@ -438,7 +438,7 @@ video.s: video.c.s
 
 # target to generate assembly for a file
 video.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video.c.s
 .PHONY : video.c.s
 
 video2.o: video2.c.o
@@ -447,7 +447,7 @@ video2.o: video2.c.o
 
 # target to build an object file
 video2.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.o
 .PHONY : video2.c.o
 
 video2.i: video2.c.i
@@ -456,7 +456,7 @@ video2.i: video2.c.i
 
 # target to preprocess a source file
 video2.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.i
 .PHONY : video2.c.i
 
 video2.s: video2.c.s
@@ -465,7 +465,7 @@ video2.s: video2.c.s
 
 # target to generate assembly for a file
 video2.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/video2.c.s
 .PHONY : video2.c.s
 
 videoAspectRatio.o: videoAspectRatio.c.o
@@ -474,7 +474,7 @@ videoAspectRatio.o: videoAspectRatio.c.o
 
 # target to build an object file
 videoAspectRatio.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.o
 .PHONY : videoAspectRatio.c.o
 
 videoAspectRatio.i: videoAspectRatio.c.i
@@ -483,7 +483,7 @@ videoAspectRatio.i: videoAspectRatio.c.i
 
 # target to preprocess a source file
 videoAspectRatio.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.i
 .PHONY : videoAspectRatio.c.i
 
 videoAspectRatio.s: videoAspectRatio.c.s
@@ -492,7 +492,7 @@ videoAspectRatio.s: videoAspectRatio.c.s
 
 # target to generate assembly for a file
 videoAspectRatio.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoAspectRatio.c.s
 .PHONY : videoAspectRatio.c.s
 
 videoLuma.o: videoLuma.c.o
@@ -501,7 +501,7 @@ videoLuma.o: videoLuma.c.o
 
 # target to build an object file
 videoLuma.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.o
 .PHONY : videoLuma.c.o
 
 videoLuma.i: videoLuma.c.i
@@ -510,7 +510,7 @@ videoLuma.i: videoLuma.c.i
 
 # target to preprocess a source file
 videoLuma.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.i
 .PHONY : videoLuma.c.i
 
 videoLuma.s: videoLuma.c.s
@@ -519,7 +519,7 @@ videoLuma.s: videoLuma.c.s
 
 # target to generate assembly for a file
 videoLuma.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoLuma.c.s
 .PHONY : videoLuma.c.s
 
 videoRGBA.o: videoRGBA.c.o
@@ -528,7 +528,7 @@ videoRGBA.o: videoRGBA.c.o
 
 # target to build an object file
 videoRGBA.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.o
 .PHONY : videoRGBA.c.o
 
 videoRGBA.i: videoRGBA.c.i
@@ -537,7 +537,7 @@ videoRGBA.i: videoRGBA.c.i
 
 # target to preprocess a source file
 videoRGBA.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.i
 .PHONY : videoRGBA.c.i
 
 videoRGBA.s: videoRGBA.c.s
@@ -546,7 +546,7 @@ videoRGBA.s: videoRGBA.c.s
 
 # target to generate assembly for a file
 videoRGBA.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoRGBA.c.s
 .PHONY : videoRGBA.c.s
 
 videoSaveImage.o: videoSaveImage.c.o
@@ -555,7 +555,7 @@ videoSaveImage.o: videoSaveImage.c.o
 
 # target to build an object file
 videoSaveImage.c.o:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.o
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.o
 .PHONY : videoSaveImage.c.o
 
 videoSaveImage.i: videoSaveImage.c.i
@@ -564,7 +564,7 @@ videoSaveImage.i: videoSaveImage.c.i
 
 # target to preprocess a source file
 videoSaveImage.c.i:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.i
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.i
 .PHONY : videoSaveImage.c.i
 
 videoSaveImage.s: videoSaveImage.c.s
@@ -573,7 +573,7 @@ videoSaveImage.s: videoSaveImage.c.s
 
 # target to generate assembly for a file
 videoSaveImage.c.s:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.s
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(MAKE) -f ARX/ARVideo/CMakeFiles/ARVideo.dir/build.make ARX/ARVideo/CMakeFiles/ARVideo.dir/videoSaveImage.c.s
 .PHONY : videoSaveImage.c.s
 
 # Help Target
@@ -645,6 +645,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

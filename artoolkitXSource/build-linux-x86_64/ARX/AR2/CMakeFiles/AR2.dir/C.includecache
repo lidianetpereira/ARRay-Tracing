@@ -152,7 +152,7 @@ ARX/AR2/marker.h
 ARX/AR2/config.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/coord.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/coord.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -164,7 +164,7 @@ ARX/AR2/imageSet.h
 ARX/AR2/coord.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/featureMap.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/featureMap.c
 ARX/AR/ar.h
 -
 math.h
@@ -178,7 +178,7 @@ ARX/AR2/config.h
 ARX/AR2/featureSet.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/featureSet.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/featureSet.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -188,7 +188,7 @@ stdlib.h
 ARX/AR2/featureSet.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/handle.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/handle.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -204,7 +204,7 @@ ARX/AR2/tracking.h
 ARX/AR2/util.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/imageSet.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/imageSet.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -220,7 +220,7 @@ ARX/AR2/imageFormat.h
 ARX/AR2/imageSet.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/jpeg.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/jpeg.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -230,13 +230,13 @@ stdlib.h
 string.h
 -
 jpeglib.h
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/jpeglib.h
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/jpeglib.h
 setjmp.h
 -
 ARX/AR2/imageFormat.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/marker.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/marker.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -248,7 +248,7 @@ ARX/AR2/marker.h
 ARX/AR2/util.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/matching.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/matching.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -264,7 +264,7 @@ ARX/AR2/config.h
 ARX/AR2/template.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/matching2.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/matching2.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -280,7 +280,7 @@ ARX/AR2/config.h
 ARX/AR2/template.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/searchPoint.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/searchPoint.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -296,7 +296,7 @@ ARX/AR2/coord.h
 ARX/AR2/searchPoint.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/selectTemplate.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/selectTemplate.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -310,7 +310,7 @@ math.h
 ARX/AR2/template.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/surface.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/surface.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -330,7 +330,7 @@ ARX/AR2/tracking.h
 ARX/AR2/util.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/template.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/template.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -350,7 +350,7 @@ ARX/AR2/template.h
 ARX/AR2/tracking.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/tracking.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/tracking.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -374,7 +374,7 @@ ARX/AR2/template.h
 ARX/AR2/tracking.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/tracking2d.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/tracking2d.c
 ARX/AR/ar.h
 -
 stdio.h
@@ -394,7 +394,7 @@ ARX/AR2/searchPoint.h
 ARX/AR2/tracking.h
 -
 
-/home/lidiane/ARRay-TracingGit/artoolkitXSource/ARX/AR2/util.c
+/home/lidiane/Documentos/arraytracing/artoolkitXSource/ARX/AR2/util.c
 ARX/AR/ar.h
 -
 stdio.h

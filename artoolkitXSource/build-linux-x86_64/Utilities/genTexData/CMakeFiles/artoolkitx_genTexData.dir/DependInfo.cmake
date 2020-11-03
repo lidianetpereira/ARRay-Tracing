@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/Utilities/genTexData/genTexData.c" "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o"
+  "/home/lidiane/Documentos/arraytracing/artoolkitXSource/Utilities/genTexData/genTexData.c" "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -25,8 +25,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/AR2/CMakeFiles/AR2.dir/DependInfo.cmake"
-  "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
+  "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX/AR2/CMakeFiles/AR2.dir/DependInfo.cmake"
+  "/home/lidiane/Documentos/arraytracing/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/ARX.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
