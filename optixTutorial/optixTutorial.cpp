@@ -159,15 +159,6 @@ char str[512];
 float invOut[16];
 
 Group m_top_object;
-std::string mesh_teapotBody = std::string(sutil::samplesDir()) + "/data/teapot_body.ply";
-std::string mesh_teapotLid = std::string(sutil::samplesDir()) + "/data/teapot_lid.ply";
-std::string mesh_al = std::string(sutil::samplesDir()) + "/data/al.obj";
-std::string mesh_flowers = std::string(sutil::samplesDir()) + "/data/flowers.obj";
-std::string mesh_rosevase = std::string(sutil::samplesDir()) + "/data/rose+vase.obj";
-std::string mesh_bunny = std::string(sutil::samplesDir()) + "/data/bunny.obj";
-std::string mesh_suzanne = std::string(sutil::samplesDir()) + "/data/suzanne.obj";
-std::string mesh_tyra = std::string(sutil::samplesDir()) + "/data/tyra.obj";
-std::string mesh_armadillo = std::string(sutil::samplesDir()) + "/data/armadillo.obj";
 optix::Aabb  aabb;
 
 Program pgram_intersection = 0;
@@ -175,22 +166,9 @@ Program pgram_bounding_box = 0;
 Program diffuse_ch = 0;
 Program diffuse_ah = 0;
 
-Matrix4x4 teapotPose;
-Matrix4x4 bunnyPose;
-Matrix4x4 suzannePose;
-Matrix4x4 rosePose;
-Matrix4x4 flowersPose;
-Matrix4x4 transformsObj;
-
 Transform cornellPose;
 Transform scale;
-Transform bunnyT;
-Transform suzzaneT;
-Transform roseT;
-Transform flowersT;
-Transform teapotT;
 float transformMat[16];
-float scaleMat[16];
 
 int scene = 6;
 //------------------------------------------------------------------------------
@@ -636,7 +614,7 @@ void glutInitialize( int* argc, char** argv )
     glutInitDisplayMode( GLUT_RGB | GLUT_ALPHA | GLUT_DEPTH | GLUT_DOUBLE);
     glutInitWindowSize( width, height );
     glutInitWindowPosition( 100, 100 );
-    glutCreateWindow( SAMPLE_NAME );
+    glutCreateWindow( "ARRay - Tracing - OptiX" );
     glutHideWindow();
 }
 
@@ -892,7 +870,6 @@ static void init(){
     char buf[MAXPATHLEN];
     ARLOGd("CWD is '%s'.\n", getcwd(buf, sizeof(buf)));
 #endif
-    //char *resourcesDir = arUtilGetResourcesDirectoryPath(AR_UTIL_RESOURCES_DIRECTORY_BEHAVIOR_BEST);
     char *resourcesDir = "../";
     ARLOGd("Resources are in'%s'.\n", resourcesDir);
     for (int i = 0; i < markerCount; i++) {
