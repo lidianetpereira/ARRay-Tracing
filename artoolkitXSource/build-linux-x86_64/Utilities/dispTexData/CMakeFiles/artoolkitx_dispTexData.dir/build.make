@@ -109,6 +109,34 @@ Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/build: Utilities/dis
 
 .PHONY : Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/build
 
+# Object files for target artoolkitx_dispTexData
+artoolkitx_dispTexData_OBJECTS = \
+"CMakeFiles/artoolkitx_dispTexData.dir/dispTexData.cpp.o"
+
+# External object files for target artoolkitx_dispTexData
+artoolkitx_dispTexData_EXTERNAL_OBJECTS =
+
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/dispTexData.cpp.o
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/build.make
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: ARX/libARX.so.1.0.6
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: depends/common/src/Eden/libEden.a
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/lib/x86_64-linux-gnu/libGL.so
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/lib/x86_64-linux-gnu/libGLU.so
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/local/lib/libSDL2main.a
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/local/lib/libSDL2.so
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/lib/x86_64-linux-gnu/libjpeg.so
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/lib/x86_64-linux-gnu/libGL.so
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/lib/x86_64-linux-gnu/libGLU.so
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: /usr/lib/x86_64-linux-gnu/libGLESv2.so
+Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData: Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/dispTexData && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_dispTexData.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/preinstall: Utilities/dispTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData
+
+.PHONY : Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/preinstall
+
 Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/requires: Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/dispTexData.cpp.o.requires
 
 .PHONY : Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/requires

@@ -38,22 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_checkResolution" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_checkResolution")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_checkResolution"
-         RPATH "$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/artoolkitx_checkResolution")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_checkResolution" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_checkResolution")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_checkResolution"
-         OLD_RPATH "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX:"
-         NEW_RPATH "$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_checkResolution")
-    endif()
-  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution")
 endif()
 

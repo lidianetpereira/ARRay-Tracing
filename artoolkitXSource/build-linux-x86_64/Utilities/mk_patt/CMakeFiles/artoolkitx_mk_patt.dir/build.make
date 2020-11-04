@@ -122,6 +122,47 @@ Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build: Utilities/mk_patt/art
 
 .PHONY : Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build
 
+# Object files for target artoolkitx_mk_patt
+artoolkitx_mk_patt_OBJECTS = \
+"CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o"
+
+# External object files for target artoolkitx_mk_patt
+artoolkitx_mk_patt_EXTERNAL_OBJECTS =
+
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ARX/AR/libAR.a
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ARX/ARUtil/libARUtil.a
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ARX/ARVideo/libARVideo.a
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ARX/ARG/libARG.a
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ARX/libARX.so.1.0.6
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: depends/common/src/Eden/libEden.a
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libGL.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libGLU.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/local/lib/libSDL2main.a
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/local/lib/libSDL2.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_calib3d.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_features2d.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_flann.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_highgui.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_videoio.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_imgcodecs.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_video.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_imgproc.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: ../depends/linux/lib/libopencv_core.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libz.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libcurl.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libjpeg.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: /usr/lib/x86_64-linux-gnu/libGLESv2.so
+Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt: Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/mk_patt && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_mk_patt.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/preinstall: Utilities/mk_patt/CMakeFiles/CMakeRelink.dir/artoolkitx_mk_patt
+
+.PHONY : Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/preinstall
+
 Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/requires: Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/mk_patt.cpp.o.requires
 
 .PHONY : Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/requires

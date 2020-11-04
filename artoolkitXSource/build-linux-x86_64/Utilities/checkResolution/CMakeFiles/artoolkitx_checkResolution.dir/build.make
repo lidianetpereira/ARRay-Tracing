@@ -104,6 +104,29 @@ Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build: Utili
 
 .PHONY : Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build
 
+# Object files for target artoolkitx_checkResolution
+artoolkitx_checkResolution_OBJECTS = \
+"CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o"
+
+# External object files for target artoolkitx_checkResolution
+artoolkitx_checkResolution_EXTERNAL_OBJECTS =
+
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: ARX/libARX.so.1.0.6
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: ARX/AR2/libAR2.a
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: /usr/lib/x86_64-linux-gnu/libGL.so
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: /usr/lib/x86_64-linux-gnu/libGLU.so
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: /usr/lib/x86_64-linux-gnu/libjpeg.so
+Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution: Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/checkResolution && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_checkResolution.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/preinstall: Utilities/checkResolution/CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution
+
+.PHONY : Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/preinstall
+
 Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/requires: Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o.requires
 
 .PHONY : Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/requires

@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/artoolkitx_checkResolution.dir/checkResolution.c.o"
   "artoolkitx_checkResolution.pdb"
   "artoolkitx_checkResolution"
+  "artoolkitx_checkResolution.pdb"
+  "CMakeFiles/CMakeRelink.dir/artoolkitx_checkResolution"
 )
 
 # Per-language clean rules from dependency scanning.

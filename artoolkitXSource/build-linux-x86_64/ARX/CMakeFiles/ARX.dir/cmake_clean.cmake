@@ -20,6 +20,10 @@ file(REMOVE_RECURSE
   "libARX.so.1.0.6"
   "libARX.so"
   "libARX.so.1"
+  "libARX.pdb"
+  "CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6"
+  "CMakeFiles/CMakeRelink.dir/libARX.so"
+  "CMakeFiles/CMakeRelink.dir/libARX.so.1"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -38,39 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libARX.so.1.0.6"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libARX.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libARX.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "")
-    endif()
-  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/libARX.so.1.0.6"
-    "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/libARX.so.1"
-    "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/libARX.so"
+    "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6"
+    "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1"
+    "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX/CMakeFiles/CMakeRelink.dir/libARX.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libARX.so.1.0.6"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libARX.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libARX.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib:"
-           NEW_RPATH "")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

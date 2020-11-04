@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/artoolkitx_dispTexData.dir/dispTexData.cpp.o"
   "artoolkitx_dispTexData.pdb"
   "artoolkitx_dispTexData"
+  "artoolkitx_dispTexData.pdb"
+  "CMakeFiles/CMakeRelink.dir/artoolkitx_dispTexData"
 )
 
 # Per-language clean rules from dependency scanning.

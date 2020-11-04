@@ -109,6 +109,34 @@ Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/build: Utilities/check_id/
 
 .PHONY : Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/build
 
+# Object files for target artoolkitx_check_id
+artoolkitx_check_id_OBJECTS = \
+"CMakeFiles/artoolkitx_check_id.dir/check_id.cpp.o"
+
+# External object files for target artoolkitx_check_id
+artoolkitx_check_id_EXTERNAL_OBJECTS =
+
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/check_id.cpp.o
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/build.make
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: ARX/libARX.so.1.0.6
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: ARX/ARVideo/libARVideo.a
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: depends/common/src/Eden/libEden.a
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: /usr/lib/x86_64-linux-gnu/libGL.so
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: /usr/lib/x86_64-linux-gnu/libGLU.so
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: /usr/local/lib/libSDL2main.a
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: /usr/local/lib/libSDL2.so
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: /usr/lib/x86_64-linux-gnu/libjpeg.so
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: /usr/lib/x86_64-linux-gnu/libcurl.so
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: /usr/lib/x86_64-linux-gnu/libGLESv2.so
+Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id: Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CMakeFiles/CMakeRelink.dir/artoolkitx_check_id"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/check_id && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_check_id.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/preinstall: Utilities/check_id/CMakeFiles/CMakeRelink.dir/artoolkitx_check_id
+
+.PHONY : Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/preinstall
+
 Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/requires: Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/check_id.cpp.o.requires
 
 .PHONY : Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/requires

@@ -104,6 +104,29 @@ Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build: Utilities/genTe
 
 .PHONY : Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build
 
+# Object files for target artoolkitx_genTexData
+artoolkitx_genTexData_OBJECTS = \
+"CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o"
+
+# External object files for target artoolkitx_genTexData
+artoolkitx_genTexData_EXTERNAL_OBJECTS =
+
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: ARX/AR2/libAR2.a
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: ARX/libARX.so.1.0.6
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: /usr/lib/x86_64-linux-gnu/libjpeg.so
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: /usr/lib/x86_64-linux-gnu/libGL.so
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: /usr/lib/x86_64-linux-gnu/libGLU.so
+Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData: Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genTexData && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/artoolkitx_genTexData.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/preinstall: Utilities/genTexData/CMakeFiles/CMakeRelink.dir/artoolkitx_genTexData
+
+.PHONY : Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/preinstall
+
 Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/requires: Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/genTexData.c.o.requires
 
 .PHONY : Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/requires

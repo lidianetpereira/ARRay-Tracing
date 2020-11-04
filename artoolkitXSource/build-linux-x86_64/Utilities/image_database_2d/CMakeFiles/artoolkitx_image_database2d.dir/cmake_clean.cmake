@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/artoolkitx_image_database2d.dir/image_database2d.cpp.o"
   "artoolkitx_image_database2d.pdb"
   "artoolkitx_image_database2d"
+  "artoolkitx_image_database2d.pdb"
+  "CMakeFiles/CMakeRelink.dir/artoolkitx_image_database2d"
 )
 
 # Per-language clean rules from dependency scanning.

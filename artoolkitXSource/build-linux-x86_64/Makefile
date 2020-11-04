@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -168,6 +156,11 @@ ARX: cmake_check_build_system
 ARX/fast:
 	$(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/build
 .PHONY : ARX/fast
+
+# Manual pre-install relink rule for target.
+ARX/preinstall:
+	$(MAKE) -f ARX/CMakeFiles/ARX.dir/build.make ARX/CMakeFiles/ARX.dir/preinstall
+.PHONY : ARX/preinstall
 
 #=============================================================================
 # Target rules for targets named AR
@@ -286,6 +279,11 @@ artoolkitx_check_id/fast:
 	$(MAKE) -f Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/build.make Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/build
 .PHONY : artoolkitx_check_id/fast
 
+# Manual pre-install relink rule for target.
+artoolkitx_check_id/preinstall:
+	$(MAKE) -f Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/build.make Utilities/check_id/CMakeFiles/artoolkitx_check_id.dir/preinstall
+.PHONY : artoolkitx_check_id/preinstall
+
 #=============================================================================
 # Target rules for targets named artoolkitx_genMarkerSet
 
@@ -298,6 +296,11 @@ artoolkitx_genMarkerSet: cmake_check_build_system
 artoolkitx_genMarkerSet/fast:
 	$(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build
 .PHONY : artoolkitx_genMarkerSet/fast
+
+# Manual pre-install relink rule for target.
+artoolkitx_genMarkerSet/preinstall:
+	$(MAKE) -f Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/build.make Utilities/genMarkerSet/CMakeFiles/artoolkitx_genMarkerSet.dir/preinstall
+.PHONY : artoolkitx_genMarkerSet/preinstall
 
 #=============================================================================
 # Target rules for targets named artoolkitx_mk_patt
@@ -312,6 +315,11 @@ artoolkitx_mk_patt/fast:
 	$(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build
 .PHONY : artoolkitx_mk_patt/fast
 
+# Manual pre-install relink rule for target.
+artoolkitx_mk_patt/preinstall:
+	$(MAKE) -f Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/build.make Utilities/mk_patt/CMakeFiles/artoolkitx_mk_patt.dir/preinstall
+.PHONY : artoolkitx_mk_patt/preinstall
+
 #=============================================================================
 # Target rules for targets named artoolkitx_checkResolution
 
@@ -324,6 +332,11 @@ artoolkitx_checkResolution: cmake_check_build_system
 artoolkitx_checkResolution/fast:
 	$(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build
 .PHONY : artoolkitx_checkResolution/fast
+
+# Manual pre-install relink rule for target.
+artoolkitx_checkResolution/preinstall:
+	$(MAKE) -f Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/build.make Utilities/checkResolution/CMakeFiles/artoolkitx_checkResolution.dir/preinstall
+.PHONY : artoolkitx_checkResolution/preinstall
 
 #=============================================================================
 # Target rules for targets named artoolkitx_genTexData
@@ -338,6 +351,11 @@ artoolkitx_genTexData/fast:
 	$(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build
 .PHONY : artoolkitx_genTexData/fast
 
+# Manual pre-install relink rule for target.
+artoolkitx_genTexData/preinstall:
+	$(MAKE) -f Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/build.make Utilities/genTexData/CMakeFiles/artoolkitx_genTexData.dir/preinstall
+.PHONY : artoolkitx_genTexData/preinstall
+
 #=============================================================================
 # Target rules for targets named artoolkitx_dispTexData
 
@@ -350,6 +368,11 @@ artoolkitx_dispTexData: cmake_check_build_system
 artoolkitx_dispTexData/fast:
 	$(MAKE) -f Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/build.make Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/build
 .PHONY : artoolkitx_dispTexData/fast
+
+# Manual pre-install relink rule for target.
+artoolkitx_dispTexData/preinstall:
+	$(MAKE) -f Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/build.make Utilities/dispTexData/CMakeFiles/artoolkitx_dispTexData.dir/preinstall
+.PHONY : artoolkitx_dispTexData/preinstall
 
 #=============================================================================
 # Target rules for targets named artoolkitx_image_database2d
@@ -364,13 +387,17 @@ artoolkitx_image_database2d/fast:
 	$(MAKE) -f Utilities/image_database_2d/CMakeFiles/artoolkitx_image_database2d.dir/build.make Utilities/image_database_2d/CMakeFiles/artoolkitx_image_database2d.dir/build
 .PHONY : artoolkitx_image_database2d/fast
 
+# Manual pre-install relink rule for target.
+artoolkitx_image_database2d/preinstall:
+	$(MAKE) -f Utilities/image_database_2d/CMakeFiles/artoolkitx_image_database2d.dir/build.make Utilities/image_database_2d/CMakeFiles/artoolkitx_image_database2d.dir/preinstall
+.PHONY : artoolkitx_image_database2d/preinstall
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... list_install_components"

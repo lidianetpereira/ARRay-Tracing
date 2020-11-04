@@ -543,6 +543,84 @@ ARX/CMakeFiles/ARX.dir/build: ARX/libARX.so
 
 .PHONY : ARX/CMakeFiles/ARX.dir/build
 
+# Object files for target ARX
+ARX_OBJECTS = \
+"CMakeFiles/ARX.dir/ARX_c.cpp.o" \
+"CMakeFiles/ARX.dir/ARController.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackable.cpp.o" \
+"CMakeFiles/ARX.dir/ARPattern.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackable2d.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o" \
+"CMakeFiles/ARX.dir/ARTracker.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o" \
+"CMakeFiles/ARX.dir/ARTracker2d.cpp.o" \
+"CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o" \
+"CMakeFiles/ARX.dir/ARVideoSource.cpp.o" \
+"CMakeFiles/ARX.dir/ARVideoView.cpp.o" \
+"CMakeFiles/ARX.dir/trackingSub.c.o" \
+"CMakeFiles/ARX.dir/mapper.cpp.o"
+
+# External object files for target ARX
+ARX_EXTERNAL_OBJECTS =
+
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARController.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARPattern.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquareAuto.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackableMultiSquare.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackableNFT.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackable2d.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackableSquare.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTracker.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackerNFT.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTracker2d.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARTrackerSquare.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARVideoSource.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/ARVideoView.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/trackingSub.c.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/mapper.cpp.o
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/build.make
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/AR/libAR.a
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/ARVideo/libARVideo.a
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/ARUtil/libARUtil.a
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/ARG/libARG.a
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: /usr/lib/x86_64-linux-gnu/libGL.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: /usr/lib/x86_64-linux-gnu/libGLU.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/AR2/libAR2.a
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/KPM/libKPM.a
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/OCVT/libOCVT.a
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: /usr/lib/x86_64-linux-gnu/libcurl.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: /usr/lib/x86_64-linux-gnu/libz.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_calib3d.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_features2d.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_flann.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_highgui.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_videoio.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_imgcodecs.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_video.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_imgproc.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ../depends/linux/lib/libopencv_core.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: /usr/lib/x86_64-linux-gnu/libjpeg.so
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6: ARX/CMakeFiles/ARX.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX shared library CMakeFiles/CMakeRelink.dir/libARX.so"
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ARX.dir/relink.txt --verbose=$(VERBOSE)
+	cd /home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX && $(CMAKE_COMMAND) -E cmake_symlink_library CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6 CMakeFiles/CMakeRelink.dir/libARX.so.1 CMakeFiles/CMakeRelink.dir/libARX.so
+
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1: ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6
+	@$(CMAKE_COMMAND) -E touch_nocreate ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1
+
+ARX/CMakeFiles/CMakeRelink.dir/libARX.so: ARX/CMakeFiles/CMakeRelink.dir/libARX.so.1.0.6
+	@$(CMAKE_COMMAND) -E touch_nocreate ARX/CMakeFiles/CMakeRelink.dir/libARX.so
+
+# Rule to relink during preinstall.
+ARX/CMakeFiles/ARX.dir/preinstall: ARX/CMakeFiles/CMakeRelink.dir/libARX.so
+
+.PHONY : ARX/CMakeFiles/ARX.dir/preinstall
+
 ARX/CMakeFiles/ARX.dir/requires: ARX/CMakeFiles/ARX.dir/ARX_c.cpp.o.requires
 ARX/CMakeFiles/ARX.dir/requires: ARX/CMakeFiles/ARX.dir/ARController.cpp.o.requires
 ARX/CMakeFiles/ARX.dir/requires: ARX/CMakeFiles/ARX.dir/ARTrackable.cpp.o.requires

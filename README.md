@@ -21,7 +21,8 @@ These instructions were tested on Ubuntu 18.04.5 LTS, other distros will may req
 </ol>
 
 The compiled exemple will be into BASE_FOLDER/bin.
-Run the sample and point your webcam to one of the markers from file "markers.pdf", the result will look like this:
+Run the sample and point your webcam to one of the markers from file [markers.pdf](markers.pdf), the result will look like: ![screenshot](print.png)
+
 
 
 

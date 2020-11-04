@@ -38,22 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_genMarkerSet" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_genMarkerSet")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_genMarkerSet"
-         RPATH "$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet/artoolkitx_genMarkerSet")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_genMarkerSet" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_genMarkerSet")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_genMarkerSet"
-         OLD_RPATH "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/ARX:/usr/local/lib:/home/lidiane/ARRay-TracingGit/artoolkitXSource/depends/linux/lib:"
-         NEW_RPATH "$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/artoolkitx_genMarkerSet")
-    endif()
-  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lidiane/ARRay-TracingGit/artoolkitXSource/build-linux-x86_64/Utilities/genMarkerSet/CMakeFiles/CMakeRelink.dir/artoolkitx_genMarkerSet")
 endif()
 

@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/artoolkitx_check_id.dir/check_id.cpp.o"
   "artoolkitx_check_id.pdb"
   "artoolkitx_check_id"
+  "artoolkitx_check_id.pdb"
+  "CMakeFiles/CMakeRelink.dir/artoolkitx_check_id"
 )
 
 # Per-language clean rules from dependency scanning.
